@@ -1,1 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>The Lorak Codex</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #0b0d12;
+            color: #e6e6e6;
+            font-family: Georgia, serif;
+        }
+
+        header {
+            background: #11151d;
+            border-bottom: 1px solid #343a46;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+            letter-spacing: 3px;
+        }
+
+        header p {
+            color: #9da5b4;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        nav {
+            background: #080a0f;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #c8ced8;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .intro h2 {
+            font-size: 30px;
+        }
+
+        .intro p {
+            color: #aeb5c1;
+            line-height: 1.7;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #141820;
+            border: 1px solid #303641;
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .card p {
+            color: #aeb5c1;
+            line-height: 1.5;
+        }
+
+        .card a {
+            color: #d5dae3;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #707887;
+            border-top: 1px solid #252a34;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>THE LORAK CODEX</h1>
+    <p>Archives of history, transcripts and forgotten truths.</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="#">Quests</a>
+    <a href="#">Transcripts</a>
+    <a href="#">Characters</a>
+    <a href="#">Factions</a>
+    <a href="#">Timeline</a>
+</nav>
+
+<main>
+
+    <section class="intro">
+        <h2>Welcome to the Codex</h2>
+
+        <p>
+            I am Lorak.
+        </p>
+
+        <p>
+            These pages preserve the stories, records and histories
+            scattered throughout the Origin System.
+        </p>
+
+        <p>
+            Some truths were recorded.
+            Others were forgotten.
+            And some were never meant to be found.
+        </p>
+    </section>
+
+    <section class="cards">
+
+        <div class="card">
+            <h3>Quest Archives</h3>
+            <p>
+                Explore the quests that shaped the history of the Origin System and beyond.
+            </p>
+            <a href="#">Enter the Archives →</a>
+        </div>
+
+        <div class="card">
+            <h3>Transcripts</h3>
+            <p>
+                Browse dialogue and recorded conversations from across the system.
+            </p>
+            <a href="#">Read the Transcripts →</a>
+        </div>
+
+        <div class="card">
+            <h3>Characters</h3>
+            <p>
+                Records concerning the people, beings and entities within the story.
+            </p>
+            <a href="#">Open Character Records →</a>
+        </div>
+
+        <div class="card">
+            <h3>Factions</h3>
+            <p>
+                Discover the organizations and forces that shaped the Origin System.
+            </p>
+            <a href="#">View Factions →</a>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    The Lorak Codex · A fan-made Warframe lore archive
+</footer>
+
+</body>
+</html>
