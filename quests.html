@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,20 +73,52 @@
         }
 
         .quest {
+            margin-bottom: 12px;
+        }
+
+        .quest-button {
+            width: 100%;
             background-color: #151515;
             border: 1px solid #333333;
             border-left: 4px solid #d4af37;
-            margin-bottom: 12px;
             border-radius: 6px;
             padding: 18px 20px;
             color: #d4af37;
             font-size: 19px;
             font-weight: bold;
+            text-align: left;
+            cursor: pointer;
         }
 
-        .quest:hover {
+        .quest-button:hover {
             background-color: #1c1c1c;
             color: #ffffff;
+        }
+
+        .quest-button::before {
+            content: "▶";
+            display: inline-block;
+            margin-right: 12px;
+            font-size: 12px;
+            transition: transform 0.2s;
+        }
+
+        .quest-button.active::before {
+            transform: rotate(90deg);
+        }
+
+        .quest-content {
+            display: none;
+            background-color: #111111;
+            border: 1px solid #333333;
+            border-top: none;
+            padding: 18px 20px;
+            color: #888888;
+            border-radius: 0 0 6px 6px;
+        }
+
+        .quest-content.show {
+            display: block;
         }
 
         footer {
@@ -124,45 +157,173 @@
         </p>
     </div>
 
-    <div class="quest">1. Vor's Prize</div>
+    <div class="quest">
+        <button class="quest-button" onclick="toggleQuest(this)">
+            1. Vor's Prize
+        </button>
+        <div class="quest-content">
+            Summary coming soon.
+        </div>
+    </div>
 
-    <div class="quest">2. Once Awake</div>
+    <div class="quest">
+        <button class="quest-button" onclick="toggleQuest(this)">
+            2. Once Awake
+        </button>
+        <div class="quest-content">
+            Summary coming soon.
+        </div>
+    </div>
 
-    <div class="quest">3. Saya's Vigil</div>
+    <div class="quest">
+        <button class="quest-button" onclick="toggleQuest(this)">
+            3. Saya's Vigil
+        </button>
+        <div class="quest-content">
+            Summary coming soon.
+        </div>
+    </div>
 
-    <div class="quest">4. The Archwing</div>
+    <div class="quest">
+        <button class="quest-button" onclick="toggleQuest(this)">
+            4. The Archwing
+        </button>
+        <div class="quest-content">
+            Summary coming soon.
+        </div>
+    </div>
 
-    <div class="quest">5. Natah</div>
+    <div class="quest">
+        <button class="quest-button" onclick="toggleQuest(this)">
+            5. Natah
+        </button>
+        <div class="quest-content">
+            Summary coming soon.
+        </div>
+    </div>
 
-    <div class="quest">6. The Second Dream</div>
+    <div class="quest">
+        <button class="quest-button" onclick="toggleQuest(this)">
+            6. The Second Dream
+        </button>
+        <div class="quest-content">
+            Summary coming soon.
+        </div>
+    </div>
 
-    <div class="quest">7. The War Within</div>
+    <div class="quest">
+        <button class="quest-button" onclick="toggleQuest(this)">
+            7. The War Within
+        </button>
+        <div class="quest-content">
+            Summary coming soon.
+        </div>
+    </div>
 
-    <div class="quest">8. Chains of Harrow</div>
+    <div class="quest">
+        <button class="quest-button" onclick="toggleQuest(this)">
+            8. Chains of Harrow
+        </button>
+        <div class="quest-content">
+            Summary coming soon.
+        </div>
+    </div>
 
-    <div class="quest">9. Apostasy Prologue</div>
+    <div class="quest">
+        <button class="quest-button" onclick="toggleQuest(this)">
+            9. Apostasy Prologue
+        </button>
+        <div class="quest-content">
+            Summary coming soon.
+        </div>
+    </div>
 
-    <div class="quest">10. The Sacrifice</div>
+    <div class="quest">
+        <button class="quest-button" onclick="toggleQuest(this)">
+            10. The Sacrifice
+        </button>
+        <div class="quest-content">
+            Summary coming soon.
+        </div>
+    </div>
 
-    <div class="quest">11. Prelude to War</div>
+    <div class="quest">
+        <button class="quest-button" onclick="toggleQuest(this)">
+            11. Prelude to War
+        </button>
+        <div class="quest-content">
+            Summary coming soon.
+        </div>
+    </div>
 
-    <div class="quest">12. The New War</div>
+    <div class="quest">
+        <button class="quest-button" onclick="toggleQuest(this)">
+            12. The New War
+        </button>
+        <div class="quest-content">
+            Summary coming soon.
+        </div>
+    </div>
 
-    <div class="quest">13. The Duviri Paradox</div>
+    <div class="quest">
+        <button class="quest-button" onclick="toggleQuest(this)">
+            13. The Duviri Paradox
+        </button>
+        <div class="quest-content">
+            Summary coming soon.
+        </div>
+    </div>
 
-    <div class="quest">14. Angels of the Zariman</div>
+    <div class="quest">
+        <button class="quest-button" onclick="toggleQuest(this)">
+            14. Angels of the Zariman
+        </button>
+        <div class="quest-content">
+            Summary coming soon.
+        </div>
+    </div>
 
-    <div class="quest">15. Whispers in the Walls</div>
+    <div class="quest">
+        <button class="quest-button" onclick="toggleQuest(this)">
+            15. Whispers in the Walls
+        </button>
+        <div class="quest-content">
+            Summary coming soon.
+        </div>
+    </div>
 
-    <div class="quest">16. The Lotus Eaters</div>
+    <div class="quest">
+        <button class="quest-button" onclick="toggleQuest(this)">
+            16. The Lotus Eaters
+        </button>
+        <div class="quest-content">
+            Summary coming soon.
+        </div>
+    </div>
 
-    <div class="quest">17. The Hex / Warframe: 1999</div>
+    <div class="quest">
+        <button class="quest-button" onclick="toggleQuest(this)">
+            17. The Hex / Warframe: 1999
+        </button>
+        <div class="quest-content">
+            Summary coming soon.
+        </div>
+    </div>
 
 </main>
 
 <footer>
     <p>The Lorak Codex — Warframe Lore &amp; History</p>
 </footer>
+
+<script>
+    function toggleQuest(button) {
+        const content = button.nextElementSibling;
+
+        button.classList.toggle("active");
+        content.classList.toggle("show");
+    }
+</script>
 
 </body>
 </html>
