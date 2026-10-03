@@ -1,1 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline | The Lorak Codex</title>
 
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #0b0b0f;
+            color: #e6e6e6;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #111118;
+            border-bottom: 1px solid #2b2b35;
+            padding: 25px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #d6b36a;
+            font-size: 2.2rem;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #888894;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            color: #aaaab5;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: #d6b36a;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .intro h2 {
+            color: #d6b36a;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            color: #9999a5;
+        }
+
+        .era {
+            background: #12121a;
+            border: 1px solid #2b2b35;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+        }
+
+        .era summary {
+            cursor: pointer;
+            padding: 20px 25px;
+            color: #d6b36a;
+            font-size: 1.35rem;
+            font-weight: bold;
+            list-style: none;
+            background: #15151e;
+        }
+
+        .era summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .era summary::before {
+            content: "▸";
+            margin-right: 12px;
+            color: #777784;
+            display: inline-block;
+            transition: transform 0.2s ease;
+        }
+
+        .era[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        .era summary:hover {
+            background: #1b1b25;
+        }
+
+        .era-content {
+            padding: 25px 30px 30px;
+        }
+
+        .era-content ul {
+            padding-left: 25px;
+        }
+
+        .era-content li {
+            margin-bottom: 14px;
+            color: #d0d0d8;
+        }
+
+        .era-content li::marker {
+            color: #d6b36a;
+        }
+
+        strong {
+            color: #e4c77e;
+        }
+
+        footer {
+            border-top: 1px solid #2b2b35;
+            margin-top: 60px;
+            padding: 25px;
+            text-align: center;
+            color: #666672;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.7rem;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 7px;
+            }
+
+            .era summary {
+                font-size: 1.1rem;
+                padding: 17px 18px;
+            }
+
+            .era-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>THE LORAK CODEX</h1>
+    <p>Archives of history, transcripts and forgotten truths.</p>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Quests</a>
+        <a href="#">Transcripts</a>
+        <a href="#">Characters</a>
+        <a href="#">Factions</a>
+        <a href="timeline.html">Timeline</a>
+    </nav>
+</header>
+
+<main>
+
+    <div class="intro">
+        <h2>Historical Timeline</h2>
+        <p>
+            A chronological record of the major events that shaped the Origin System,
+            from the earliest known history to the events surrounding 1999.
+        </p>
+    </div>
+
+    <details class="era" open>
+        <summary>Pre-Orokin Era</summary>
+        <div class="era-content">
+            <ul>
+                <li><strong>XX99</strong> is a largely unknown period of human history.</li>
+                <li>Humanity has not yet entered the <strong>Orokin Era</strong>.</li>
+                <li>Much of this period remains undocumented, although some details can be learned through the <strong>KIM conversations</strong>.</li>
+                <li><strong>1999</strong> is a significant period of pre-Orokin human history.</li>
+            </ul>
+        </div>
+    </details>
+
+    <details class="era">
+        <summary>Orokin Era</summary>
+        <div class="era-content">
+            <ul>
+                <li>The <strong>Orokin</strong> rise to become the upper-class royalty of the Empire.</li>
+                <li>They create <strong>Cephalons</strong>, the <strong>Grineer</strong>, and train selected soldiers to become <strong>Dax</strong>.</li>
+                <li>The Orokin discover the <strong>Void</strong> and begin studying it, eventually leading to the invention of <strong>Void technology</strong>.</li>
+                <li>They construct the <strong>Solar Rail network</strong>, allowing travel throughout the Origin System.</li>
+                <li><strong>Parvos Granum</strong> establishes the <strong>Corpus</strong>, creating the first true rival to the Orokin.</li>
+                <li>The Orokin create the <strong>Sentients</strong>, sending them to <strong>Tau</strong> to terraform its worlds and construct an <strong>Extrasolar Rail</strong>.</li>
+                <li>The Sentients successfully complete their mission, but the journey to Tau changes them.</li>
+                <li>After reaching Tau, the Sentients realise that the Orokin would eventually arrive and ruin what they had created.</li>
+                <li>The <strong>Sentients rebel against the Orokin</strong>, triggering the start of the <strong>Great Sentient War</strong>, which lasts for an unspecified amount of time.</li>
+                <li>The Orokin construct the <strong>Zariman 10-0</strong> as part of an attempt to reach Tau and beat the Sentients there.</li>
+                <li>The <strong>Zariman 10-0 disappears into the Void</strong> in an event later known as the <strong>Zariman Incident</strong>.</li>
+            </ul>
+        </div>
+    </details>
+
+    <details class="era">
+        <summary>The Old War and Old Peace</summary>
+        <div class="era-content">
+            <ul>
+                <li>The Sentients' ability to adapt and interfere with Orokin technology means that the more advanced the Orokin become, the greater their losses. In response, the Orokin do the opposite of advancing their technology and return to the old ways of <strong>gun and blade</strong>.</li>
+                <li>The Orokin deploy <strong>Necramechs, Infested creatures, Grineer clones, and Warframe bio-drones</strong> in response, but all are eventually deemed unsuccessful.</li>
+                <li>The <strong>Zariman 10-0</strong> eventually returns from the Void, but no adults survive the attempted jump to the Tau System.</li>
+                <li>The surviving children are permanently altered by their exposure to the Void.</li>
+                <li>The Orokin discover that the children can control the <strong>Warframes through Transference</strong>, leading <strong>Ballas</strong> to take control of the project and weaponize it.</li>
+                <li>The Zariman children become known as the <strong>Tenno</strong> and fight alongside their Warframes against the Sentients.</li>
+                <li>A brief period of <strong>peace</strong> follows as the conflict temporarily subsides.</li>
+                <li>The <strong>Orokin Empire</strong>, including the Tenno, travels to <strong>Tau</strong> through the <strong>Extrasolar Rail</strong>.</li>
+                <li>The Tenno are forced to fight a rebellion group known as the <strong>Anarchs</strong>, who are secretly funded by <strong>Executor Nitokh</strong> in an attempt to keep the war going.</li>
+                <li><strong>Executor Ballas</strong> manipulates the Tenno into destroying the <strong>Xenoflora on Tau's moon, Perita</strong>, contributing to the Old War resuming.</li>
+                <li>The Operator is forced to fight <strong>Adis</strong>.</li>
+                <li>Adis fatally wounds the Operator.</li>
+                <li>Adis uses his ability to heal the Operator, saving their life.</li>
+                <li>The effort of healing the Operator ultimately causes <strong>Adis to die</strong>.</li>
+                <li>The Operator enters a rage and takes control of <strong>Uriel</strong>, flying to the <strong>Tauron Academy</strong> and destroying anything in sight.</li>
+                <li>The Operator attempts to hunt down <strong>Ballas</strong>, but Ballas is already long gone.</li>
+                <li>The Operator eventually encounters <strong>Margulis</strong>.</li>
+                <li>Margulis refuses to answer the Operator's questions.</li>
+                <li>Margulis puts the Operator to sleep, preparing to return them to the <strong>Origin System</strong>.</li>
+                <li>The Operator is placed within the <strong>Second Dream</strong>.</li>
+                <li><strong>Margulis is charged with treason</strong>, taking the Operator's charge upon herself.</li>
+                <li><strong>Margulis is executed by Jade Light</strong>.</li>
+                <li>Following Margulis' death, <strong>Ballas betrays the Orokin</strong> and begins working with <strong>Hunhow</strong>.</li>
+                <li>Ballas gives Hunhow the <strong>location of Lua</strong>.</li>
+                <li>Ballas reprograms Hunhow's daughter, <strong>Natah</strong>, beginning the chain of events that leads to her becoming the <strong>Lotus</strong>.</li>
+                <li>After prolonged fighting, the Tenno eventually <strong>beat the Sentients back</strong>, forcing them to retreat into hiding within the <strong>Veil</strong>.</li>
+                <li>As the Orokin gather to celebrate their victory, the Tenno turn against them and <strong>slaughter them under the instructions of the reprogrammed Natah</strong>.</li>
+            </ul>
+        </div>
+    </details>
+
+    <details class="era">
+        <summary>The Collapse</summary>
+        <div class="era-content">
+            <ul>
+                <li>The remaining <strong>Orokin</strong> are hunted down by the Tenno, leaving only a small number of survivors.</li>
+                <li>Much of the Orokin's technology becomes unusable due to its <strong>gene-locks</strong>.</li>
+                <li><strong>Lua is phased into the Void</strong> in an attempt to protect it.</li>
+                <li>The process exposes the <strong>Lotus</strong> to the Void.</li>
+                <li>To survive the exposure, Lotus makes a deal that allows her to survive the effects of the Void.</li>
+                <li>The <strong>Infestation</strong> spreads throughout the System.</li>
+                <li>The <strong>Grineer</strong>, led by an unusually intelligent mutant, begin to emerge as a major power.</li>
+                <li>The <strong>Twin Sisters</strong> eventually become the Grineer Queens.</li>
+                <li>A rogue Sentient arrives on Earth and destroys almost all of the remaining <strong>Orokin Towers</strong>.</li>
+                <li>Only the <strong>Tower of the Unum</strong> survives.</li>
+                <li>The Sentient is defeated by <strong>Gara</strong>.</li>
+                <li>The Tenno enter <strong>cryosleep</strong>, disappearing from the System.</li>
+            </ul>
+        </div>
+    </details>
+
+    <details class="era">
+        <summary>Post-Collapse</summary>
+        <div class="era-content">
+            <ul>
+                <li>Humanity enters a prolonged <strong>dark age</strong> lasting at least a millennium.</li>
+                <li>Surviving factions fight over remnants of lost Orokin technology.</li>
+                <li>Isolated colonies struggle to survive due to the <strong>Tenno no longer being around to help</strong>.</li>
+                <li>The space-faring <strong>Ostrons</strong> establish a settlement near the <strong>Tower of the Unum</strong>, which becomes <strong>Cetus</strong>.</li>
+            </ul>
+        </div>
+    </details>
+
+    <details class="era">
+        <summary>Modern Era</summary>
+        <div class="era-content">
+            <ul>
+                <li>The <strong>Twin Queens</strong> order the recently demoted <strong>Captain Vor</strong> to locate and destroy the dormant Tenno cryopods. He disobeys this command and instead attempts to kidnap the Warframe using an <strong>Ascaris</strong>.</li>
+                <li>Vor's mission prompts the <strong>Lotus</strong> to begin awakening the Tenno.</li>
+                <li>The <strong>Infestation is released by Grineer scientist Dr. Tengus</strong>, causing the previously contained Infested to begin spreading across the System.</li>
+                <li><strong>Deimos</strong>, concealed within the Void, returns to real-space.</li>
+                <li>The <strong>Entrati family</strong> and their forgotten Orokin secrets are revealed.</li>
+                <li>The <strong>Grineer-Corpus War</strong> erupts and continues throughout much of the modern era.</li>
+                <li><strong>Alad V</strong> attempts to use the Infested to seize control of the System.</li>
+                <li>His plan fails, and he eventually turns to the Tenno for help with his Infestation.</li>
+                <li><strong>Tyl Regor</strong> discovers the tomb of <strong>Hunhow</strong>.</li>
+                <li>Hunhow awakens and attempts to exterminate the Tenno.</li>
+                <li>Hunhow's actions result in <strong>Lua returning to real-space</strong>, and the Tenno remembering that they weren't the Warframe, but a child piloting the Warframe from a distance through <strong>Transference</strong>.</li>
+                <li>The <strong>Elder Queen</strong> attempts to use Continuity on the <strong>Chosen Operator</strong>, using them as a Yuvan, but the attempt fails and the Elder Queen is killed.</li>
+            </ul>
+        </div>
+    </details>
+
+    <details class="era">
+        <summary>The New War</summary>
+        <div class="era-content">
+            <ul>
+                <li><strong>Ballas</strong> emerges from hiding and abducts the <strong>Lotus</strong>, triggering the return of her Sentient programming.</li>
+                <li>Ballas takes control of the remaining <strong>Sentient forces</strong>.</li>
+                <li>He launches a full-scale invasion of the <strong>Origin System</strong>, but fails to take <strong>Deimos</strong> after <strong>Vome and Fass</strong> blast the Murex out of the sky.</li>
+                <li>The Sentients defeat the combined <strong>Grineer and Corpus</strong> forces in the <strong>Veil Proxima</strong>.</li>
+                <li>Ballas imprisons the <strong>Chosen Operator</strong> within their own past.</li>
+                <li>With the Tenno neutralised, Ballas conquers the Origin System.</li>
+                <li>He establishes <strong>Narmer</strong>, creating an empire centred around himself.</li>
+                <li>Ballas rules Narmer for an undefined period of months or years.</li>
+                <li>The <strong>Drifter</strong>, an alternate version of the Chosen Operator, arrives in the Origin System.</li>
+                <li>The Drifter helps the Operator escape.</li>
+                <li>The Operator and Drifter ultimately become united as a single individual.</li>
+                <li>Together, they confront Ballas.</li>
+                <li>Ballas opens a portal toward <strong>Tau</strong>, tearing a hole through reality.</li>
+                <li>The Chosen Operator defeats Ballas.</li>
+                <li>The <strong>Lotus kills Ballas</strong> and closes the portal.</li>
+            </ul>
+        </div>
+    </details>
+
+    <details class="era">
+        <summary>Post-New War / 1999 / The Hex</summary>
+        <div class="era-content">
+            <ul>
+                <li><strong>Narmer remnants</strong> remain active under <strong>Pazuul</strong>.</li>
+                <li>The Tenno and <strong>Kahl-175</strong> continue fighting Narmer forces.</li>
+                <li>The <strong>Zariman 10-0</strong> suddenly appears in the Origin System once again.</li>
+                <li>The Tenno encounter the <strong>Holdfasts</strong> and fight to protect the returning ship.</li>
+                <li>The enormous portal created by Ballas greatly empowers the <strong>Indifference</strong>.</li>
+                <li>The <strong>Murmur</strong> attacks <strong>Albrecht Entrati's</strong> secret laboratories beneath Deimos.</li>
+                <li>The <strong>Kalymos Sequence</strong> is activated, drawing the Tenno into the laboratories.</li>
+                <li>The Tenno fight the Murmur and awaken <strong>Loid</strong>, Albrecht's assistant.</li>
+                <li>The <strong>Drifter and Operator</strong> travel to the Sanctum, where they find <strong>Lotus at the edge of the Void</strong>.</li>
+                <li>Lotus sends the <strong>Drifter</strong> on a mission to retrieve <strong>Arthur's book page</strong>.</li>
+                <li>Lotus explains that the Drifter must travel to <strong>1999 instead of the Operator</strong>, because the <strong>Man in the Wall</strong> considers the Operator refusing to give it the page during the New War to be a breach of their deal, making the Operator's involvement a greater risk.</li>
+                <li>The <strong>Hex</strong> begins with <strong>Arthur searching for his motorbike keys</strong>, as he intends to find Albrecht.</li>
+                <li>Arthur eventually gets a lead after fighting the <strong>tank</strong>. Following the lead eventually takes him to Albrecht, but <strong>Scaldra forces arrive and take Albrecht captive</strong>.</li>
+                <li>Arthur travels through the <strong>Techrot</strong>, eventually reaching <strong>Helminth</strong>, which spits the Drifter out into 1999 while they are controlling an <strong>Excalibur</strong>.</li>
+                <li>Arthur and the Drifter engage in a duel. The Drifter exits <strong>Transference</strong> and attempts to enter Arthur's mind, but Arthur is able to reject the attempt.</li>
+                <li>Arthur ultimately wins the duel by <strong>stabbing the Drifter in the hand</strong>.</li>
+                <li>Following the duel, the <strong>Drifter is questioned by the Hex</strong>.</li>
+                <li>The Drifter begins carrying out <strong>tasks for the Hex across various nodes throughout 1999</strong>.</li>
+                <li>One of these tasks involves finding <strong>Albrecht Entrati</strong>, but when the Drifter reaches the location, Entrati is no longer there and has instead been replaced by the <strong>Man in the Wall</strong>.</li>
+                <li>Eventually, the Drifter discovers the <strong>Backroom</strong>, an Albrecht Entrati safehouse hidden within the <strong>Höllvania Central Mall</strong>.</li>
+                <li>Inside, the Drifter finds a recording from Albrecht explaining what has happened and telling the Drifter what they must do next.</li>
+                <li>Eventually, the Drifter and the Hex confront <strong>Major Neci Rusalka</strong>, who has become increasingly influenced by the Man in the Wall.</li>
+                <li>Following the confrontation, Albrecht tells the Drifter that Rusalka has become a <strong>breach through which the Man in the Wall is entering the time loop</strong>.</li>
+                <li>Albrecht orders the Drifter to <strong>kill Rusalka</strong>, but the Drifter refuses.</li>
+                <li>The <strong>Man in the Wall kidnaps the Drifter</strong>, taking them to the <strong>Zariman 10-0</strong>.</li>
+                <li>The events surrounding the Zariman 10-0 lead into another cycle of <strong>1999</strong>.</li>
+                <li>The Drifter eventually returns to 1999, continuing the events surrounding the <strong>Hex</strong>.</li>
+            </ul>
+        </div>
+    </details>
+
+</main>
+
+<footer>
+    The Lorak Codex · A fan-made Warframe lore archive
+</footer>
+
+</body>
+</html>
