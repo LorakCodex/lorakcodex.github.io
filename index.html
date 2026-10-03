@@ -9,63 +9,69 @@
     <style>
         body {
             margin: 0;
-            background: #0b0d12;
+            background: #0b0b0b;
             color: #e6e6e6;
-            font-family: Georgia, serif;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         header {
-            background: #11151d;
-            border-bottom: 1px solid #343a46;
+            background: #111;
+            border-bottom: 1px solid #333;
             padding: 30px 20px;
             text-align: center;
         }
 
         header h1 {
             margin: 0;
-            font-size: 42px;
+            color: #d4af37;
+            font-size: 32px;
             letter-spacing: 3px;
         }
 
         header p {
-            color: #9da5b4;
             margin-top: 10px;
-            font-style: italic;
+            color: #999;
+            font-size: 14px;
         }
 
         nav {
-            background: #080a0f;
+            background: #151515;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
             padding: 15px;
-            text-align: center;
+            border-bottom: 1px solid #292929;
         }
 
         nav a {
-            color: #c8ced8;
+            color: #ccc;
             text-decoration: none;
-            margin: 0 12px;
+            font-size: 14px;
         }
 
         nav a:hover {
-            color: white;
+            color: #d4af37;
         }
 
         main {
             max-width: 1000px;
             margin: auto;
-            padding: 60px 20px;
+            padding: 50px 20px;
         }
 
         .intro {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
 
         .intro h2 {
-            font-size: 30px;
+            color: #d4af37;
+            font-size: 26px;
         }
 
         .intro p {
-            color: #aeb5c1;
+            color: #aaa;
             line-height: 1.7;
         }
 
@@ -76,31 +82,36 @@
         }
 
         .card {
-            background: #141820;
-            border: 1px solid #303641;
+            background: #141414;
+            border: 1px solid #292929;
             padding: 25px;
             border-radius: 8px;
+            text-decoration: none;
+            color: #e6e6e6;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            border-color: #d4af37;
+            transform: translateY(-3px);
         }
 
         .card h3 {
             margin-top: 0;
+            color: #d4af37;
         }
 
         .card p {
-            color: #aeb5c1;
+            color: #999;
             line-height: 1.5;
-        }
-
-        .card a {
-            color: #d5dae3;
-            text-decoration: none;
         }
 
         footer {
             text-align: center;
-            padding: 30px;
-            color: #707887;
-            border-top: 1px solid #252a34;
+            padding: 30px 20px;
+            border-top: 1px solid #292929;
+            color: #666;
+            font-size: 13px;
             margin-top: 40px;
         }
     </style>
@@ -119,63 +130,53 @@
     <a href="#">Transcripts</a>
     <a href="#">Characters</a>
     <a href="#">Factions</a>
-    <a href="#">Timeline</a>
+    <a href="timeline.html">Timeline</a>
 </nav>
 
 <main>
 
     <section class="intro">
-        <h2>Welcome to the Codex</h2>
+        <h2>I am Lorak.</h2>
 
         <p>
-            I am Lorak.
+            I have spent countless years gathering fragments of history,
+            forgotten records and stories buried beneath the surface of the Origin System.
         </p>
 
         <p>
-            These pages preserve the stories, records and histories
-            scattered throughout the Origin System.
-        </p>
-
-        <p>
-            Some truths were recorded.
-            Others were forgotten.
-            And some were never meant to be found.
+            What follows is an archive of what I have discovered.
         </p>
     </section>
 
     <section class="cards">
 
-        <div class="card">
+        <a href="#" class="card">
             <h3>Quest Archives</h3>
             <p>
-                Explore the quests that shaped the history of the Origin System and beyond.
+                Records and summaries of the quests that shaped the Origin System.
             </p>
-            <a href="#">Enter the Archives →</a>
-        </div>
+        </a>
 
-        <div class="card">
+        <a href="#" class="card">
             <h3>Transcripts</h3>
             <p>
-                Browse dialogue and recorded conversations from across the system.
+                Dialogue, transmissions and recovered conversations.
             </p>
-            <a href="#">Read the Transcripts →</a>
-        </div>
+        </a>
 
-        <div class="card">
+        <a href="#" class="card">
             <h3>Characters</h3>
             <p>
-                Records concerning the people, beings and entities within the story.
+                Information about the individuals who shaped history.
             </p>
-            <a href="#">Open Character Records →</a>
-        </div>
+        </a>
 
-        <div class="card">
+        <a href="#" class="card">
             <h3>Factions</h3>
             <p>
-                Discover the organizations and forces that shaped the Origin System.
+                Records concerning the major factions of the Origin System.
             </p>
-            <a href="#">View Factions →</a>
-        </div>
+        </a>
 
     </section>
 
