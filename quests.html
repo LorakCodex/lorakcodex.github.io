@@ -8,16 +8,16 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
             background-color: #0b0b0b;
-            color: #ffffff;
+            color: #e6e6e6;
+            font-family: Arial, sans-serif;
         }
 
         header {
-            background-color: #111111;
-            padding: 20px;
+            background-color: #111;
+            padding: 25px;
             text-align: center;
-            border-bottom: 1px solid #d4af37;
+            border-bottom: 2px solid #d4af37;
         }
 
         header h1 {
@@ -31,14 +31,14 @@
         }
 
         nav a {
-            color: #ffffff;
+            color: #d4af37;
             text-decoration: none;
-            margin: 0 8px;
-            font-size: 14px;
+            margin: 0 10px;
+            font-weight: bold;
         }
 
         nav a:hover {
-            color: #d4af37;
+            color: #fff;
         }
 
         main {
@@ -49,60 +49,72 @@
 
         h2 {
             color: #d4af37;
-            text-align: center;
-            margin-bottom: 30px;
+            border-bottom: 1px solid #d4af37;
+            padding-bottom: 10px;
         }
 
         .quest {
-            margin-bottom: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #333;
+            border-left: 4px solid #d4af37;
+            background-color: #111;
         }
 
-        .quest-button {
+        .quest button {
             width: 100%;
-            padding: 16px;
-            background-color: #151515;
+            background: none;
+            border: none;
             color: #d4af37;
-            border: 1px solid #333333;
+            padding: 18px;
             text-align: left;
-            font-size: 16px;
+            font-size: 18px;
+            font-weight: bold;
             cursor: pointer;
-            border-radius: 6px;
         }
 
-        .quest-button:hover {
-            border-color: #d4af37;
-        }
-
-        .quest-button.active {
-            border-color: #d4af37;
+        .quest button:hover {
+            background-color: #191919;
         }
 
         .quest-content {
             display: none;
-            background-color: #101010;
-            border: 1px solid #333333;
-            border-top: none;
-            padding: 18px;
+            padding: 0 20px 20px 20px;
+            color: #ddd;
             line-height: 1.6;
         }
 
-        .quest-content.show {
-            display: block;
+        .quest-content ul {
+            padding-left: 25px;
         }
 
-        .quest-content p {
-            margin-top: 0;
-            margin-bottom: 16px;
+        .quest-content li {
+            margin-bottom: 12px;
+        }
+
+        .quest-content strong {
+            color: #fff;
         }
 
         footer {
             text-align: center;
             padding: 30px;
+            color: #777;
+            border-top: 1px solid #222;
             margin-top: 50px;
-            color: #777777;
-            border-top: 1px solid #222222;
         }
     </style>
+
+    <script>
+        function toggleQuest(id) {
+            const content = document.getElementById(id);
+
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -112,11 +124,8 @@
 
     <nav>
         <a href="index.html">Home</a>
-        <a href="quests.html">Quests</a>
-        <a href="#">Transcripts</a>
-        <a href="#">Characters</a>
-        <a href="#">Factions</a>
         <a href="timeline.html">Timeline</a>
+        <a href="quests.html">Quests</a>
         <a href="operations.html">Operations</a>
         <a href="args.html">ARGs</a>
         <a href="https://discord.gg/X3WsdC8jP4">Discord</a>
@@ -124,240 +133,366 @@
 </header>
 
 <main>
-    <h2>Quest Archives</h2>
+
+    <h2>Quest Order</h2>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">1. The Awakening</button>
-        <div class="quest-content">
-            <p>• The Awakening: For centuries, the Tenno have been dormant. As the Grineer Empire grows, the Lotus starts waking them up.</p>
+        <button onclick="toggleQuest('quest1')">
+            1. Awakening
+        </button>
 
-            <p>• Captain Vor's Plot: Captain Vor hunts down newly awakened Tenno on Earth. Instead of killing the player like ordered by the Twin Queens, he attaches an Ascaris device to control the Warframe.</p>
-
-            <p>• The Intervention: The Lotus remotely surges the player's power systems, letting them break free and fight back against nearby Grineer soldiers.</p>
-
-            <p>Conclusion: You eventually fight Vor at the end and get picked up by Ordis, your original Orbiter Cephalon.</p>
+        <div class="quest-content" id="quest1">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">2. Vor's Prize</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest2')">
+            2. Vor's Prize
+        </button>
+
+        <div class="quest-content" id="quest2">
+            <ul>
+                <li><strong>The Broken Orbiter:</strong> After escaping Earth, the Tenno arrives on their personal ship only to find it heavily damaged, offline, and stripped of vital components by the Grineer.</li>
+
+                <li><strong>The Cephalon's Return:</strong> Ordis, the ship's erratic Cephalon companion, boots back up to help the player locate and reinstall missing segments, bringing the Foundry and Arsenal back to fighting shape.</li>
+
+                <li><strong>Darvo's Rescue:</strong> To find a cure for the burrowing Ascaris device, the Tenno intercepts Grineer comms and rescues Darvo, an imprisoned Corpus merchant who provides a blueprint for an Ascaris Negator.</li>
+
+                <li><strong>The Anti-Tamper Trigger:</strong> You forge the Negator in your ship's Foundry, but injecting it activates a hidden Grineer failsafe, transforming the Ascaris into a ticking bomb that will detonate your Warframe.</li>
+
+                <li><strong>The Confrontation:</strong> The Lotus tracks the detonation override signal straight to Mercury, forcing the Tenno to infiltrate a mining outpost and face Vor head-on as he fights using Void energy from his Janus Key.</li>
+
+                <li><strong>Conclusion:</strong> You defeat Vor in combat, which permanently disables the detonator signal, purges the Ascaris from your systems, and allows you to safely take to the stars.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">3. The Teacher</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest3')">
+            3. The Teacher
+        </button>
+
+        <div class="quest-content" id="quest3">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">4. Saya's Vigil</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest4')">
+            4. Saya's Vigil
+        </button>
+
+        <div class="quest-content" id="quest4">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">5. Vox Solaris</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest5')">
+            5. Vox Solaris
+        </button>
+
+        <div class="quest-content" id="quest5">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">6. Once Awake</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest6')">
+            6. Once Awake
+        </button>
+
+        <div class="quest-content" id="quest6">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">7. Heart of Deimos</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest7')">
+            7. Heart of Deimos
+        </button>
+
+        <div class="quest-content" id="quest7">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">8. The Archwing</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest8')">
+            8. The Archwing
+        </button>
+
+        <div class="quest-content" id="quest8">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">9. Natah</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest9')">
+            9. Natah
+        </button>
+
+        <div class="quest-content" id="quest9">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">10. The Second Dream</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest10')">
+            10. The Second Dream
+        </button>
+
+        <div class="quest-content" id="quest10">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">11. The War Within</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest11')">
+            11. The War Within
+        </button>
+
+        <div class="quest-content" id="quest11">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">12. Rising Tide</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest12')">
+            12. Rising Tide
+        </button>
+
+        <div class="quest-content" id="quest12">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">13. Chains of Harrow</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest13')">
+            13. Chains of Harrow
+        </button>
+
+        <div class="quest-content" id="quest13">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">14. Apostasy Prologue</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest14')">
+            14. Apostasy Prologue
+        </button>
+
+        <div class="quest-content" id="quest14">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">15. The Sacrifice</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest15')">
+            15. The Sacrifice
+        </button>
+
+        <div class="quest-content" id="quest15">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">16. Prelude to War</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest16')">
+            16. Prelude to War
+        </button>
+
+        <div class="quest-content" id="quest16">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">17. The New War</button>
-        <div class="quest-content">
-            <p>• The United Front: Grineer soldier Kahl-175, Corpus tech Veso-R, the Chosen Operator, and Teshin launch a desperate, coordinated assault against Erra’s Sentient armada, ultimately failing as Teshin is captured and forced to fight Erra.</p>
+        <button onclick="toggleQuest('quest17')">
+            17. The New War
+        </button>
 
-            <p>Eventually, the Operator shows up, but this is also a failed effort. Ballas opens a Void portal, which begins pulling Natah through. The Operator, in an effort to pull her back, exits Transference, with the Warframe still holding on. Ballas takes advantage of this and cuts Natah’s hand off. The Operator, in shock, kneels on the ground. Ballas then stabs the Operator, sending them into the Void and trapping them in their own personal history.</p>
+        <div class="quest-content" id="quest17">
+            <ul>
+                <li><strong>The United Front:</strong> Grineer soldier Kahl-175, Corpus tech Veso-R, the Chosen Operator, and Teshin launch a desperate, coordinated assault against Erra's Sentient armada, ultimately failing as Teshin is captured and forced to fight Erra.</li>
 
-            <p>• The Drifter’s Rise: With the Tenno cast into the Void and the Lotus turned into an Eidolon, a mysterious, older version of the Operator—the Drifter—leads a resistance movement against Ballas’s brainwashed empire, Narmer.</p>
+                <li><strong>The Drifter's Rise:</strong> The Drifter survives within the Sentient-controlled system and becomes involved with Nira, Hunhow, and the Nataruk, gradually finding a way to challenge the Sentient occupation.</li>
 
-            <p>This eventually leads to the Drifter having to run from an Archon named Nira. After this, the Drifter goes to the only person he could think of who would know something about Archons, Hunhow. Despite his hatred, Hunhow puts it aside because he wants his daughter free of Ballas. To help you fight them, he gives you a bow called Nataruk.</p>
+                <li><strong>The Choice &amp; Convergence:</strong> The Operator eventually confronts Ballas and Natah as the conflict reaches its climax, leading to the convergence of the Operator and Drifter.</li>
 
-            <p>• The Choice &amp; Convergence: After traversing the past as the Operator, the Drifter links up with the Operator mid-fight with Eidolon Lotus. This leads to you rescuing your younger self and the Drifter gaining Void powers. You must then choose whether to face the final battle as the Operator or the Drifter.</p>
-
-            <p>Conclusion: You defeat Ballas, break his hold over the Origin System, and the Man in the Wall shows up expanding Ballas’s Void portal speaks his language before leaving.</p>
-
-            <p>When back on the Orbiter, you decide the name the Lotus will use to lead the others, though this is her choice.</p>
+                <li><strong>Conclusion:</strong> The New War ends with Ballas defeated and the Lotus freed, while the Operator and Drifter are left to deal with the consequences of the conflict.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">18. The Duviri Paradox</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest18')">
+            18. The Duviri Paradox
+        </button>
+
+        <div class="quest-content" id="quest18">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">19. Angels of the Zariman</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest19')">
+            19. Angels of the Zariman
+        </button>
+
+        <div class="quest-content" id="quest19">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">20. Veilbreaker</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest20')">
+            20. Veilbreaker
+        </button>
+
+        <div class="quest-content" id="quest20">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">21. Whispers in the Walls</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest21')">
+            21. Whispers in the Walls
+        </button>
+
+        <div class="quest-content" id="quest21">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">22. Jade Shadows</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest22')">
+            22. Jade Shadows
+        </button>
+
+        <div class="quest-content" id="quest22">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">23. Jade Shadows: Constellations</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest23')">
+            23. Jade Shadows: Constellations
+        </button>
+
+        <div class="quest-content" id="quest23">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">24. The Lotus Eaters</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest24')">
+            24. The Lotus Eaters
+        </button>
+
+        <div class="quest-content" id="quest24">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">25. The Hex / Warframe: 1999</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest25')">
+            25. The Hex / Warframe: 1999
+        </button>
+
+        <div class="quest-content" id="quest25">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">26. Old Peace</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest26')">
+            26. Old Peace
+        </button>
+
+        <div class="quest-content" id="quest26">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">27. Tau Prologue</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest27')">
+            27. Tau Prologue
+        </button>
+
+        <div class="quest-content" id="quest27">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">28. Tau 2026</button>
-        <div class="quest-content">
-            <p>Summary coming soon.</p>
+        <button onclick="toggleQuest('quest28')">
+            28. Tau 2026
+        </button>
+
+        <div class="quest-content" id="quest28">
+            <ul>
+                <li>Summary coming soon.</li>
+            </ul>
         </div>
     </div>
 
 </main>
 
 <footer>
-    The Lorak Codex — Warframe Lore Archive
+    The Lorak Codex — A Warframe Lore Archive
 </footer>
-
-<script>
-    function toggleQuest(button) {
-        const content = button.nextElementSibling;
-
-        if (!content || !content.classList.contains("quest-content")) {
-            return;
-        }
-
-        button.classList.toggle("active");
-        content.classList.toggle("show");
-    }
-</script>
 
 </body>
 </html>
