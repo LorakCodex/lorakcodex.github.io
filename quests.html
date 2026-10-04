@@ -15,7 +15,7 @@
 
         header {
             background-color: #111;
-            padding: 25px;
+            padding: 20px;
             text-align: center;
             border-bottom: 2px solid #d4af37;
         }
@@ -38,7 +38,7 @@
         }
 
         nav a:hover {
-            color: #fff;
+            text-decoration: underline;
         }
 
         main {
@@ -49,14 +49,13 @@
 
         h2 {
             color: #d4af37;
-            border-bottom: 1px solid #d4af37;
+            border-bottom: 1px solid #444;
             padding-bottom: 10px;
         }
 
         .quest {
             margin-bottom: 15px;
-            border: 1px solid #333;
-            border-left: 4px solid #d4af37;
+            border-left: 3px solid #d4af37;
             background-color: #111;
         }
 
@@ -65,41 +64,36 @@
             background: none;
             border: none;
             color: #d4af37;
-            padding: 18px;
             text-align: left;
+            padding: 15px;
             font-size: 18px;
             font-weight: bold;
             cursor: pointer;
         }
 
         .quest button:hover {
-            background-color: #191919;
+            background-color: #1a1a1a;
         }
 
         .quest-content {
             display: none;
             padding: 0 20px 20px 20px;
-            color: #ddd;
             line-height: 1.6;
         }
 
         .quest-content ul {
-            padding-left: 25px;
+            padding-left: 20px;
         }
 
         .quest-content li {
-            margin-bottom: 12px;
-        }
-
-        .quest-content strong {
-            color: #fff;
+            margin-bottom: 10px;
         }
 
         footer {
             text-align: center;
             padding: 30px;
             color: #777;
-            border-top: 1px solid #222;
+            border-top: 1px solid #333;
             margin-top: 50px;
         }
     </style>
@@ -136,13 +130,10 @@
 
     <h2>Quest Order</h2>
 
-    <!-- 1. Awakening -->
+    <!-- 1 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest1')">
-            1. Awakening
-        </button>
-
-        <div class="quest-content" id="quest1">
+        <button onclick="toggleQuest('quest1')">1. Awakening</button>
+        <div id="quest1" class="quest-content">
             <ul>
                 <li><strong>The Awakening:</strong> For centuries, the Tenno have been dormant. As the Grineer Empire grows, the Lotus starts waking them up.</li>
 
@@ -155,13 +146,10 @@
         </div>
     </div>
 
-    <!-- 2. Vor's Prize -->
+    <!-- 2 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest2')">
-            2. Vor's Prize
-        </button>
-
-        <div class="quest-content" id="quest2">
+        <button onclick="toggleQuest('quest2')">2. Vor's Prize</button>
+        <div id="quest2" class="quest-content">
             <ul>
                 <li><strong>The Broken Orbiter:</strong> After escaping Earth, the Tenno arrives on their personal ship only to find it heavily damaged, offline, and stripped of vital components by the Grineer.</li>
 
@@ -178,195 +166,158 @@
         </div>
     </div>
 
-    <!-- 3. The Teacher -->
+    <!-- 3 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest3')">
-            3. The Teacher
-        </button>
+        <button onclick="toggleQuest('quest3')">3. The Teacher</button>
+        <div id="quest3" class="quest-content">
+            <ul>
+                <li><strong>The Interruption:</strong> You track down an Orokin Mod Segment, only to be intercepted by Teshin, a surviving Dax warrior.</li>
 
-        <div class="quest-content" id="quest3">
+                <li><strong>The Lesson:</strong> Disapproving of the Lotus hiding your memories of the Old War, Teshin captures you to teach you how to use mods to amplify your gear.</li>
+
+                <li><strong>Corpus Ambush:</strong> Corpus forces interrupt the training, and Teshin surrenders himself so you can escape with the segment.</li>
+
+                <li><strong>The Rescue:</strong> You upgrade your gear, infiltrate a Corpus ship to rescue Teshin, and subsequently sabotage the ship's reactor.</li>
+
+                <li><strong>Conclusion:</strong> Teshin and the Lotus reconcile on needing each other to guide you, and Teshin relocates to the Relay to act as your ongoing mentor.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="quest">
+        <button onclick="toggleQuest('quest4')">4. Saya's Vigil</button>
+        <div id="quest4" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
         </div>
     </div>
 
-    <!-- 4. Saya's Vigil -->
+    <!-- 5 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest4')">
-            4. Saya's Vigil
-        </button>
-
-        <div class="quest-content" id="quest4">
+        <button onclick="toggleQuest('quest5')">5. Vox Solaris</button>
+        <div id="quest5" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
         </div>
     </div>
 
-    <!-- 5. Vox Solaris -->
+    <!-- 6 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest5')">
-            5. Vox Solaris
-        </button>
-
-        <div class="quest-content" id="quest5">
+        <button onclick="toggleQuest('quest6')">6. Once Awake</button>
+        <div id="quest6" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
         </div>
     </div>
 
-    <!-- 6. Once Awake -->
+    <!-- 7 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest6')">
-            6. Once Awake
-        </button>
-
-        <div class="quest-content" id="quest6">
+        <button onclick="toggleQuest('quest7')">7. Heart of Deimos</button>
+        <div id="quest7" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
         </div>
     </div>
 
-    <!-- 7. Heart of Deimos -->
+    <!-- 8 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest7')">
-            7. Heart of Deimos
-        </button>
-
-        <div class="quest-content" id="quest7">
+        <button onclick="toggleQuest('quest8')">8. The Archwing</button>
+        <div id="quest8" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
         </div>
     </div>
 
-    <!-- 8. The Archwing -->
+    <!-- 9 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest8')">
-            8. The Archwing
-        </button>
-
-        <div class="quest-content" id="quest8">
+        <button onclick="toggleQuest('quest9')">9. Natah</button>
+        <div id="quest9" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
         </div>
     </div>
 
-    <!-- 9. Natah -->
+    <!-- 10 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest9')">
-            9. Natah
-        </button>
-
-        <div class="quest-content" id="quest9">
+        <button onclick="toggleQuest('quest10')">10. The Second Dream</button>
+        <div id="quest10" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
         </div>
     </div>
 
-    <!-- 10. The Second Dream -->
+    <!-- 11 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest10')">
-            10. The Second Dream
-        </button>
-
-        <div class="quest-content" id="quest10">
+        <button onclick="toggleQuest('quest11')">11. The War Within</button>
+        <div id="quest11" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
         </div>
     </div>
 
-    <!-- 11. The War Within -->
+    <!-- 12 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest11')">
-            11. The War Within
-        </button>
-
-        <div class="quest-content" id="quest11">
+        <button onclick="toggleQuest('quest12')">12. Rising Tide</button>
+        <div id="quest12" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
         </div>
     </div>
 
-    <!-- 12. Rising Tide -->
+    <!-- 13 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest12')">
-            12. Rising Tide
-        </button>
-
-        <div class="quest-content" id="quest12">
+        <button onclick="toggleQuest('quest13')">13. Chains of Harrow</button>
+        <div id="quest13" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
         </div>
     </div>
 
-    <!-- 13. Chains of Harrow -->
+    <!-- 14 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest13')">
-            13. Chains of Harrow
-        </button>
-
-        <div class="quest-content" id="quest13">
+        <button onclick="toggleQuest('quest14')">14. Apostasy Prologue</button>
+        <div id="quest14" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
         </div>
     </div>
 
-    <!-- 14. Apostasy Prologue -->
+    <!-- 15 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest14')">
-            14. Apostasy Prologue
-        </button>
-
-        <div class="quest-content" id="quest14">
+        <button onclick="toggleQuest('quest15')">15. The Sacrifice</button>
+        <div id="quest15" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
         </div>
     </div>
 
-    <!-- 15. The Sacrifice -->
+    <!-- 16 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest15')">
-            15. The Sacrifice
-        </button>
-
-        <div class="quest-content" id="quest15">
+        <button onclick="toggleQuest('quest16')">16. Prelude to War</button>
+        <div id="quest16" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
         </div>
     </div>
 
-    <!-- 16. Prelude to War -->
+    <!-- 17 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest16')">
-            16. Prelude to War
-        </button>
-
-        <div class="quest-content" id="quest16">
-            <ul>
-                <li>Summary coming soon.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- 17. The New War -->
-    <div class="quest">
-        <button onclick="toggleQuest('quest17')">
-            17. The New War
-        </button>
-
-        <div class="quest-content" id="quest17">
+        <button onclick="toggleQuest('quest17')">17. The New War</button>
+        <div id="quest17" class="quest-content">
             <ul>
                 <li><strong>The United Front:</strong> Grineer soldier Kahl-175, Corpus tech Veso-R, the Chosen Operator, and Teshin launch a desperate, coordinated assault against Erra's Sentient armada, ultimately failing as Teshin is captured and forced to fight Erra.</li>
 
@@ -377,143 +328,110 @@
         </div>
     </div>
 
-    <!-- 18. The Duviri Paradox -->
+    <!-- 18 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest18')">
-            18. The Duviri Paradox
-        </button>
-
-        <div class="quest-content" id="quest18">
+        <button onclick="toggleQuest('quest18')">18. The Duviri Paradox</button>
+        <div id="quest18" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
         </div>
     </div>
 
-    <!-- 19. Angels of the Zariman -->
+    <!-- 19 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest19')">
-            19. Angels of the Zariman
-        </button>
-
-        <div class="quest-content" id="quest19">
+        <button onclick="toggleQuest('quest19')">19. Angels of the Zariman</button>
+        <div id="quest19" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
         </div>
     </div>
 
-    <!-- 20. Veilbreaker -->
+    <!-- 20 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest20')">
-            20. Veilbreaker
-        </button>
-
-        <div class="quest-content" id="quest20">
+        <button onclick="toggleQuest('quest20')">20. Veilbreaker</button>
+        <div id="quest20" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
         </div>
     </div>
 
-    <!-- 21. Whispers in the Walls -->
+    <!-- 21 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest21')">
-            21. Whispers in the Walls
-        </button>
-
-        <div class="quest-content" id="quest21">
+        <button onclick="toggleQuest('quest21')">21. Whispers in the Walls</button>
+        <div id="quest21" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
         </div>
     </div>
 
-    <!-- 22. Jade Shadows -->
+    <!-- 22 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest22')">
-            22. Jade Shadows
-        </button>
-
-        <div class="quest-content" id="quest22">
+        <button onclick="toggleQuest('quest22')">22. Jade Shadows</button>
+        <div id="quest22" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
         </div>
     </div>
 
-    <!-- 23. Jade Shadows: Constellations -->
+    <!-- 23 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest23')">
-            23. Jade Shadows: Constellations
-        </button>
-
-        <div class="quest-content" id="quest23">
+        <button onclick="toggleQuest('quest23')">23. Jade Shadows: Constellations</button>
+        <div id="quest23" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
         </div>
     </div>
 
-    <!-- 24. The Lotus Eaters -->
+    <!-- 24 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest24')">
-            24. The Lotus Eaters
-        </button>
-
-        <div class="quest-content" id="quest24">
+        <button onclick="toggleQuest('quest24')">24. The Lotus Eaters</button>
+        <div id="quest24" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
         </div>
     </div>
 
-    <!-- 25. The Hex / Warframe: 1999 -->
+    <!-- 25 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest25')">
-            25. The Hex / Warframe: 1999
-        </button>
-
-        <div class="quest-content" id="quest25">
+        <button onclick="toggleQuest('quest25')">25. The Hex / Warframe: 1999</button>
+        <div id="quest25" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
         </div>
     </div>
 
-    <!-- 26. Old Peace -->
+    <!-- 26 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest26')">
-            26. Old Peace
-        </button>
-
-        <div class="quest-content" id="quest26">
+        <button onclick="toggleQuest('quest26')">26. Old Peace</button>
+        <div id="quest26" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
         </div>
     </div>
 
-    <!-- 27. Tau Prologue -->
+    <!-- 27 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest27')">
-            27. Tau Prologue
-        </button>
-
-        <div class="quest-content" id="quest27">
+        <button onclick="toggleQuest('quest27')">27. Tau Prologue</button>
+        <div id="quest27" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
         </div>
     </div>
 
-    <!-- 28. Tau 2026 -->
+    <!-- 28 -->
     <div class="quest">
-        <button onclick="toggleQuest('quest28')">
-            28. Tau 2026
-        </button>
-
-        <div class="quest-content" id="quest28">
+        <button onclick="toggleQuest('quest28')">28. Tau 2026</button>
+        <div id="quest28" class="quest-content">
             <ul>
                 <li>Summary coming soon.</li>
             </ul>
