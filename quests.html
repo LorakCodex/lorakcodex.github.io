@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Quests | The Lorak Codex</title>
+    <title>Quests - The Lorak Codex</title>
 
     <style>
         body {
@@ -16,39 +15,30 @@
 
         header {
             background-color: #111111;
-            padding: 25px;
+            padding: 20px;
             text-align: center;
-            border-bottom: 2px solid #d4af37;
+            border-bottom: 1px solid #d4af37;
         }
 
         header h1 {
             margin: 0;
             color: #d4af37;
-            font-size: 32px;
-        }
-
-        header p {
-            margin-top: 8px;
-            color: #cccccc;
+            letter-spacing: 3px;
         }
 
         nav {
-            background-color: #151515;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 12px;
-            gap: 20px;
+            margin-top: 15px;
         }
 
         nav a {
-            color: #d4af37;
+            color: #ffffff;
             text-decoration: none;
-            font-weight: bold;
+            margin: 0 8px;
+            font-size: 14px;
         }
 
         nav a:hover {
-            color: #ffffff;
+            color: #d4af37;
         }
 
         main {
@@ -57,19 +47,10 @@
             padding: 0 20px;
         }
 
-        .intro {
-            text-align: center;
-            margin-bottom: 35px;
-        }
-
-        .intro h2 {
+        h2 {
             color: #d4af37;
-            font-size: 28px;
-        }
-
-        .intro p {
-            color: #cccccc;
-            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 30px;
         }
 
         .quest {
@@ -78,56 +59,48 @@
 
         .quest-button {
             width: 100%;
+            padding: 16px;
             background-color: #151515;
-            border: 1px solid #333333;
-            border-left: 4px solid #d4af37;
-            border-radius: 6px;
-            padding: 18px 20px;
             color: #d4af37;
-            font-size: 19px;
-            font-weight: bold;
+            border: 1px solid #333333;
             text-align: left;
+            font-size: 16px;
             cursor: pointer;
+            border-radius: 6px;
         }
 
         .quest-button:hover {
-            background-color: #1c1c1c;
-            color: #ffffff;
+            border-color: #d4af37;
         }
 
-        .quest-button::before {
-            content: "▶";
-            display: inline-block;
-            margin-right: 12px;
-            font-size: 12px;
-            transition: transform 0.2s;
-        }
-
-        .quest-button.active::before {
-            transform: rotate(90deg);
+        .quest-button.active {
+            border-color: #d4af37;
         }
 
         .quest-content {
             display: none;
-            background-color: #111111;
+            background-color: #101010;
             border: 1px solid #333333;
             border-top: none;
-            padding: 18px 20px;
-            color: #cccccc;
-            border-radius: 0 0 6px 6px;
-            line-height: 1.7;
+            padding: 18px;
+            line-height: 1.6;
         }
 
         .quest-content.show {
             display: block;
         }
 
+        .quest-content p {
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
         footer {
             text-align: center;
             padding: 30px;
             margin-top: 50px;
-            border-top: 1px solid #333333;
-            color: #888888;
+            color: #777777;
+            border-top: 1px solid #222222;
         }
     </style>
 </head>
@@ -136,32 +109,25 @@
 
 <header>
     <h1>The Lorak Codex</h1>
-    <p>Warframe Lore &amp; History</p>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="quests.html">Quests</a>
+        <a href="#">Transcripts</a>
+        <a href="#">Characters</a>
+        <a href="#">Factions</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="operations.html">Operations</a>
+        <a href="args.html">ARGs</a>
+        <a href="https://discord.gg/X3WsdC8jP4">Discord</a>
+    </nav>
 </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="quests.html">Quests</a>
-    <a href="#">Transcripts</a>
-    <a href="#">Characters</a>
-    <a href="#">Factions</a>
-    <a href="timeline.html">Timeline</a>
-    <a href="operations.html">Operations</a>
-    <a href="args.html">ARGs</a>
-    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
-</nav>
-
 <main>
-
-    <div class="intro">
-        <h2>Quests</h2>
-        <p>
-            Explore the quests of Warframe in story order.
-        </p>
-    </div>
+    <h2>Quest Archives</h2>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">1. Awakening</button>
+        <button class="quest-button" type="button" onclick="toggleQuest(this)">1. The Awakening</button>
         <div class="quest-content">
             <p>• The Awakening: For centuries, the Tenno have been dormant. As the Grineer Empire grows, the Lotus starts waking them up.</p>
 
@@ -175,87 +141,121 @@
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">2. Vor's Prize</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">3. The Teacher</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">4. Saya's Vigil</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">5. Vox Solaris</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">6. Once Awake</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">7. Heart of Deimos</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">8. The Archwing</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">9. Natah</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">10. The Second Dream</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">11. The War Within</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">12. Rising Tide</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">13. Chains of Harrow</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">14. Apostasy Prologue</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">15. The Sacrifice</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">16. Prelude to War</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">17. The New War</button>
         <div class="quest-content">
-            <p>• The United Front: Grineer soldier Kahl-175, Corpus tech Veso-R, the Chosen Operator, and Teshin launch a desperate, coordinated assault against Erra's Sentient armada, ultimately failing as Teshin is captured and forced to fight Erra. Eventually, the Operator shows up, but this is also a failed effort. Ballas opens a Void portal, which begins pulling Natah through. The Operator, in an effort to pull her back, exits Transference, with the Warframe still holding on. Ballas takes advantage of this and cuts Natah's hand off. The Operator, in shock, kneels on the ground. Ballas then stabs the Operator, sending them into the Void and trapping them in their own personal history.</p>
+            <p>• The United Front: Grineer soldier Kahl-175, Corpus tech Veso-R, the Chosen Operator, and Teshin launch a desperate, coordinated assault against Erra’s Sentient armada, ultimately failing as Teshin is captured and forced to fight Erra.</p>
 
-            <p>• The Drifter's Rise: With the Tenno cast into the Void and the Lotus turned into an Eidolon, a mysterious, older version of the Operator—the Drifter—leads a resistance movement against Ballas's brainwashed empire, Narmer.</p>
+            <p>Eventually, the Operator shows up, but this is also a failed effort. Ballas opens a Void portal, which begins pulling Natah through. The Operator, in an effort to pull her back, exits Transference, with the Warframe still holding on. Ballas takes advantage of this and cuts Natah’s hand off. The Operator, in shock, kneels on the ground. Ballas then stabs the Operator, sending them into the Void and trapping them in their own personal history.</p>
 
-            <p>• The Choice &amp; Convergence: After traversing the past as the Operator, the Drifter links up mid-fight with Eidolon Lotus. This leads to you rescuing your younger self and the Drifter gaining Void powers. You must then choose whether to face the final battle as the Operator or the Drifter.</p>
+            <p>• The Drifter’s Rise: With the Tenno cast into the Void and the Lotus turned into an Eidolon, a mysterious, older version of the Operator—the Drifter—leads a resistance movement against Ballas’s brainwashed empire, Narmer.</p>
+
+            <p>This eventually leads to the Drifter having to run from an Archon named Nira. After this, the Drifter goes to the only person he could think of who would know something about Archons, Hunhow. Despite his hatred, Hunhow puts it aside because he wants his daughter free of Ballas. To help you fight them, he gives you a bow called Nataruk.</p>
+
+            <p>• The Choice &amp; Convergence: After traversing the past as the Operator, the Drifter links up with the Operator mid-fight with Eidolon Lotus. This leads to you rescuing your younger self and the Drifter gaining Void powers. You must then choose whether to face the final battle as the Operator or the Drifter.</p>
 
             <p>Conclusion: You defeat Ballas, break his hold over the Origin System, and the Man in the Wall shows up before leaving. When back on the Orbiter, you decide the name the Lotus will use to lead the others, though this is her choice.</p>
         </div>
@@ -263,63 +263,85 @@
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">18. The Duviri Paradox</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">19. Angels of the Zariman</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">20. Veilbreaker</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">21. Whispers in the Walls</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">22. Jade Shadows</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">23. Jade Shadows: Constellations</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">24. The Lotus Eaters</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">25. The Hex / Warframe: 1999</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">26. Old Peace</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">27. Tau Prologue</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">28. Tau 2026</button>
-        <div class="quest-content">Summary coming soon.</div>
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
     </div>
 
 </main>
 
 <footer>
-    <p>The Lorak Codex — Warframe Lore &amp; History</p>
+    The Lorak Codex — Warframe Lore Archive
 </footer>
 
 <script>
