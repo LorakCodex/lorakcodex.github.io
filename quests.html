@@ -8,21 +8,21 @@
     <style>
         body {
             margin: 0;
-            background-color: #0b0b0b;
-            color: #e0e0e0;
+            background: #0b0b0b;
+            color: #e6e6e6;
             font-family: Arial, sans-serif;
         }
 
         header {
-            background-color: #111;
+            background: #111;
             padding: 20px;
             text-align: center;
-            border-bottom: 2px solid #d4af37;
+            border-bottom: 1px solid #333;
         }
 
-        header h1 {
-            color: #d4af37;
+        h1 {
             margin: 0 0 15px 0;
+            color: #d4af37;
             letter-spacing: 3px;
         }
 
@@ -30,7 +30,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 10px;
+            gap: 12px;
         }
 
         nav a {
@@ -38,17 +38,17 @@
             text-decoration: none;
             padding: 8px 12px;
             border: 1px solid #d4af37;
-            border-radius: 5px;
+            border-radius: 4px;
         }
 
         nav a:hover {
-            background-color: #d4af37;
-            color: #111;
+            background: #d4af37;
+            color: #000;
         }
 
         main {
             max-width: 900px;
-            margin: 40px auto;
+            margin: 30px auto;
             padding: 0 20px;
         }
 
@@ -59,34 +59,33 @@
         }
 
         .quest {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            overflow: hidden;
+            background: #111;
         }
 
         .quest-button {
             width: 100%;
-            background-color: #151515;
+            background: #111;
             color: #d4af37;
-            border: 1px solid #d4af37;
-            padding: 15px;
+            border: none;
+            padding: 16px;
             text-align: left;
             font-size: 16px;
             cursor: pointer;
-            border-radius: 5px;
         }
 
         .quest-button:hover,
         .quest-button.active {
-            background-color: #d4af37;
-            color: #111;
+            background: #1b1b1b;
         }
 
         .quest-content {
             display: none;
-            background-color: #111;
-            border-left: 1px solid #d4af37;
-            border-right: 1px solid #d4af37;
-            border-bottom: 1px solid #d4af37;
-            padding: 15px;
+            padding: 15px 18px;
+            border-top: 1px solid #333;
             line-height: 1.6;
         }
 
@@ -95,8 +94,7 @@
         }
 
         .quest-content p {
-            margin-top: 0;
-            margin-bottom: 15px;
+            margin: 0 0 15px 0;
         }
 
         .quest-content p:last-child {
@@ -106,7 +104,7 @@
         footer {
             text-align: center;
             padding: 30px 20px;
-            margin-top: 50px;
+            margin-top: 40px;
             border-top: 1px solid #333;
             color: #777;
         }
@@ -151,14 +149,30 @@
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">2. Vor's Prize</button>
         <div class="quest-content">
-            <p>Summary coming soon.</p>
+            <p>• The Broken Orbiter: After escaping Earth, the Tenno arrives on their personal ship only to find it heavily damaged, offline, and stripped of vital components by the Grineer.</p>
+
+            <p>• The Cephalon's Return: Ordis, the ship's erratic companion, boots back up to help the player locate and reinstall missing segments, bringing the Foundry and Arsenal back to fighting shape.</p>
+
+            <p>• Darvo's Rescue: To find a cure for the burrowing Ascaris device, the Tenno intercepts Grineer comms and rescues Darvo, an imprisoned Corpus merchant who provides a blueprint for an Ascaris Negator.</p>
+
+            <p>• The Anti-Tamper Trigger: You forge the Negator in your ship's Foundry, but injecting it activates a hidden Grineer failsafe, transforming the Ascaris into a ticking bomb that will detonate your Warframe.</p>
+
+            <p>• The Confrontation: The Lotus tracks the detonation override signal straight to Mercury, forcing the Tenno to infiltrate a mining outpost and face Vor head-on as he fights using Orokin Void energy from his Janus Key.</p>
+
+            <p>• Conclusion: You defeat Vor in combat, which permanently disables the detonator signal, purges the Ascaris from your systems, and allows you to safely act as a Tenno without the risk of Vor’s Ascaris taking over your systems.</p>
         </div>
     </div>
 
     <div class="quest">
         <button class="quest-button" type="button" onclick="toggleQuest(this)">3. The Teacher</button>
         <div class="quest-content">
-            <p>Summary coming soon.</p>
+            <p>• The Interruption: you track down an Orokin Mod Segment, only to be intercepted by Teshin, a surviving Dax warrior.</p>
+
+            <p>• The Lesson: Disapproving of the Lotus hiding your memories of the Old War, Teshin captures you to teach you how to use mods to amplify your gear.</p>
+
+            <p>• Corpus Ambush: Corpus forces interrupt the training, and Teshin surrenders himself so you can escape with the segment.</p>
+
+            <p>• The Rescue: You upgrade</p>
         </div>
     </div>
 
@@ -190,7 +204,7 @@
 
             <p>• The Entrati Family: Upon arrival, the player discovers The Entrati, a family of Orokin aristocrats who have been mutated and merged with the Infestation, though they retain some level of their human minds.</p>
 
-            <p>• The Heart’s Crisis: The family explains that the Heart of Deimos—a mechanical construct that pumps Void energy across the entire Origin System to power all Warframes—is failing due to an attack by a Necramech called Snake.</p>
+            <p>• The Heart's Crisis: The family explains that the Heart of Deimos—a mechanical construct that pumps Void energy across the entire Origin System to power all Warframes—is failing due to an attack by a Necramech called Snake.</p>
 
             <p>• The Reclamation: Stripped of their Warframe's power due to the failing Heart, the player must pilot Snake, the same Necramech Grandmother used to damage the Heart, then fight through the Infestation, defeat the threat, and restart the Heart to restore power to all Warframes and Void tech across the System.</p>
         </div>
@@ -372,7 +386,7 @@
 </main>
 
 <footer>
-    <p>The Lorak Codex — A Warframe Lore Archive</p>
+    The Lorak Codex — Warframe Lore Archive
 </footer>
 
 <script>
