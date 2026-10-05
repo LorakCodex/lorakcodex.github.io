@@ -8,37 +8,42 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
             background-color: #0b0b0b;
-            color: #ffffff;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
         }
 
         header {
-            background-color: #111111;
+            background-color: #111;
             padding: 20px;
             text-align: center;
-            border-bottom: 1px solid #d4af37;
+            border-bottom: 2px solid #d4af37;
         }
 
         header h1 {
-            margin: 0;
             color: #d4af37;
+            margin: 0 0 15px 0;
             letter-spacing: 3px;
         }
 
         nav {
-            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
         }
 
         nav a {
-            color: #ffffff;
+            color: #d4af37;
             text-decoration: none;
-            margin: 0 8px;
-            font-size: 14px;
+            padding: 8px 12px;
+            border: 1px solid #d4af37;
+            border-radius: 5px;
         }
 
         nav a:hover {
-            color: #d4af37;
+            background-color: #d4af37;
+            color: #111;
         }
 
         main {
@@ -59,30 +64,29 @@
 
         .quest-button {
             width: 100%;
-            padding: 16px;
             background-color: #151515;
             color: #d4af37;
-            border: 1px solid #333333;
+            border: 1px solid #d4af37;
+            padding: 15px;
             text-align: left;
             font-size: 16px;
             cursor: pointer;
-            border-radius: 6px;
+            border-radius: 5px;
         }
 
-        .quest-button:hover {
-            border-color: #d4af37;
-        }
-
+        .quest-button:hover,
         .quest-button.active {
-            border-color: #d4af37;
+            background-color: #d4af37;
+            color: #111;
         }
 
         .quest-content {
             display: none;
-            background-color: #101010;
-            border: 1px solid #333333;
-            border-top: none;
-            padding: 18px;
+            background-color: #111;
+            border-left: 1px solid #d4af37;
+            border-right: 1px solid #d4af37;
+            border-bottom: 1px solid #d4af37;
+            padding: 15px;
             line-height: 1.6;
         }
 
@@ -92,15 +96,19 @@
 
         .quest-content p {
             margin-top: 0;
-            margin-bottom: 16px;
+            margin-bottom: 15px;
+        }
+
+        .quest-content p:last-child {
+            margin-bottom: 0;
         }
 
         footer {
             text-align: center;
-            padding: 30px;
+            padding: 30px 20px;
             margin-top: 50px;
-            color: #777777;
-            border-top: 1px solid #222222;
+            border-top: 1px solid #333;
+            color: #777;
         }
     </style>
 </head>
@@ -124,6 +132,7 @@
 </header>
 
 <main>
+
     <h2>Quest Archives</h2>
 
     <div class="quest">
@@ -135,7 +144,7 @@
 
             <p>• The Intervention: The Lotus remotely surges the player's power systems, letting them break free and fight back against nearby Grineer soldiers.</p>
 
-            <p>Conclusion: You eventually fight Vor at the end and get picked up by Ordis, your original Orbiter Cephalon.</p>
+            <p>• Conclusion: You eventually fight Vor at the end and get picked up by Ordis, your original Orbiter Cephalon.</p>
         </div>
     </div>
 
@@ -228,7 +237,7 @@
         <div class="quest-content">
             <p>• The Vision: The quest begins when a mysterious glowing orb of light appears in the player's Orbiter personal quarters, drawing the Operator into a memory or vision.</p>
 
-            <p>• The Lua Reservoir: The light leads the Operator to the Lua Reservoir—the chamber where the Tenno slept during the Old War. There, the player finds the Lotus standing near a glowing Orokin tree.</p>
+            <p>• The Lua Reservoir: The light leads the Operator to the Lua Reservoir—the chamber where the Tenno slept during the Old War. There, the player finds the Lotus standing at her Lotus pod.</p>
 
             <p>• Ballas Return: The Orokin Executor, Ballas, who was long thought dead, steps out from the light. He reveals himself as one of the surviving Orokin after the Naga Drums and refers to the Lotus by the name of the woman she was reprogrammed to function as, Margulis.</p>
 
@@ -357,7 +366,7 @@
 </main>
 
 <footer>
-    The Lorak Codex — Warframe Lore Archive
+    <p>The Lorak Codex — A Warframe Lore Archive</p>
 </footer>
 
 <script>
