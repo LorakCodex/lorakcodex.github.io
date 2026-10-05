@@ -118,8 +118,48 @@
         }
 
         .transcript-content p {
-            margin: 0;
+            margin: 0 0 12px 0;
             line-height: 1.6;
+        }
+
+        .inner-button {
+            width: 100%;
+            background-color: #151515;
+            color: #ccc;
+            border: 1px solid #333;
+            padding: 12px;
+            margin-top: 10px;
+            font-size: 15px;
+            text-align: left;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .inner-button:hover {
+            background-color: #1c1c1c;
+            color: #d4af37;
+        }
+
+        .inner-button.active {
+            color: #d4af37;
+            border-color: #555;
+        }
+
+        .inner-content {
+            display: none;
+            background-color: #0b0b0b;
+            border-left: 2px solid #555;
+            padding: 15px;
+            margin-bottom: 5px;
+        }
+
+        .inner-content.show {
+            display: block;
+        }
+
+        .inner-content p {
+            line-height: 1.6;
+            margin: 0 0 12px 0;
         }
 
         footer {
@@ -146,7 +186,7 @@
         <a href="timeline.html">Timeline</a>
         <a href="operations.html">Operations</a>
         <a href="args.html">ARGs</a>
-        <a href="https://discord.gg/X3WsdC8jP4">Discord</a>
+        <a href="https://discord.gg/X3WsdC8jP4" target="_blank">Discord</a>
     </nav>
 </header>
 
@@ -160,83 +200,336 @@
 
     <div class="category-content">
 
-        <button class="transcript-button" type="button">1. Awakening</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+        <button class="transcript-button" type="button">
+            1. Awakening
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
 
-        <button class="transcript-button" type="button">2. Vor's Prize</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+        <button class="transcript-button" type="button">
+            2. Vor's Prize
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
 
-        <button class="transcript-button" type="button">3. The Teacher</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+        <button class="transcript-button" type="button">
+            3. The Teacher
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
 
-        <button class="transcript-button" type="button">4. Vox Solaris</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+        <button class="transcript-button" type="button">
+            4. Vox Solaris
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
 
-        <button class="transcript-button" type="button">5. Once Awake</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+        <button class="transcript-button" type="button">
+            5. Once Awake
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
 
-        <button class="transcript-button" type="button">6. Heart of Deimos</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+        <button class="transcript-button" type="button">
+            6. Heart of Deimos
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
 
-        <button class="transcript-button" type="button">7. The Archwing</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+        <button class="transcript-button" type="button">
+            7. The Archwing
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
 
-        <button class="transcript-button" type="button">8. Natah</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+        <button class="transcript-button" type="button">
+            8. Natah
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
 
-        <button class="transcript-button" type="button">9. The Second Dream</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+        <button class="transcript-button" type="button">
+            9. The Second Dream
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
 
-        <button class="transcript-button" type="button">10. The War Within</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+        <button class="transcript-button" type="button">
+            10. The War Within
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
 
-        <button class="transcript-button" type="button">11. Rising Tide</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+        <button class="transcript-button" type="button">
+            11. Rising Tide
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
 
-        <button class="transcript-button" type="button">12. Chains of Harrow</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+        <button class="transcript-button" type="button">
+            12. Chains of Harrow
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
 
-        <button class="transcript-button" type="button">13. Apostasy Prologue</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+        <button class="transcript-button" type="button">
+            13. Apostasy Prologue
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
 
-        <button class="transcript-button" type="button">14. The Sacrifice</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+        <button class="transcript-button" type="button">
+            14. The Sacrifice
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
 
-        <button class="transcript-button" type="button">15. Prelude to War</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+        <button class="transcript-button" type="button">
+            15. Prelude to War
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
 
-        <button class="transcript-button" type="button">16. The New War</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+        <!-- THE NEW WAR -->
 
-        <button class="transcript-button" type="button">17. The Duviri Paradox</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+        <button class="transcript-button" type="button">
+            16. The New War
+        </button>
 
-        <button class="transcript-button" type="button">18. Angels of the Zariman</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+        <div class="transcript-content">
 
-        <button class="transcript-button" type="button">19. Whispers in the Walls</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+            <button class="inner-button" type="button">
+                Quest Description
+            </button>
 
-        <button class="transcript-button" type="button">20. Jade Shadows</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+            <div class="inner-content">
+                <p>Quest description coming soon.</p>
+            </div>
 
-        <button class="transcript-button" type="button">21. Jade Shadows: Constellations</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+            <button class="inner-button" type="button">
+                Missions
+            </button>
 
-        <button class="transcript-button" type="button">22. The Lotus Eaters</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+            <div class="inner-content">
 
-        <button class="transcript-button" type="button">23. The Hex / Warframe: 1999</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+                <button class="inner-button" type="button">
+                    Mission 1
+                </button>
 
-        <button class="transcript-button" type="button">24. Old Peace</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+                <div class="inner-content">
 
-        <button class="transcript-button" type="button">25. Tau Prologue</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+                    <button class="inner-button" type="button">
+                        Description
+                    </button>
 
-        <button class="transcript-button" type="button">26. Tau 2026</button>
-        <div class="transcript-content"><p>Transcript coming soon.</p></div>
+                    <div class="inner-content">
+                        <p>Mission description coming soon.</p>
+                    </div>
+
+                    <button class="inner-button" type="button">
+                        Enemies
+                    </button>
+
+                    <div class="inner-content">
+                        <p>Enemies coming soon.</p>
+                    </div>
+
+                    <button class="inner-button" type="button">
+                        Transcript
+                    </button>
+
+                    <div class="inner-content">
+                        <p>Transcript coming soon.</p>
+                    </div>
+
+                </div>
+
+                <button class="inner-button" type="button">
+                    Mission 2
+                </button>
+
+                <div class="inner-content">
+
+                    <button class="inner-button" type="button">
+                        Description
+                    </button>
+
+                    <div class="inner-content">
+                        <p>Mission description coming soon.</p>
+                    </div>
+
+                    <button class="inner-button" type="button">
+                        Enemies
+                    </button>
+
+                    <div class="inner-content">
+                        <p>Enemies coming soon.</p>
+                    </div>
+
+                    <button class="inner-button" type="button">
+                        Transcript
+                    </button>
+
+                    <div class="inner-content">
+                        <p>Transcript coming soon.</p>
+                    </div>
+
+                </div>
+
+                <button class="inner-button" type="button">
+                    Mission 3
+                </button>
+
+                <div class="inner-content">
+
+                    <button class="inner-button" type="button">
+                        Description
+                    </button>
+
+                    <div class="inner-content">
+                        <p>Mission description coming soon.</p>
+                    </div>
+
+                    <button class="inner-button" type="button">
+                        Enemies
+                    </button>
+
+                    <div class="inner-content">
+                        <p>Enemies coming soon.</p>
+                    </div>
+
+                    <button class="inner-button" type="button">
+                        Transcript
+                    </button>
+
+                    <div class="inner-content">
+                        <p>Transcript coming soon.</p>
+                    </div>
+
+                </div>
+
+                <button class="inner-button" type="button">
+                    Mission 4
+                </button>
+
+                <div class="inner-content">
+
+                    <button class="inner-button" type="button">
+                        Description
+                    </button>
+
+                    <div class="inner-content">
+                        <p>Mission description coming soon.</p>
+                    </div>
+
+                    <button class="inner-button" type="button">
+                        Enemies
+                    </button>
+
+                    <div class="inner-content">
+                        <p>Enemies coming soon.</p>
+                    </div>
+
+                    <button class="inner-button" type="button">
+                        Transcript
+                    </button>
+
+                    <div class="inner-content">
+                        <p>Transcript coming soon.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- REMAINING MAIN QUESTS -->
+
+        <button class="transcript-button" type="button">
+            17. The Duviri Paradox
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" type="button">
+            18. Angels of the Zariman
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" type="button">
+            19. Whispers in the Walls
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" type="button">
+            20. Jade Shadows
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" type="button">
+            21. Jade Shadows: Constellations
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" type="button">
+            22. The Lotus Eaters
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" type="button">
+            23. The Hex / Warframe: 1999
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" type="button">
+            24. Old Peace
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" type="button">
+            25. Tau Prologue
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" type="button">
+            26. Tau 2026
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
 
     </div>
 
@@ -307,9 +600,7 @@
 </footer>
 
 <script>
-    const categoryButtons = document.querySelectorAll(".category-button");
-
-    categoryButtons.forEach(function(button) {
+    document.querySelectorAll(".category-button").forEach(function(button) {
         button.addEventListener("click", function() {
             const content = button.nextElementSibling;
 
@@ -318,14 +609,23 @@
         });
     });
 
-    const transcriptButtons = document.querySelectorAll(".transcript-button");
-
-    transcriptButtons.forEach(function(button) {
+    document.querySelectorAll(".transcript-button").forEach(function(button) {
         button.addEventListener("click", function() {
             const content = button.nextElementSibling;
 
             button.classList.toggle("active");
             content.classList.toggle("show");
+        });
+    });
+
+    document.querySelectorAll(".inner-button").forEach(function(button) {
+        button.addEventListener("click", function() {
+            const content = button.nextElementSibling;
+
+            if (content && content.classList.contains("inner-content")) {
+                button.classList.toggle("active");
+                content.classList.toggle("show");
+            }
         });
     });
 </script>
