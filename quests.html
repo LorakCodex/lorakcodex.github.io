@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+l<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,84 +8,79 @@
     <style>
         body {
             margin: 0;
-            background: #0b0b0b;
-            color: #e6e6e6;
             font-family: Arial, sans-serif;
+            background-color: #0b0b0b;
+            color: #ddd;
         }
 
         header {
-            background: #111;
+            background-color: #111;
             padding: 20px;
             text-align: center;
             border-bottom: 1px solid #333;
         }
 
         h1 {
-            margin: 0 0 15px 0;
             color: #d4af37;
             letter-spacing: 3px;
+            margin: 0;
         }
 
         nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
+            margin-top: 15px;
         }
 
         nav a {
             color: #d4af37;
             text-decoration: none;
-            padding: 8px 12px;
-            border: 1px solid #d4af37;
-            border-radius: 4px;
+            margin: 0 10px;
         }
 
         nav a:hover {
-            background: #d4af37;
-            color: #000;
+            text-decoration: underline;
         }
 
         main {
             max-width: 900px;
-            margin: 30px auto;
+            margin: 40px auto;
             padding: 0 20px;
         }
 
         h2 {
             color: #d4af37;
-            text-align: center;
-            margin-bottom: 30px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
         }
 
         .quest {
             margin-bottom: 10px;
-            border: 1px solid #333;
-            border-radius: 5px;
-            overflow: hidden;
-            background: #111;
         }
 
         .quest-button {
             width: 100%;
-            background: #111;
+            background-color: #151515;
             color: #d4af37;
-            border: none;
-            padding: 16px;
+            border: 1px solid #333;
+            padding: 15px;
             text-align: left;
             font-size: 16px;
             cursor: pointer;
         }
 
-        .quest-button:hover,
+        .quest-button:hover {
+            background-color: #1d1d1d;
+        }
+
         .quest-button.active {
-            background: #1b1b1b;
+            background-color: #1d1d1d;
         }
 
         .quest-content {
             display: none;
-            padding: 15px 18px;
-            border-top: 1px solid #333;
+            background-color: #101010;
+            border: 1px solid #333;
+            border-top: none;
+            padding: 15px;
             line-height: 1.6;
         }
 
@@ -93,20 +88,12 @@
             display: block;
         }
 
-        .quest-content p {
-            margin: 0 0 15px 0;
-        }
-
-        .quest-content p:last-child {
-            margin-bottom: 0;
-        }
-
         footer {
             text-align: center;
-            padding: 30px 20px;
-            margin-top: 40px;
-            border-top: 1px solid #333;
+            padding: 30px;
             color: #777;
+            border-top: 1px solid #333;
+            margin-top: 50px;
         }
     </style>
 </head>
@@ -134,138 +121,218 @@
     <h2>Quest Archives</h2>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">1. The Awakening</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            1. Awakening
+        </button>
+
         <div class="quest-content">
             <p>• The Awakening: For centuries, the Tenno have been dormant. As the Grineer Empire grows, the Lotus starts waking them up.</p>
+
             <p>• Captain Vor's Plot: Captain Vor hunts down newly awakened Tenno on Earth. Instead of killing the player like ordered by the Twin Queens, he attaches an Ascaris device to control the Warframe.</p>
+
             <p>• The Intervention: The Lotus remotely surges the player's power systems, letting them break free and fight back against nearby Grineer soldiers.</p>
+
             <p>• Conclusion: You eventually fight Vor at the end and get picked up by Ordis, your original Orbiter Cephalon.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">2. Vor's Prize</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            2. Vor's Prize
+        </button>
+
         <div class="quest-content">
             <p>• The Broken Orbiter: After escaping Earth, the Tenno arrives on their personal ship only to find it heavily damaged, offline, and stripped of vital components by the Grineer.</p>
+
             <p>• The Cephalon's Return: Ordis, the ship's erratic companion, boots back up to help the player locate and reinstall missing segments, bringing the Foundry and Arsenal back to fighting shape.</p>
+
             <p>• Darvo's Rescue: To find a cure for the burrowing Ascaris device, the Tenno intercepts Grineer comms and rescues Darvo, an imprisoned Corpus merchant who provides a blueprint for an Ascaris Negator.</p>
+
             <p>• The Anti-Tamper Trigger: You forge the Negator in your ship's Foundry, but injecting it activates a hidden Grineer failsafe, transforming the Ascaris into a ticking bomb that will detonate your Warframe.</p>
+
             <p>• The Confrontation: The Lotus tracks the detonation override signal straight to Mercury, forcing the Tenno to infiltrate a mining outpost and face Vor head-on as he fights using Orokin Void energy from his Janus Key.</p>
+
             <p>• Conclusion: You defeat Vor in combat, which permanently disables the detonator signal, purges the Ascaris from your systems, and allows you to safely act as a Tenno without the risk of Vor’s Ascaris taking over your systems.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">3. The Teacher</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            3. The Teacher
+        </button>
+
         <div class="quest-content">
             <p>• The Interruption: you track down an Orokin Mod Segment, only to be intercepted by Teshin, a surviving Dax warrior.</p>
+
             <p>• The Lesson: Disapproving of the Lotus hiding your memories of the Old War, Teshin captures you to teach you how to use mods to amplify your gear.</p>
+
             <p>• Corpus Ambush: Corpus forces interrupt the training, and Teshin surrenders himself so you can escape with the segment.</p>
+
             <p>• The Rescue: You upgrade your mods and save Teshin from a Corpus ship, proving to him you are the Tenno he once knew.</p>
+
             <p>• Conclusion: Teshin decides to work with the Lotus and moves into the Relay as your Teacher.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">4. Saya's Vigil</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            4. Saya's Vigil
+        </button>
+
         <div class="quest-content">
             <p>Summary coming soon.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">5. Vox Solaris</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            5. Vox Solaris
+        </button>
+
         <div class="quest-content">
             <p>Summary coming soon.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">6. Once Awake</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            6. Waverider
+        </button>
+
         <div class="quest-content">
             <p>Summary coming soon.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">7. Heart of Deimos</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            7. Once Awake
+        </button>
+
+        <div class="quest-content">
+            <p>Summary coming soon.</p>
+        </div>
+    </div>
+
+    <div class="quest">
+        <button class="quest-button" onclick="toggleQuest(this)">
+            8. Heart of Deimos
+        </button>
+
         <div class="quest-content">
             <p>• The Distress Signal: The Tenno receives an ancient, encrypted Orokin transmission broadcasting an urgent distress signal from Cambion Drift on Deimos.</p>
+
             <p>• The Entrati Family: Upon arrival, the player discovers The Entrati, a family of Orokin aristocrats who have been mutated and merged with the Infestation, though they retain some level of their human minds.</p>
-            <p>• The Heart's Crisis: The family explains that the Heart of Deimos—a mechanical construct that pumps Void energy across the entire Origin System to power all Warframes—is failing due to an attack by a Necramech called Snake.</p>
+
+            <p>• The Heart’s Crisis: The family explains that the Heart of Deimos—a mechanical construct that pumps Void energy across the entire Origin System to power all Warframes—is failing due to an attack by a Necramech called Snake.</p>
+
             <p>• The Reclamation: Stripped of their Warframe's power due to the failing Heart, the player must pilot Snake, the same Necramech Grandmother used to damage the Heart, then fight through the Infestation, defeat the threat, and restart the Heart to restore power to all Warframes and Void tech across the System.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">8. The Archwing</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            9. The Archwing
+        </button>
+
         <div class="quest-content">
             <p>Summary coming soon.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">9. Natah</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            10. Natah
+        </button>
+
         <div class="quest-content">
             <p>Summary coming soon.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">10. The Second Dream</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            11. The Second Dream
+        </button>
+
         <div class="quest-content">
             <p>Summary coming soon.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">11. The War Within</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            12. The War Within
+        </button>
+
         <div class="quest-content">
             <p>Summary coming soon.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">12. Rising Tide</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            13. Rising Tide
+        </button>
+
         <div class="quest-content">
             <p>Summary coming soon.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">13. Chains of Harrow</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            14. Chains of Harrow
+        </button>
+
         <div class="quest-content">
             <p>Summary coming soon.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">14. Apostasy Prologue</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            15. Apostasy Prologue
+        </button>
+
         <div class="quest-content">
             <p>• The Vision: The quest begins when a mysterious glowing orb of light appears in the player's Orbiter personal quarters, drawing the Operator into a memory or vision.</p>
+
             <p>• The Lua Reservoir: The light leads the Operator to the Lua Reservoir—the chamber where the Tenno slept during the Old War. There, the player finds the Lotus standing at her Lotus pod.</p>
+
             <p>• Ballas Return: The Orokin Executor, Ballas, who was long thought dead, steps out from the light. He reveals himself as one of the surviving Orokin after the Naga Drums and refers to the Lotus by the name of the woman she was reprogrammed to function as, Margulis.</p>
+
             <p>• The Betrayal: Ballas severs the Lotus's mechanical connection to her Lotus pod, claiming she has been imprisoned by the Tenno. The Lotus takes Ballas's hand and willingly departs with him, abandoning the Tenno and leaving behind only her helmet.</p>
+
             <p>Conclusion: You pick up Lotus’s helmet and place it in your Orbiter.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">15. The Sacrifice</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            16. The Sacrifice
+        </button>
+
         <div class="quest-content">
             <p>Summary coming soon.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">16. Prelude to War</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            17. Prelude to War
+        </button>
+
         <div class="quest-content">
             <p>Summary coming soon.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">17. The New War</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            18. The New War
+        </button>
+
         <div class="quest-content">
             <p>• The United Front: Grineer soldier Kahl-175, Corpus tech Veso-R, the Chosen Operator, and Teshin launch a desperate, coordinated assault against Erra’s Sentient armada, ultimately failing as Teshin is captured and forced to fight Erra.</p>
 
@@ -284,80 +351,116 @@
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">18. The Duviri Paradox</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            19. The Duviri Paradox
+        </button>
+
         <div class="quest-content">
             <p>Summary coming soon.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">19. Angels of the Zariman</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            20. Angels of the Zariman
+        </button>
+
         <div class="quest-content">
             <p>• The Return: The Orokin colony ship, the Zariman Ten Zero, re-emerges from the Void and begins singing across the Origin System, attracting the Tenno, Grineer, and Corpus.</p>
+
             <p>• The Holdfasts: Players meet The Holdfasts, the ethereal, ghost-like adult crew, the last adults of the original disaster not to go insane when the Man in the Wall interrupted the trip who exist as Conceptual Embodiments—manifestations of memories shaped by the Void.</p>
+
             <p>• The Threat: Led by Quinn, the Holdfasts explain that a member named Kira has succumbed to the Void's song, mutating into a monstrous Void Angel and threatening a total breakdown of reality via a Void Cascade.</p>
+
             <p>• The Conclusion: The Chosen Operator works to purge contamination, defend the ship, and defeat Kira in the Void realm to reclaim their lost home from the Void Angel.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">20. Veilbreaker</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            21. Veilbreaker
+        </button>
+
         <div class="quest-content">
             <p>Summary coming soon.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">21. Whispers in the Walls</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            22. Whispers in the Walls
+        </button>
+
         <div class="quest-content">
             <p>Summary coming soon.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">22. Jade Shadows</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            23. Jade Shadows
+        </button>
+
         <div class="quest-content">
             <p>Summary coming soon.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">23. Jade Shadows: Constellations</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            24. Jade Shadows: Constellations
+        </button>
+
         <div class="quest-content">
             <p>Summary coming soon.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">24. The Lotus Eaters</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            25. The Lotus Eaters
+        </button>
+
         <div class="quest-content">
             <p>Summary coming soon.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">25. The Hex / Warframe: 1999</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            26. The Hex / Warframe: 1999
+        </button>
+
         <div class="quest-content">
             <p>Summary coming soon.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">26. Old Peace</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            27. Old Peace
+        </button>
+
         <div class="quest-content">
             <p>Summary coming soon.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">27. Tau Prologue</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            28. Tau Prologue
+        </button>
+
         <div class="quest-content">
             <p>Summary coming soon.</p>
         </div>
     </div>
 
     <div class="quest">
-        <button class="quest-button" type="button" onclick="toggleQuest(this)">28. Tau 2026</button>
+        <button class="quest-button" onclick="toggleQuest(this)">
+            29. Tau 2026
+        </button>
+
         <div class="quest-content">
             <p>Summary coming soon.</p>
         </div>
