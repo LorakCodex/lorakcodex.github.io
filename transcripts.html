@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcripts — The Lorak Codex</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #0b0b0b;
+            color: #ddd;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+
+        h1 {
+            margin: 0;
+            color: #d4af37;
+            letter-spacing: 3px;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: #d4af37;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .category-button {
+            width: 100%;
+            background-color: #151515;
+            color: #d4af37;
+            border: 1px solid #444;
+            padding: 18px;
+            margin-top: 15px;
+            font-size: 18px;
+            text-align: left;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .category-button:hover {
+            background-color: #1d1d1d;
+        }
+
+        .category-button.active {
+            border-color: #d4af37;
+        }
+
+        .category-content {
+            display: none;
+            padding: 10px 0;
+        }
+
+        .category-content.show {
+            display: block;
+        }
+
+        .transcript-button {
+            width: 100%;
+            background-color: #111;
+            color: #ccc;
+            border: 1px solid #333;
+            padding: 14px;
+            margin-top: 8px;
+            font-size: 16px;
+            text-align: left;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .transcript-button:hover {
+            background-color: #191919;
+            color: #d4af37;
+        }
+
+        .transcript-button.active {
+            color: #d4af37;
+            border-color: #555;
+        }
+
+        .transcript-content {
+            display: none;
+            background-color: #0f0f0f;
+            border-left: 2px solid #d4af37;
+            padding: 15px;
+            margin-bottom: 5px;
+        }
+
+        .transcript-content.show {
+            display: block;
+        }
+
+        .transcript-content p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #777;
+            border-top: 1px solid #222;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>The Lorak Codex</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="quests.html">Quests</a>
+        <a href="transcripts.html">Transcripts</a>
+        <a href="#">Characters</a>
+        <a href="#">Factions</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="operations.html">Operations</a>
+        <a href="args.html">ARGs</a>
+        <a href="https://discord.gg/X3WsdC8jP4">Discord</a>
+    </nav>
+</header>
+
+<main>
+
+    <h2>Transcript Archives</h2>
+
+    <!-- MAIN QUEST TRANSCRIPTS -->
+
+    <button class="category-button" onclick="toggleCategory(this)">
+        Main Quest Transcripts
+    </button>
+
+    <div class="category-content">
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            1. Awakening
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            2. Vor's Prize
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            3. The Teacher
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            4. Vox Solaris
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            5. Once Awake
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            6. Heart of Deimos
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            7. The Archwing
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            8. Natah
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            9. The Second Dream
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            10. The War Within
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            11. Rising Tide
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            12. Chains of Harrow
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            13. Apostasy Prologue
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            14. The Sacrifice
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            15. Prelude to War
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            16. The New War
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            17. The Duviri Paradox
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            18. Angels of the Zariman
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            19. Whispers in the Walls
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            20. Jade Shadows
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            21. Jade Shadows: Constellations
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            22. The Lotus Eaters
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            23. The Hex / Warframe: 1999
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            24. Old Peace
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            25. Tau Prologue
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            26. Tau 2026
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+    </div>
+
+
+    <!-- SIDE QUEST TRANSCRIPTS -->
+
+    <button class="category-button" onclick="toggleCategory(this)">
+        Side Quest Transcripts
+    </button>
+
+    <div class="category-content">
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            1. Howl of the Kubrow
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            2. The Limbo Theorem
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            3. Patient Zero
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            4. Stolen Dreams
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            5. The New Strange
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            6. A Man of Few Words
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            7. The Jordas Precept
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            8. Sands of Inaros
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            9. The Silver Grove
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            10. The Glast Gambit
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            11. Octavia's Anthem
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            12. Saya's Vigil
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            13. Mask of the Revenant
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            14. The Deadlock Protocol
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            15. Call of the Tempestarii
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            16. The Waverider
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+        <button class="transcript-button" onclick="toggleTranscript(this)">
+            17. Veilbreaker
+        </button>
+        <div class="transcript-content">
+            <p>Transcript coming soon.</p>
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    The Lorak Codex — Warframe Lore Archive
+</footer>
+
+<script>
+    function toggleCategory(button) {
+        const content = button.nextElementSibling;
+
+        if (!content || !content.classList.contains("category-content")) {
+            return;
+        }
+
+        button.classList.toggle("active");
+        content.classList.toggle("show");
+    }
+
+    function toggleTranscript(button) {
+        const content = button.nextElementSibling;
+
+        if (!content || !content.classList.contains("transcript-content")) {
+            return;
+        }
+
+        button.classList.toggle("active");
+        content.classList.toggle("show");
+    }
+</script>
+
+</body>
+</html>
