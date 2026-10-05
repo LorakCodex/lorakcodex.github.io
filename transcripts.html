@@ -1,104 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transcripts - The Lorak Codex</title>
+
 <style>
-    body {
-        margin: 0;
-        background: #0b0b0b;
-        color: #ddd;
-        font-family: Arial, sans-serif;
-    }
+body {
+    margin:0;
+    background:#0b0b0b;
+    color:#ddd;
+    font-family:Arial,sans-serif;
+}
 
-    header {
-        background: #111;
-        padding: 25px;
-        text-align: center;
-        border-bottom: 1px solid #333;
-    }
+header {
+    background:#111;
+    padding:25px;
+    text-align:center;
+    border-bottom:1px solid #333;
+}
 
-    h1 {
-        color: #d4af37;
-        letter-spacing: 3px;
-        margin: 0;
-    }
+h1 {
+    color:#d4af37;
+    letter-spacing:3px;
+    margin:0;
+}
 
-    nav {
-        margin-top: 20px;
-    }
+nav {
+    margin-top:20px;
+}
 
-    nav a {
-        color: #d4af37;
-        text-decoration: none;
-        margin: 0 8px;
-    }
+nav a {
+    color:#d4af37;
+    text-decoration:none;
+    margin:0 8px;
+}
 
-    nav a:hover {
-        text-decoration: underline;
-    }
+nav a:hover {
+    text-decoration:underline;
+}
 
-    .container {
-        max-width: 900px;
-        margin: 30px auto;
-        padding: 0 15px;
-    }
+.container {
+    max-width:900px;
+    margin:30px auto;
+    padding:0 15px;
+}
 
-    .category-button,
-    .transcript-button,
-    .inner-button {
-        width: 100%;
-        background: #151515;
-        color: #d4af37;
-        border: 1px solid #333;
-        padding: 16px;
-        margin-top: 10px;
-        text-align: left;
-        font-size: 17px;
-        cursor: pointer;
-        border-radius: 6px;
-    }
+.category-button,
+.transcript-button,
+.inner-button {
+    width:100%;
+    background:#151515;
+    color:#d4af37;
+    border:1px solid #333;
+    padding:16px;
+    margin-top:10px;
+    text-align:left;
+    font-size:17px;
+    cursor:pointer;
+    border-radius:6px;
+    box-sizing:border-box;
+}
 
-    .category-button:hover,
-    .transcript-button:hover,
-    .inner-button:hover {
-        background: #1d1d1d;
-    }
+.category-button:hover,
+.transcript-button:hover,
+.inner-button:hover,
+.category-button.active,
+.transcript-button.active,
+.inner-button.active {
+    background:#1d1d1d;
+}
 
-    .category-button.active,
-    .transcript-button.active,
-    .inner-button.active {
-        background: #1d1d1d;
-    }
+.category-content,
+.transcript-content,
+.inner-content {
+    display:none;
+    padding:10px 0 10px 15px;
+}
 
-    .category-content,
-    .transcript-content,
-    .inner-content {
-        display: none;
-        padding: 10px 0 10px 15px;
-    }
+.category-content.show,
+.transcript-content.show,
+.inner-content.show {
+    display:block;
+}
 
-    .category-content.show,
-    .transcript-content.show,
-    .inner-content.show {
-        display: block;
-    }
+.part-label {
+    color:#d4af37;
+    font-weight:bold;
+    font-size:18px;
+    margin:18px 0 8px;
+}
 
-    .part-label {
-        color: #d4af37;
-        font-weight: bold;
-        font-size: 18px;
-        margin: 18px 0 8px;
-    }
+.transcript-text {
+    background:#111;
+    border-left:2px solid #d4af37;
+    padding:15px;
+    margin-top:10px;
+    white-space:pre-line;
+    line-height:1.6;
+    box-sizing:border-box;
+}
 
-    .transcript-text {
-        background: #111;
-        border-left: 2px solid #d4af37;
-        padding: 15px;
-        margin-top: 10px;
-        white-space: pre-line;
-        line-height: 1.6;
-    }
-
-    footer {
-        text-align: center;
-        color: #666;
-        padding: 40px 20px;
-        font-size: 14px;
-    }
+footer {
+    text-align:center;
+    color:#666;
+    padding:40px 20px;
+    font-size:14px;
+}
 </style>
+</head>
+
+<body>
+
+<header>
+<h1>THE LORAK CODEX</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="quests.html">Quests</a>
+<a href="transcripts.html">Transcripts</a>
+<a href="#">Characters</a>
+<a href="#">Factions</a>
+<a href="timeline.html">Timeline</a>
+<a href="operations.html">Operations</a>
+<a href="args.html">ARGs</a>
+<a href="https://discord.gg/X3WsdC8jP4">Discord</a>
+</nav>
+</header>
+
+<div class="container">
+
+<button class="category-button">Main Quest Transcripts</button>
+<div class="category-content">
+
+<button class="transcript-button">1. Awakening</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">2. Vor's Prize</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">3. The Teacher</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">4. Vox Solaris</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">5. Once Awake</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">6. Heart of Deimos</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">7. The Archwing</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">8. Natah</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">9. The Second Dream</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">10. The War Within</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">11. Rising Tide</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">12. Chains of Harrow</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">13. Apostasy Prologue</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">14. The Sacrifice</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">15. Prelude to War</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">16. The New War</button>
+<div class="transcript-content">
+
+<button class="inner-button">Quest Description</button>
+<div class="inner-content">
+<div class="transcript-text">The Sentient armada has emerged from the Veil Proxima in shocking numbers.
+At their head, Natah, once the trusted guide 'Lotus', now seemingly in thrall to Ballas and her brother Erra.
+Across worlds and space, the Tenno and their unlikely alliance launch a final assault to take the Sentient mothership... where Natah awaits.</div>
+</div>
+
+<button class="inner-button">Missions</button>
+<div class="inner-content">
+
+<button class="inner-button">1. For My Brothers</button>
+<div class="inner-content">
+
+<div class="part-label">Kahl-175</div>
+<div class="transcript-text">Ballas: "We... are seasons. All of us.
+
+Ballas: "Growing in the light... fading in the dark..."
+
+Ballas: “At once the same... yet... ever changed."
+
+Erra: Don’t be afraid 
+
+Councilor Vay Hek: "Eight squad! Eight squad! YOU MAGGOTS! REPORT!"
+
+Kahl: "Brothers dead. Only Kahl one-seven-five
+
+Councilor Vay Hek: "BROTHER? Brother. The WORMS have swarmed the sector, but we will prevail. Regroup on my beacon."
+
+Kahl: "F-for... For the Queens!"
+
+Kahl: "Dargyn crash. Kahl help pilot. Kahl finish mission."
+
+Councilor Vay Hek: "For the Queens. Now... run MAGGOT, RUUUUNNN!"
+
+Councilor Vay Hek: "One-seven-five. The worms close in. Hurry brother!"
+
+Councilor Vay Hek: "Worms have jammed our exfil systems. All ships are grounded."
+
+Kahl: "Pilot is dead."
+
+Kahl: "What is mission now?"
+
+Councilor Vay Hek: "Mission? That Bloated Condrix swats us down like flies. We're grounded."
+
+Kahl: "Kahl stop. Tell Kahl."
+
+Councilor Vay Hek: "Impossible. Even if you could get close to that thing, they'd eat you alive."
+
+Kahl: "Eat alive? What if food... is bomb
+
+Councilor Vay Hek: "Hmmm. Brother Kahl... yes! Find something with a high enough yield! Hurry!"
+
+On Rampart
+
+Kahl: "This is for Mattac, and Vahn, and Big Borduul!"
+
+Kahl: "You. Are. No. Eidolons!"
+
+Kahl: "Searches! Must not see Kahl."
+
+Kahl: "Kahl sneak good."
+
+Kahl: "For the Queens."
+
+Kahl: "For the Queens."
+
+Councilor Vay Hek: "There! You are so close! Detonate near enough and your brothers shall live to fight another day!"
+
+Kahl: "For the Queens."
+
+Councilor Vay Hek: "That's it. Detonate at the base of that Bloated Condrix. FOR GLORY!"
+
+Councilor Vay Hek: "I salute you, One-Seven-Five. For the Queens!"
+
+Kahl: "For the... huh... For my brothers."
+
+Erra: "Don't be afraid."</div>
+
+<div class="part-label">Veso-R</div>
+<div class="transcript-text">Alad V: "Hold fast to your stations, crews! Our glorious victory is close at hand! Oh, and, uh, any remaining techs aboard, narrow-band me at once!"
+
+Veso: "Confirming tech aboard! Veso-R at your service, most gilded director, most...!"
+
+Alad V: "Yes, yes thank Profit! My command overrides aren't working. I need to break fire control from the fleet. Can you fix that, Veko?"
+
+Veso: "It's Veso, most lucrative and sagacious visionary. Yes, I can try. There's a trace conduit nearby, I can bypass it--"
+
+Alad V: "--Great, yes, do your thing. There's a nice bonus in it if you can."
+
+Veso: "Hmm. A Breacher Moa could clear that debris. Wonder if the robotics dispenser still functional?"
+
+Veso: "Aah! Why are you shooting at me?"
+
+Veso: "Sir! Veso, here. Our robotics have gone rogue... the Sentients must have latched the grid!"
+
+Alad V: "Someone has, yes. I'll pull some meat-crews to cover you. Just get me that override... um?"
+
+Veso: "Veso. Right. I've got a datapad, secure robot dispenser access... and a Plinx. Right."
+
+Veso: "A functioning shield drone dispenser? Oh, thank Profit."
+
+Veso: "My shields should hold up, if I'm fast."
+
+Veso: "There is no shame in maximizing my shields and just running."
+
+Veso: "No point trying to shoot my way through this."
+
+Veso: "Their shields are too strong to shoot through. Maybe if I boosted mine somehow."
+
+Striker Moa Unlocked
+
+Veso: "How many hostiles ahead? I can't do this! Unless... I get a Striker Moa."
+
+Targeting turret for attack
+
+Veso: "Turrets look a little less scary now that I've got a Striker Moa."
+
+Veso: "Hello again, turrets. I've brought a friend this time."
+
+Alad V: "If I don't stand down fire control soon, we'll all be sucking vacuum! Teko! What's taking so long?"
+
+Veso: "Sir? You want to disengage fire control from the fleet? I... I don't understand."
+
+Alad V: "Look outside! We'll all about to be under new management! Now do your part or I'll find a more forward-thinking replacement."
+
+Veso: "There has to be a way to protect that Breacher Moa."
+
+Veso: "What if I shield that Moa?"
+
+Alad V: "Our... uh... victory is ever-nearer, crew! Your service and sacrifice will be richly rewarded, yes!"
+
+Alad V: "You see. This is why we need that command override back. The board just can't face reality. So what's your plan, Teso?"
+
+Veso: "Plan? You mean, I have to... Okay. I guess... hit him in the knees? Trigger his a-attack routine? That should leave his shields vulnerable. In theory..."
+
+Alad V: "Clever. Get to it."
+
+Veso: "Am... am I a traitor to the Board? Yes sir."
+
+Jackal hovers
+
+Veso: "All his power is going into his attack. Shields vulnerable. Beams incredibly dangerous!"
+
+Veso: "Got to blast those shields while I can!"
+
+Veso: "Drain those shields and that will force his self-repair routine."
+
+If Breacher Moa dies to electric floor
+
+Veso: "Need to shield that Breacher Moa."
+
+Veso: "No no, he got blown up too soon!"
+
+After Jackal Fight
+
+Alad V: "Just in time, too! Our new management is about to pay a personal visit. Be quick; I've got to stand down fire when they dock with us! Well done, Viko!
+
+Veso: "Go!"
+
+Alad V: "Attention crew, stand down, all stations. You'll be pleased to know that I, Alad V. have negotiated a peaceful... and profitable... transfer of power to our new--"
+
+Veso: "--Fleet control..."
+
+Veso: "Firing sync reengaged. Authorization: Corpus Tech First Class Veso-R. Take your shot. For Profit."</div>
+
+<div class="part-label">Railjack</div>
+<div class="transcript-text">Teshin: "The enemy's eye turns upon our allies. Quickly. Press onward."
+
+Operator: "We're through the perimeter. You're sure about this? It should be me."
+
+Teshin: "No, Tenno. Your Warframe will be useless until I clear the Orphix fields. Then we will meet inside."
+
+Operator: "Teshin. What if the Lotus won't..."
+
+Teshin: "If I must... I can make the harder choice."
+
+Erra: "How tediously human. A slapdash alliance making a feeble last stand. IF you all crave death in a final flash of glory - I am more than happy to oblige."
+
+Cephalon Cy: "Boarding party intends to sabotage this ship. Stop them."
+
+Cephalon Cy: "Intruders cleared."
+
+Operator: "Cy, Charge the slingshot."
+
+Cephalon Cy: "You will need to get closer to your mother's ship."
+
+Operator: "Huh? Did you just--"
+
+Cephalon Cy: "Squadron incoming. The enemy is wise to our diversion."
+
+Cephalon Cy: "If hull integrity continues to drop this will be a one-way trip."
+
+Cephalon Cy: "Mothership in range. Problem: Slingshot damaged. Crew, hold postion while I route a bypass."
+
+Cephalon Cy: "Mothership in range. Problem: Slingshot damaged. Crew, hold postion while I route a bypass."
+
+Erra: "Do you think there's a shred of Lotus left in Natah? All this time, it's been dying. A tumor scorched from its rotting hole."
+
+Cephalon Cy: "Slingshot patched. Ready to launch."
+
+Operator: "Teshin... I'll be awaiting... so I can bring her home."
+
+Teshin: "I'll clear the Orphix, and we'll do it together."
+
+Cephalon Cy: "Deploying Teshin Dax. Cephalon Ordis to assist."
+
+Teshin: "Wait, I do not need..."</div>
+
+<div class="part-label">Teshin</div>
+<div class="transcript-text">Teshin: "Orphix fields will be scattered--"
+
+Ordis: "The Orphix fields will be scattered deep in the ship. Ordis can help you triangulate them--"
+
+Teshin: "--Quiet!"
+
+Ordis: "I'm only trying to--"
+
+Teshin: "--I don't need your help. Switch off!"
+
+Teshin: "(grumbles)"
+
+Ordis: "Ah! Please excuse Ordis."
+
+Ordis: "Grineer! Oh my. Ordis wonders what we are getting into."
+
+Ordis: "Observation: a power field requires a power source
+
+Teshin: "Hmm? Ordis..."
+
+Ordis: "Yes? Would you like me to dephase that for you?"
+
+Teshin: "(grumbles)"
+
+Ordis: "Swing away, Teshin."
+
+Ballas: "The Devil sends their relic to do the deed. But then... we're both relics aren't we, old man?"
+
+Teshin: "You shouldn't have come here. You've ruined us both."
+
+Ordis: "Teshin? Are you - LOSING IT - feeling unwell?"
+
+Ordis: "Ordis is still happy to help!"
+
+Teshin: "Too easy."
+
+Ballas: "The Tenno freed you from your oath, did they? Does that absolve them of their sins?"
+
+Ordis: "Just one left, and Ordis will be able to safely signal the Operator to join!"
+
+Teshin: "I will decide when it is safe."
+
+Ballas: "She and her void brood toppled a golden age of order and honor. Do you really believe this chaos is freedom?"
+
+Ordis: "Almost done, Teshin"
+
+Ordis: "Orphix fields are disabled. The Operator should be cleared to board."
+
+Teshin: "No. Too easy. Let me nudge the snares first."
+
+Ballas: "That's it. Come to me, old man. I am eager to show you how this war ends. Not with brutality, but with hope. Not with lies, but truth. A truth for all who are strong enough to believe. Even you."
+
+Ballas: "Wake up, sleepyhead."
+
+Ballas: "You're going to want to see this. Watch the Veil do its work."
+
+Erra: "Call out, Dax."
+
+Teshin: "Cool water flows. The moon, behind a cloud."
+
+Teshin: "(grunts)"
+
+Teshin: "... No!"
+
+Ballas: "He'll give in soon. They all will... and this war will be over before it even begins. Not with bombs and blood... but with truth. They programmed you and your kind. Now it is our turn to program them."
+
+Erra: "Summon your devil. It's time."
+
+Teshin: "Why? No! No! Valeria!"
+
+Ballas: "See the Veil work. Turning his memories inside out. Making him see the things he's lost. Putting pain where it serves us. A lost love, perhaps... her life, cut short by the very Tenno he had sworn to protect."
+
+Erra: "Call out, old man. Give her justice, give her peace!"
+
+Teshin: "I-I can... see her... Tenno... why???"
+
+Erra: "One for the reject pile, then."
+
+Ballas: "Goodbye, my love."
+
+Natah: "Let me go, child. Let me go."
+
+Operator: "I can't! I won't."
+
+Operator: "(struggles)"
+
+Ballas: "You cannot kill the devil, Tenno!"
+
+Ballas: "...but you can send it back to hell!"</div>
+
+</div>
+</div>
+
+<button class="inner-button">2. The Rise of Narmer</button>
+<div class="inner-content">
+
+<div class="part-label">Cutscene</div>
+<div class="transcript-text">Ballas: "All... as one."
+
+Ballas: "I stand before you... last of my kind. An orphan of Tenno massacres. But their violence did not end with me, did it? It carried on... to all of you."
+
+Ballas: "Grineer languished in their torture-plexes. Ostron clades starved for Tenno tithe. Corpus pupils weeping Tenno praise under blade. Solaris souls blackened the skies of Tenno foundries."
+
+Ballas: "But now is our time. An era of peace and security. The devils have been cast out. And by the Void... the Tenno shall never return!"</div>
+
+<div class="part-label">Earth</div>
+<div class="transcript-text">???: "Spire due-south. Full detachment, veils on."
+
+(Player)???: "Comms are bad tonight. How many prisoners, you thin
+
+???: "Too deep to know for sure... but what if there's an Archon down there?"
+
+(Player)???: "Don't do that."</div>
+
+<div class="part-label">Arriving at Narmer outpost gate</div>
+<div class="transcript-text">???: "Patch in, and I'll release the door..."</div>
+
+<div class="part-label">Inside Narmer outpost</div>
+<div class="transcript-text"> ???: "Looks clear... but maybe an Archon--"  
+
+(Player)???: "--stay cool."  
+
+???: "I have no idea what that means."</div>
+
+<div class="part-label">Arriving at Narmer vault</div>
+<div class="transcript-text">???: "Let's hope you're not too late."</div>
+
+<div class="part-label">Cutscene</div>
+<div class="transcript-text">Ostron: "No! No! Kruna metta! Please!"
+
+Ballas: "Ostron clades starved for Tenno tithe."
+
+Ostron: "All as-- There! APOSTASY!"</div>
+
+<div class="part-label">After killing all enemies</div>
+<div class="transcript-text">(Player)???: "Easy now. I'm not going to hurt you... Let me get that thing off your face..."
+
+Ostron: "All as one. All as one. All as-"
+
+
+???: "I told you! I told you! An Archon!"
+
+(Player)???: "Call the ship, smart ass!"
+
+???: "It'll be there! Just run!"
+
+Player)???: "Seal it!"</div>
+
+<div class="part-label">After saving Ostron prisoners</div>
+<div class="transcript-text">Male Ostron: "Dah-dap, surah. Dah-dap."
+
+Male Ostron: "Help the others. Kruna-metta."
+
+Male Ostron: "Dah-dap. Sho-la."
+
+Male Ostron: "Never will I submit to Narmer."
+
+Male Ostron: "Dah-dap."
+
+Female Ostron: "The Unum, did she send you? Does she live?"
+
+Female Ostron: "You will rescue the others, yes?"
+
+Female Ostron: "Do not succumb to the mask, surah. She gives, we live."
+
+Female Ostron: "Do not concern yourself with me, surah."
+
+Female Ostron: "Kruna-metta. My family, I must find them."
+
+Female Ostron: "Release me, utz."
+
+Female Ostron: "Ai yo."</div>
+
+<div class="part-label">Narmer Propaganda</div>
+<div class="transcript-text">Ballas: "All as one."
+
+Ballas: "A nightmare is over. Finally we see clearly. Finally we speak freely."
+
+Ballas: "Future generations won't remember the Tenno oppression, but we do."
+
+Ballas: "We bear the scars, we mourn the dead, and we must never allow ourselves to forget. All as one.”
+
+Ballas: "To those few who have yet to embrace Narmer, hear this: we understand."
+
+Ballas: "We see your fear, your hesitation, and we say come into the warm."
+
+Ballas: "To those who imagined that any shall be rejected, hear this: there is room for you too, in this better world."
+
+Ballas: "But come sooner rather than later, for our pity shall only last so long. All as one."
+
+Ballas: "They breed in the midnight places. A pestilence. You have known them of old. Told tales of their evil."
+
+Ballas: "Stand strong. Stand together."
+
+Ballas: "One cord alone may snap, but a rope woven of many cords may bind. All must do their part. All as one."
+
+Ballas: "I saw a system divided, and I brought unity. I went over the orphans of war, and I brought peace."
+
+Ballas: "My ears rang with a cacophany of chaos and I said: Be still."
+
+Ballas: "This bounty I give to you freely. Not the spoils of conquest, nor the profit of trade, but the gift of a loving father. All as one."
+
+Ballas: "Just as a crystal lens first brought the heavenly bodies within the sight of man, so does the Veil show us the world as it truly is."
+
+Ballas: "Seek out those who still walk within the smoke of confusion, and cry aloud for comfort. Take their hands and guide them into the light. All as one."
+
+Ballas: "There are those who hate and fear the truth. And well they might. For the truth is a surgeon's scalpel and has no mercy for what is foul and diseased."
+
+Ballas: "Purge, and purge again, until only the truth remains. All as one</div>
+
+</div>
+
+<button class="inner-button">3. Drifter’s Camp</button>
+<div class="inner-content">
+
+<div class="part-label">Drifter’s Camp</div>
+<div class="transcript-text">Nora Night: "How long's it been, since the Tenno left without sayin' goodbye? Since Narmer and the masks? Since the truth became a luxury few can lay their hands on? Whoever's picked up the mantle the Tenno dropped, driftin' wild, poppin' masks and loosin' bonds, whoever you may be, we salute you. Drifter."
+
+Drifter: "Hey! Gimme that."
+
+Drifter: "Alright... alright. Good to see you too."
+
+Drifter: "What do you think, Ordis?"
+
+Ordis: "What do I think? I think --FINISH HER-- this is torture. What's left of her is just... just wasting away. We've tried everything. I have no 'care and feeding of Eidolons' in my data arrays. We don't know what we're dealing with."
+
+Drifter: "No, we don't. But you know someone that does
+
+Ordis: "I know someone that--?! Wait, Operator, you can't be serious!"
+
+Ordis: "Sorry, Op-- Sorry. If you want to get to the Outer systems past Narmer, we'll need a Corpus shuttle."</div>
+
+</div>
+
+<button class="inner-button">4. Solen Plates</button>
+<div class="inner-content">
+
+<div class="part-label">Fortuna</div>
+<div class="transcript-text">Healed, the pain of independence
+Strong, our wise and trusted friend
+We, united in one vision
+Rise to sing of sorrow's end
+
+He, the bringer of the vision
+Bids you answer to his call
+Praise the wise and mighty Ballas
+Heed the ruler of us all
+
+For we're all One
+And the work's begun
+For Narmer
+And we all run
+To our golden son
+For Narmer
+For Narmer
+
+Ordis: "Vox Solaris collapsed under Narmer. You're on your own here. Keep your head down and get topside as quick as you can."
+
+Ordis: "Wait. Deacons. They'll sense if you're not veiled. Give them a wide berth, or you'll be sucking black ooze before long."
+
+Ordis: "Avoid the Deacons, or they'll seal you in!"</div>
+
+<div class="part-label">For Narmer</div>
+<div class="transcript-text">Healed, the pain of independence
+Strong, our wise and trusted friend
+We, united in one vision
+Rise to sing of sorrow's end
+
+He, the bringer of the vision
+Bids you answer to his call
+Praise the wise and mighty Ballas
+Heed the ruler of us all
+
+For we're all One
+And the work's begun
+For Narmer
+And we all run
+To our golden son
+For Narmer
+For Narmer</div>
+
+<div class="part-label">Ambient</div>
+<div class="transcript-text">Drifter: "All as one."
+
+Drifter: "All as one."
+
+Drifter: "All as one."
+
+Solaris Male: "All as one."</div>
+
+<div class="part-label">Almost to elevator</div>
+<div class="transcript-text">Little Duck: "Allo allo - missing your brain-buster then?"
+
+Ordis: "Ignore her. We can't risk it."
+
+Little Duck: "Hah! Can't risk what? Jank-ciphered comms? Already blew it. But listen, if you're here to muck with Narmer, I'm keen to lift with ya."
+
+Drifter: "'Eh, need a ship, Corpus tags."
+
+Little Duck: "Then you'll be wanting to pay a visit to that bleeding brain-buster factory. I know a shortcut. Might grab yourself a K-Drive if you've got the legs for it."</div>
+
+<div class="part-label">While on K-Drive</div>
+<div class="transcript-text">Little Duck: "Name's Little Duck. And you... you must be that stick in the spokes I've heard about. You weren't in with the Tenno back in the day, were ya?"
+
+Drifter: "Something like that."</div>
+
+<div class="part-label">Arriving at veil factory</div>
+<div class="transcript-text">Little Duck: "Fresh shipment of brain-busters... and there's one with your name on it. See... security's lax on account of how the only way inside is wearing one of those sticky things."
+
+Ordis: "What? Op-- you-- you don't know what effect it will have on you. There's got to be a better way."
+
+Little Duck: "'Fraid not."</div>
+
+<div class="part-label">Killing all enemies</div>
+<div class="transcript-text">Little Duck: "Pops my plugs to think that some people take the veil by choice! Warm lies are more comfort than cold, hard truths, eh?"</div>
+
+<div class="part-label">After putting on veil</div>
+<div class="transcript-text">Little Duck: "Ready? Veil up, and I'll mark the shuttle uplink once you're inside. Think happy thoughts, yeah?"
+
+Lotus: "My child... so beautiful to behold. How do you feel?"
+
+Lotus: "We found you within the derelict Zariman. Feral. Evil. Void in your heart... but Ballas... he saw a lost child in need of a father. As you recovered, he noticed me less and less. What good was I to him if you weren't sick?"
+
+Lotus: "I loved him, but he only loved you. The stasis dreams were the only choice I had. Your Zariman dreams of mother, father... I made them nightmares."
+
+Lotus: "And it worked. You began to see Ballas not as the father, but as the phantom of your nightmares. He confined in me. The deeper your madness, the deeper our love. Ballas was mine."
+
+Little Duck: "Blending in nice, but I'd still give those Deacons a wide berth. Did you know they can detonate those veils if they smell a rat?"
+
+Little Duck: "Ya shammin' brainless real nice, but I'd still give those Deacons a wide berth. They smell a rat, your Veil[sic] detonates. Take your whole face off an' no mistake."
+
+Ordis: "Are you serious?! It didn't occur to you that you might want to mention that before we put one ON!?"
+
+Little Duck: "It did. And I didn't. Needed you focused."</div>
+
+<div class="part-label">Past the gate</div>
+<div class="transcript-text">Lotus: "But he could not be deceived for long. He saw through my deception, and my judgment was swift and true. He cradled you in his arms, saying: "Child--""
+
+Ballas: "--Child, my child, forgive me. Wake from this horrid dream of hers. The world outside is waiting for you. These horrors of Zariman... are lies only to hold you ill. I... love you."</div>
+
+<div class="part-label">At console</div>
+<div class="transcript-text">Drifter: "I can't..."
+
+Little Duck: "Oi! Focus! Jab that console, quick
+
+Little Duck: "Ah, guts! You've been rumbled! Right, leg it out the back before ya mumblin' with the rest! I've sorted your ship... and a little nugget for myself while I was there."</div>
+
+<div class="part-label">Exiting factory</div>
+<div class="transcript-text">Little Duck: "Ah... takes me back to the good old Tenno days... expect those brain-busters might be on backorder for a while. Been a pleasure lifting with you, Drifter."
+
+Little Duck: "Ah... takes me back to the good old Tenno days... expect those brain-busters might be on backorder for a while. Been a pleasure lifting with you, Drifter."</div>
+
+<div class="part-label">Drifter's Camp</div>
+<div class="transcript-text">Nora Night: "Lovers... holdouts... I just got word on the wave. Narmhead factory got hit. No doubt the handiwork of that Drifter we've been hearing about. Feels good to have a little bit of truth in the world."
+
+Ordis: "Navigation is marked... but I hope you change your mind."</div>
+
+</div>
+
+<button class="inner-button">5. Enemy of Enemies</button>
+<div class="inner-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="inner-button">6. Temporal Axioms</button>
+<div class="inner-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="inner-button">7. The Wild Hunt</button>
+<div class="inner-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="inner-button">8. The Aftermath</button>
+<div class="inner-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="inner-button">9. She gives, We live</button>
+<div class="inner-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="inner-button">10. In Space</button>
+<div class="inner-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="inner-button">11. Approach Praghasa</button>
+<div class="inner-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="inner-button">12. Conclusion</button>
+<div class="inner-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+</div>
+</div>
+
+<button class="transcript-button">17. The Duviri Paradox</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">18. Angels of the Zariman</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">19. Whispers in the Walls</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">20. Jade Shadows</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">21. Jade Shadows: Constellations</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">22. The Lotus Eaters</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">23. The Hex / Warframe: 1999</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">24. Old Peace</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">25. Tau Prologue</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">26. Tau 2026</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+</div>
+
+<button class="category-button">Side Quest Transcripts</button>
+<div class="category-content">
+
+<button class="transcript-button">1. Howl of the Kubrow</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">2. The Limbo Theorem</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">3. Patient Zero</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">4. Stolen Dreams</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">5. The New Strange</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">6. A Man of Few Words</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">7. The Jordas Precept</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">8. Sands of Inaros</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">9. The Silver Grove</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">10. The Glast Gambit</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">11. Octavia's Anthem</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">12. Saya's Vigil</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">13. Mask of the Revenant</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">14. The Deadlock Protocol</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">15. Call of the Tempestarii</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">16. The Waverider</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+<button class="transcript-button">17. Veilbreaker</button>
+<div class="transcript-content">
+<div class="transcript-text">Transcript coming soon.</div>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+The Lorak Codex
+</footer>
+
+<script>
+document.querySelectorAll(".category-button").forEach(button => {
+    button.addEventListener("click", () => {
+        button.classList.toggle("active");
+        const content = button.nextElementSibling;
+        if (content) {
+            content.classList.toggle("show");
+        }
+    });
+});
+
+document.querySelectorAll(".transcript-button, .inner-button").forEach(button => {
+    button.addEventListener("click", () => {
+        button.classList.toggle("active");
+        const content = button.nextElementSibling;
+        if (content) {
+            content.classList.toggle("show");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
