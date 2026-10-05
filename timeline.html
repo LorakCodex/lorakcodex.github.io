@@ -1,238 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timeline | The Lorak Codex</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            background: #0b0b0b;
-            color: #e6e6e6;
-            font-family: Arial, sans-serif;
-        }
+<title>Timeline - The Lorak Codex</title>
 
-        header {
-            text-align: center;
-            padding: 40px 20px 25px;
-            border-bottom: 1px solid #2b2b2b;
-        }
+<style>
+    body {
+        margin: 0;
+        background: #0b0b0b;
+        color: #ddd;
+        font-family: Arial, sans-serif;
+    }
 
-        header h1 {
-            margin: 0;
-            color: #d4af37;
-            font-size: 36px;
-            letter-spacing: 3px;
-        }
+    header {
+        background: #111;
+        padding: 25px;
+        text-align: center;
+        border-bottom: 1px solid #333;
+    }
 
-        header p {
-            color: #aaa;
-            margin-top: 10px;
-        }
+    h1 {
+        color: #d4af37;
+        letter-spacing: 3px;
+        margin: 0;
+    }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding: 18px;
-            border-bottom: 1px solid #2b2b2b;
-        }
+    nav {
+        margin-top: 20px;
+    }
 
-        nav a {
-            color: #d4af37;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    nav a {
+        color: #d4af37;
+        text-decoration: none;
+        margin: 0 8px;
+    }
 
-        nav a:hover {
-            color: #fff;
-        }
+    nav a:hover {
+        text-decoration: underline;
+    }
 
-        main {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+    .container {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 0 15px;
+    }
 
-        .era {
-            margin-bottom: 15px;
-            border: 1px solid #3a3a3a;
-            border-radius: 8px;
-            overflow: hidden;
-            background: #111;
-        }
+    .era-button {
+        width: 100%;
+        background: #151515;
+        color: #d4af37;
+        border: 1px solid #333;
+        padding: 18px;
+        margin-top: 12px;
+        text-align: left;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 6px;
+    }
 
-        .era summary {
-            cursor: pointer;
-            padding: 20px;
-            color: #d4af37;
-            font-size: 21px;
-            font-weight: bold;
-            background: #151515;
-        }
+    .era-button:hover {
+        background: #1d1d1d;
+    }
 
-        .era summary:hover {
-            background: #1c1c1c;
-        }
+    .era-button.active {
+        background: #1d1d1d;
+    }
 
-        .era-content {
-            padding: 20px 25px;
-            line-height: 1.7;
-        }
+    .era-content {
+        display: none;
+        background: #111;
+        border-left: 2px solid #d4af37;
+        padding: 18px;
+        margin-top: 5px;
+        line-height: 1.6;
+    }
 
-        .era-content ul {
-            padding-left: 22px;
-            margin: 0;
-        }
+    .era-content.show {
+        display: block;
+    }
 
-        .era-content li {
-            margin-bottom: 12px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 50px;
-            border-top: 1px solid #2b2b2b;
-            color: #777;
-        }
-    </style>
+    footer {
+        text-align: center;
+        color: #666;
+        padding: 40px 20px;
+        font-size: 14px;
+    }
+</style>
 </head>
 
 <body>
 
 <header>
     <h1>THE LORAK CODEX</h1>
-    <p>Timeline of the Origin System</p>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="quests.html">Quests</a>
+        <a href="transcripts.html">Transcripts</a>
+        <a href="#">Characters</a>
+        <a href="#">Factions</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="operations.html">Operations</a>
+        <a href="args.html">ARGs</a>
+        <a href="https://discord.gg/X3WsdC8jP4">Discord</a>
+    </nav>
 </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="#">Quests</a>
-    <a href="#">Transcripts</a>
-    <a href="#">Characters</a>
-    <a href="#">Factions</a>
-    <a href="timeline.html">Timeline</a>
-    <a href="https://discord.gg/X3WsdC8jP4" target="_blank">Discord</a>
-</nav>
+<div class="container">
 
-<main>
+    <button class="era-button">Pre-Orokin Era</button>
+    <div class="era-content">
+    </div>
 
-    <details class="era">
-        <summary>1. Pre-Orokin Era</summary>
-        <div class="era-content">
-            <ul>
-                <li>Early civilizations develop throughout the Origin System.</li>
-                <li>The Orokin eventually rise to power.</li>
-            </ul>
-        </div>
-    </details>
+    <button class="era-button">Orokin Era</button>
+    <div class="era-content">
+    </div>
 
-    <details class="era">
-        <summary>2. Orokin Era</summary>
-        <div class="era-content">
-            <ul>
-                <li>The Orokin rise to become the ruling class of the Origin System.</li>
-                <li>The Grineer, Cephalons and Dax already exist as parts of Orokin society.</li>
-                <li>The Orokin discover how to harness and control the Void.</li>
-                <li>Their mastery of the Void allows the Orokin Empire to expand.</li>
-                <li>The Sentients are created to terraform the Tau System.</li>
-                <li>The Zariman 10-0 is created and eventually disappears into the Void.</li>
-                <li>The Zariman eventually returns, but no adults survive.</li>
-                <li>The surviving children develop extraordinary Void abilities.</li>
-            </ul>
-        </div>
-    </details>
+    <button class="era-button">Old War</button>
+    <div class="era-content">
+    </div>
 
-    <details class="era">
-        <summary>3. The Old War</summary>
-        <div class="era-content">
-            <ul>
-                <li>The Sentients return from Tau and rebel against the Orokin, beginning the Old War.</li>
-                <li>The Orokin develop the Warframes and Tenno to fight the Sentients.</li>
-                <li>Old Peace occurs as a temporary ceasefire during the conflict, similar to the Christmas Truce of World War I.</li>
-                <li>The war resumes after the ceasefire.</li>
-                <li>Margulis is murdered by the Orokin.</li>
-                <li>The Tenno eventually turn the tide of the war.</li>
-                <li>The surviving Sentients flee into the Veil, and the Orokin celebrate what they believe is victory.</li>
-            </ul>
-        </div>
-    </details>
+    <button class="era-button">Collapse</button>
+    <div class="era-content">
+    </div>
 
-    <details class="era">
-        <summary>4. The Collapse</summary>
-        <div class="era-content">
-            <ul>
-                <li>Ballas betrays the Orokin.</li>
-                <li>The Tenno turn against the Orokin.</li>
-                <li>The Orokin Empire collapses.</li>
-                <li>Lotus hides the Tenno and places them into cryosleep.</li>
-                <li>Lua is phased into the Void, and Lotus makes a deal to survive the Void exposure.</li>
-            </ul>
-        </div>
-    </details>
+    <button class="era-button">Post-Collapse</button>
+    <div class="era-content">
+    </div>
 
-    <details class="era">
-        <summary>5. Post-Collapse</summary>
-        <div class="era-content">
-            <ul>
-                <li>The Origin System falls into chaos.</li>
-                <li>The Grineer and Corpus become major powers.</li>
-                <li>The Tenno gradually awaken.</li>
-                <li>Hunhow's actions return Lua to real space.</li>
-                <li>The Tenno discover that they are actually children controlling the Warframes remotely.</li>
-            </ul>
-        </div>
-    </details>
+    <button class="era-button">Modern Era</button>
+    <div class="era-content">
+    </div>
 
-    <details class="era">
-        <summary>6. Modern Era</summary>
-        <div class="era-content">
-            <ul>
-                <li>The Tenno continue fighting across the Origin System.</li>
-                <li>The Infestation is released by Grineer scientist Dr. Tengus, and the previously contained Infested begin spreading across the System.</li>
-                <li>The Tenno uncover more of the Orokin's secrets.</li>
-                <li>Major conflicts eventually lead toward the New War.</li>
-            </ul>
-        </div>
-    </details>
+    <button class="era-button">The New War</button>
+    <div class="era-content">
+    </div>
 
-    <details class="era">
-        <summary>7. The New War</summary>
-        <div class="era-content">
-            <ul>
-                <li>The Sentients invade the Origin System.</li>
-                <li>Ballas takes control.</li>
-                <li>The Tenno fight to stop the invasion.</li>
-                <li>Ballas is defeated and the New War ends.</li>
-                <li>The Drifter becomes increasingly important to the events that follow.</li>
-            </ul>
-        </div>
-    </details>
+    <button class="era-button">Post-New War / Warframe: 1999</button>
+    <div class="era-content">
+    </div>
 
-    <details class="era">
-        <summary>8. Post-New War / 1999 / The Hex</summary>
-        <div class="era-content">
-            <ul>
-                <li>The Drifter becomes involved in the events surrounding 1999.</li>
-                <li>The Drifter encounters The Hex.</li>
-                <li>The Drifter is questioned by the Hex and begins working with them.</li>
-                <li>One of their tasks involves finding Albrecht Entrati.</li>
-                <li>When the Drifter arrives, they instead encounter the Man in the Wall.</li>
-                <li>Events involving Rusalka, Entrati and the Man in the Wall escalate.</li>
-                <li>The Drifter eventually refuses to kill Rusalka when ordered to do so.</li>
-                <li>The Drifter is kidnapped by the Man in the Wall, leading into the next chapter of the story.</li>
-            </ul>
-        </div>
-    </details>
-
-</main>
+</div>
 
 <footer>
-    The Lorak Codex · A fan-made Warframe lore archive
+    The Lorak Codex
 </footer>
+
+<script>
+    document.querySelectorAll(".era-button").forEach(button => {
+        button.addEventListener("click", () => {
+            button.classList.toggle("active");
+
+            const content = button.nextElementSibling;
+
+            if (content) {
+                content.classList.toggle("show");
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
