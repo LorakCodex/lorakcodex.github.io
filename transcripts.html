@@ -7,59 +7,59 @@
 
 <style>
 body {
-    margin:0;
-    background:#0b0b0b;
-    color:#ddd;
-    font-family:Arial,sans-serif;
+    margin: 0;
+    background: #0b0b0b;
+    color: #ddd;
+    font-family: Arial, sans-serif;
 }
 
 header {
-    background:#111;
-    padding:25px;
-    text-align:center;
-    border-bottom:1px solid #333;
+    background: #111;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 1px solid #333;
 }
 
 h1 {
-    color:#d4af37;
-    letter-spacing:3px;
-    margin:0;
+    color: #d4af37;
+    letter-spacing: 3px;
+    margin: 0;
 }
 
 nav {
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 nav a {
-    color:#d4af37;
-    text-decoration:none;
-    margin:0 8px;
+    color: #d4af37;
+    text-decoration: none;
+    margin: 0 8px;
 }
 
 nav a:hover {
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 .container {
-    max-width:900px;
-    margin:30px auto;
-    padding:0 15px;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 15px;
 }
 
 .category-button,
 .transcript-button,
 .inner-button {
-    width:100%;
-    background:#151515;
-    color:#d4af37;
-    border:1px solid #333;
-    padding:16px;
-    margin-top:10px;
-    text-align:left;
-    font-size:17px;
-    cursor:pointer;
-    border-radius:6px;
-    box-sizing:border-box;
+    width: 100%;
+    background: #151515;
+    color: #d4af37;
+    border: 1px solid #333;
+    padding: 16px;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 6px;
+    box-sizing: border-box;
 }
 
 .category-button:hover,
@@ -68,44 +68,44 @@ nav a:hover {
 .category-button.active,
 .transcript-button.active,
 .inner-button.active {
-    background:#1d1d1d;
+    background: #1d1d1d;
 }
 
 .category-content,
 .transcript-content,
 .inner-content {
-    display:none;
-    padding:10px 0 10px 15px;
+    display: none;
+    padding: 10px 0 10px 15px;
 }
 
 .category-content.show,
 .transcript-content.show,
 .inner-content.show {
-    display:block;
+    display: block;
 }
 
 .part-label {
-    color:#d4af37;
-    font-weight:bold;
-    font-size:18px;
-    margin:18px 0 8px;
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 18px 0 8px;
 }
 
 .transcript-text {
-    background:#111;
-    border-left:2px solid #d4af37;
-    padding:15px;
-    margin-top:10px;
-    white-space:pre-line;
-    line-height:1.6;
-    box-sizing:border-box;
+    background: #111;
+    border-left: 2px solid #d4af37;
+    padding: 15px;
+    margin-top: 10px;
+    white-space: pre-line;
+    line-height: 1.6;
+    box-sizing: border-box;
 }
 
 footer {
-    text-align:center;
-    color:#666;
-    padding:40px 20px;
-    font-size:14px;
+    text-align: center;
+    color: #666;
+    padding: 40px 20px;
+    font-size: 14px;
 }
 </style>
 </head>
@@ -113,14 +113,14 @@ footer {
 <body>
 
 <header>
-<h1>THE LORAK CODEX</h1>
+<h1>The Lorak Codex</h1>
 
 <nav>
 <a href="index.html">Home</a>
 <a href="quests.html">Quests</a>
 <a href="transcripts.html">Transcripts</a>
-<a href="#">Characters</a>
-<a href="#">Factions</a>
+<a href="characters.html">Characters</a>
+<a href="factions.html">Factions</a>
 <a href="timeline.html">Timeline</a>
 <a href="operations.html">Operations</a>
 <a href="args.html">ARGs</a>
@@ -130,7 +130,9 @@ footer {
 
 <div class="container">
 
+<!-- MAIN QUEST TRANSCRIPTS -->
 <button class="category-button">Main Quest Transcripts</button>
+
 <div class="category-content">
 
 <button class="transcript-button">1. Awakening</button>
@@ -208,7 +210,9 @@ footer {
 <div class="transcript-text">Transcript coming soon.</div>
 </div>
 
+<!-- 16. THE NEW WAR -->
 <button class="transcript-button">16. The New War</button>
+
 <div class="transcript-content">
 
 <button class="inner-button">Quest Description</button>
@@ -219,6 +223,7 @@ Across worlds and space, the Tenno and their unlikely alliance launch a final as
 </div>
 
 <button class="inner-button">Missions</button>
+
 <div class="inner-content">
 
 <button class="inner-button">1. For My Brothers</button>
@@ -511,7 +516,6 @@ Ballas: "You cannot kill the devil, Tenno!"
 Ballas: "...but you can send it back to hell!"</div>
 
 </div>
-</div>
 
 <button class="inner-button">2. The Rise of Narmer</button>
 <div class="inner-content">
@@ -538,9 +542,9 @@ Ballas: "But now is our time. An era of peace and security. The devils have been
 <div class="transcript-text">???: "Patch in, and I'll release the door..."</div>
 
 <div class="part-label">Inside Narmer outpost</div>
-<div class="transcript-text"> ???: "Looks clear... but maybe an Archon--"  
+<div class="transcript-text">???: "Looks clear... but maybe an Archon--"
 
-(Player)???: "--stay cool."  
+(Player)???: "--stay cool."
 
 ???: "I have no idea what that means."</div>
 
@@ -632,10 +636,8 @@ Ballas: "Purge, and purge again, until only the truth remains. All as one</div>
 
 </div>
 
-<button class="inner-button">3. Drifter’s Camp</button>
+<button class="inner-button">3. Drifter's Camp</button>
 <div class="inner-content">
-
-<div class="part-label">Drifter’s Camp</div>
 <div class="transcript-text">Nora Night: "How long's it been, since the Tenno left without sayin' goodbye? Since Narmer and the masks? Since the truth became a luxury few can lay their hands on? Whoever's picked up the mantle the Tenno dropped, driftin' wild, poppin' masks and loosin' bonds, whoever you may be, we salute you. Drifter."
 
 Drifter: "Hey! Gimme that."
@@ -651,7 +653,6 @@ Drifter: "No, we don't. But you know someone that does
 Ordis: "I know someone that--?! Wait, Operator, you can't be serious!"
 
 Ordis: "Sorry, Op-- Sorry. If you want to get to the Outer systems past Narmer, we'll need a Corpus shuttle."</div>
-
 </div>
 
 <button class="inner-button">4. Solen Plates</button>
@@ -780,48 +781,33 @@ Ordis: "Navigation is marked... but I hope you change your mind."</div>
 </div>
 
 <button class="inner-button">5. Enemy of Enemies</button>
-<div class="inner-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="inner-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 <button class="inner-button">6. Temporal Axioms</button>
-<div class="inner-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="inner-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 <button class="inner-button">7. The Wild Hunt</button>
-<div class="inner-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="inner-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 <button class="inner-button">8. The Aftermath</button>
-<div class="inner-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="inner-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 <button class="inner-button">9. She gives, We live</button>
-<div class="inner-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="inner-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 <button class="inner-button">10. In Space</button>
-<div class="inner-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="inner-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 <button class="inner-button">11. Approach Praghasa</button>
-<div class="inner-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="inner-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 <button class="inner-button">12. Conclusion</button>
-<div class="inner-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="inner-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 </div>
 </div>
 
+<!-- QUESTS 17-26 ARE INSIDE MAIN QUEST TRANSCRIPTS -->
 <button class="transcript-button">17. The Duviri Paradox</button>
 <div class="transcript-content">
 <div class="transcript-text">Transcript coming soon.</div>
@@ -873,94 +859,62 @@ Ordis: "Navigation is marked... but I hope you change your mind."</div>
 </div>
 
 </div>
+<!-- MAIN QUEST TRANSCRIPTS ENDS HERE -->
 
 <button class="category-button">Side Quest Transcripts</button>
+
 <div class="category-content">
 
 <button class="transcript-button">1. Howl of the Kubrow</button>
-<div class="transcript-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="transcript-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 <button class="transcript-button">2. The Limbo Theorem</button>
-<div class="transcript-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="transcript-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 <button class="transcript-button">3. Patient Zero</button>
-<div class="transcript-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="transcript-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 <button class="transcript-button">4. Stolen Dreams</button>
-<div class="transcript-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="transcript-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 <button class="transcript-button">5. The New Strange</button>
-<div class="transcript-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="transcript-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 <button class="transcript-button">6. A Man of Few Words</button>
-<div class="transcript-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="transcript-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 <button class="transcript-button">7. The Jordas Precept</button>
-<div class="transcript-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="transcript-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 <button class="transcript-button">8. Sands of Inaros</button>
-<div class="transcript-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="transcript-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 <button class="transcript-button">9. The Silver Grove</button>
-<div class="transcript-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="transcript-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 <button class="transcript-button">10. The Glast Gambit</button>
-<div class="transcript-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="transcript-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 <button class="transcript-button">11. Octavia's Anthem</button>
-<div class="transcript-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="transcript-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 <button class="transcript-button">12. Saya's Vigil</button>
-<div class="transcript-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="transcript-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 <button class="transcript-button">13. Mask of the Revenant</button>
-<div class="transcript-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="transcript-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 <button class="transcript-button">14. The Deadlock Protocol</button>
-<div class="transcript-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="transcript-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 <button class="transcript-button">15. Call of the Tempestarii</button>
-<div class="transcript-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="transcript-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 <button class="transcript-button">16. The Waverider</button>
-<div class="transcript-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="transcript-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 <button class="transcript-button">17. Veilbreaker</button>
-<div class="transcript-content">
-<div class="transcript-text">Transcript coming soon.</div>
-</div>
+<div class="transcript-content"><div class="transcript-text">Transcript coming soon.</div></div>
 
 </div>
 
