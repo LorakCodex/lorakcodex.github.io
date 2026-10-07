@@ -1,0 +1,71 @@
+name: Codex Update
+
+on:
+  workflow_dispatch:
+    inputs:
+      type:
+        description: "Update type"
+        required: true
+        type: choice
+        options:
+          - Quest
+          - Transcript
+          - Timeline
+          - Character
+          - Faction
+          - Operation
+          - ARG
+          - Website
+          - Other
+
+      title:
+        description: "Update title"
+        required: true
+        type: string
+
+      update:
+        description: "What changed?"
+        required: true
+        type: string
+
+jobs:
+  send-discord-update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send Codex Update to Discord
+        env:
+          WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          UPDATE_TYPE: ${{ inputs.type }}
+          UPDATE_TITLE: ${{ inputs.title }}
+          UPDATE_TEXT: ${{ inputs.update }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import urllib.request
+
+          data = {
+              "username": "The Lorak Codex",
+              "embeds": [
+                  {
+                      "title": "📖 Codex Update",
+                      "description": (
+                          f"**{os.environ['UPDATE_TITLE']}**\n\n"
+                          f"**Type:** {os.environ['UPDATE_TYPE']}\n\n"
+                          f"{os.environ['UPDATE_TEXT']}"
+                      ),
+                      "color": 13934647
+                  }
+              ]
+          }
+
+          request = urllib.request.Request(
+              os.environ["WEBHOOK_URL"],
+              data=json.dumps(data).encode("utf-8"),
+              headers={"Content-Type": "application/json"},
+              method="POST"
+          )
+
+          urllib.request.urlopen(request)
+          PY
