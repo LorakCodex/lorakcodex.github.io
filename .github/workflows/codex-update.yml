@@ -35,37 +35,17 @@ jobs:
     steps:
       - name: Send Codex Update to Discord
         env:
-          WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          UPDATE_TYPE: ${{ inputs.type }}
-          UPDATE_TITLE: ${{ inputs.title }}
-          UPDATE_TEXT: ${{ inputs.update }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
-          python - <<'PY'
-          import json
-          import os
-          import urllib.request
-
-          data = {
+          curl -X POST "$DISCORD_WEBHOOK_URL" \
+            -H "Content-Type: application/json" \
+            -d '{
               "username": "The Lorak Codex",
               "embeds": [
-                  {
-                      "title": "📖 Codex Update",
-                      "description": (
-                          f"**{os.environ['UPDATE_TITLE']}**\n\n"
-                          f"**Type:** {os.environ['UPDATE_TYPE']}\n\n"
-                          f"{os.environ['UPDATE_TEXT']}"
-                      ),
-                      "color": 13934647
-                  }
+                {
+                  "title": "📖 Codex Update",
+                  "description": "**${{ inputs.title }}**\n\n**Type:** ${{ inputs.type }}\n\n${{ inputs.update }}",
+                  "color": 13934647
+                }
               ]
-          }
-
-          request = urllib.request.Request(
-              os.environ["WEBHOOK_URL"],
-              data=json.dumps(data).encode("utf-8"),
-              headers={"Content-Type": "application/json"},
-              method="POST"
-          )
-
-          urllib.request.urlopen(request)
-          PY
+            }'
