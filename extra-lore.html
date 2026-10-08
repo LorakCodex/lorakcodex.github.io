@@ -1,136 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Extra Lore - The Lorak Codex</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{
-    margin:0;
-    background:#0b0b0b;
-    color:#ddd;
-    font-family:Arial,sans-serif;
-}
+    <title>Extra Lore | The Lorak Codex</title>
 
-header{
-    background:#111;
-    padding:25px;
-    text-align:center;
-    border-bottom:1px solid #333;
-}
+    <style>
+        body {
+            margin: 0;
+            background: #0b0b0b;
+            color: #e6e6e6;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-h1{
-    color:#d4af37;
-    letter-spacing:3px;
-    margin:0;
-}
+        header {
+            background: #111;
+            border-bottom: 1px solid #333;
+            padding: 30px 20px;
+            text-align: center;
+        }
 
-nav{
-    margin-top:20px;
-}
+        header h1 {
+            margin: 0;
+            color: #d4af37;
+            font-size: 32px;
+            letter-spacing: 3px;
+        }
 
-nav a{
-    color:#d4af37;
-    text-decoration:none;
-    margin:0 8px;
-}
+        header p {
+            margin-top: 10px;
+            color: #999;
+            font-size: 14px;
+        }
 
-nav a:hover{
-    text-decoration:underline;
-}
+        nav {
+            background: #151515;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 15px;
+            border-bottom: 1px solid #292929;
+        }
 
-.container{
-    max-width:900px;
-    margin:30px auto;
-    padding:0 15px;
-}
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+        }
 
-.page-title{
-    color:#d4af37;
-    font-size:26px;
-    font-weight:bold;
-    margin-bottom:25px;
-    letter-spacing:1px;
-}
+        nav a:hover {
+            color: #d4af37;
+        }
 
-.intro{
-    background:#111;
-    border-left:2px solid #d4af37;
-    padding:15px;
-    margin-bottom:25px;
-    line-height:1.8;
-    box-sizing:border-box;
-}
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 50px 20px;
+        }
 
-.lore-button{
-    display:block;
-    width:100%;
-    background:#d4af37;
-    color:#0b0b0b;
-    text-decoration:none;
-    padding:14px 15px;
-    margin-top:10px;
-    font-size:17px;
-    font-weight:bold;
-    border-radius:4px;
-    box-sizing:border-box;
-}
+        .back {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #d4af37;
+            text-decoration: none;
+            font-size: 14px;
+        }
 
-.lore-button:hover{
-    background:#d4af37;
-    color:#0b0b0b;
-}
+        .back:hover {
+            text-decoration: underline;
+        }
 
-footer{
-    text-align:center;
-    color:#666;
-    padding:40px 20px;
-    font-size:14px;
-}
-</style>
+        h2 {
+            color: #d4af37;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .intro {
+            color: #aaa;
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+
+        .lore-button {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            background: #d4af37;
+            color: #0b0b0b;
+            text-decoration: none;
+            padding: 15px;
+            margin-top: 12px;
+            border-radius: 4px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .lore-button:hover {
+            background: #d4af37;
+            color: #0b0b0b;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid #292929;
+            color: #666;
+            font-size: 13px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-<h1>The Lorak Codex</h1>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="quests.html">Quests</a>
-<a href="transcripts.html">Transcripts</a>
-<a href="extra-lore.html">Extra Lore</a>
-<a href="factions.html">Factions</a>
-<a href="timeline.html">Timeline</a>
-<a href="operations.html">Operations</a>
-<a href="args.html">ARGs</a>
-<a href="https://discord.gg/X3WsdC8jP4">Discord</a>
-</nav>
+    <h1>THE LORAK CODEX</h1>
+    <p>Archives of history, transcripts and forgotten truths.</p>
 </header>
 
-<div class="container">
+<nav>
+    <a href="index.html">Home</a>
+    <a href="quests.html">Quests</a>
+    <a href="transcripts.html">Transcripts</a>
+    <a href="extra-lore.html">Extra Lore</a>
+    <a href="factions.html">Factions</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="operations.html">Operations</a>
+    <a href="args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank">Discord</a>
+</nav>
 
-<div class="page-title">Extra Lore</div>
+<main>
 
-<div class="intro">
-Explore lore that exists outside the main quest transcripts, including Fragments, Tablets, documents, recordings, and other hidden or standalone pieces of the Origin System's history.
-</div>
+    <a class="back" href="index.html">← Back to Home</a>
 
-<a class="lore-button" href="fragments.html">Fragments</a>
+    <h2>Extra Lore</h2>
 
-<a class="lore-button" href="tablets.html">Tablets</a>
+    <p class="intro">
+        Explore lore that exists outside the main quest transcripts, including
+        fragments, tablets, written archives, and character dialogue from
+        throughout the Origin System.
+    </p>
 
-<a class="lore-button" href="documents.html">Documents</a>
+    <a class="lore-button" href="fragments.html">Fragments</a>
 
-<a class="lore-button" href="recordings.html">Recordings</a>
+    <a class="lore-button" href="tablets.html">Tablets</a>
 
-<a class="lore-button" href="other-lore.html">Other Lore</a>
+    <a class="lore-button" href="archives.html">Archives</a>
 
-</div>
+    <a class="lore-button" href="character-dialogue.html">Character Dialogue</a>
+
+</main>
 
 <footer>
-The Lorak Codex
+    The Lorak Codex · A fan-made Warframe lore archive
 </footer>
 
 </body>
