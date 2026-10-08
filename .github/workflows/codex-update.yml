@@ -11,6 +11,9 @@ on:
           - Quest
           - Transcript
           - Timeline
+          - Fragments
+          - Tablets
+          - Archives
           - Character Dialogue
           - Faction
           - Operation
