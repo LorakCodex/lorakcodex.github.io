@@ -76,7 +76,6 @@ nav a:hover{
 
 .mission{
     margin-top:15px;
-    margin-bottom:30px;
 }
 
 .mission-button{
@@ -101,7 +100,7 @@ nav a:hover{
 
 .mission-content{
     display:none;
-    margin-top:25px;
+    padding-top:25px;
 }
 
 .mission-content.show{
@@ -111,15 +110,19 @@ nav a:hover{
 .subheading{
     color:#d4af37;
     font-weight:bold;
-    margin:0 0 18px 0;
     font-size:20px;
+    margin:0 0 15px 0;
+}
+
+.objective{
+    margin-bottom:30px;
 }
 
 .transcript-box{
     background:#111;
     border-left:4px solid #d4af37;
     padding:28px 34px;
-    margin-bottom:30px;
+    margin-top:0;
     font-size:20px;
     line-height:1.8;
     box-sizing:border-box;
@@ -172,111 +175,125 @@ footer{
     </div>
 
     <div class="mission">
+
         <button class="mission-button" onclick="toggleMission(this)">
             1. Introduction
         </button>
 
         <div class="mission-content">
 
-            <div class="subheading">Opening Cinematic</div>
+            <div class="objective">
 
-            <div class="transcript-box">
+                <div class="subheading">Opening Cinematic</div>
 
-                <p>Lotus: "For generations, you've slept. No purpose.... no call... to wake you."</p>
+                <div class="transcript-box">
 
-                <p>Lotus: "Grineer! Seeds from the ruins of the Old War. Swallowing colonies whole."</p>
+                    <p>Lotus: "For generations, you've slept. No purpose.... no call... to wake you."</p>
 
-                <p>Lotus: "But there's still hope."</p>
+                    <p>Lotus: "Grineer! Seeds from the ruins of the Old War. Swallowing colonies whole."</p>
 
-                <p>Lotus: "The Tenno. Monuments of an ancient warrior caste. Scattered across frail worlds."</p>
+                    <p>Lotus: "But there's still hope."</p>
 
-                <p>Lotus: "Together, they fought back. Bringing an end to an empire. Then, they left."</p>
+                    <p>Lotus: "The Tenno. Monuments of an ancient warrior caste. Scattered across frail worlds."</p>
 
-                <p>Lotus: "Forgotten. Like a dream..."</p>
+                    <p>Lotus: "Together, they fought back. Bringing an end to an empire. Then, they left."</p>
 
-                <p>Lotus: "Wake up, Tenno. Wake up."</p>
+                    <p>Lotus: "Forgotten. Like a dream..."</p>
 
-                <p>Grineer Lancer: "Tenno skoom!" / "Tenno scum!"</p>
+                    <p>Lotus: "Wake up, Tenno. Wake up."</p>
 
-                <p>Vor: "Hmm. I see the Lotus has tried to wake you... pity she's too late. You're my prize now, Tenno."</p>
+                    <p>Grineer Lancer: "Tenno skoom!" / "Tenno scum!"</p>
 
-                <p>Vor: "No! We are taking this one with us."</p>
+                    <p>Vor: "Hmm. I see the Lotus has tried to wake you... pity she's too late. You're my prize now, Tenno."</p>
 
-                <p>Lotus: "What has he done to you? I can't lose another Tenno. I am surging your Warframe's power systems."</p>
+                    <p>Vor: "No! We are taking this one with us."</p>
+
+                    <p>Lotus: "What has he done to you? I can't lose another Tenno. I am surging your Warframe's power systems."</p>
+
+                </div>
 
             </div>
 
         </div>
+
     </div>
 
     <div class="mission">
+
         <button class="mission-button" onclick="toggleMission(this)">
             2. Awakening
         </button>
 
         <div class="mission-content">
 
-            <div class="transcript-box">
+            <div class="objective">
 
-                <p>Lotus: "Quick. Use your power. Defend yourself."</p>
+                <div class="subheading">Awakening</div>
 
-                <p>Lotus: "An extraction ship is waiting for you. But the Grineer will be hunting you, arm yourself"</p>
+                <div class="transcript-box">
 
-                <p>Lotus: "A Tenno's melee weapon honors their warrior tradition. When technology was turned against them, they adapted."</p>
+                    <p>Lotus: "Quick. Use your power. Defend yourself."</p>
 
-                <p>Lotus: "Keep moving."</p>
+                    <p>Lotus: "An extraction ship is waiting for you. But the Grineer will be hunting you, arm yourself"</p>
 
-                <p>Lotus: "There's a cache of weapons ahead. Grab what you can."</p>
+                    <p>Lotus: "A Tenno's melee weapon honors their warrior tradition. When technology was turned against them, they adapted."</p>
 
-                <p>Grineer Lancer: "Suggresshung fugre!" / "Suppressing fire!"</p>
+                    <p>Lotus: "Keep moving."</p>
 
-                <p>Grineer Lancer: "Klouvor hu rearr." / "Thought I heard."</p>
+                    <p>Lotus: "There's a cache of weapons ahead. Grab what you can."</p>
 
-                <p>Lotus: "Good. The extraction point is up ahead. Hurry, before Vor finds out you've escaped."</p>
+                    <p>Grineer Lancer: "Suggresshung fugre!" / "Suppressing fire!"</p>
 
-                <p>Lotus: "A Tenno flows like fire over the battle terrain. Do you remember how to dash up walls?"</p>
+                    <p>Grineer Lancer: "Klouvor hu rearr." / "Thought I heard."</p>
 
-                <p>Vor: "Salvage team, why have you not reported in?"</p>
+                    <p>Lotus: "Good. The extraction point is up ahead. Hurry, before Vor finds out you've escaped."</p>
 
-                <p>Lotus: "You made it. There's the extraction ship!"</p>
+                    <p>Lotus: "A Tenno flows like fire over the battle terrain. Do you remember how to dash up walls?"</p>
 
-                <p>Vor: "My decrepit heart is pounding! This one is stronger than the rest. Lock the area down! This Tenno is mine!"</p>
+                    <p>Vor: "Salvage team, why have you not reported in?"</p>
 
-                <p>Lotus: "Get out of there Tenno! You'll have to face Vor another time, when you are fully restored."</p>
+                    <p>Lotus: "You made it. There's the extraction ship!"</p>
 
-                <p>Vor: "Grineer, my sons. Prepare the reinforcements, we need that Tenno."</p>
+                    <p>Vor: "My decrepit heart is pounding! This one is stronger than the rest. Lock the area down! This Tenno is mine!"</p>
 
-                <p>Vor: "The Queens want to destroy you, but I need to know more."</p>
+                    <p>Lotus: "Get out of there Tenno! You'll have to face Vor another time, when you are fully restored."</p>
 
-                <p>Lotus: "Quick, get to the console and release the lockdown. Do that and I will guide you to your old ship. It's your only chance."</p>
+                    <p>Vor: "Grineer, my sons. Prepare the reinforcements, we need that Tenno."</p>
 
-                <p>Lotus: "Escape will only be possible with a primary weapon. Choose now."</p>
+                    <p>Vor: "The Queens want to destroy you, but I need to know more."</p>
 
-                <p>Lotus: "I'm not sure what Vor has done to your Warframe, but we cannot remove it now. Just keep going, your ship is up ahead."</p>
+                    <p>Lotus: "Quick, get to the console and release the lockdown. Do that and I will guide you to your old ship. It's your only chance."</p>
 
-                <p>Lotus: "There it is, your ship. Hurry, Vor's reinforcements must be on their way."</p>
+                    <p>Lotus: "Escape will only be possible with a primary weapon. Choose now."</p>
 
-                <p>Lotus: "There's the ship. It will require power. Activate it."</p>
+                    <p>Lotus: "I'm not sure what Vor has done to your Warframe, but we cannot remove it now. Just keep going, your ship is up ahead."</p>
 
-                <p>Lotus: "Your Parazon is a versatile tool, use it to breach this panel and restart the ship."</p>
+                    <p>Lotus: "There it is, your ship. Hurry, Vor's reinforcements must be on their way."</p>
 
-                <p>"Stop touching me, you— what? Are my sensors deceiving me? Operator, is that you?"</p>
+                    <p>Lotus: "There's the ship. It will require power. Activate it."</p>
 
-                <p>Grineer Lancer: "Orre klegra!" / "Over there!"</p>
+                    <p>Lotus: "Your Parazon is a versatile tool, use it to breach this panel and restart the ship."</p>
 
-                <p>Grineer Lancer: "Khus hut!" / "Kill it!"</p>
+                    <p>"Stop touching me, you— what? Are my sensors deceiving me? Operator, is that you?"</p>
 
-                <p>Lotus: "Enemy reinforcements are here! Ship Cephalon, we require immediate extraction."</p>
+                    <p>Grineer Lancer: "Orre klegra!" / "Over there!"</p>
 
-                <p>Ordis: "The Operator is in danger? I will need a few moments to cycle the engines!"</p>
+                    <p>Grineer Lancer: "Khus hut!" / "Kill it!"</p>
 
-                <p>Vor: "Tenno, are you afraid? You cannot hide from these old eyes. I've marked you. You will return to me."</p>
+                    <p>Lotus: "Enemy reinforcements are here! Ship Cephalon, we require immediate extraction."</p>
 
-                <p>Lotus: "Tenno, the ship is ready. It's time to leave."</p>
+                    <p>Ordis: "The Operator is in danger? I will need a few moments to cycle the engines!"</p>
+
+                    <p>Vor: "Tenno, are you afraid? You cannot hide from these old eyes. I've marked you. You will return to me."</p>
+
+                    <p>Lotus: "Tenno, the ship is ready. It's time to leave."</p>
+
+                </div>
 
             </div>
 
         </div>
+
     </div>
 
 </div>
