@@ -80,22 +80,38 @@
     }
 
     .operation-button {
-        display: block;
         width: 100%;
-        box-sizing: border-box;
         background: #d4af37;
         color: #0b0b0b;
-        text-decoration: none;
+        border: none;
         padding: 14px 15px;
         margin-top: 10px;
+        text-align: left;
         font-size: 17px;
         font-weight: bold;
+        cursor: pointer;
         border-radius: 4px;
+        box-sizing: border-box;
     }
 
-    .operation-button:hover {
+    .operation-button:hover,
+    .operation-button.active {
         background: #d4af37;
         color: #0b0b0b;
+    }
+
+    .operation-content {
+        display: none;
+        background: #111;
+        border: 1px solid #222;
+        border-top: none;
+        padding: 18px;
+        line-height: 1.6;
+        color: #ddd;
+    }
+
+    .operation-content.show {
+        display: block;
     }
 
     footer {
@@ -134,7 +150,6 @@
 
     <p class="intro">
         Major Operations and large-scale events from throughout the history of the Origin System.
-        Individual Operations will be added here as their lore is documented.
     </p>
 
     <!-- Operations will be added here -->
@@ -144,6 +159,20 @@
 <footer>
     The Lorak Codex
 </footer>
+
+<script>
+    document.querySelectorAll(".operation-button").forEach(button => {
+        button.addEventListener("click", () => {
+            button.classList.toggle("active");
+
+            const content = button.nextElementSibling;
+
+            if (content) {
+                content.classList.toggle("show");
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
