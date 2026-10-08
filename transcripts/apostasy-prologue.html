@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apostasy Prologue - Transcripts - The Lorak Codex</title>
+
+<style>
+body{
+    margin:0;
+    background:#0b0b0b;
+    color:#ddd;
+    font-family:Arial,sans-serif;
+}
+
+header{
+    background:#111;
+    padding:25px;
+    text-align:center;
+    border-bottom:1px solid #333;
+}
+
+h1{
+    color:#d4af37;
+    letter-spacing:3px;
+    margin:0;
+}
+
+nav{
+    margin-top:20px;
+}
+
+nav a{
+    color:#d4af37;
+    text-decoration:none;
+    margin:0 8px;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+.container{
+    max-width:900px;
+    margin:30px auto;
+    padding:0 15px;
+}
+
+.back{
+    display:inline-block;
+    color:#d4af37;
+    text-decoration:none;
+    margin-bottom:20px;
+}
+
+.back:hover{
+    text-decoration:underline;
+}
+
+.quest-title{
+    color:#d4af37;
+    font-size:26px;
+    font-weight:bold;
+    margin-bottom:25px;
+    letter-spacing:1px;
+}
+
+.quest-description{
+    background:#111;
+    border-left:2px solid #d4af37;
+    padding:15px;
+    margin-bottom:25px;
+    line-height:1.8;
+    box-sizing:border-box;
+}
+
+.quest-button{
+    width:100%;
+    background:#d4af37;
+    color:#0b0b0b;
+    border:none;
+    padding:14px 15px;
+    margin-top:10px;
+    text-align:left;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:4px;
+    box-sizing:border-box;
+}
+
+.quest-button:hover,
+.quest-button.active{
+    background:#d4af37;
+    color:#0b0b0b;
+}
+
+.content{
+    display:none;
+    padding:10px 0 10px 15px;
+}
+
+.content.show{
+    display:block;
+}
+
+.label{
+    color:#d4af37;
+    font-weight:bold;
+    font-size:18px;
+    margin:18px 0 8px;
+}
+
+.text{
+    background:#111;
+    border-left:2px solid #d4af37;
+    padding:15px;
+    margin-top:10px;
+    white-space:pre-line;
+    line-height:2.2;
+    box-sizing:border-box;
+    overflow-wrap:anywhere;
+}
+
+footer{
+    text-align:center;
+    color:#666;
+    padding:40px 20px;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>The Lorak Codex</h1>
+
+<nav>
+<a href="../index.html">Home</a>
+<a href="../quests.html">Quests</a>
+<a href="../transcripts.html">Transcripts</a>
+<a href="../characters.html">Characters</a>
+<a href="../factions.html">Factions</a>
+<a href="../timeline.html">Timeline</a>
+<a href="../operations.html">Operations</a>
+<a href="../args.html">ARGs</a>
+<a href="https://discord.gg/X3WsdC8jP4">Discord</a>
+</nav>
+</header>
+
+<div class="container">
+
+<a class="back" href="../transcripts.html">← Back to Transcripts</a>
+
+<div class="quest-title">13. Apostasy Prologue</div>
+
+<div class="quest-description">
+Inspect your personal quarters upon finishing the Chains of Harrow quest.
+</div>
+
+<button class="quest-button">1. Lua</button>
+<div class="content">
+
+<div class="text">Margulis: "Do something. Get me out of here."
+
+Ballas: "You know I can't."
+
+Margulis: "Can't or won't."
+
+Ballas: "I told you not to speak out. If you recant, maybe-"
+
+Margulis: "-You lied to me, Ballas. You're no different than the rest of them."
+
+Ballas: "Margulis... please... forgive me."
+
+Ballas: "Honored seven, we have gathered here today to carry out the sentencing of Archimedian Margulis... You face the Jade light, recant, and we will grant a merciful death”
+
+Margulis: "My daughters, my sons... I want you to know... my last thoughts are of you."</div>
+
+<div class="label"><strong>Cinematic</strong></div>
+
+<div class="text">Lotus: "How long have we waited for this moment?"
+
+Operator: "I--"
+
+Ballas: "Forgive me."
+
+Lotus: "For what? I am not who you think I am."
+
+Ballas: "-But of course you are. Imprisoned, just as she was."
+
+Operator: (winces in pain)
+
+Lotus: "Ballas?"
+
+Ballas: "I will not abandon you again, Margulis."</div>
+
+</div>
+
+<button class="quest-button">2. Orbiter</button>
+<div class="content">
+
+<div class="text">Ordis: "Operator? What is happening? Is the Lotus... is she gone?"
+
+Ordis: "Ordis will attempt to synthesize her mission directives until we can figure out where she is."</div>
+
+</div>
+
+</div>
+
+<footer>
+The Lorak Codex
+</footer>
+
+<script>
+document.querySelectorAll(".quest-button").forEach(button=>{
+    button.addEventListener("click",()=>{
+        button.classList.toggle("active");
+        const content=button.nextElementSibling;
+        if(content){
+            content.classList.toggle("show");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
