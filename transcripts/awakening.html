@@ -85,23 +85,28 @@ nav a:hover{
     border:none;
     padding:14px 15px;
     text-align:left;
-    font-size:16px;
+    font-size:17px;
     font-weight:bold;
     cursor:pointer;
     border-radius:4px;
+    box-sizing:border-box;
 }
 
-.mission-button:hover{
-    background:#e0bd4a;
+.mission-button:hover,
+.mission-button.active{
+    background:#d4af37;
+    color:#0b0b0b;
 }
 
 .mission-content{
     display:none;
-    background:#151515;
-    border:1px solid #444;
-    border-top:none;
-    padding:20px;
-    line-height:1.7;
+    background:#111;
+    border-left:4px solid #d4af37;
+    padding:28px 34px;
+    margin-top:0;
+    font-size:20px;
+    line-height:1.8;
+    box-sizing:border-box;
 }
 
 .mission-content.show{
@@ -109,7 +114,7 @@ nav a:hover{
 }
 
 .mission-content p{
-    margin:0 0 14px 0;
+    margin:0 0 42px;
 }
 
 .mission-content p:last-child{
@@ -119,7 +124,12 @@ nav a:hover{
 .subheading{
     color:#d4af37;
     font-weight:bold;
-    margin:0 0 15px 0;
+    margin:0 0 32px;
+    font-size:20px;
+}
+
+.subheading:not(:first-child){
+    margin-top:10px;
 }
 
 footer{
@@ -268,8 +278,13 @@ footer{
 
 <script>
 function toggleMission(button){
+    button.classList.toggle("active");
+
     const content = button.nextElementSibling;
-    content.classList.toggle("show");
+
+    if(content){
+        content.classList.toggle("show");
+    }
 }
 </script>
 
