@@ -20,20 +20,20 @@ header{
     border-bottom:1px solid #333;
 }
 
-h1{
+header h1{
+    margin:0;
     color:#d4af37;
     letter-spacing:3px;
-    margin:0;
 }
 
 nav{
-    margin-top:20px;
+    margin-top:15px;
 }
 
 nav a{
     color:#d4af37;
     text-decoration:none;
-    margin:0 8px;
+    margin:0 10px;
 }
 
 nav a:hover{
@@ -47,9 +47,10 @@ nav a:hover{
 }
 
 .back{
-    display:inline-block;
+    display:block;
     color:#d4af37;
     text-decoration:none;
+    font-weight:bold;
     margin-bottom:20px;
 }
 
@@ -61,7 +62,7 @@ nav a:hover{
     color:#d4af37;
     font-size:26px;
     font-weight:bold;
-    margin-bottom:25px;
+    margin-bottom:10px;
     letter-spacing:1px;
 }
 
@@ -74,7 +75,7 @@ nav a:hover{
     box-sizing:border-box;
 }
 
-.quest-button{
+.mission-button{
     width:100%;
     background:#d4af37;
     color:#0b0b0b;
@@ -89,15 +90,15 @@ nav a:hover{
     box-sizing:border-box;
 }
 
-.quest-button:hover,
-.quest-button.active{
+.mission-button:hover,
+.mission-button.active{
     background:#d4af37;
     color:#0b0b0b;
 }
 
 .content{
     display:none;
-    padding:10px 0 10px 15px;
+    padding:10px 0 10px 0;
 }
 
 .content.show{
@@ -124,9 +125,10 @@ nav a:hover{
 
 footer{
     text-align:center;
-    color:#666;
-    padding:40px 20px;
-    font-size:14px;
+    padding:30px;
+    color:#777;
+    border-top:1px solid #333;
+    margin-top:40px;
 }
 </style>
 </head>
@@ -134,35 +136,36 @@ footer{
 <body>
 
 <header>
-<h1>The Lorak Codex</h1>
+    <h1>The Lorak Codex</h1>
 
-<nav>
-<a href="../index.html">Home</a>
-<a href="../quests.html">Quests</a>
-<a href="../transcripts.html">Transcripts</a>
-<a href="../characters.html">Characters</a>
-<a href="../factions.html">Factions</a>
-<a href="../timeline.html">Timeline</a>
-<a href="../operations.html">Operations</a>
-<a href="../args.html">ARGs</a>
-<a href="https://discord.gg/X3WsdC8jP4">Discord</a>
-</nav>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../quests.html">Quests</a>
+        <a href="../transcripts.html">Transcripts</a>
+        <a href="../characters.html">Characters</a>
+        <a href="../factions.html">Factions</a>
+        <a href="../timeline.html">Timeline</a>
+        <a href="../operations.html">Operations</a>
+        <a href="../args.html">ARGs</a>
+        <a href="https://discord.gg/X3WsdC8jP4">Discord</a>
+    </nav>
 </header>
 
 <div class="container">
 
-<a class="back" href="../transcripts.html">← Back to Transcripts</a>
+    <a class="back" href="../transcripts.html">← Back to Transcripts</a>
 
-<div class="quest-title">22. The Lotus Eaters</div>
+    <div class="quest-title">22. The Lotus Eaters</div>
 
-<div class="quest-description">
-A strange call comes from beyond and must not go unanswered.
-</div>
+    <div class="quest-description">
+        A strange call comes from beyond and must not go unanswered.
+    </div>
 
-<button class="quest-button">1. Investigate The Sound</button>
-<div class="content">
+    <button class="mission-button">1. Investigate The Sound</button>
 
-<div class="text">Natah/Lotus/Margulis: "Hm? Oh. It's you."
+    <div class="content">
+
+        <div class="text">Natah/Lotus/Margulis: "Hm? Oh. It's you."
 
 Operator:
 
@@ -198,23 +201,24 @@ Natah/Lotus/Margulis: "You, my champion. Please. Drown out that noise that becko
 
 Natah/Lotus/Margulis: "Do you hear it? The calls of angels, devils, life itself? It's grown so loud. It tries to follow in his footsteps through time. You must find him first."</div>
 
-</div>
+    </div>
 
-<button class="quest-button">2. Conclusion</button>
-<div class="content">
+    <button class="mission-button">2. Conclusion</button>
 
-<div class="text">“The link to the past is forged, but time is running out. While Loid works tirelessly and the Lotus keeps her lonely vigil, step by step the Indifference draws closer to its coveted prey.”</div>
+    <div class="content">
 
-</div>
+        <div class="text">“The link to the past is forged, but time is running out. While Loid works tirelessly and the Lotus keeps her lonely vigil, step by step the Indifference draws closer to its coveted prey.”</div>
+
+    </div>
 
 </div>
 
 <footer>
-The Lorak Codex
+    The Lorak Codex
 </footer>
 
 <script>
-document.querySelectorAll(".quest-button").forEach(button=>{
+document.querySelectorAll(".mission-button").forEach(button=>{
     button.addEventListener("click",()=>{
         button.classList.toggle("active");
         const content=button.nextElementSibling;
