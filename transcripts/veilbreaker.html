@@ -72,41 +72,40 @@ h1{
 
 .quest-content{
     display:none;
-    background:#111;
-    border:1px solid #333;
-    border-top:none;
-    padding:18px;
-    line-height:1.6;
+    margin-top:0;
 }
 
 .quest-content.show{
     display:block;
 }
 
+.transcript-box{
+    background:#111;
+    border-left:4px solid #d4af37;
+    padding:28px 34px;
+    margin-top:0;
+    font-size:20px;
+    line-height:1.8;
+    box-sizing:border-box;
+}
+
+.transcript-box p{
+    margin:0 0 42px;
+}
+
+.transcript-box p:last-child{
+    margin-bottom:0;
+}
+
 .section-title{
     color:#d4af37;
     font-weight:bold;
-    margin:18px 0 8px;
+    margin:0 0 32px;
+    font-size:20px;
 }
 
-.text-box{
-    background:#111;
-    border:1px solid #333;
-    padding:18px;
-    line-height:1.6;
-    margin-bottom:15px;
-}
-
-.conclusion-box{
-    background:#111;
-    border:1px solid #333;
-    padding:18px;
-    line-height:1.6;
-    margin-bottom:15px;
-}
-
-.conclusion-box p{
-    margin:0;
+.section-title:not(:first-child){
+    margin-top:10px;
 }
 
 footer{
@@ -134,154 +133,188 @@ Daughter Entrati gets more than she bargained for when she enlists the Tenno to 
 <button class="quest-button">1. Investigate the Murex</button>
 <div class="quest-content">
 
-    <div class="section-title">Who Is Pazuul?</div>
-    <div class="text-box">
+    <div class="transcript-box">
+
+        <div class="section-title">Who Is Pazuul?</div>
+
         <p>Tenno, need your help. Check the message for details.<br>—Daughter</p>
+
         <p>Daughter: "Nora Night keeps saying Narmer isn't dead. Someone new is at the top. All she knows is a name, Pazuul. Well, guess what, Tenno? I have a lead. I detected a dot code signal broadcast from inside a Murex. It only says one thing, over and over again. "NEED REINFORCEMENTS." It's probably one of the freedom fighters Nora keeps talking about. If they made it into a Murex, they have to know about Pazuul. Come on, Tenno, say you'll help."</p>
-    </div>
 
-    <div class="text-box">
         <p>Daughter: "Whoa. The inside of a Murex... organic scaffolds... node-based circulation... but on a scale I never thought possible. The Medusa network means I'm scanner blind in here. Knock it out, and I'll pinpoint the location of our messenger."</p>
+
         <p>Daughter: "When Ballas and Narmer struck the system, I was ready to do something, anything... but no, the family said we had to 'guard the Heart of Deimos'. I spent the entire war laying low in the Necralisk, listening to Nora Night talk about those brave few fighters who were out there doing exciting things. Not this time."</p>
-    </div>
 
-    <div class="section-title">Entering the Medusa Hub</div>
-    <div class="text-box">
+        <div class="section-title">Entering the Medusa Hub</div>
+
         <p>Daughter: "Tenno, I think that's the central hub of the Medusa network. Without a scanner feed, you'll need to figure out how to disable it on your own."</p>
-    </div>
 
-    <div class="section-title">After destroying the Medusa Hub</div>
-    <div class="text-box">
+        <div class="section-title">After destroying the Medusa Hub</div>
+
         <p>Daughter: "That's it! Triangulating distress beacon. There. The signal originates from the other side of the Murex. I hope they're not too frightened to talk."</p>
+
         <p>Daughter: "Don't be afraid. We're here to-"</p>
+
         <p>Kahl: "Kahl NOT Afraid. Kahl ned brothers, Queens' send... Blue Girl?"</p>
+
         <p>Daughter: "A... A... A... A VAT RAT?!I can't believe I expected to find out who Pazuul is. I'm an idiot."</p>
+
         <p>Kahl: "Kahl know Pazuul."</p>
+
         <p>Daughter: "Excuse me?"</p>
+
         <p>Kahl: "Kahl need gun. Find Kahl gun. Kahl tell about Pazuul."</p>
+
         <p>Daughter: "Of course, of course. 'Kahl,' was it? There... Marking a weapon signature."</p>
+
         <p>Daughter: "So about Pazuul... Maybe you should just tell me everything now just in case this gets dangerous?"</p>
+
         <p>Kahl: "(grunts)"</p>
-    </div>
 
-    <div class="section-title">After Getting Gun</div>
-    <div class="text-box">
+        <div class="section-title">After Getting Gun</div>
+
         <p>Daughter: "You got your gun, and I will guide you out of here, but first, I need you to tell me about Pazuul."</p>
+
         <p>Kahl: "Kahl find brothers. You help. Then talk."</p>
+
         <p>Daughter: ""Brothers"? "Brothers" was not what we agreed to. You said "gun"! I got you your gun! Now tell me about Pazuul!"</p>
+
         <p>Kahl: "Find brothers. Then talk."</p>
-    </div>
 
-    <div class="section-title">After Finding Brother</div>
-    <div class="text-box">
+        <div class="section-title">After Finding Brother</div>
+
         <p>Daughter: "Ugh. Perfect. The field your brother is locked in is entangled with complex restraints. Get close. I'll use your signal to target a dissipation beam."</p>
+
         <p>Kahl: "Kahl know what to do."</p>
-    </div>
 
-    <div class="section-title">When Field Dissipation is at Half Progress</div>
-    <div class="text-box">
+        <div class="section-title">When Field Dissipation is at Half Progress</div>
+
         <p>Daughter: "You could have said please."</p>
+
         <p>Kahl: "Release field... please?"</p>
-    </div>
 
-    <div class="section-title">After Releasing your Brother</div>
-    <div class="text-box">
+        <div class="section-title">After Releasing your Brother</div>
+
         <p>Kahl: "Brother wake up. Kahl give orders now. Come!"</p>
+
         <p>Rogg-417: "... Kahl? Where you lead, Rogg follow!"</p>
+
         <p>Daughter: "A blockage? Not even a brutish Grineer fist can punch through that... think... think.."</p>
+
         <p>Kahl: "Blue Girl stop think, Kahl see Rogg has bomb."</p>
-    </div>
 
-    <div class="section-title">After destroying blockage</div>
-    <div class="text-box">
+        <div class="section-title">After destroying blockage</div>
+
         <p>Daughter: "Grineer are good at destroying things. Shocking."</p>
+
         <p>Daughter: "Vat rats are good at destroying things. Shocking."</p>
+
         <p>Kahl: "Blue Girl, where others?"</p>
+
         <p>Daughter: "Grineer have a lot of brothers, Kahl. They're not all going to fit aboard my friend's lander."</p>
+
         <p>Kahl: "Get bigger ship."</p>
+
         <p>Daughter: "Scans show what appears to be a Grineer Dropship, but it might not even be operational."</p>
+
         <p>Kahl: "Kahl make work. First find all brothers."</p>
+
         <p>Daughter: "I don't know how, but you need to find a way across."</p>
+
         <p>Kahl: "Hmm."</p>
+
         <p>Kahl: "Kahl... 180. Same tube."</p>
+
         <p>Kahl: "Hellion pack. How hard could be?"</p>
-    </div>
 
-    <div class="section-title">Using jetpack</div>
-    <div class="text-box">
+        <div class="section-title">Using jetpack</div>
+
         <p>Kahl: "Whoa."</p>
-    </div>
 
-    <div class="section-title">When Field Dissipation is at Half Progress</div>
-    <div class="text-box">
+        <div class="section-title">When Field Dissipation is at Half Progress</div>
+
         <p>Daughter: "Hold tight, Kahl. Just a little bit longer."</p>
-    </div>
 
-    <div class="section-title">After Freeing Grineer</div>
-    <div class="text-box">
+        <div class="section-title">After Freeing Grineer</div>
+
         <p>Rescued Grineer: "For the Queens!"</p>
+
         <p>Kahl: "No. Queens abandon us. Fight for brothers now."</p>
+
         <p>Rescued Grineer: "Huh?"</p>
-    </div>
 
-    <div class="section-title">Approaching Corpus Captive</div>
-    <div class="text-box">
+        <div class="section-title">Approaching Corpus Captive</div>
+
         <p>Daughter: "This one's just a Corpus."</p>
+
         <p>Daughter: "Ugh."</p>
+
         <p>Kahl: "Kahl know what Veil like. Nobody deserve Veil."</p>
-    </div>
 
-    <div class="section-title">After Freeing Corpus</div>
-    <div class="text-box">
+        <div class="section-title">After Freeing Corpus</div>
+
         <p>Corpus Captive: "I as ttee. I as it yout petp!" (I am free. I am in your debt.)</p>
-    </div>
 
-    <div class="section-title">After Rescuing Every Captive</div>
-    <div class="text-box">
+        <div class="section-title">After Rescuing Every Captive</div>
+
         <p>Daughter: "That's everyone. Can we go now? Dropship marked."</p>
+
         <p>Daughter: "You're coming up on the Bolkor... and - of course - it's held in place by a Tether Node. I've devised an eight-step plan to evade security and gain access. Step one -"</p>
+
         <p>Kahl: "No time Blue Girl, Kahl do!!"</p>
+
         <p>Kahl: "Need to bomb node thing"</p>
+
         <p>Kahl: "Can brother bomb node thing?"</p>
-    </div>
 
-    <div class="section-title">After Shooting the Node Thing</div>
-    <div class="text-box">
+        <div class="section-title">After Shooting the Node Thing</div>
+
         <p>Kahl: "We fight for no Queens. We fight for Brothers!"</p>
-    </div>
 
-    <div class="section-title">Approaching the Dropship</div>
-    <div class="text-box">
+        <div class="section-title">Approaching the Dropship</div>
+
         <p>Daughter: "I can pilot this thing remotely but I need you to man the guns."</p>
-    </div>
 
-    <div class="section-title">After Manning the Gun</div>
-    <div class="text-box">
+        <div class="section-title">After Manning the Gun</div>
+
         <p>Daughter: "That Tether Node still has a grip on you. Take it out."</p>
+
         <p>Daughter: "Shoot the Tether Nodes Kahl!"</p>
-    </div>
 
-    <div class="section-title">After Destroying Tether Nodes</div>
-    <div class="text-box">
+        <div class="section-title">After Destroying Tether Nodes</div>
+
         <p>Daughter: "Make any more stops, and you risk everyone you already saved. And you still haven't told me about Pazuul"</p>
-        <p>Kahl: "Blue Girl have brother? Would she leave him to die?"</p>
-        <p>Daughter: "Ugh... You're loyal; I'll give you that. Plotting a course to the second Narmer holding facility. Hold on tight."</p>
-        <p>Kahl: "Die worm scoom!"</p>
-        <p>Daughter: "Hull integrity dropping!"</p>
-        <p>Daughter: "Losing control! Kahl!"</p>
-        <p>Kahl: "Brothers! Get out!!"</p>
-        <p>Kahl: "It over. Kahl tell you about Pazuul."</p>
-        <p>Daughter: "Not now, Kahl. I'll see if there's another way to get you and your brothers out of here."</p>
-    </div>
 
-    <div class="section-title">After Freeing All Brothers</div>
-    <div class="text-box">
+        <p>Kahl: "Blue Girl have brother? Would she leave him to die?"</p>
+
+        <p>Daughter: "Ugh... You're loyal; I'll give you that. Plotting a course to the second Narmer holding facility. Hold on tight."</p>
+
+        <p>Kahl: "Die worm scoom!"</p>
+
+        <p>Daughter: "Hull integrity dropping!"</p>
+
+        <p>Daughter: "Losing control! Kahl!"</p>
+
+        <p>Kahl: "Brothers! Get out!!"</p>
+
+        <p>Kahl: "It over. Kahl tell you about Pazuul."</p>
+
+        <p>Daughter: "Not now, Kahl. I'll see if there's another way to get you and your brothers out of here."</p>
+
+        <div class="section-title">After Freeing All Brothers</div>
+
         <p>Daughter: "Kahl, I've called in a favor. Get to the hangar and you just might live."</p>
+
         <p>Daughter: "Railjack just up ahead."</p>
+
         <p>Kahl: "Tenno? Hmmm. Brothers trust Kahl, and Kahl trust you. Brothers, get in!"</p>
+
         <p>Kahl: "Save teleport for wounded. Kahl walk"</p>
+
         <p>Kahl: "No teleport! Kahl go old fashioned way."</p>
+
         <p>Kahl: "Blue Girl bring brothers aboard. Kahl check everything safe."</p>
+
     </div>
 
 </div>
@@ -289,13 +322,20 @@ Daughter Entrati gets more than she bargained for when she enlists the Tenno to 
 <button class="quest-button">2. Return to Drifters Camp</button>
 <div class="quest-content">
 
-    <div class="text-box">
+    <div class="transcript-box">
+
         <p>Daughter: "Kahl. This is Blue Girl. Did my friend get you all set up?"</p>
+
         <p>Kahl: "Tenno is friend. Kahl tell Blue Girl about Pazuul: Body is dead worm. Head like animal</p>
+
         <p>Daughter: "'Dead worm,' is that all?"</p>
+
         <p>Kahl: "What more to know? Want kill Pazuul? Find brothers. Break veils, Kill Narmer. That what Kahl do."</p>
+
         <p>Daughter: "Fine. I'm in. We'll get more done working together. Face it, Vat Rat, you NEED me."</p>
+
         <p>Kahl: "If Narmer make Veils, Kahl and Blue Girl break them."</p>
+
     </div>
 
 </div>
@@ -303,8 +343,10 @@ Daughter Entrati gets more than she bargained for when she enlists the Tenno to 
 <button class="quest-button">3. Talk to Kahl</button>
 <div class="quest-content">
 
-    <div class="text-box">
+    <div class="transcript-box">
+
         <p>Kahl: "Who help Grineer today? Not Queens. Not Vay Hek. Only Tenno and Blue Girl help brothers. Other Brothers still have Veil. So Kahl break. This camp little. But soon, it get big. You see. Kahl not afraid. And now Kahl not alone."</p>
+
     </div>
 
 </div>
@@ -312,8 +354,12 @@ Daughter Entrati gets more than she bargained for when she enlists the Tenno to 
 <button class="quest-button">4. Conclusion</button>
 <div class="quest-content">
 
-    <div class="conclusion-box">
-        <p><strong style="color:#d4af37;">LET THE ARCHON HUNTS BEGIN!</strong><br>Tenno,<br>Heard you're going to start hunting Archons. Now that sounds exciting!<br>What if I told you that Archon Shards can be used to enhance your Warframes?<br>My brother has designed a new Helminth segment for you. Build and install it, then give it a Shard to work with, and enjoy.<br>(Of course, you'll need to be on speaking terms with your Helminth in order to use this, and if you don't know what I'm talking about you probably should be spending a bit more time on Deimos.)<br>You know, what with Kahl doing the intel gathering on the ground, me running mission command and you all ready to take down the Archons, this team is synergizing quite deliciously.<br>'Blue Girl'</p>
+    <div class="transcript-box">
+
+        <p><strong style="color:#d4af37;">LET THE ARCHON HUNTS BEGIN!</strong></p>
+
+        <p>Tenno,<br>Heard you're going to start hunting Archons. Now that sounds exciting!<br>What if I told you that Archon Shards can be used to enhance your Warframes?<br>My brother has designed a new Helminth segment for you. Build and install it, then give it a Shard to work with, and enjoy.<br>(Of course, you'll need to be on speaking terms with your Helminth in order to use this, and if you don't know what I'm talking about you probably should be spending a bit more time on Deimos.)<br>You know, what with Kahl doing the intel gathering on the ground, me running mission command and you all ready to take down the Archons, this team is synergizing quite deliciously.<br>'Blue Girl'</p>
+
     </div>
 
 </div>
@@ -329,6 +375,7 @@ document.querySelectorAll(".quest-button").forEach(button=>{
     button.addEventListener("click",()=>{
         button.classList.toggle("active");
         const content=button.nextElementSibling;
+
         if(content){
             content.classList.toggle("show");
         }
