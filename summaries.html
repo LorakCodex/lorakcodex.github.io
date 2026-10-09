@@ -107,6 +107,15 @@ nav a:hover {
 
 .summary-content.show {
     display: block;
+    min-height: 30px;
+    overflow: visible;
+    visibility: visible;
+    color: #ddd;
+}
+
+.summary-content.show p {
+    display: block;
+    visibility: visible;
 }
 
 .summary-content p {
@@ -315,40 +324,38 @@ footer {
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector(".container").addEventListener("click", function (event) {
+    const container = document.querySelector(".container");
+
+    container.addEventListener("click", function (event) {
         const button = event.target.closest("button");
 
-        if (!button) {
+        if (!button || !container.contains(button)) {
             return;
         }
 
+        let content;
+
         if (button.classList.contains("category-button")) {
-            const content = button.nextElementSibling;
+            content = button.nextElementSibling;
 
             if (!content || !content.classList.contains("category-content")) {
                 return;
             }
-
-            const isOpen = !content.classList.contains("show");
-
-            content.classList.toggle("show", isOpen);
-            button.classList.toggle("active", isOpen);
-            button.setAttribute("aria-expanded", String(isOpen));
-        }
-
-        if (button.classList.contains("quest-button")) {
-            const content = button.nextElementSibling;
+        } else if (button.classList.contains("quest-button")) {
+            content = button.nextElementSibling;
 
             if (!content || !content.classList.contains("summary-content")) {
                 return;
             }
-
-            const isOpen = !content.classList.contains("show");
-
-            content.classList.toggle("show", isOpen);
-            button.classList.toggle("active", isOpen);
-            button.setAttribute("aria-expanded", String(isOpen));
+        } else {
+            return;
         }
+
+        const isOpen = !content.classList.contains("show");
+
+        content.classList.toggle("show", isOpen);
+        button.classList.toggle("active", isOpen);
+        button.setAttribute("aria-expanded", String(isOpen));
     });
 });
 </script>
