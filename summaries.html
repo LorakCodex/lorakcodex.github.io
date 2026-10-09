@@ -102,6 +102,7 @@ nav a:hover {
     padding: 15px;
     margin-top: 10px;
     border-radius: 4px;
+    color: #ddd;
 }
 
 .summary-content.show {
@@ -313,23 +314,41 @@ footer {
 </footer>
 
 <script>
-document.querySelectorAll(".category-button").forEach(button => {
-    button.addEventListener("click", () => {
-        const content = button.nextElementSibling;
-        const isOpen = content.classList.toggle("show");
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".container").addEventListener("click", function (event) {
+        const button = event.target.closest("button");
 
-        button.classList.toggle("active", isOpen);
-        button.setAttribute("aria-expanded", isOpen);
-    });
-});
+        if (!button) {
+            return;
+        }
 
-document.querySelectorAll(".quest-button").forEach(button => {
-    button.addEventListener("click", () => {
-        const content = button.nextElementSibling;
-        const isOpen = content.classList.toggle("show");
+        if (button.classList.contains("category-button")) {
+            const content = button.nextElementSibling;
 
-        button.classList.toggle("active", isOpen);
-        button.setAttribute("aria-expanded", isOpen);
+            if (!content || !content.classList.contains("category-content")) {
+                return;
+            }
+
+            const isOpen = !content.classList.contains("show");
+
+            content.classList.toggle("show", isOpen);
+            button.classList.toggle("active", isOpen);
+            button.setAttribute("aria-expanded", String(isOpen));
+        }
+
+        if (button.classList.contains("quest-button")) {
+            const content = button.nextElementSibling;
+
+            if (!content || !content.classList.contains("summary-content")) {
+                return;
+            }
+
+            const isOpen = !content.classList.contains("show");
+
+            content.classList.toggle("show", isOpen);
+            button.classList.toggle("active", isOpen);
+            button.setAttribute("aria-expanded", String(isOpen));
+        }
     });
 });
 </script>
