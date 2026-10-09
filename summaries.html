@@ -2,104 +2,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quest Summaries - The Lorak Codex</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Summaries - The Lorak Codex</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0b0b0b;
-            color: #ddd;
-            line-height: 1.6;
-        }
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #ddd;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
 
-        header {
-            background-color: #111;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #d4af37;
-        }
+header {
+    background: #111;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
 
-        header h1 {
-            color: #d4af37;
-            letter-spacing: 3px;
-            margin: 0;
-        }
+h1 {
+    color: #d4af37;
+    letter-spacing: 3px;
+    margin: 0;
+}
 
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            padding: 15px;
-            background-color: #111;
-        }
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
 
-        nav a {
-            color: #d4af37;
-            text-decoration: none;
-            font-weight: bold;
-        }
+nav a {
+    color: #d4af37;
+    text-decoration: none;
+}
 
-        nav a:hover {
-            color: #fff;
-        }
+nav a:hover {
+    text-decoration: underline;
+}
 
-        main {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
 
-        h2 {
-            color: #d4af37;
-            border-bottom: 1px solid #d4af37;
-            padding-bottom: 8px;
-        }
+.category-button {
+    width: 100%;
+    background: #151515;
+    color: #d4af37;
+    border: 1px solid #333;
+    padding: 16px;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 6px;
+}
 
-        .quest-list {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
+.category-button:hover,
+.category-button.active {
+    background: #1d1d1d;
+}
 
-        .quest-link {
-            display: block;
-            background: #111;
-            border: 1px solid #333;
-            border-left: 4px solid #d4af37;
-            border-radius: 4px;
-            padding: 12px 15px;
-            color: #d4af37;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.content {
+    display: none;
+    padding: 10px 0 10px 15px;
+}
 
-        .quest-link:hover {
-            background: #1a1a1a;
-            color: #fff;
-        }
+.content.show {
+    display: block;
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #888;
-            border-top: 1px solid #333;
-            margin-top: 30px;
-        }
-    </style>
+.quest-link {
+    display: block;
+    width: 100%;
+    background: #111;
+    color: #d4af37;
+    border-left: 2px solid #d4af37;
+    padding: 15px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.quest-link:hover {
+    background: #1d1d1d;
+}
+
+footer {
+    text-align: center;
+    color: #666;
+    padding: 40px 20px;
+    font-size: 14px;
+}
+
+</style>
 </head>
 
 <body>
-    <header>
-        <h1>The Lorak Codex</h1>
-    </header>
+
+<header>
+    <h1>The Lorak Codex</h1>
 
     <nav>
         <a href="index.html">Home</a>
@@ -113,51 +125,89 @@
         <a href="args.html">ARGs</a>
         <a href="https://discord.gg/X3WsdC8jP4">Discord</a>
     </nav>
+</header>
 
-    <main>
-        <h2>Main Quest Summaries</h2>
+<div class="container">
 
-        <div class="quest-list">
-            <a class="quest-link" href="summaries/awakening.html">1. Awakening</a>
-            <a class="quest-link" href="summaries/vors-prize.html">2. Vor's Prize</a>
-            <a class="quest-link" href="summaries/the-teacher.html">3. The Teacher</a>
-            <a class="quest-link" href="summaries/sayas-vigil.html">4. Saya's Vigil</a>
-            <a class="quest-link" href="summaries/vox-solaris.html">5. Vox Solaris</a>
-            <a class="quest-link" href="summaries/once-awake.html">6. Once Awake</a>
-            <a class="quest-link" href="summaries/heart-of-deimos.html">7. Heart of Deimos</a>
-            <a class="quest-link" href="summaries/the-archwing.html">8. The Archwing</a>
-            <a class="quest-link" href="summaries/natah.html">9. Natah</a>
-            <a class="quest-link" href="summaries/the-second-dream.html">10. The Second Dream</a>
-            <a class="quest-link" href="summaries/the-war-within.html">11. The War Within</a>
-            <a class="quest-link" href="summaries/rising-tide.html">12. Rising Tide</a>
-            <a class="quest-link" href="summaries/chains-of-harrow.html">13. Chains of Harrow</a>
-            <a class="quest-link" href="summaries/apostasy-prologue.html">14. Apostasy Prologue</a>
-            <a class="quest-link" href="summaries/the-sacrifice.html">15. The Sacrifice</a>
-            <a class="quest-link" href="summaries/prelude-to-war.html">Prelude to War</a>
-            <a class="quest-link" href="summaries/the-new-war.html">16. The New War</a>
-            <a class="quest-link" href="summaries/duviri-paradox.html">17. Duviri Paradox</a>
-            <a class="quest-link" href="summaries/angels-of-the-zariman.html">18. Angels of the Zariman</a>
-            <a class="quest-link" href="summaries/whispers-in-the-walls.html">19. Whispers in the Walls</a>
-            <a class="quest-link" href="summaries/jade-shadows.html">20. Jade Shadows</a>
-            <a class="quest-link" href="summaries/jade-shadows-constellations.html">21. Jade Shadows: Constellations</a>
-            <a class="quest-link" href="summaries/the-lotus-eaters.html">22. The Lotus Eaters</a>
-            <a class="quest-link" href="summaries/the-hex.html">23. The Hex / Warframe: 1999</a>
-            <a class="quest-link" href="summaries/old-peace.html">24. Old Peace</a>
-            <a class="quest-link" href="summaries/tau-prologue.html">25. Tau Prologue</a>
-            <a class="quest-link" href="summaries/tau-2026.html">26. Tau 2026</a>
-        </div>
+    <button class="category-button" aria-expanded="false">
+        Main Quest Summaries
+    </button>
 
-        <h2>Side Quest Summaries</h2>
+    <div class="content">
 
-        <div class="quest-list">
-            <a class="quest-link" href="summaries/limbo-theorem.html">Limbo Theorem</a>
-            <a class="quest-link" href="summaries/hidden-messages.html">Hidden Messages</a>
-            <a class="quest-link" href="summaries/war-within-side-quests.html">Other Side Quests</a>
-        </div>
-    </main>
+        <a class="quest-link" href="summaries/awakening.html">1. Awakening</a>
+        <a class="quest-link" href="summaries/vors-prize.html">2. Vor's Prize</a>
+        <a class="quest-link" href="summaries/the-teacher.html">3. The Teacher</a>
+        <a class="quest-link" href="summaries/vox-solaris.html">4. Vox Solaris</a>
+        <a class="quest-link" href="summaries/once-awake.html">5. Once Awake</a>
+        <a class="quest-link" href="summaries/heart-of-deimos.html">6. Heart of Deimos</a>
+        <a class="quest-link" href="summaries/the-archwing.html">7. The Archwing</a>
+        <a class="quest-link" href="summaries/natah.html">8. Natah</a>
+        <a class="quest-link" href="summaries/the-second-dream.html">9. The Second Dream</a>
+        <a class="quest-link" href="summaries/the-war-within.html">10. The War Within</a>
+        <a class="quest-link" href="summaries/rising-tide.html">11. Rising Tide</a>
+        <a class="quest-link" href="summaries/chains-of-harrow.html">12. Chains of Harrow</a>
+        <a class="quest-link" href="summaries/apostasy-prologue.html">13. Apostasy Prologue</a>
+        <a class="quest-link" href="summaries/the-sacrifice.html">14. The Sacrifice</a>
+        <a class="quest-link" href="summaries/prelude-to-war.html">15. Prelude to War</a>
+        <a class="quest-link" href="https://lorakcodex.github.io/summaries/the-new-war.html">16. The New War</a>
+        <a class="quest-link" href="summaries/duviri-paradox.html">17. The Duviri Paradox</a>
+        <a class="quest-link" href="summaries/angels-of-the-zariman.html">18. Angels of the Zariman</a>
+        <a class="quest-link" href="summaries/whispers-in-the-walls.html">19. Whispers in the Walls</a>
+        <a class="quest-link" href="summaries/jade-shadows.html">20. Jade Shadows</a>
+        <a class="quest-link" href="summaries/jade-shadows-constellations.html">21. Jade Shadows: Constellations</a>
+        <a class="quest-link" href="summaries/the-lotus-eaters.html">22. The Lotus Eaters</a>
+        <a class="quest-link" href="summaries/the-hex.html">23. The Hex / Warframe: 1999</a>
+        <a class="quest-link" href="summaries/old-peace.html">24. Old Peace</a>
+        <a class="quest-link" href="summaries/tau-prologue.html">25. Tau Prologue</a>
+        <a class="quest-link" href="summaries/tau-2026.html">26. Tau 2026</a>
 
-    <footer>
-        The Lorak Codex
-    </footer>
+    </div>
+
+    <button class="category-button" aria-expanded="false">
+        Side Quest Summaries
+    </button>
+
+    <div class="content">
+
+        <a class="quest-link" href="summaries/howl-of-the-kubrow.html">1. Howl of the Kubrow</a>
+        <a class="quest-link" href="summaries/the-limbo-theorem.html">2. The Limbo Theorem</a>
+        <a class="quest-link" href="summaries/patient-zero.html">3. Patient Zero</a>
+        <a class="quest-link" href="summaries/stolen-dreams.html">4. Stolen Dreams</a>
+        <a class="quest-link" href="summaries/the-new-strange.html">5. The New Strange</a>
+        <a class="quest-link" href="summaries/a-man-of-few-words.html">6. A Man of Few Words</a>
+        <a class="quest-link" href="summaries/the-jordas-precept.html">7. The Jordas Precept</a>
+        <a class="quest-link" href="summaries/sands-of-inaros.html">8. Sands of Inaros</a>
+        <a class="quest-link" href="summaries/the-silver-grove.html">9. The Silver Grove</a>
+        <a class="quest-link" href="summaries/the-glast-gambit.html">10. The Glast Gambit</a>
+        <a class="quest-link" href="summaries/octavias-anthem.html">11. Octavia's Anthem</a>
+        <a class="quest-link" href="summaries/sayas-vigil.html">12. Saya's Vigil</a>
+        <a class="quest-link" href="summaries/mask-of-the-revenant.html">13. Mask of the Revenant</a>
+        <a class="quest-link" href="summaries/the-deadlock-protocol.html">14. The Deadlock Protocol</a>
+        <a class="quest-link" href="summaries/call-of-the-tempestarii.html">15. Call of the Tempestarii</a>
+        <a class="quest-link" href="summaries/the-waverider.html">16. The Waverider</a>
+        <a class="quest-link" href="summaries/veilbreaker.html">17. Veilbreaker</a>
+
+    </div>
+
+</div>
+
+<footer>
+    The Lorak Codex
+</footer>
+
+<script>
+document.querySelectorAll(".category-button").forEach(button => {
+    button.addEventListener("click", () => {
+        button.classList.toggle("active");
+
+        const content = button.nextElementSibling;
+        const isOpen = content.classList.toggle("show");
+
+        button.setAttribute("aria-expanded", isOpen);
+    });
+});
+</script>
+
 </body>
 </html>
