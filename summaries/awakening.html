@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,6 +57,14 @@ h2 {
     padding-bottom: 10px;
 }
 
+.back {
+    display: block;
+    color: #d4af37;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
 .summary-box {
     background: #101010;
     border: 1px solid #333;
@@ -69,18 +76,17 @@ h2 {
     margin: 8px 0;
 }
 
-.page-link {
+.transcript-link {
     display: inline-block;
-    background: #151515;
+    margin-top: 20px;
     color: #d4af37;
-    border: 1px solid #d4af37;
-    padding: 10px 15px;
-    margin: 10px 10px 0 0;
     text-decoration: none;
+    font-weight: bold;
 }
 
-.page-link:hover {
-    background: #242424;
+.transcript-link:hover,
+.back:hover {
+    text-decoration: underline;
 }
 
 footer {
@@ -111,20 +117,25 @@ footer {
 </header>
 
 <main>
-    <h2>Awakening — Quest Summary</h2>
+
+    <a class="back" href="../quests.html">← Back to Quest Index</a>
+
+    <h2>Awakening</h2>
 
     <div class="summary-box">
-        <p>This is a dummy summary page.</p>
-        <p>Your actual quest summary will go here when you transfer it from quests.html.</p>
+        <p>• The Awakening: For centuries, the Tenno have been dormant. As the Grineer Empire grows, the Lotus starts waking them up.</p>
+
+        <p>• Captain Vor's Plot: Captain Vor hunts down newly awakened Tenno on Earth. Instead of killing the player like ordered by the Twin Queens, he attaches an Ascaris device to control the Warframe.</p>
+
+        <p>• The Intervention: The Lotus remotely surges the player's power systems, letting them break free and fight back against nearby Grineer soldiers.</p>
+
+        <p>• Conclusion: You eventually fight Vor at the end and get picked up by Ordis, your original Orbiter Cephalon.</p>
     </div>
 
-    <a class="page-link" href="../quests.html">
-        Back to Quest Index
+    <a class="transcript-link" href="../transcripts/awakening.html">
+        Read the Awakening Transcript →
     </a>
 
-    <a class="page-link" href="../transcripts/awakening.html">
-        Read Transcript
-    </a>
 </main>
 
 <footer>
