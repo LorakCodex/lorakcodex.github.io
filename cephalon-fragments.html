@@ -15,96 +15,63 @@ body {
     background: #0b0b0b;
     color: #ddd;
     font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
 header {
     background: #111;
-    padding: 20px;
+    padding: 22px 15px;
     text-align: center;
-    border-bottom: 2px solid #d4af37;
+    border-bottom: 1px solid #292929;
 }
 
 header h1 {
+    margin: 0;
     color: #d4af37;
     letter-spacing: 3px;
-    margin: 0;
+    font-size: 25px;
 }
 
 nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 15px 10px;
     background: #111;
-    padding: 12px;
-    text-align: center;
 }
 
-nav a {
+nav a,
+.back {
     color: #d4af37;
     text-decoration: none;
-    margin: 0 8px;
     font-weight: bold;
 }
 
 nav a:hover,
-.back:hover,
-.source-link:hover {
-    text-decoration: underline;
+.back:hover {
+    color: #fff0a8;
 }
 
-.container {
-    max-width: 900px;
+main {
+    max-width: 950px;
     margin: auto;
-    padding: 20px;
-}
-
-.back {
-    display: block;
-    color: #d4af37;
-    font-weight: bold;
-    text-decoration: none;
-    margin-bottom: 20px;
+    padding: 20px 15px 45px;
 }
 
 h2 {
     color: #d4af37;
+    margin-bottom: 10px;
 }
 
-.description {
-    background: #111;
-    border-left: 3px solid #d4af37;
-    padding: 15px;
+.intro {
+    color: #bbb;
     margin-bottom: 20px;
-    line-height: 1.6;
 }
 
-.stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-bottom: 25px;
-}
-
-.stat {
-    background: #111;
-    border: 1px solid #393329;
-    padding: 15px 8px;
-    text-align: center;
-}
-
-.stat-number {
+.back {
     display: block;
-    color: #d4af37;
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.stat-label {
-    color: #aaa;
-    font-size: 13px;
-}
-
-.section-heading {
-    color: #d4af37;
-    margin: 25px 0 10px;
+    margin-bottom: 20px;
 }
 
 .location-button,
@@ -112,120 +79,82 @@ h2 {
     display: block;
     width: 100%;
     border: none;
+    border-radius: 3px;
     background: #d4af37;
     color: #0b0b0b;
     font-weight: bold;
     text-align: left;
     cursor: pointer;
-    padding: 12px;
-    font-size: 15px;
+    padding: 12px 14px;
 }
 
 .location-button {
     margin-top: 10px;
-    border-radius: 4px;
+    font-size: 16px;
 }
 
 .location-button:hover,
 .entry-button:hover {
-    background: #edcf60;
+    background: #ead078;
 }
 
 .location-content {
     display: none;
-    padding-top: 10px;
-}
-
-.location-content.show {
-    display: block;
+    padding: 0 0 8px;
 }
 
 .entry-button {
-    margin-bottom: 10px;
-    border-radius: 3px;
+    margin-top: 8px;
+    font-size: 14px;
 }
 
 .entry-content {
     display: none;
-    background: #111;
-    border: 1px solid #393329;
-    padding: 15px;
-    margin: 0 0 10px;
-    line-height: 1.6;
-    overflow-wrap: anywhere;
+    background: #141414;
+    border: 1px solid #333;
+    border-left: 3px solid #d4af37;
+    padding: 14px;
+    margin: 10px 0;
+    color: #ddd;
 }
 
-.entry-content.show {
-    display: block;
-}
-
-.scan-info {
-    color: #d4af37;
-    font-size: 13px;
-    margin-bottom: 10px;
-}
-
-.lore-placeholder {
-    color: #999;
+.coming-soon {
+    color: #bbb;
     font-style: italic;
+    margin: 0;
+}
+
+.ordis-section {
+    margin-top: 28px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
 }
 
 .source-link {
-    display: inline-block;
-    color: #d4af37;
-    margin-top: 8px;
-}
-
-.note {
-    background: #111;
-    border: 1px solid #393329;
-    padding: 15px;
     margin-top: 25px;
-    line-height: 1.6;
+    font-size: 13px;
 }
 
-button:focus-visible,
-a:focus-visible {
-    outline: 2px solid white;
-    outline-offset: 3px;
+.source-link a {
+    color: #d4af37;
 }
 
 footer {
     text-align: center;
     color: #777;
-    padding: 20px;
-    margin-top: 30px;
-    border-top: 1px solid #333;
+    padding: 20px 10px;
+    border-top: 1px solid #292929;
+    font-size: 12px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     header h1 {
-        font-size: 22px;
+        font-size: 20px;
     }
 
-    nav a {
-        display: inline-block;
-        margin: 6px;
-    }
-
-    .container {
-        padding: 15px;
-    }
-
-    .stats {
-        gap: 6px;
-    }
-
-    .stat {
-        padding: 12px 4px;
-    }
-
-    .stat-number {
-        font-size: 22px;
-    }
-
-    .stat-label {
-        font-size: 11px;
+    main {
+        padding-left: 12px;
+        padding-right: 12px;
     }
 }
 </style>
@@ -239,312 +168,299 @@ footer {
 
 <nav>
     <a href="index.html">Home</a>
-    <a href="extra-lore.html">Extra Lore</a>
     <a href="fragments.html">Fragments</a>
+    <a href="extra-lore.html">Extra Lore</a>
 </nav>
 
-<main class="container">
-
-    <a class="back" href="extra-lore.html">← Back to Extra Lore</a>
+<main>
+    <a class="back" href="fragments.html">← Back to Fragments</a>
 
     <h2>Cephalon Fragments</h2>
 
-    <div class="description">
-        Cephalon Fragments are collectible lore entries scattered
-        throughout the Origin System. Scanning them unlocks Codex
-        artwork and information about the Origin System.
-
-        <p>
-            Select a location to view its entries. Select an entry
-            to open its lore box.
-        </p>
-
-        <p>
-            The lore text for each entry will be added as it is
-            documented and verified.
-        </p>
-
-        <a class="source-link"
-           href="https://www.orokinarchives.com/navigation-hub/fragments/cephalon/"
-           target="_blank"
-           rel="noopener noreferrer">
-            Reference: Orokin Archives — Cephalon Fragments
-        </a>
-    </div>
-
-    <div class="stats">
-        <div class="stat">
-            <span class="stat-number" id="location-total">17</span>
-            <span class="stat-label">Locations</span>
-        </div>
-
-        <div class="stat">
-            <span class="stat-number" id="entry-total">43</span>
-            <span class="stat-label">Lore Entries</span>
-        </div>
-
-        <div class="stat">
-            <span class="stat-number" id="scan-total">223</span>
-            <span class="stat-label">Total Scans</span>
-        </div>
-    </div>
-
-    <h3 class="section-heading">Fragment Locations</h3>
+    <p class="intro">
+        Cephalon Fragments contain pieces of information scattered
+        throughout the Origin System. Scan the fragments to uncover
+        their entries and learn more about the Warframe universe.
+    </p>
 
     <div id="fragment-list"></div>
 
-    <div class="note">
-        <strong>Ordis — Hidden Story</strong>
-        <p>
-            Scanning Cephalon Fragments also unlocks transmissions
-            revealing parts of Ordis's past. These transmissions
-            are connected to the regular fragments and are not an
-            additional planetary fragment entry.
-        </p>
-    </div>
+    <section class="ordis-section">
+        <h2>Ordis — Hidden Story</h2>
 
+        <p class="intro">
+            Ordis's hidden transmissions reveal more about his past.
+            This section is separate from the regular Cephalon Fragments.
+        </p>
+
+        <button class="location-button" id="ordis-button"
+                aria-expanded="false">
+            Ordis (Hidden)
+        </button>
+
+        <div class="location-content" id="ordis-content">
+            <button class="entry-button" data-ordis-entry="0">
+                Hidden Transmission 1
+            </button>
+            <div class="entry-content" data-ordis-content="0">
+                <p class="coming-soon">Dialogue coming soon.</p>
+            </div>
+
+            <button class="entry-button" data-ordis-entry="1">
+                Hidden Transmission 2
+            </button>
+            <div class="entry-content" data-ordis-content="1">
+                <p class="coming-soon">Dialogue coming soon.</p>
+            </div>
+
+            <button class="entry-button" data-ordis-entry="2">
+                Hidden Transmission 3
+            </button>
+            <div class="entry-content" data-ordis-content="2">
+                <p class="coming-soon">Dialogue coming soon.</p>
+            </div>
+
+            <button class="entry-button" data-ordis-entry="3">
+                Hidden Transmission 4
+            </button>
+            <div class="entry-content" data-ordis-content="3">
+                <p class="coming-soon">Dialogue coming soon.</p>
+            </div>
+
+            <button class="entry-button" data-ordis-entry="4">
+                Hidden Transmission 5
+            </button>
+            <div class="entry-content" data-ordis-content="4">
+                <p class="coming-soon">Dialogue coming soon.</p>
+            </div>
+        </div>
+    </section>
+
+    <p class="source-link">
+        Reference:
+        <a href="https://www.orokinarchives.com/navigation-hub/fragments/cephalon/"
+           target="_blank" rel="noopener noreferrer">
+            Orokin Archives — Cephalon Fragments
+        </a>
+    </p>
 </main>
 
 <footer>
-    The Lorak Codex
+    The Lorak Codex · Warframe Lore Archive
 </footer>
 
 <script>
+/*
+ * Add the original fragment dialogue inside each entry's dialogue field
+ * when it has been verified.
+ *
+ * Example:
+ * dialogue: `Original dialogue goes here.`
+ *
+ * Until then, entries display "Dialogue coming soon."
+ */
+
 const locations = [
     {
         name: "Earth",
-        scans: 3,
         entries: [
-            "Earth",
-            "Wildlife",
-            "Earth Settlements"
+            { name: "Earth", dialogue: "" },
+            { name: "Wildlife", dialogue: "" },
+            { name: "Earth Settlements", dialogue: "" }
         ]
     },
     {
         name: "Venus",
-        scans: 3,
         entries: [
-            "Venus",
-            "Dojo",
-            "Corpus Crew"
+            { name: "Venus", dialogue: "" },
+            { name: "Dojo", dialogue: "" },
+            { name: "Corpus Crew", dialogue: "" }
         ]
     },
     {
         name: "Mercury",
-        scans: 5,
         entries: [
-            "Mercury",
-            "Grineer Leadership",
-            "Archaic Weapons"
+            { name: "Mercury", dialogue: "" },
+            { name: "Grineer Leadership", dialogue: "" },
+            { name: "Archaic Weapons", dialogue: "" }
         ]
     },
     {
         name: "Mars",
-        scans: 5,
         entries: [
-            "Mars",
-            "Sentinels",
-            "Grineer Settlements"
+            { name: "Mars", dialogue: "" },
+            { name: "Sentinels", dialogue: "" },
+            { name: "Grineer Settlements", dialogue: "" }
         ]
     },
     {
         name: "Phobos",
-        scans: 5,
         entries: [
-            "Phobos",
-            "Grineer",
-            "Corpus Weapons"
+            { name: "Phobos", dialogue: "" },
+            { name: "Grineer", dialogue: "" },
+            { name: "Corpus Weapons", dialogue: "" }
         ]
     },
     {
         name: "Ceres",
-        scans: 5,
         entries: [
-            "Ceres",
-            "Grineer Labour"
+            { name: "Ceres", dialogue: "" },
+            { name: "Grineer Labour", dialogue: "" }
         ]
     },
     {
         name: "Jupiter",
-        scans: 5,
         entries: [
-            "Jupiter",
-            "Robotics"
+            { name: "Jupiter", dialogue: "" },
+            { name: "Robotics", dialogue: "" }
         ]
     },
     {
         name: "Europa",
-        scans: 5,
         entries: [
-            "Europa",
-            "Corpus",
-            "Europa Landscape"
+            { name: "Europa", dialogue: "" },
+            { name: "Corpus", dialogue: "" },
+            { name: "Europa Landscape", dialogue: "" }
         ]
     },
     {
         name: "The Void",
-        scans: 5,
         entries: [
-            "Void",
-            "Orokin"
+            { name: "Void", dialogue: "" },
+            { name: "Orokin", dialogue: "" }
         ]
     },
     {
         name: "Saturn",
-        scans: 5,
         entries: [
-            "Saturn",
-            "Citizens",
-            "Landing Craft"
+            { name: "Saturn", dialogue: "" },
+            { name: "Citizens", dialogue: "" },
+            { name: "Landing Craft", dialogue: "" }
         ]
     },
     {
         name: "Uranus",
-        scans: 5,
         entries: [
-            "Uranus",
-            "Orbiter"
+            { name: "Uranus", dialogue: "" },
+            { name: "Orbiter", dialogue: "" }
         ]
     },
     {
         name: "Neptune",
-        scans: 5,
         entries: [
-            "Neptune",
-            "Lotus"
+            { name: "Neptune", dialogue: "" },
+            { name: "Lotus", dialogue: "" }
         ]
     },
     {
         name: "Lua",
-        scans: 5,
         entries: [
-            "Lua",
-            "Warframes"
+            { name: "Lua", dialogue: "" },
+            { name: "Warframes", dialogue: "" }
         ]
     },
     {
         name: "Pluto",
-        scans: 7,
         entries: [
-            "Pluto",
-            "Infested"
+            { name: "Pluto", dialogue: "" },
+            { name: "Infested", dialogue: "" }
         ]
     },
     {
         name: "Orokin Derelict",
-        scans: 7,
         entries: [
-            "Orokin Derelict",
-            "The Collapse",
-            "Lephantis"
+            { name: "Orokin Derelict", dialogue: "" },
+            { name: "The Collapse", dialogue: "" },
+            { name: "Lephantis", dialogue: "" }
         ]
     },
     {
         name: "Eris",
-        scans: 7,
         entries: [
-            "Eris",
-            "Warframe Technology",
-            "Infestation"
+            { name: "Eris", dialogue: "" },
+            { name: "Warframe Technology", dialogue: "" },
+            { name: "Infestation", dialogue: "" }
         ]
     },
     {
         name: "Sedna",
-        scans: 7,
         entries: [
-            "Sedna",
-            "Grineer Technology"
+            { name: "Sedna", dialogue: "" },
+            { name: "Grineer Technology", dialogue: "" }
         ]
     }
 ];
 
-const list = document.getElementById("fragment-list");
+const fragmentList = document.getElementById("fragment-list");
 
-const totalEntries = locations.reduce(function(total, location) {
-    return total + location.entries.length;
-}, 0);
-
-const totalScans = locations.reduce(function(total, location) {
-    return total + (location.entries.length * location.scans);
-}, 0);
-
-document.getElementById("location-total").textContent =
-    locations.length;
-
-document.getElementById("entry-total").textContent =
-    totalEntries;
-
-document.getElementById("scan-total").textContent =
-    totalScans;
-
-locations.forEach(function(location) {
-    const section = document.createElement("section");
-
+locations.forEach((location, locationIndex) => {
     const locationButton = document.createElement("button");
     locationButton.className = "location-button";
-    locationButton.type = "button";
-    locationButton.textContent =
-        location.name + " (" +
-        location.entries.length + " entries · " +
-        (location.entries.length * location.scans) +
-        " scans)";
-
+    locationButton.textContent = location.name;
     locationButton.setAttribute("aria-expanded", "false");
 
     const locationContent = document.createElement("div");
     locationContent.className = "location-content";
 
-    location.entries.forEach(function(entryName, index) {
+    locationButton.addEventListener("click", () => {
+        const isOpen = locationContent.style.display === "block";
+
+        locationContent.style.display = isOpen ? "none" : "block";
+        locationButton.setAttribute("aria-expanded", String(!isOpen));
+    });
+
+    location.entries.forEach((entry, entryIndex) => {
         const entryButton = document.createElement("button");
         entryButton.className = "entry-button";
-        entryButton.type = "button";
-        entryButton.textContent =
-            (index + 1) + ". " + entryName;
-
+        entryButton.textContent = entry.name;
         entryButton.setAttribute("aria-expanded", "false");
 
         const entryContent = document.createElement("div");
         entryContent.className = "entry-content";
 
-        const scanInfo = document.createElement("div");
-        scanInfo.className = "scan-info";
-        scanInfo.textContent =
-            "Scans required: " + location.scans;
+        const dialogue = document.createElement("p");
+        dialogue.className = entry.dialogue
+            ? ""
+            : "coming-soon";
+        dialogue.textContent = entry.dialogue || "Dialogue coming soon.";
 
-        const loreText = document.createElement("p");
-        loreText.className = "lore-placeholder";
-        loreText.textContent =
-            "Lore text coming soon.";
+        entryContent.appendChild(dialogue);
 
-        entryContent.appendChild(scanInfo);
-        entryContent.appendChild(loreText);
+        entryButton.addEventListener("click", () => {
+            const isOpen = entryContent.style.display === "block";
 
-        entryButton.addEventListener("click", function() {
-            const isOpen = entryContent.classList.toggle("show");
-
-            entryButton.setAttribute(
-                "aria-expanded",
-                String(isOpen)
-            );
+            entryContent.style.display = isOpen ? "none" : "block";
+            entryButton.setAttribute("aria-expanded", String(!isOpen));
         });
 
         locationContent.appendChild(entryButton);
         locationContent.appendChild(entryContent);
     });
 
-    locationButton.addEventListener("click", function() {
-        const isOpen = locationContent.classList.toggle("show");
+    fragmentList.appendChild(locationButton);
+    fragmentList.appendChild(locationContent);
+});
 
-        locationButton.setAttribute(
-            "aria-expanded",
-            String(isOpen)
+document.getElementById("ordis-button").addEventListener("click", () => {
+    const button = document.getElementById("ordis-button");
+    const content = document.getElementById("ordis-content");
+    const isOpen = content.style.display === "block";
+
+    content.style.display = isOpen ? "none" : "block";
+    button.setAttribute("aria-expanded", String(!isOpen));
+});
+
+document.querySelectorAll("[data-ordis-entry]").forEach(button => {
+    button.addEventListener("click", () => {
+        const index = button.dataset.ordisEntry;
+        const content = document.querySelector(
+            `[data-ordis-content="${index}"]`
         );
+        const isOpen = content.style.display === "block";
+
+        content.style.display = isOpen ? "none" : "block";
+        button.setAttribute("aria-expanded", String(!isOpen));
     });
-
-    section.appendChild(locationButton);
-    section.appendChild(locationContent);
-
-    list.appendChild(section);
 });
 </script>
 
