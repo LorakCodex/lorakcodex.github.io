@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,18 +75,29 @@ h2 {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .chapter-button:hover {
     background: #e5c451;
 }
 
+.chapter-button::after {
+    content: "+";
+    float: right;
+    font-size: 18px;
+}
+
+.chapter-button.active::after {
+    content: "−";
+}
+
 .chapter-content {
     display: none;
-    background: #151515;
-    border: 1px solid #333;
-    padding: 15px;
+    background: #111;
+    border: 1px solid #66551d;
+    border-radius: 5px;
+    padding: 10px 15px;
     margin-top: 10px;
     margin-bottom: 15px;
     line-height: 1.6;
@@ -103,13 +115,14 @@ h2 {
 .scan-count {
     color: #d4af37;
     font-size: 13px;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    border-top: 1px solid #333;
+    border-top: 1px solid #66551d;
     color: #777;
     font-size: 13px;
 }
@@ -133,7 +146,7 @@ footer {
     </p>
 
     <div class="chapter">
-        <button class="chapter-button" onclick="toggleChapter(this)">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
             1. The Aftermath
         </button>
         <div class="chapter-content">
@@ -170,7 +183,7 @@ footer {
     </div>
 
     <div class="chapter">
-        <button class="chapter-button" onclick="toggleChapter(this)">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
             2. The Cavia
         </button>
         <div class="chapter-content">
@@ -207,7 +220,7 @@ footer {
     </div>
 
     <div class="chapter">
-        <button class="chapter-button" onclick="toggleChapter(this)">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
             3. Duviri
         </button>
         <div class="chapter-content">
@@ -236,7 +249,7 @@ footer {
     </div>
 
     <div class="chapter">
-        <button class="chapter-button" onclick="toggleChapter(this)">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
             4. The Vessels
         </button>
         <div class="chapter-content">
@@ -255,7 +268,7 @@ footer {
     </div>
 
     <div class="chapter">
-        <button class="chapter-button" onclick="toggleChapter(this)">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
             5. We End As We Began
         </button>
         <div class="chapter-content">
@@ -285,12 +298,11 @@ footer {
 <script>
 function toggleChapter(button) {
     const content = button.nextElementSibling;
+    const isOpen = content.style.display === "block";
 
-    if (content.style.display === "block") {
-        content.style.display = "none";
-    } else {
-        content.style.display = "block";
-    }
+    content.style.display = isOpen ? "none" : "block";
+    button.classList.toggle("active", !isOpen);
+    button.setAttribute("aria-expanded", String(!isOpen));
 }
 </script>
 
