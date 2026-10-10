@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Tale of Two Sisters | The Lorak Codex</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background: #0b0b0b;
+    color: #ddd;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 2px solid #d4af37;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #d4af37;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.subtitle {
+    color: #aaa;
+    letter-spacing: 2px;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+}
+
+.back {
+    display: block;
+    color: #d4af37;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.back:hover {
+    color: #f0d778;
+}
+
+h2 {
+    color: #d4af37;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+.thread-button {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    margin: 0 0 10px;
+    background: #d4af37;
+    color: #0b0b0b;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+}
+
+.thread-button:hover {
+    background: #e6c65a;
+}
+
+.thread-button::after {
+    content: "+";
+    float: right;
+    font-size: 18px;
+}
+
+.thread-button.active::after {
+    content: "−";
+}
+
+.thread-content {
+    display: none;
+    background: #111;
+    border: 1px solid #66551d;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 0 0 10px;
+}
+
+.thread-content p {
+    margin: 0;
+    white-space: pre-line;
+}
+
+footer {
+    text-align: center;
+    color: #d4af37;
+    border-top: 1px solid #d4af37;
+    margin-top: 40px;
+    padding: 20px 0;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>THE LORAK CODEX</h1>
+    <div class="subtitle">FRAGMENT LORE</div>
+</header>
+
+<main>
+
+<a class="back" href="fragments.html">← Back to Fragments</a>
+
+<h2>THE TALE OF TWO SISTERS</h2>
+
+<p class="description">
+The Kuria are small objects hidden around the Origin System, able to be scanned in standard missions. When scanned, they will reveal a line from a poem about the Grineer leaders the Twin Queens.
+</p>
+
+<button class="thread-button" onclick="toggleThread(this)" aria-expanded="false">
+#1 - A Story once lost
+</button>
+<div class="thread-content">
+<p>A Story once lost
+Recovered by fate
+The tale of two sisters
+Who bore the same face</p>
+</div>
+
+<button class="thread-button" onclick="toggleThread(this)" aria-expanded="false">
+#2 - Born one quiet morning
+</button>
+<div class="thread-content">
+<p>Born one quiet morning
+Amidst the great war
+All elders were gathered
+For this life's new dawn</p>
+</div>
+
+<button class="thread-button" onclick="toggleThread(this)" aria-expanded="false">
+#3 - Confused and bewildered
+</button>
+<div class="thread-content">
+<p>Confused and bewildered
+They judged them amiss
+For they never witnessed
+Two self-same as these</p>
+</div>
+
+<button class="thread-button" onclick="toggleThread(this)" aria-expanded="false">
+#4 - A mirrored reflection
+</button>
+<div class="thread-content">
+<p>A mirrored reflection
+Had come into life
+By will of their father
+Kept safe from the knife</p>
+</div>
+
+<button class="thread-button" onclick="toggleThread(this)" aria-expanded="false">
+#5 - Their sameness was shunned
+</button>
+<div class="thread-content">
+<p>Their sameness was shunned
+As slave-like and soiled
+They tended their strays
+Rejected by all</p>
+</div>
+
+<button class="thread-button" onclick="toggleThread(this)" aria-expanded="false">
+#6 - As both Girls Matured
+</button>
+<div class="thread-content">
+<p>As both Girls Matured
+Their bond grew in depth
+They had the same poise
+Same senses, same strength</p>
+</div>
+
+<button class="thread-button" onclick="toggleThread(this)" aria-expanded="false">
+#7 - The Uprising came
+</button>
+<div class="thread-content">
+<p>The Uprising came
+And Spread like a weed
+An army of copy-men
+Ferocious and Free</p>
+</div>
+
+<button class="thread-button" onclick="toggleThread(this)" aria-expanded="false">
+#8 - And much like the sea
+</button>
+<div class="thread-content">
+<p>And much like the sea
+They came just like waves
+For years they fought on
+For years we remained</p>
+</div>
+
+<button class="thread-button" onclick="toggleThread(this)" aria-expanded="false">
+#9 - Like chisel to stone
+</button>
+<div class="thread-content">
+<p>Like chisel to stone
+War molded the twins
+Who ravaged the hordes
+Became legend to them</p>
+</div>
+
+<button class="thread-button" onclick="toggleThread(this)" aria-expanded="false">
+#10 - They had a deep strength
+</button>
+<div class="thread-content">
+<p>They had a deep strength
+That came from Each other
+Unlike all these copies
+Identical, but not brothers</p>
+</div>
+
+<button class="thread-button" onclick="toggleThread(this)" aria-expanded="false">
+#11 - The copies could see it
+</button>
+<div class="thread-content">
+<p>The copies could see it
+They yearned for it too
+If the twins could do it
+Perhaps they could too</p>
+</div>
+
+<button class="thread-button" onclick="toggleThread(this)" aria-expanded="false">
+#12 - The twins had attained
+</button>
+<div class="thread-content">
+<p>The twins had attained
+Something more than a whole
+A true understanding
+Of each other soul</p>
+</div>
+
+<button class="thread-button" onclick="toggleThread(this)" aria-expanded="false">
+#13 - The copies became believers
+</button>
+<div class="thread-content">
+<p>The copies became believers
+One by one bowed to the twins
+And led forth by their new masters
+They ravaged the colonies</p>
+</div>
+
+<button class="thread-button" onclick="toggleThread(this)" aria-expanded="false">
+#14 - Now a power to follow
+</button>
+<div class="thread-content">
+<p>Now a power to follow
+Not a force to be fought
+From the ashes of war
+The Twin Queens were wrought</p>
+</div>
+
+</main>
+
+<footer>
+THE LORAK CODEX
+</footer>
+
+<script>
+function toggleThread(button) {
+    const content = button.nextElementSibling;
+    const isOpen = content.style.display === "block";
+
+    content.style.display = isOpen ? "none" : "block";
+    button.classList.toggle("active", !isOpen);
+    button.setAttribute("aria-expanded", String(!isOpen));
+}
+</script>
+
+</body>
+</html>
