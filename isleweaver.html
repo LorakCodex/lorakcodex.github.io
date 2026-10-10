@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isleweaver | The Lorak Codex</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background: #0b0b0b;
+    color: #ddd;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 2px solid #d4af37;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #d4af37;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.subtitle {
+    color: #aaa;
+    letter-spacing: 2px;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+}
+
+.back {
+    display: block;
+    color: #d4af37;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.back:hover {
+    color: #f0d778;
+}
+
+h2 {
+    color: #d4af37;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+.thread-button {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    margin: 0 0 10px;
+    background: #d4af37;
+    color: #0b0b0b;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+}
+
+.thread-button:hover {
+    background: #e6c65a;
+}
+
+.thread-button::after {
+    content: "+";
+    float: right;
+    font-size: 18px;
+}
+
+.thread-button.active::after {
+    content: "−";
+}
+
+.thread-content {
+    display: none;
+    background: #111;
+    border: 1px solid #66551d;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 0 0 10px;
+}
+
+.thread-content p {
+    margin: 0 0 15px;
+}
+
+.thread-content p:last-child {
+    margin-bottom: 0;
+}
+
+footer {
+    text-align: center;
+    color: #d4af37;
+    border-top: 1px solid #d4af37;
+    margin-top: 40px;
+    padding: 20px 0;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>THE LORAK CODEX</h1>
+    <div class="subtitle">FRAGMENT LORE</div>
+</header>
+
+<main>
+
+<a class="back" href="../fragments.html">← Back to Fragments</a>
+
+<h2>ISLEWEAVER</h2>
+
+<p class="description">
+A dark, storybook-like tale told through five threads, following a little girl as she faces envy, fear, sadness, joy, and anger — while a spider offers to consume everything she struggles with.
+</p>
+
+<button class="thread-button" onclick="toggleThread(this)" aria-expanded="false">
+1. The First Thread
+</button>
+<div class="thread-content">
+<p>Once Upon A Time... there was a little girl. An envious little girl, who watched as the whole world had more than she did. All the nice things, all the expensive things. And so she took what she didn't have.</p>
+<p>And along came a spider who told her that everyone in the world would always have more than she did. But the spider said he could eat it all up for her.</p>
+<p>But she clung to her favorite toy and filled her life with family and told the spider to GO! AWAY!</p>
+</div>
+
+<button class="thread-button" onclick="toggleThread(this)" aria-expanded="false">
+2. The Second Thread
+</button>
+<div class="thread-content">
+<p>Once Upon A Time... there was a little girl. A frightened little girl, who ran and hid and was so afraid of everything around her. But most of all, she was afraid to die.</p>
+<p>And along came a spider who told her that everything we love in this world withers and dies. But the spider said he could eat it all up for her.</p>
+<p>But she hid her fear away in the arms of strangers and told the spider to GO! AWAY!</p>
+</div>
+
+<button class="thread-button" onclick="toggleThread(this)" aria-expanded="false">
+3. The Third Thread
+</button>
+<div class="thread-content">
+<p>Once Upon A Time... there was a little girl. A sad little girl, who watched as the world went wrong. Watched as people fought. As people lied. A sad little girl who watched as per parents grew farther and farther apart.</p>
+<p>And along came a spider who told her that everything in the world always ended in sadness. But the spider said he could eat it all up for her.</p>
+<p>But she turned away from the sadness and filled her life with faith and told the spider to GO! AWAY!</p>
+</div>
+
+<button class="thread-button" onclick="toggleThread(this)" aria-expanded="false">
+4. The Fourth Thread
+</button>
+<div class="thread-content">
+<p>Once Upon A Time... there was a little girl. A joyful little girl, whose life was filled with meaning and happiness. She filled her world with dolls on strings and made them dance.</p>
+<p>And along came a spider who told her that everything was a lie, and all her happiness was a shallow pane of glass. But the spider said he could eat it all up for her.</p>
+<p>But she turned away from the joy and filled her life with war and told the spider to GO! AWAY!</p>
+</div>
+
+<button class="thread-button" onclick="toggleThread(this)" aria-expanded="false">
+5. The Last Thread
+</button>
+<div class="thread-content">
+<p>Once Upon A Time... there was a little girl. An angry little girl, whose life was filled with fury and rage. She hurt and maimed and was hurt and maimed in return.</p>
+<p>And along came a spider who told her that everything in the world always ended in anger. But the spider said he could eat it all up for her.</p>
+<p>But she turned away... and realized she had nothing else to fill her life with.</p>
+<p>The spider smiled... and he ate her all up.</p>
+</div>
+
+</main>
+
+<footer>
+THE LORAK CODEX
+</footer>
+
+<script>
+function toggleThread(button) {
+    const content = button.nextElementSibling;
+    const isOpen = content.style.display === "block";
+
+    content.style.display = isOpen ? "none" : "block";
+    button.classList.toggle("active", !isOpen);
+    button.setAttribute("aria-expanded", String(!isOpen));
+}
+</script>
+
+</body>
+</html>
