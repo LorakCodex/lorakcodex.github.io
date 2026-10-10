@@ -5,11 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cephalon Fragments - The Lorak Codex</title>
-
 <style>
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
@@ -58,9 +55,7 @@ nav a {
     margin-bottom: 20px;
 }
 
-h2 {
-    color: #d4af37;
-}
+h2 { color: #d4af37; }
 
 .description {
     background: #111;
@@ -83,22 +78,16 @@ h2 {
     font-size: 15px;
 }
 
-.location-button {
-    margin-top: 10px;
-}
+.location-button { margin-top: 10px; }
 
 .location-content {
     display: none;
     padding-top: 10px;
 }
 
-.location-content.show {
-    display: block;
-}
+.location-content.show { display: block; }
 
-.entry-button {
-    margin-bottom: 10px;
-}
+.entry-button { margin-bottom: 10px; }
 
 .entry-content {
     display: none;
@@ -110,14 +99,18 @@ h2 {
     overflow-wrap: anywhere;
 }
 
-.entry-content.show {
-    display: block;
-}
+.entry-content.show { display: block; }
 
 .scan-info {
     color: #aaa;
     font-size: 13px;
     margin-bottom: 10px;
+}
+
+.source-link {
+    display: inline-block;
+    color: #d4af37;
+    margin-top: 8px;
 }
 
 .location-button:hover,
@@ -127,7 +120,7 @@ h2 {
 
 button:focus-visible,
 a:focus-visible {
-    outline: 2px solid #fff;
+    outline: 2px solid white;
     outline-offset: 3px;
 }
 
@@ -140,22 +133,15 @@ footer {
 }
 
 @media (max-width: 600px) {
-    header h1 {
-        font-size: 22px;
-    }
-
+    header h1 { font-size: 22px; }
     nav a {
         display: inline-block;
         margin: 6px;
     }
-
-    .container {
-        padding: 15px;
-    }
+    .container { padding: 15px; }
 }
 </style>
 </head>
-
 <body>
 
 <header>
@@ -168,53 +154,126 @@ footer {
 </nav>
 
 <main class="container">
+    <a class="back" href="extra-lore.html">← Back to Extra Lore</a>
 
-<a class="back" href="extra-lore.html">← Back to Extra Lore</a>
+    <h2>Cephalon Fragments</h2>
 
-<h2>Cephalon Fragments</h2>
+    <div class="description">
+        Cephalon Fragments are collectible lore entries scattered
+        throughout the Origin System. Scanning them unlocks Codex
+        artwork and information about the Origin System.
 
-<div class="description">
-    Cephalon Fragments are collectible pieces of lore scattered
-    throughout the Origin System.
+        <p>
+            Select a location to view its entries. Select an entry
+            to open its lore box.
+        </p>
 
-    <p>
-        Scanning fragments unlocks Codex artwork and information
-        about the Origin System, including details about Ordis's past.
-    </p>
+        <p>
+            <a class="source-link"
+               href="https://www.orokinarchives.com/navigation-hub/fragments/cephalon/"
+               target="_blank" rel="noopener noreferrer">
+                Reference: Orokin Archives — Cephalon Fragments
+            </a>
+        </p>
+    </div>
 
-    <p>
-        Select a location to browse its lore entries. Each entry
-        has its own expandable box for the corresponding lore text.
-    </p>
-</div>
-
-<div id="fragment-list"></div>
-
+    <div id="fragment-list"></div>
 </main>
 
-<footer>
-    The Lorak Codex
-</footer>
+<footer>The Lorak Codex</footer>
 
 <script>
 const locations = [
-    { name: "Earth", entries: 3, scans: 3 },
-    { name: "Venus", entries: 3, scans: 3 },
-    { name: "Mercury", entries: 2, scans: null },
-    { name: "Mars", entries: 3, scans: 5 },
-    { name: "Phobos", entries: 3, scans: 5 },
-    { name: "Ceres", entries: 2, scans: 5 },
-    { name: "Jupiter", entries: 2, scans: 5 },
-    { name: "Europa", entries: 3, scans: 5 },
-    { name: "Saturn", entries: 3, scans: 5 },
-    { name: "Uranus", entries: 2, scans: 5 },
-    { name: "Neptune", entries: 2, scans: 5 },
-    { name: "Pluto", entries: 2, scans: 7 },
-    { name: "Sedna", entries: 2, scans: 7 },
-    { name: "Lua", entries: 2, scans: 5 },
-    { name: "The Void", entries: 2, scans: 5 },
-    { name: "Eris", entries: 3, scans: 7 },
-    { name: "Orokin Derelict (Deimos)", entries: 3, scans: 7 }
+    {
+        name: "Earth",
+        scans: 3,
+        entries: ["Earth", "Wildlife", "Earth Settlements"]
+    },
+    {
+        name: "Venus",
+        scans: 3,
+        entries: ["Venus", "Dojo", "Corpus Crew"]
+    },
+    {
+        name: "Mercury",
+        scans: null,
+        entries: ["Mercury", "Grineer Leadership", "Archaic Weapons"]
+    },
+    {
+        name: "Mars",
+        scans: 5,
+        entries: ["Mars", "Sentinels", "Grineer Settlements"]
+    },
+    {
+        name: "Phobos",
+        scans: 5,
+        entries: ["Phobos", "Grineer", "Corpus Weapons"]
+    },
+    {
+        name: "Ceres",
+        scans: 5,
+        entries: ["Ceres", "Grineer Labour"]
+    },
+    {
+        name: "Jupiter",
+        scans: 5,
+        entries: ["Jupiter", "Robotics"]
+    },
+    {
+        name: "Europa",
+        scans: 5,
+        entries: ["Europa", "Corpus", "Europa Landscape"]
+    },
+    {
+        name: "Saturn",
+        scans: 5,
+        entries: ["Saturn", "Citizens", "Landing Craft"]
+    },
+    {
+        name: "Uranus",
+        scans: 5,
+        entries: ["Uranus", "Orbiter"]
+    },
+    {
+        name: "Neptune",
+        scans: 5,
+        entries: ["Neptune", "Lotus"]
+    },
+    {
+        name: "Pluto",
+        scans: 7,
+        entries: ["Pluto", "Infested"]
+    },
+    {
+        name: "Sedna",
+        scans: 7,
+        entries: ["Sedna", "Grineer Technology"]
+    },
+    {
+        name: "Lua",
+        scans: 5,
+        entries: ["Lua", "Warframes"]
+    },
+    {
+        name: "The Void",
+        scans: 5,
+        entries: ["The Void", "Orokin"]
+    },
+    {
+        name: "Eris",
+        scans: 7,
+        entries: ["Eris", "Warframe Technology", "Infestation"]
+    },
+    {
+        name: "Orokin Derelict (Deimos)",
+        scans: 7,
+        entries: ["Orokin Derelict", "The Collapse", "Lephantis"]
+    },
+    {
+        name: "Ordis (Hidden Story)",
+        scans: null,
+        entries: ["Ordis — Hidden Fragment Story"]
+    }
 ];
 
 const list = document.getElementById("fragment-list");
@@ -226,18 +285,17 @@ locations.forEach(function(location) {
     locationButton.className = "location-button";
     locationButton.type = "button";
     locationButton.textContent =
-        location.name + " (" + location.entries + " entries)";
+        location.name + " (" + location.entries.length + " entries)";
     locationButton.setAttribute("aria-expanded", "false");
 
     const locationContent = document.createElement("div");
     locationContent.className = "location-content";
 
-    for (let i = 1; i <= location.entries; i++) {
+    location.entries.forEach(function(entryName, index) {
         const entryButton = document.createElement("button");
         entryButton.className = "entry-button";
         entryButton.type = "button";
-        entryButton.textContent =
-            i + ". " + location.name + " Fragment";
+        entryButton.textContent = (index + 1) + ". " + entryName;
         entryButton.setAttribute("aria-expanded", "false");
 
         const entryContent = document.createElement("div");
@@ -249,29 +307,29 @@ locations.forEach(function(location) {
             scanInfo.textContent =
                 "Scans required: " + location.scans;
             entryContent.appendChild(scanInfo);
+        } else {
+            const scanInfo = document.createElement("div");
+            scanInfo.className = "scan-info";
+            scanInfo.textContent =
+                "Scan requirement not confirmed.";
+            entryContent.appendChild(scanInfo);
         }
 
         entryButton.addEventListener("click", function() {
             const isOpen = entryContent.classList.toggle("show");
-
-            entryButton.classList.toggle("active", isOpen);
             entryButton.setAttribute(
-                "aria-expanded",
-                String(isOpen)
+                "aria-expanded", String(isOpen)
             );
         });
 
         locationContent.appendChild(entryButton);
         locationContent.appendChild(entryContent);
-    }
+    });
 
     locationButton.addEventListener("click", function() {
         const isOpen = locationContent.classList.toggle("show");
-
-        locationButton.classList.toggle("active", isOpen);
         locationButton.setAttribute(
-            "aria-expanded",
-            String(isOpen)
+            "aria-expanded", String(isOpen)
         );
     });
 
