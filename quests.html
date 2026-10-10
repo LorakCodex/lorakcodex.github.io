@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -416,7 +417,7 @@
 
     function loadSummaries() {
         if (!summariesPromise) {
-            summariesPromise = fetch("summaries.html")
+            summariesPromise = fetch("summaries.html?refresh=" + Date.now(), { cache: "no-store" })
                 .then(function (response) {
                     if (!response.ok) {
                         throw new Error("Could not load summaries.html");
