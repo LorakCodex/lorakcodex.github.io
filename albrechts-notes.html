@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Albrecht's Notes - The Lorak Codex</title>
+
+<style>
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #d4af37;
+}
+
+h1 {
+    color: #d4af37;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back {
+    display: block;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #d4af37;
+}
+
+.description {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.chapter {
+    margin-top: 10px;
+}
+
+.chapter-button {
+    width: 100%;
+    background: #d4af37;
+    color: #0b0b0b;
+    border: none;
+    padding: 13px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.chapter-content {
+    display: none;
+    background: #151515;
+    border: 1px solid #333;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.chapter-content p {
+    margin: 0;
+}
+
+.scan-count {
+    color: #d4af37;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>THE LORAK CODEX</h1>
+</header>
+
+<main>
+    <a class="back" href="fragments.html">← Back to Fragments</a>
+
+    <h2>Albrecht's Notes</h2>
+
+    <p class="description">
+        Pages from Albrecht Entrati's Grimoire, documenting his experiences
+        following his first voyage into the Void.
+    </p>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)">
+            1. The Aftermath
+        </button>
+        <div class="chapter-content">
+            <div class="scan-count">Scans required: 6</div>
+            <p>Text coming soon.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)">
+            2. The Cavia
+        </button>
+        <div class="chapter-content">
+            <div class="scan-count">Scans required: 6</div>
+            <p>Text coming soon.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)">
+            3. Duviri
+        </button>
+        <div class="chapter-content">
+            <div class="scan-count">Scans required: 5</div>
+            <p>Text coming soon.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)">
+            4. The Vessels
+        </button>
+        <div class="chapter-content">
+            <div class="scan-count">Scans required: 5</div>
+            <p>Text coming soon.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)">
+            5. We End As We Began
+        </button>
+        <div class="chapter-content">
+            <div class="scan-count">Scans required: 1</div>
+            <p>Text coming soon.</p>
+        </div>
+    </div>
+
+</main>
+
+<script>
+function toggleChapter(button) {
+    const content = button.nextElementSibling;
+
+    if (content.style.display === "block") {
+        content.style.display = "none";
+    } else {
+        content.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
