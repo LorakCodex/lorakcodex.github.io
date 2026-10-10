@@ -1,12 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cephalon Fragments - The Lorak Codex</title>
+
 <style>
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
@@ -37,8 +39,14 @@ nav {
 nav a {
     color: #d4af37;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 8px;
     font-weight: bold;
+}
+
+nav a:hover,
+.back:hover,
+.source-link:hover {
+    text-decoration: underline;
 }
 
 .container {
@@ -55,7 +63,9 @@ nav a {
     margin-bottom: 20px;
 }
 
-h2 { color: #d4af37; }
+h2 {
+    color: #d4af37;
+}
 
 .description {
     background: #111;
@@ -65,8 +75,41 @@ h2 { color: #d4af37; }
     line-height: 1.6;
 }
 
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.stat {
+    background: #111;
+    border: 1px solid #393329;
+    padding: 15px 8px;
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    color: #d4af37;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: #aaa;
+    font-size: 13px;
+}
+
+.section-heading {
+    color: #d4af37;
+    margin: 25px 0 10px;
+}
+
 .location-button,
 .entry-button {
+    display: block;
     width: 100%;
     border: none;
     background: #d4af37;
@@ -78,33 +121,53 @@ h2 { color: #d4af37; }
     font-size: 15px;
 }
 
-.location-button { margin-top: 10px; }
+.location-button {
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.location-button:hover,
+.entry-button:hover {
+    background: #edcf60;
+}
 
 .location-content {
     display: none;
     padding-top: 10px;
 }
 
-.location-content.show { display: block; }
+.location-content.show {
+    display: block;
+}
 
-.entry-button { margin-bottom: 10px; }
+.entry-button {
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
 
 .entry-content {
     display: none;
     background: #111;
     border: 1px solid #393329;
     padding: 15px;
-    margin-bottom: 10px;
+    margin: 0 0 10px;
     line-height: 1.6;
     overflow-wrap: anywhere;
 }
 
-.entry-content.show { display: block; }
+.entry-content.show {
+    display: block;
+}
 
 .scan-info {
-    color: #aaa;
+    color: #d4af37;
     font-size: 13px;
     margin-bottom: 10px;
+}
+
+.lore-placeholder {
+    color: #999;
+    font-style: italic;
 }
 
 .source-link {
@@ -113,9 +176,12 @@ h2 { color: #d4af37; }
     margin-top: 8px;
 }
 
-.location-button:hover,
-.entry-button:hover {
-    background: #edcf60;
+.note {
+    background: #111;
+    border: 1px solid #393329;
+    padding: 15px;
+    margin-top: 25px;
+    line-height: 1.6;
 }
 
 button:focus-visible,
@@ -133,15 +199,38 @@ footer {
 }
 
 @media (max-width: 600px) {
-    header h1 { font-size: 22px; }
+    header h1 {
+        font-size: 22px;
+    }
+
     nav a {
         display: inline-block;
         margin: 6px;
     }
-    .container { padding: 15px; }
+
+    .container {
+        padding: 15px;
+    }
+
+    .stats {
+        gap: 6px;
+    }
+
+    .stat {
+        padding: 12px 4px;
+    }
+
+    .stat-number {
+        font-size: 22px;
+    }
+
+    .stat-label {
+        font-size: 11px;
+    }
 }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -151,9 +240,11 @@ footer {
 <nav>
     <a href="index.html">Home</a>
     <a href="extra-lore.html">Extra Lore</a>
+    <a href="fragments.html">Fragments</a>
 </nav>
 
 <main class="container">
+
     <a class="back" href="extra-lore.html">← Back to Extra Lore</a>
 
     <h2>Cephalon Fragments</h2>
@@ -169,114 +260,222 @@ footer {
         </p>
 
         <p>
-            <a class="source-link"
-               href="https://www.orokinarchives.com/navigation-hub/fragments/cephalon/"
-               target="_blank" rel="noopener noreferrer">
-                Reference: Orokin Archives — Cephalon Fragments
-            </a>
+            The lore text for each entry will be added as it is
+            documented and verified.
+        </p>
+
+        <a class="source-link"
+           href="https://www.orokinarchives.com/navigation-hub/fragments/cephalon/"
+           target="_blank"
+           rel="noopener noreferrer">
+            Reference: Orokin Archives — Cephalon Fragments
+        </a>
+    </div>
+
+    <div class="stats">
+        <div class="stat">
+            <span class="stat-number" id="location-total">17</span>
+            <span class="stat-label">Locations</span>
+        </div>
+
+        <div class="stat">
+            <span class="stat-number" id="entry-total">43</span>
+            <span class="stat-label">Lore Entries</span>
+        </div>
+
+        <div class="stat">
+            <span class="stat-number" id="scan-total">223</span>
+            <span class="stat-label">Total Scans</span>
+        </div>
+    </div>
+
+    <h3 class="section-heading">Fragment Locations</h3>
+
+    <div id="fragment-list"></div>
+
+    <div class="note">
+        <strong>Ordis — Hidden Story</strong>
+        <p>
+            Scanning Cephalon Fragments also unlocks transmissions
+            revealing parts of Ordis's past. These transmissions
+            are connected to the regular fragments and are not an
+            additional planetary fragment entry.
         </p>
     </div>
 
-    <div id="fragment-list"></div>
 </main>
 
-<footer>The Lorak Codex</footer>
+<footer>
+    The Lorak Codex
+</footer>
 
 <script>
 const locations = [
     {
         name: "Earth",
         scans: 3,
-        entries: ["Earth", "Wildlife", "Earth Settlements"]
+        entries: [
+            "Earth",
+            "Wildlife",
+            "Earth Settlements"
+        ]
     },
     {
         name: "Venus",
         scans: 3,
-        entries: ["Venus", "Dojo", "Corpus Crew"]
+        entries: [
+            "Venus",
+            "Dojo",
+            "Corpus Crew"
+        ]
     },
     {
         name: "Mercury",
-        scans: null,
-        entries: ["Mercury", "Grineer Leadership", "Archaic Weapons"]
+        scans: 5,
+        entries: [
+            "Mercury",
+            "Grineer Leadership",
+            "Archaic Weapons"
+        ]
     },
     {
         name: "Mars",
         scans: 5,
-        entries: ["Mars", "Sentinels", "Grineer Settlements"]
+        entries: [
+            "Mars",
+            "Sentinels",
+            "Grineer Settlements"
+        ]
     },
     {
         name: "Phobos",
         scans: 5,
-        entries: ["Phobos", "Grineer", "Corpus Weapons"]
+        entries: [
+            "Phobos",
+            "Grineer",
+            "Corpus Weapons"
+        ]
     },
     {
         name: "Ceres",
         scans: 5,
-        entries: ["Ceres", "Grineer Labour"]
+        entries: [
+            "Ceres",
+            "Grineer Labour"
+        ]
     },
     {
         name: "Jupiter",
         scans: 5,
-        entries: ["Jupiter", "Robotics"]
+        entries: [
+            "Jupiter",
+            "Robotics"
+        ]
     },
     {
         name: "Europa",
         scans: 5,
-        entries: ["Europa", "Corpus", "Europa Landscape"]
-    },
-    {
-        name: "Saturn",
-        scans: 5,
-        entries: ["Saturn", "Citizens", "Landing Craft"]
-    },
-    {
-        name: "Uranus",
-        scans: 5,
-        entries: ["Uranus", "Orbiter"]
-    },
-    {
-        name: "Neptune",
-        scans: 5,
-        entries: ["Neptune", "Lotus"]
-    },
-    {
-        name: "Pluto",
-        scans: 7,
-        entries: ["Pluto", "Infested"]
-    },
-    {
-        name: "Sedna",
-        scans: 7,
-        entries: ["Sedna", "Grineer Technology"]
-    },
-    {
-        name: "Lua",
-        scans: 5,
-        entries: ["Lua", "Warframes"]
+        entries: [
+            "Europa",
+            "Corpus",
+            "Europa Landscape"
+        ]
     },
     {
         name: "The Void",
         scans: 5,
-        entries: ["The Void", "Orokin"]
+        entries: [
+            "Void",
+            "Orokin"
+        ]
+    },
+    {
+        name: "Saturn",
+        scans: 5,
+        entries: [
+            "Saturn",
+            "Citizens",
+            "Landing Craft"
+        ]
+    },
+    {
+        name: "Uranus",
+        scans: 5,
+        entries: [
+            "Uranus",
+            "Orbiter"
+        ]
+    },
+    {
+        name: "Neptune",
+        scans: 5,
+        entries: [
+            "Neptune",
+            "Lotus"
+        ]
+    },
+    {
+        name: "Lua",
+        scans: 5,
+        entries: [
+            "Lua",
+            "Warframes"
+        ]
+    },
+    {
+        name: "Pluto",
+        scans: 7,
+        entries: [
+            "Pluto",
+            "Infested"
+        ]
+    },
+    {
+        name: "Orokin Derelict",
+        scans: 7,
+        entries: [
+            "Orokin Derelict",
+            "The Collapse",
+            "Lephantis"
+        ]
     },
     {
         name: "Eris",
         scans: 7,
-        entries: ["Eris", "Warframe Technology", "Infestation"]
+        entries: [
+            "Eris",
+            "Warframe Technology",
+            "Infestation"
+        ]
     },
     {
-        name: "Orokin Derelict (Deimos)",
+        name: "Sedna",
         scans: 7,
-        entries: ["Orokin Derelict", "The Collapse", "Lephantis"]
-    },
-    {
-        name: "Ordis (Hidden Story)",
-        scans: null,
-        entries: ["Ordis — Hidden Fragment Story"]
+        entries: [
+            "Sedna",
+            "Grineer Technology"
+        ]
     }
 ];
 
 const list = document.getElementById("fragment-list");
+
+const totalEntries = locations.reduce(function(total, location) {
+    return total + location.entries.length;
+}, 0);
+
+const totalScans = locations.reduce(function(total, location) {
+    return total + (location.entries.length * location.scans);
+}, 0);
+
+document.getElementById("location-total").textContent =
+    locations.length;
+
+document.getElementById("entry-total").textContent =
+    totalEntries;
+
+document.getElementById("scan-total").textContent =
+    totalScans;
 
 locations.forEach(function(location) {
     const section = document.createElement("section");
@@ -285,7 +484,11 @@ locations.forEach(function(location) {
     locationButton.className = "location-button";
     locationButton.type = "button";
     locationButton.textContent =
-        location.name + " (" + location.entries.length + " entries)";
+        location.name + " (" +
+        location.entries.length + " entries · " +
+        (location.entries.length * location.scans) +
+        " scans)";
+
     locationButton.setAttribute("aria-expanded", "false");
 
     const locationContent = document.createElement("div");
@@ -295,30 +498,33 @@ locations.forEach(function(location) {
         const entryButton = document.createElement("button");
         entryButton.className = "entry-button";
         entryButton.type = "button";
-        entryButton.textContent = (index + 1) + ". " + entryName;
+        entryButton.textContent =
+            (index + 1) + ". " + entryName;
+
         entryButton.setAttribute("aria-expanded", "false");
 
         const entryContent = document.createElement("div");
         entryContent.className = "entry-content";
 
-        if (location.scans !== null) {
-            const scanInfo = document.createElement("div");
-            scanInfo.className = "scan-info";
-            scanInfo.textContent =
-                "Scans required: " + location.scans;
-            entryContent.appendChild(scanInfo);
-        } else {
-            const scanInfo = document.createElement("div");
-            scanInfo.className = "scan-info";
-            scanInfo.textContent =
-                "Scan requirement not confirmed.";
-            entryContent.appendChild(scanInfo);
-        }
+        const scanInfo = document.createElement("div");
+        scanInfo.className = "scan-info";
+        scanInfo.textContent =
+            "Scans required: " + location.scans;
+
+        const loreText = document.createElement("p");
+        loreText.className = "lore-placeholder";
+        loreText.textContent =
+            "Lore text coming soon.";
+
+        entryContent.appendChild(scanInfo);
+        entryContent.appendChild(loreText);
 
         entryButton.addEventListener("click", function() {
             const isOpen = entryContent.classList.toggle("show");
+
             entryButton.setAttribute(
-                "aria-expanded", String(isOpen)
+                "aria-expanded",
+                String(isOpen)
             );
         });
 
@@ -328,13 +534,16 @@ locations.forEach(function(location) {
 
     locationButton.addEventListener("click", function() {
         const isOpen = locationContent.classList.toggle("show");
+
         locationButton.setAttribute(
-            "aria-expanded", String(isOpen)
+            "aria-expanded",
+            String(isOpen)
         );
     });
 
     section.appendChild(locationButton);
     section.appendChild(locationContent);
+
     list.appendChild(section);
 });
 </script>
