@@ -6,6 +6,10 @@
     <title>Quests - The Lorak Codex</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -110,11 +114,19 @@
             border: 1px solid #333;
             border-top: none;
             padding: 10px 15px;
-            line-height: normal;
+            line-height: 1.6;
         }
 
         .quest-content.show {
             display: block;
+        }
+
+        .quest-content p {
+            margin: 0 0 15px;
+        }
+
+        .quest-content p:last-child {
+            margin-bottom: 0;
         }
 
         footer {
@@ -135,7 +147,8 @@
     <nav>
         <a href="index.html">Home</a>
         <a href="quests.html">Quests</a>
-        <a href="/transcripts.html">Transcripts</a>
+        <a href="summaries.html">Summaries</a>
+        <a href="transcripts.html">Transcripts</a>
         <a href="extra-lore.html">Extra Lore</a>
         <a href="#">Factions</a>
         <a href="timeline.html">Timeline</a>
@@ -153,139 +166,140 @@
 
     <div class="category">
 
-        <button class="category-button" onclick="toggleCategory(this)">
+        <button class="category-button" type="button"
+                aria-expanded="false" onclick="toggleCategory(this)">
             Main Quest Summaries
         </button>
 
         <div class="category-content">
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">1. Awakening</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">1. Awakening</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">2. Vor's Prize</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">2. Vor's Prize</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">3. The Teacher</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">3. The Teacher</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">4. Vox Solaris</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">4. Vox Solaris</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">5. Once Awake</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">5. Once Awake</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">6. Heart of Deimos</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">6. Heart of Deimos</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">7. The Archwing</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">7. The Archwing</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">8. Natah</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">8. Natah</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">9. The Second Dream</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">9. The Second Dream</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">10. The War Within</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">10. The War Within</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">11. Rising Tide</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">11. Rising Tide</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">12. Chains of Harrow</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">12. Chains of Harrow</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">13. Apostasy Prologue</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">13. Apostasy Prologue</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">14. The Sacrifice</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">14. The Sacrifice</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">15. Prelude to War</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">15. Prelude to War</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">16. The New War</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">16. The New War</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">17. The Duviri Paradox</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">17. The Duviri Paradox</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">18. Angels of the Zariman</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">18. Angels of the Zariman</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">19. Whispers in the Walls</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">19. Whispers in the Walls</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">20. Jade Shadows</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">20. Jade Shadows</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">21. Jade Shadows: Constellations</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">21. Jade Shadows: Constellations</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">22. The Lotus Eaters</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">22. The Lotus Eaters</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">23. The Hex / Warframe: 1999</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">23. The Hex / Warframe: 1999</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">24. Old Peace</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">24. Old Peace</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">25. Tau Prologue</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">25. Tau Prologue</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">26. Tau 2026</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">26. Tau 2026</button>
                 <div class="quest-content"></div>
             </div>
 
@@ -296,94 +310,95 @@
 
     <div class="category">
 
-        <button class="category-button" onclick="toggleCategory(this)">
+        <button class="category-button" type="button"
+                aria-expanded="false" onclick="toggleCategory(this)">
             Side Quest Summaries
         </button>
 
         <div class="category-content">
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">1. Howl of the Kubrow</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">1. Howl of the Kubrow</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">2. The Limbo Theorem</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">2. The Limbo Theorem</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">3. Patient Zero</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">3. Patient Zero</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">4. Stolen Dreams</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">4. Stolen Dreams</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">5. The New Strange</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">5. The New Strange</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">6. A Man of Few Words</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">6. A Man of Few Words</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">7. The Jordas Precept</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">7. The Jordas Precept</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">8. Sands of Inaros</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">8. Sands of Inaros</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">9. The Silver Grove</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">9. The Silver Grove</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">10. The Glast Gambit</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">10. The Glast Gambit</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">11. Octavia's Anthem</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">11. Octavia's Anthem</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">12. Saya's Vigil</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">12. Saya's Vigil</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">13. Mask of the Revenant</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">13. Mask of the Revenant</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">14. The Deadlock Protocol</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">14. The Deadlock Protocol</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">15. Call of the Tempestarii</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">15. Call of the Tempestarii</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">16. The Waverider</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">16. The Waverider</button>
                 <div class="quest-content"></div>
             </div>
 
             <div class="quest">
-                <button class="quest-button" onclick="toggleQuest(this)">17. Veilbreaker</button>
+                <button class="quest-button" type="button" onclick="toggleQuest(this)">17. Veilbreaker</button>
                 <div class="quest-content"></div>
             </div>
 
@@ -397,6 +412,33 @@
 </footer>
 
 <script>
+    let summariesPromise = null;
+
+    function loadSummaries() {
+        if (!summariesPromise) {
+            summariesPromise = fetch("summaries.html")
+                .then(function (response) {
+                    if (!response.ok) {
+                        throw new Error("Could not load summaries.html");
+                    }
+                    return response.text();
+                })
+                .then(function (html) {
+                    return new DOMParser().parseFromString(html, "text/html");
+                });
+        }
+
+        return summariesPromise;
+    }
+
+    function normalizeTitle(title) {
+        return title
+            .replace(/^\s*\d+\.\s*/, "")
+            .replace(/\s+/g, " ")
+            .trim()
+            .toLowerCase();
+    }
+
     function toggleCategory(button) {
         const content = button.nextElementSibling;
 
@@ -404,19 +446,57 @@
             return;
         }
 
-        button.classList.toggle("active");
-        content.classList.toggle("show");
+        const isOpen = !content.classList.contains("show");
+
+        content.classList.toggle("show", isOpen);
+        button.classList.toggle("active", isOpen);
+        button.setAttribute("aria-expanded", String(isOpen));
     }
 
-    function toggleQuest(button) {
+    async function toggleQuest(button) {
         const content = button.nextElementSibling;
 
         if (!content || !content.classList.contains("quest-content")) {
             return;
         }
 
-        button.classList.toggle("active");
-        content.classList.toggle("show");
+        const isOpen = !content.classList.contains("show");
+
+        content.classList.toggle("show", isOpen);
+        button.classList.toggle("active", isOpen);
+        button.setAttribute("aria-expanded", String(isOpen));
+
+        if (!isOpen || content.dataset.loaded === "true") {
+            return;
+        }
+
+        content.dataset.loaded = "true";
+
+        try {
+            const summaryDocument = await loadSummaries();
+            const summaryButtons = summaryDocument.querySelectorAll(".quest-button");
+            const targetTitle = normalizeTitle(button.textContent);
+
+            let summaryContent = null;
+
+            for (const summaryButton of summaryButtons) {
+                if (normalizeTitle(summaryButton.textContent) === targetTitle) {
+                    const next = summaryButton.nextElementSibling;
+
+                    if (next && next.classList.contains("summary-content")) {
+                        summaryContent = next;
+                        break;
+                    }
+                }
+            }
+
+            if (summaryContent && summaryContent.innerHTML.trim() !== "") {
+                content.innerHTML = summaryContent.innerHTML;
+            }
+        } catch (error) {
+            content.dataset.loaded = "false";
+            console.error("Unable to load quest summary:", error);
+        }
     }
 </script>
 
