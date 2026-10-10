@@ -10,79 +10,68 @@
         body {
             margin: 0;
             background: #0b0b0b;
-            color: #e6e6e6;
-            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-family: Arial, sans-serif;
         }
 
         header {
             background: #111;
-            border-bottom: 1px solid #333;
-            padding: 30px 20px;
+            padding: 20px;
             text-align: center;
+            border-bottom: 1px solid #d4af37;
         }
 
-        header h1 {
-            margin: 0;
+        h1 {
             color: #d4af37;
-            font-size: 32px;
             letter-spacing: 3px;
-        }
-
-        header p {
-            margin-top: 10px;
-            color: #999;
-            font-size: 14px;
+            margin: 0;
         }
 
         nav {
-            background: #151515;
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
-            gap: 20px;
+            justify-content: center;
+            gap: 15px;
             padding: 15px;
-            border-bottom: 1px solid #292929;
+            background: #111;
         }
 
         nav a {
-            color: #ccc;
+            color: #d4af37;
             text-decoration: none;
-            font-size: 14px;
+            font-weight: bold;
         }
 
         nav a:hover {
-            color: #d4af37;
+            color: white;
         }
 
         main {
             max-width: 900px;
             margin: auto;
-            padding: 40px 20px;
+            padding: 20px;
         }
 
         .back {
-            display: inline-block;
-            margin-bottom: 25px;
+            display: block;
             color: #d4af37;
             text-decoration: none;
-            font-size: 14px;
             font-weight: bold;
+            margin-bottom: 20px;
         }
 
         .back:hover {
-            text-decoration: underline;
+            color: white;
         }
 
         h2 {
             color: #d4af37;
-            font-size: 28px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .intro {
-            color: #aaa;
             line-height: 1.7;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .archive-button {
@@ -92,26 +81,16 @@
             background: #d4af37;
             color: #0b0b0b;
             text-decoration: none;
-            padding: 15px;
-            margin-top: 12px;
-            border-radius: 4px;
-            font-size: 17px;
+            text-align: left;
             font-weight: bold;
-            transition: 0.2s;
+            padding: 14px 16px;
+            border: none;
+            border-radius: 4px;
+            margin-top: 12px;
         }
 
         .archive-button:hover {
-            background: #e5c451;
-            transform: translateY(-2px);
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            border-top: 1px solid #292929;
-            color: #666;
-            font-size: 13px;
-            margin-top: 40px;
+            background: #f0d46b;
         }
     </style>
 </head>
@@ -119,24 +98,20 @@
 <body>
 
 <header>
-    <h1>THE LORAK CODEX</h1>
-    <p>Recovered Codex entries and forgotten histories.</p>
+    <h1>The Lorak Codex</h1>
 </header>
 
 <nav>
     <a href="index.html">Home</a>
     <a href="quests.html">Quests</a>
     <a href="transcripts.html">Transcripts</a>
-    <a href="extra-lore.html">Extra Lore</a>
-    <a href="factions.html">Factions</a>
     <a href="timeline.html">Timeline</a>
     <a href="operations.html">Operations</a>
     <a href="args.html">ARGs</a>
-    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
+    <a href="extra-lore.html">Extra Lore</a>
 </nav>
 
 <main>
-
     <a class="back" href="extra-lore.html">← Back to Extra Lore</a>
 
     <h2>Archives</h2>
@@ -144,33 +119,30 @@
     <p class="intro">
         Explore Codex lore entries documenting Warframes, mysterious figures,
         and other subjects whose histories are preserved within the Origin System.
+        Entries are arranged in the chosen timeline order.
     </p>
 
-    <a class="archive-button" href="archives/ember-prime.html">
-        Ember Prime
-    </a>
-
     <a class="archive-button" href="archives/excalibur-prime.html">
-        Excalibur Prime
+        1. Excalibur Prime
     </a>
 
-    <a class="archive-button" href="archives/mag-prime.html">
-        Mag Prime
+    <a class="archive-button" href="archives/ember-prime.html">
+        2. Ember Prime
     </a>
 
     <a class="archive-button" href="archives/rhino-prime.html">
-        Rhino Prime
+        3. Rhino Prime
+    </a>
+
+    <a class="archive-button" href="archives/mag-prime.html">
+        4. Mag Prime
     </a>
 
     <a class="archive-button" href="archives/shadow-stalker.html">
-        Shadow Stalker
+        5. Shadow Stalker
     </a>
 
 </main>
-
-<footer>
-    The Lorak Codex · A fan-made Warframe lore archive
-</footer>
 
 </body>
 </html>
