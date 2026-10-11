@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -128,6 +127,17 @@
 
         .quest-content p:last-child {
             margin-bottom: 0;
+        }
+
+        .quest-content h1,
+        .quest-content h2,
+        .quest-content h3 {
+            color: #d4af37;
+            letter-spacing: normal;
+        }
+
+        .quest-content a {
+            color: #d4af37;
         }
 
         footer {
@@ -413,25 +423,6 @@
 </footer>
 
 <script>
-    let summariesPromise = null;
-
-    function loadSummaries() {
-        if (!summariesPromise) {
-            summariesPromise = fetch("summaries.html?refresh=" + Date.now(), { cache: "no-store" })
-                .then(function (response) {
-                    if (!response.ok) {
-                        throw new Error("Could not load summaries.html");
-                    }
-                    return response.text();
-                })
-                .then(function (html) {
-                    return new DOMParser().parseFromString(html, "text/html");
-                });
-        }
-
-        return summariesPromise;
-    }
-
     function normalizeTitle(title) {
         return title
             .replace(/^\s*\d+\.\s*/, "")
@@ -439,6 +430,53 @@
             .trim()
             .toLowerCase();
     }
+
+    const summaryFiles = {
+        "the new war": "the-new-war.html",
+        "old peace": "old-peace.html",
+        "awakening": "awakening.html",
+        "vor's prize": "vors-prize.html",
+        "the teacher": "the-teacher.html",
+        "vox solaris": "vox-solaris.html",
+        "once awake": "once-awake.html",
+        "heart of deimos": "heart-of-deimos.html",
+        "the archwing": "the-archwing.html",
+        "natah": "natah.html",
+        "the second dream": "the-second-dream.html",
+        "the war within": "the-war-within.html",
+        "rising tide": "rising-tide.html",
+        "chains of harrow": "chains-of-harrow.html",
+        "apostasy prologue": "apostasy-prologue.html",
+        "the sacrifice": "the-sacrifice.html",
+        "prelude to war": "prelude-to-war.html",
+        "the duviri paradox": "the-duviri-paradox.html",
+        "angels of the zariman": "angels-of-the-zariman.html",
+        "whispers in the walls": "whispers-in-the-walls.html",
+        "jade shadows": "jade-shadows.html",
+        "jade shadows: constellations": "jade-shadows-constellations.html",
+        "the lotus eaters": "the-lotus-eaters.html",
+        "the hex / warframe: 1999": "the-hex-warframe-1999.html",
+        "tau prologue": "tau-prologue.html",
+        "tau 2026": "tau-2026.html",
+
+        "howl of the kubrow": "howl-of-the-kubrow.html",
+        "the limbo theorem": "the-limbo-theorem.html",
+        "patient zero": "patient-zero.html",
+        "stolen dreams": "stolen-dreams.html",
+        "the new strange": "the-new-strange.html",
+        "a man of few words": "a-man-of-few-words.html",
+        "the jordas precept": "the-jordas-precept.html",
+        "sands of inaros": "sands-of-inaros.html",
+        "the silver grove": "the-silver-grove.html",
+        "the glast gambit": "the-glast-gambit.html",
+        "octavia's anthem": "octavias-anthem.html",
+        "saya's vigil": "sayas-vigil.html",
+        "mask of the revenant": "mask-of-the-revenant.html",
+        "the deadlock protocol": "the-deadlock-protocol.html",
+        "call of the tempestarii": "call-of-the-tempestarii.html",
+        "the waverider": "the-waverider.html",
+        "veilbreaker": "veilbreaker.html"
+    };
 
     function toggleCategory(button) {
         const content = button.nextElementSibling;
@@ -471,30 +509,54 @@
             return;
         }
 
-        content.dataset.loaded = "true";
+        const title = normalizeTitle(button.textContent);
+        const filename = summaryFiles[title];
+
+        if (!filename) {
+            content.innerHTML = "<p>Summary coming soon.</p>";
+            content.dataset.loaded = "true";
+            return;
+        }
+
+        content.innerHTML = "<p>Loading summary...</p>";
 
         try {
-            const summaryDocument = await loadSummaries();
-            const summaryButtons = summaryDocument.querySelectorAll(".quest-button");
-            const targetTitle = normalizeTitle(button.textContent);
+            const response = await fetch(
+                "summaries/" + filename + "?refresh=" + Date.now(),
+                { cache: "no-store" }
+            );
 
-            let summaryContent = null;
+            if (!response.ok) {
+                throw new Error("Summary file not found: " + filename);
+            }
 
-            for (const summaryButton of summaryButtons) {
-                if (normalizeTitle(summaryButton.textContent) === targetTitle) {
-                    const next = summaryButton.nextElementSibling;
+            const html = await response.text();
+            const summaryDocument = new DOMParser().parseFromString(
+                html,
+                "text/html"
+            );
 
-                    if (next && next.classList.contains("summary-content")) {
-                        summaryContent = next;
-                        break;
-                    }
+            const body = summaryDocument.body;
+
+            if (!body || !body.innerHTML.trim()) {
+                throw new Error("The summary file is empty: " + filename);
+            }
+
+            body.querySelectorAll("script, style, nav, header, footer").forEach(
+                function (element) {
+                    element.remove();
                 }
-            }
+            );
 
-            if (summaryContent && summaryContent.innerHTML.trim() !== "") {
-                content.innerHTML = summaryContent.innerHTML;
-            }
+            content.innerHTML = body.innerHTML.trim();
+            content.dataset.loaded = "true";
+
         } catch (error) {
+            content.innerHTML =
+                "<p>Summary could not be loaded. Please check that " +
+                filename +
+                " exists in the summaries folder.</p>";
+
             content.dataset.loaded = "false";
             console.error("Unable to load quest summary:", error);
         }
