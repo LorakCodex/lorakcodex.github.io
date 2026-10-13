@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Albrecht's Requiems - The Lorak Codex</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #0b0b0b;
+            color: #ddd;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background: #111;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #d4af37;
+        }
+
+        h1 {
+            color: #d4af37;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 15px;
+            background: #111;
+        }
+
+        nav a {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .back {
+            display: block;
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .back:hover {
+            color: white;
+        }
+
+        h2 {
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        .intro {
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .requiem {
+            margin-bottom: 20px;
+        }
+
+        .requiem-button {
+            width: 100%;
+            display: block;
+            padding: 14px 16px;
+            background: #d4af37;
+            color: #0b0b0b;
+            border: none;
+            border-radius: 4px;
+            text-align: left;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .requiem-button:hover {
+            background: #f0d46b;
+        }
+
+        .requiem-content {
+            display: none;
+            margin-top: 10px;
+            padding: 18px;
+            background: #111;
+            border: 1px solid #d4af37;
+            border-radius: 4px;
+            line-height: 1.8;
+            white-space: pre-line;
+        }
+
+        .requiem-content p {
+            margin: 0;
+        }
+
+        .meaning {
+            color: #d4af37;
+            font-weight: bold;
+            margin-bottom: 12px !important;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>The Lorak Codex</h1>
+</header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../quests.html">Quests</a>
+    <a href="../transcripts.html">Transcripts</a>
+    <a href="../timeline.html">Timeline</a>
+    <a href="../operations.html">Operations</a>
+    <a href="../args.html">ARGs</a>
+    <a href="../extra-lore.html">Extra Lore</a>
+</nav>
+
+<main>
+    <a class="back" href="../archives.html">← Back to Archives</a>
+
+    <h2>Albrecht's Requiems</h2>
+
+    <p class="intro">
+        Explore the eight Requiems associated with Albrecht Entrati,
+        their meanings, and the words preserved within each entry.
+    </p>
+
+    <div class="requiem">
+        <button class="requiem-button" onclick="toggleRequiem(this)">
+            1. Xata
+        </button>
+        <div class="requiem-content">
+            <p class="meaning">Truth.</p>
+            <p>[Insert the original Xata text here.]</p>
+        </div>
+    </div>
+
+    <div class="requiem">
+        <button class="requiem-button" onclick="toggleRequiem(this)">
+            2. Jahu
+        </button>
+        <div class="requiem-content">
+            <p class="meaning">Form.</p>
+            <p>[Insert the original Jahu text here.]</p>
+        </div>
+    </div>
+
+    <div class="requiem">
+        <button class="requiem-button" onclick="toggleRequiem(this)">
+            3. Vome
+        </button>
+        <div class="requiem-content">
+            <p class="meaning">Order.</p>
+            <p>[Insert the original Vome text here.]</p>
+        </div>
+    </div>
+
+    <div class="requiem">
+        <button class="requiem-button" onclick="toggleRequiem(this)">
+            4. Fass
+        </button>
+        <div class="requiem-content">
+            <p class="meaning">Chaos.</p>
+            <p>[Insert the original Fass text here.]</p>
+        </div>
+    </div>
+
+    <div class="requiem">
+        <button class="requiem-button" onclick="toggleRequiem(this)">
+            5. Ris
+        </button>
+        <div class="requiem-content">
+            <p class="meaning">Light.</p>
+            <p>[Insert the original Ris text here.]</p>
+        </div>
+    </div>
+
+    <div class="requiem">
+        <button class="requiem-button" onclick="toggleRequiem(this)">
+            6. Khra
+        </button>
+        <div class="requiem-content">
+            <p class="meaning">Time.</p>
+            <p>[Insert the original Khra text here.]</p>
+        </div>
+    </div>
+
+    <div class="requiem">
+        <button class="requiem-button" onclick="toggleRequiem(this)">
+            7. Netra
+        </button>
+        <div class="requiem-content">
+            <p class="meaning">Decay.</p>
+            <p>[Insert the original Netra text here.]</p>
+        </div>
+    </div>
+
+    <div class="requiem">
+        <button class="requiem-button" onclick="toggleRequiem(this)">
+            8. Lohk
+        </button>
+        <div class="requiem-content">
+            <p class="meaning">Void.</p>
+            <p>[Insert the original Lohk text here.]</p>
+        </div>
+    </div>
+
+</main>
+
+<script>
+    function toggleRequiem(button) {
+        const content = button.nextElementSibling;
+        const isOpen = content.style.display === "block";
+
+        content.style.display = isOpen ? "none" : "block";
+    }
+</script>
+
+</body>
+</html>
