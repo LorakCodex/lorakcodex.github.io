@@ -83,8 +83,8 @@
         }
 
         .requiem-button {
-            width: 100%;
             display: block;
+            width: 100%;
             padding: 14px 16px;
             background: #d4af37;
             color: #0b0b0b;
@@ -100,6 +100,11 @@
             background: #f0d46b;
         }
 
+        .requiem-button:focus-visible {
+            outline: 2px solid white;
+            outline-offset: 3px;
+        }
+
         .requiem-content {
             display: none;
             margin-top: 10px;
@@ -108,17 +113,32 @@
             border: 1px solid #d4af37;
             border-radius: 4px;
             line-height: 1.8;
-            white-space: pre-line;
+            overflow-wrap: anywhere;
         }
 
-        .requiem-content p {
-            margin: 0;
+        .requiem-content.open {
+            display: block;
         }
 
         .meaning {
             color: #d4af37;
             font-weight: bold;
-            margin-bottom: 12px !important;
+            margin: 0 0 12px;
+        }
+
+        .passage {
+            margin: 0;
+            white-space: pre-line;
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 20px;
+            background: #111;
+            border-top: 1px solid #d4af37;
+            text-align: center;
+            color: #999;
+            font-size: 13px;
         }
     </style>
 </head>
@@ -145,98 +165,141 @@
     <h2>Albrecht's Requiems</h2>
 
     <p class="intro">
-        Explore the eight Requiems associated with Albrecht Entrati,
-        their meanings, and the words preserved within each entry.
+        Explore the eight Requiems and the words associated with
+        Albrecht Entrati's journey into the Void.
     </p>
 
-    <div class="requiem">
-        <button class="requiem-button" onclick="toggleRequiem(this)">
+    <section class="requiem">
+        <button class="requiem-button"
+                type="button"
+                aria-expanded="false"
+                onclick="toggleRequiem(this)">
             1. Xata
         </button>
+
         <div class="requiem-content">
             <p class="meaning">Truth.</p>
-            <p>[Insert the original Xata text here.]</p>
+            <p class="passage">It began long before us, we who now live our perfect and dull, endless lives. It began long before these moon-palaces and body-markets hurling around our golden Sun. It began long before our light-coil thinkers, our radiation wars, our oil, smoke…. It began with us. The continuity and its twin, wanderlust. The need for unseen shores deep in our marrow. No judge, jester, queen, or king can escape this old blood. We are nomads, eternal. And when no ocean, mountain, or sky could contain us… our gaze hungered star-ward. Afar, they mocked us with their brittle light. Winking and jeering like dangling Ayatans forever out of reach, illuminating the truth: immortal as we are – we die with the Sun. That's where I come in.</p>
         </div>
-    </div>
+    </section>
 
-    <div class="requiem">
-        <button class="requiem-button" onclick="toggleRequiem(this)">
+    <section class="requiem">
+        <button class="requiem-button"
+                type="button"
+                aria-expanded="false"
+                onclick="toggleRequiem(this)">
             2. Jahu
         </button>
+
         <div class="requiem-content">
             <p class="meaning">Form.</p>
-            <p>[Insert the original Jahu text here.]</p>
+            <p class="passage">My departure was a day less than any other. When I stepped inside the Bell, I saw no crowd through its seriglass. No sceptical onlookers. No regal sendoff. They all had given up on me and my paradoxical formulations. The wasted years had all shown the Void to be just that. Nothing. No energy. No entanglement. No form. To space-faring ambitions, a dead end. On the day, my laboratory was mostly vacant of witnesses; most of all, of expectation. Only my sluggish attendants, my sagacious kavat Kalymos, and, of course, my daughter. I had raised her alone, but with inconsistent vigour. In those eyes, her mother's, I did see a terrible reflection. Of a man that did not exist. A brave and principled man about to make history. In truth, he was a Void himself. An outcast, a joke, a nothing. Driven by my humiliation. Failure had made me bitter and reckless. I would dive into the depths myself to prove them all wrong. I gave the signal. My daughter grasped the lever. Kalymos then belted out a desperate, rasping growl. But, it was too late.</p>
         </div>
-    </div>
+    </section>
 
-    <div class="requiem">
-        <button class="requiem-button" onclick="toggleRequiem(this)">
+    <section class="requiem">
+        <button class="requiem-button"
+                type="button"
+                aria-expanded="false"
+                onclick="toggleRequiem(this)">
             3. Vome
         </button>
+
         <div class="requiem-content">
             <p class="meaning">Order.</p>
-            <p>[Insert the original Vome text here.]</p>
+            <p class="passage">The calipers yawed open the wall between worlds, stretching there a black, trapezoidal gap. A door. A mouth. It yawned in the light of the room, splintering it to mesmerising, unearthly hues. And I, inside the Bell, dropping obliquely toward it from my gallows. Mass and time rippled as a sudden vortex jawed before me. My head was vapour; my feet, lodestone. The Bell around me flexed like a rat paralysed in a winding, gulping snake. I faltered in the awe of it, stumbling against the seriglass and, with that, shifted the Bell's path through the wall. It grazed the caliper membrane, the edge of the door. No worldly edge was as thin, as sharp as could split even light. As the Bell faintly grazed it, the seriglass was all at once rendered like strips of flesh by Dax blade. My enclosure was beheaded in an instant, but still, I fell… sideways… into the Void.</p>
         </div>
-    </div>
+    </section>
 
-    <div class="requiem">
-        <button class="requiem-button" onclick="toggleRequiem(this)">
+    <section class="requiem">
+        <button class="requiem-button"
+                type="button"
+                aria-expanded="false"
+                onclick="toggleRequiem(this)">
             4. Fass
         </button>
+
         <div class="requiem-content">
             <p class="meaning">Chaos.</p>
-            <p>[Insert the original Fass text here.]</p>
+            <p class="passage">Death was on me; I was certain. I was face-down, eyes clenched. My heart pulsing the last of its seconds, and my lungs burning the last of their air. A sudden nostalgia gripped me. I grasped desperately for memory, of a storm just passed, the fumbling pitch of a child's song… yet all these thoughts seemed to steal away from my mind like smoke through a vent. I would die empty. I then became aware of another sensation. Physical. A web of pain, needles itching into my arm. At once I realised: I was alive! Lying in the Bell's shattered seriglass! I groped the ground. Warm stone. The floor of my laboratory. So: I had never left… and so: I had failed. Again. I heard a crunch alongside me. Someone stepping through the shattered glass. With great shame, I gasped and raised my head to face my daughter above me. But as I opened my eyes, it wasn't her. It was me.</p>
         </div>
-    </div>
+    </section>
 
-    <div class="requiem">
-        <button class="requiem-button" onclick="toggleRequiem(this)">
+    <section class="requiem">
+        <button class="requiem-button"
+                type="button"
+                aria-expanded="false"
+                onclick="toggleRequiem(this)">
             5. Ris
         </button>
+
         <div class="requiem-content">
             <p class="meaning">Light.</p>
-            <p>[Insert the original Ris text here.]</p>
+            <p class="passage">The senselessness of it, the paradoxic, the vague untime form. I was alone, but not. For I stood there confronted by myself. A twin, but no brother. A reflection, but with dimension. Behind him, no horizon, but a vast broiling sea of caustic light pierced at random by black-pin stars. And closer, around me, a gale of flowing vapour. Profane in colour, billowing relentlessly into the nascent lack, seeking all directions. I was standing on a precipice of familiar stone, jagged and unanchored, as though cleaved directly from the very floor of my laboratory. I wondered at the vapour's path, smoking outward more, leaving behind now, the walls, the filigree gold, the rare cuts of marble from my home. I knew at once the vapour's source. I turned away, back toward the wall, the trapezoid I had yawed into it. Vapour erupted inward at the gap, but not just from there. For as I rolled my eyes back, I saw the same… a great-steam of scintillation, smoking from my skull. Dumb in awe, I faced toward my chimerical twin. He spoke.</p>
         </div>
-    </div>
+    </section>
 
-    <div class="requiem">
-        <button class="requiem-button" onclick="toggleRequiem(this)">
+    <section class="requiem">
+        <button class="requiem-button"
+                type="button"
+                aria-expanded="false"
+                onclick="toggleRequiem(this)">
             6. Khra
         </button>
+
         <div class="requiem-content">
             <p class="meaning">Time.</p>
-            <p>[Insert the original Khra text here.]</p>
+            <p class="passage">An old name, unspoken in the centuries since my mother reared me. A soft hiss, soothing as a viper's gaze. "Little Bengel." The other reached out, offering his hand, gliding toward me without moving, as though the distance between us was now collapsing. A confusion, most euphoric, filled my mind. With the shred of wit that remained, I decided that I should run for my life. At once, crazed and frantic, I fled. But I made no forward progress. Instead, the world compressed evermore around me, as though I were an anchor pulling the shore to reach. When I arrived at the door, or rather, the door arrived at me, I howled, hurling myself inside. Out. And then and there, I was. Lost and unlost. Howling on the floor in harmony with my wretched Kalymos. Lacerated in flesh and heart. Scattered as the bell glass. Spilling blood and stomach on the cold, stone floor. But I sensed the other there, at the wall's breach behind me, reaching still. I screamed, but my voice was gone. Forever. I looked, but my eyes would never see again. I swept my fist across the floor, snatching broken shards. And in gripping tightly, I filled my hands with ink. "Close it!" I wrote.</p>
         </div>
-    </div>
+    </section>
 
-    <div class="requiem">
-        <button class="requiem-button" onclick="toggleRequiem(this)">
+    <section class="requiem">
+        <button class="requiem-button"
+                type="button"
+                aria-expanded="false"
+                onclick="toggleRequiem(this)">
             7. Netra
         </button>
+
         <div class="requiem-content">
             <p class="meaning">Decay.</p>
-            <p>[Insert the original Netra text here.]</p>
+            <p class="passage">Time, to us, is all but conquered. Our sacred kuva moves us on to new skin. We numb to our daily, yearly, trifles… and remedy those memories that bring lasting misery. With all our misdeeds, our excess, our indignity… we are haunted by nothing. But not for me. For with each passing day, there grew within a tumorous idea. It was minute in those early days: the pale reaching digits severed on the floor… studied with reverence, with greed. And it swelled larger in the latter days: the regal domes, the Rail dedications, the unholy Zariman parade. I had put the stars within reach, but at what cost? I never spoke of him, that man, trapped in the wall. And while there have been countless souls who have followed me through, with their light-skippers, and field-wave skins and vari-eyed instruments… not a single one ever saw him. Me. And so it is that I will not take the kuva now. Or ever again. This is the last skin I'm in. Because of this idea: That I cannot be sure. That in all that smoked commotion, in all that panic and fear, in that bending light and blinding dark… was it I who escaped? Or the other?</p>
         </div>
-    </div>
+    </section>
 
-    <div class="requiem">
-        <button class="requiem-button" onclick="toggleRequiem(this)">
+    <section class="requiem">
+        <button class="requiem-button"
+                type="button"
+                aria-expanded="false"
+                onclick="toggleRequiem(this)">
             8. Lohk
         </button>
+
         <div class="requiem-content">
             <p class="meaning">Void.</p>
-            <p>[Insert the original Lohk text here.]</p>
+            <p class="passage">From brooding gulfs are we beheld by that which bears no name.
+Its heralds are the stars it fells, the sky and earth aflame.
+Corporeal laws are unwrit, as suns and love retreat.
+To cosmic madness, laws submit, though stalwart minds entreat.
+In luminous space, blackened stars, they gaze, accuse, deny.
+Roiling, moaning, this realm of ours, in madness, lost shall die.
+Carrion hordes trill their profane accord with eldritch plans.
+To cosmic forms from tangent planes, we end as we began.</p>
         </div>
-    </div>
+    </section>
 
 </main>
+
+<footer>
+    The Lorak Codex
+</footer>
 
 <script>
     function toggleRequiem(button) {
         const content = button.nextElementSibling;
-        const isOpen = content.style.display === "block";
+        const isOpen = content.classList.toggle("open");
 
-        content.style.display = isOpen ? "none" : "block";
+        button.setAttribute("aria-expanded", isOpen);
     }
 </script>
 
