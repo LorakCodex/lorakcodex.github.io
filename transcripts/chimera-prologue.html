@@ -3,12 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>The Chimera Prologue - The Lorak Codex</title>
+<title>Chimera Prologue - Transcripts - The Lorak Codex</title>
 
 <style>
-*{
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
 }
 
 body{
@@ -16,7 +15,6 @@ body{
     background:#0b0b0b;
     color:#ddd;
     font-family:Arial,sans-serif;
-    line-height:1.5;
 }
 
 header{
@@ -26,20 +24,20 @@ header{
     border-bottom:1px solid #333;
 }
 
-h1{
+header h1{
+    margin:0;
     color:#d4af37;
     letter-spacing:3px;
-    margin:0;
 }
 
 nav{
-    margin-top:20px;
+    margin-top:15px;
 }
 
 nav a{
     color:#d4af37;
     text-decoration:none;
-    margin:0 8px;
+    margin:0 10px;
 }
 
 nav a:hover{
@@ -52,98 +50,78 @@ nav a:hover{
     padding:0 15px;
 }
 
-.back-link{
-    display:inline-block;
+.back{
+    display:block;
     color:#d4af37;
     text-decoration:none;
-    margin-bottom:25px;
+    font-weight:bold;
+    margin-bottom:20px;
 }
 
-.back-link:hover{
+.back:hover{
     text-decoration:underline;
 }
 
-h2{
+.quest-title{
     color:#d4af37;
-    letter-spacing:2px;
-    margin:0 0 20px;
+    font-size:26px;
+    font-weight:bold;
+    margin-bottom:10px;
+    letter-spacing:1px;
 }
 
 .mission-button{
-    display:block;
     width:100%;
-    background:#151515;
-    color:#d4af37;
-    border:1px solid #d4af37;
-    padding:16px;
+    background:#d4af37;
+    color:#0b0b0b;
+    border:none;
+    padding:14px 15px;
     margin-top:10px;
-    margin-bottom:10px;
     text-align:left;
     font-size:17px;
     font-weight:bold;
     cursor:pointer;
-    border-radius:6px;
+    border-radius:4px;
 }
 
 .mission-button:hover,
 .mission-button.active{
-    background:#222;
+    background:#d4af37;
+    color:#0b0b0b;
 }
 
-.mission-content{
+.content{
     display:none;
-    margin-bottom:20px;
+    padding:10px 0;
 }
 
-.mission-content.show{
+.content.show{
     display:block;
 }
 
-.transcript-box{
-    background:#111;
-    border:1px solid #292929;
-    border-radius:6px;
-    padding:18px;
-    margin-top:10px;
-    margin-bottom:20px;
-}
-
-.dialogue{
-    margin:0 0 14px;
-    line-height:1.5;
-}
-
-.dialogue:last-child{
-    margin-bottom:0;
-}
-
-.section-heading{
+.label{
     color:#d4af37;
     font-weight:bold;
-    font-size:16px;
-    margin:20px 0 10px;
+    font-size:18px;
+    margin:18px 0 8px;
+}
+
+.text{
+    background:#111;
+    border-left:2px solid #d4af37;
+    padding:15px;
+    margin-top:10px;
+    white-space:pre-line;
+    line-height:2.2;
+    overflow-wrap:anywhere;
 }
 
 footer{
     text-align:center;
-    color:#666;
-    padding:40px 20px;
-    font-size:14px;
-}
-
-@media(max-width:600px){
-    header{
-        padding:20px 12px;
-    }
-
-    nav a{
-        display:inline-block;
-        margin:5px 6px;
-    }
-
-    .transcript-box{
-        padding:14px;
-    }
+    padding:30px;
+    color:#777;
+    border-top:1px solid #333;
+    margin-top:40px;
 }
 </style>
 </head>
@@ -168,211 +146,104 @@ footer{
 
 <div class="container">
 
-    <a class="back-link" href="prelude-to-war.html">
-        &#8592; Back to Prelude to War
-    </a>
+    <h2 class="quest-title">The Chimera Prologue</h2>
 
-    <h2>The Chimera Prologue</h2>
+    <a href="prelude-to-war.html" class="back">← Back to Prelude to War</a>
 
-    <button class="mission-button">
-        Mission 1. Lua
-    </button>
+    <button class="mission-button">Lua</button>
 
-    <div class="mission-content">
-        <div class="transcript-box">
+    <div class="content">
 
-            <p class="dialogue">
-                <strong>The Man in The Wall:</strong> "Haha!"
-                <em>(Happens throughout the mission)</em>
-            </p>
+        <div class="label">The Man in The Wall</div>
+        <div class="text">The Man in The Wall: "Haha!" (Happens throughout the mission)</div>
 
-            <p class="dialogue">
-                <strong>Lotus:</strong> "I am not who you think I am."
-            </p>
+        <div class="text">Lotus: "I am not who you think I am."</div>
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "But of course, you are.
-                Imprisoned, just as she was."
-            </p>
+        <div class="text">Ballas: "But of course, you are. Imprisoned, just as she was."</div>
 
-        </div>
     </div>
 
-    <button class="mission-button">
-        Mission 2. The Sentient Chamber
-    </button>
+    <button class="mission-button">The Sentient Chamber</button>
 
-    <div class="mission-content">
+    <div class="content">
 
-        <div class="transcript-box">
+        <div class="text">Ballas: "No... No..."
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "No... No..."
-            </p>
+Ballas: "My beauty, my grace, my humanity--"
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "My beauty, my grace, my humanity--"
-            </p>
+Ballas: "H-hello? No. No hope."
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "H-hello? No. No hope."
-            </p>
+Ballas: (grunts)
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> (grunts)
-            </p>
+Ballas: "Only suffering under her eye."
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "Only suffering under her eye."
-            </p>
+Ballas: "That she sees... she punishes!"
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "That she sees... she punishes!"
-            </p>
+Ballas: "But... she gave me the gift of life!"
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "But... she gave me the gift of life!"
-            </p>
+Ballas: "Why would I betray her?"
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "Why would I betray her?"
-            </p>
+Ballas: "Fool! This... this is no gift!"
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "Fool! This... this is no gift!"
-            </p>
+Ballas: "She stole my death! My perfect death."
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "She stole my death! My perfect death."
-            </p>
+Ballas: "Such is her power... over me. Over the devil!"
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "Such is her power... over me. Over the devil!"
-            </p>
+Ballas: "We saw what we wanted, those devils and I."
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "We saw what we wanted, those devils and I."
-            </p>
+Ballas: "A lover... a mother! But now I know."
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "A lover... a mother! But now I know."
-            </p>
+Ballas: "She is neither. She's a hawk - calling with sparrow's song."
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "She is neither. She's a hawk - calling with sparrow's song."
-            </p>
+Ballas: "A viper, blending into wood."
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "A viper, blending into wood."
-            </p>
+Ballas: "And her venom... spreads not into flesh, but into your heart."
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "And her venom... spreads not into flesh, but into your heart."
-            </p>
+Ballas: "Those devils! What has their great awakening accomplished - but the destruction of potential allies?"
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "Those devils! What has their great awakening accomplished -
-                but the destruction of potential allies?"
-            </p>
+Ballas: "Don't they see?"
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "Don't they see?"
-            </p>
+Ballas: "Love must die--"
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "Love must die--"
-            </p>
+Ballas: "--As Margulis did... when I sent her to the Jade Light."
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "--As Margulis did... when I sent her to the Jade Light."
-            </p>
+Ballas: "And the Lotus... just some cloud in the sky, just some shape they imagined."
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "And the Lotus... just some cloud in the sky,
-                just some shape they imagined."
-            </p>
+Ballas: "Only the Sentient is real."
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "Only the Sentient is real."
-            </p>
+Ballas: "Only Natah."</div>
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "Only Natah."
-            </p>
+        <div class="label">If Ballas spots Operator</div>
 
-        </div>
+        <div class="text">Ballas: "Who-who's there?"
 
-        <h3 class="section-heading">If Ballas spots Operator</h3>
+Ballas: "What? What is this?"
 
-        <div class="transcript-box">
+Ballas: "Oh? Is there someone...?"
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "Who-who's there?"
-            </p>
+Ballas: "Huh?"
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "What? What is this?"
-            </p>
+Ballas: "Who?"</div>
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "Oh? Is there someone...?"
-            </p>
+        <div class="label">If Ballas loses sight of the Operator</div>
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "Huh?"
-            </p>
+        <div class="text">Ballas: "Nothing, so..."
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "Who?"
-            </p>
+Ballas: "I'm just confused... huh..."
 
-        </div>
+Ballas: "Only shadow... only shadow..."
 
-        <h3 class="section-heading">If Ballas loses sight of the Operator</h3>
+Ballas: "Oh."
 
-        <div class="transcript-box">
+Ballas: "Ok..."</div>
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "Nothing, so..."
-            </p>
+        <div class="label">Paracesis finished building</div>
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "I'm just confused... huh..."
-            </p>
+        <div class="text">Ballas: "So... tell me, devil. Do you understand what must be done?"
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "Only shadow... only shadow..."
-            </p>
+Ballas: "The Paracesis. The Sentient slayer... Hurry! Take this... the idea of it... it is the only way your war can end."
 
-            <p class="dialogue">
-                <strong>Ballas:</strong> "Oh."
-            </p>
-
-            <p class="dialogue">
-                <strong>Ballas:</strong> "Ok..."
-            </p>
-
-        </div>
-
-        <h3 class="section-heading">Paracesis finished building</h3>
-
-        <div class="transcript-box">
-
-            <p class="dialogue">
-                <strong>Ballas:</strong> "So... tell me, devil.
-                Do you understand what must be done?"
-            </p>
-
-            <p class="dialogue">
-                <strong>Ballas:</strong> "The  Paracesis. The Sentient slayer...
-                Hurry! Take this... the idea of it... it is the only way your war can end."
-            </p>
-
-            <p class="dialogue">
-                <strong>Natah:</strong> "Tenno... Tenno..."
-            </p>
-
-        </div>
+Natah: "Tenno... Tenno..."</div>
 
     </div>
 
@@ -386,9 +257,7 @@ footer{
 document.querySelectorAll(".mission-button").forEach(button=>{
     button.addEventListener("click",()=>{
         button.classList.toggle("active");
-
         const content=button.nextElementSibling;
-
         if(content){
             content.classList.toggle("show");
         }
