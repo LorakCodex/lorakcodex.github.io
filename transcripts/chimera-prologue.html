@@ -10,118 +10,118 @@
     box-sizing: border-box;
 }
 
-body{
-    margin:0;
-    background:#0b0b0b;
-    color:#ddd;
-    font-family:Arial,sans-serif;
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #ddd;
+    font-family: Arial, sans-serif;
 }
 
-header{
-    background:#111;
-    padding:25px;
-    text-align:center;
-    border-bottom:1px solid #333;
+header {
+    background: #111;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 1px solid #333;
 }
 
-header h1{
-    margin:0;
-    color:#d4af37;
-    letter-spacing:3px;
+header h1 {
+    margin: 0;
+    color: #d4af37;
+    letter-spacing: 3px;
 }
 
-nav{
-    margin-top:15px;
+nav {
+    margin-top: 15px;
 }
 
-nav a{
-    color:#d4af37;
-    text-decoration:none;
-    margin:0 10px;
+nav a {
+    color: #d4af37;
+    text-decoration: none;
+    margin: 0 10px;
 }
 
-nav a:hover{
-    text-decoration:underline;
+nav a:hover {
+    text-decoration: underline;
 }
 
-.container{
-    max-width:900px;
-    margin:30px auto;
-    padding:0 15px;
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 15px;
 }
 
-.back{
-    display:block;
-    color:#d4af37;
-    text-decoration:none;
-    font-weight:bold;
-    margin-bottom:20px;
+.back {
+    display: block;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.back:hover{
-    text-decoration:underline;
+.back:hover {
+    text-decoration: underline;
 }
 
-.quest-title{
-    color:#d4af37;
-    font-size:26px;
-    font-weight:bold;
-    margin-bottom:10px;
-    letter-spacing:1px;
+.quest-title {
+    color: #d4af37;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
-.mission-button{
-    width:100%;
-    background:#d4af37;
-    color:#0b0b0b;
-    border:none;
-    padding:14px 15px;
-    margin-top:10px;
-    text-align:left;
-    font-size:17px;
-    font-weight:bold;
-    cursor:pointer;
-    border-radius:4px;
+.mission-button {
+    width: 100%;
+    background: #d4af37;
+    color: #0b0b0b;
+    border: none;
+    padding: 14px 15px;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
 .mission-button:hover,
-.mission-button.active{
-    background:#d4af37;
-    color:#0b0b0b;
+.mission-button.active {
+    background: #d4af37;
+    color: #0b0b0b;
 }
 
-.content{
-    display:none;
-    padding:10px 0;
+.content {
+    display: none;
+    padding: 10px 0;
 }
 
-.content.show{
-    display:block;
+.content.show {
+    display: block;
 }
 
-.label{
-    color:#d4af37;
-    font-weight:bold;
-    font-size:18px;
-    margin:18px 0 8px;
+.label {
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 18px 0 8px;
 }
 
-.text{
-    background:#111;
-    border-left:2px solid #d4af37;
-    padding:15px;
-    margin-top:10px;
-    white-space:pre-line;
-    line-height:2.2;
-    overflow-wrap:anywhere;
+.text {
+    background: #111;
+    border-left: 2px solid #d4af37;
+    padding: 15px;
+    margin-top: 10px;
+    white-space: pre-line;
+    line-height: 2.2;
+    overflow-wrap: anywhere;
 }
 
-footer{
-    text-align:center;
-    padding:30px;
-    color:#777;
-    border-top:1px solid #333;
-    margin-top:40px;
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    border-top: 1px solid #333;
+    margin-top: 40px;
 }
 </style>
 </head>
@@ -150,20 +150,19 @@ footer{
 
     <a href="prelude-to-war.html" class="back">← Back to Prelude to War</a>
 
-    <button class="mission-button">Lua</button>
+    <button class="mission-button">1. Lua</button>
 
     <div class="content">
 
-        <div class="label">The Man in The Wall</div>
-        <div class="text">The Man in The Wall: "Haha!" (Happens throughout the mission)</div>
+        <div class="text">The Man in The Wall: "Haha!" (Happens throughout the mission)
 
-        <div class="text">Lotus: "I am not who you think I am."</div>
+Lotus: "I am not who you think I am."
 
-        <div class="text">Ballas: "But of course, you are. Imprisoned, just as she was."</div>
+Ballas: "But of course, you are. Imprisoned, just as she was."</div>
 
     </div>
 
-    <button class="mission-button">The Sentient Chamber</button>
+    <button class="mission-button">2. The Sentient Chamber</button>
 
     <div class="content">
 
@@ -254,11 +253,13 @@ Natah: "Tenno... Tenno..."</div>
 </footer>
 
 <script>
-document.querySelectorAll(".mission-button").forEach(button=>{
-    button.addEventListener("click",()=>{
+document.querySelectorAll(".mission-button").forEach(button => {
+    button.addEventListener("click", () => {
         button.classList.toggle("active");
-        const content=button.nextElementSibling;
-        if(content){
+
+        const content = button.nextElementSibling;
+
+        if (content) {
             content.classList.toggle("show");
         }
     });
