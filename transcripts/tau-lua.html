@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Lua - Prologue to Tau - The Lorak Codex</title>
+<title>Lua - Transcripts - The Lorak Codex</title>
 
 <style>
 * {
@@ -21,26 +21,27 @@ body {
 
 header {
     background: #111;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 1px solid #d4af37;
+    padding: 25px;
+    border-bottom: 1px solid #333;
 }
 
 header h1 {
-    color: #d4af37;
     margin: 0;
+    color: #d4af37;
     letter-spacing: 3px;
 }
 
 nav {
     margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 nav a {
     color: #d4af37;
     text-decoration: none;
-    margin: 0 8px;
-    font-size: 14px;
+    font-weight: bold;
 }
 
 nav a:hover {
@@ -49,92 +50,110 @@ nav a:hover {
 
 .container {
     max-width: 900px;
-    margin: auto;
-    padding: 20px;
+    margin: 30px auto;
+    padding: 0 15px;
 }
 
-.back-link {
+.back {
     display: inline-block;
     color: #d4af37;
     text-decoration: none;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
-.back-link:hover {
+.back:hover {
     text-decoration: underline;
 }
 
-h2 {
+.quest-title {
     color: #d4af37;
+    font-size: 26px;
+    font-weight: bold;
     margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
 .quest-description {
-    background: #151515;
-    border-left: 4px solid #d4af37;
-    padding: 16px 18px;
-    margin: 15px 0 25px;
-    line-height: 1.6;
-    color: #ddd;
+    background: #111;
+    border-left: 2px solid #d4af37;
+    padding: 15px;
+    margin-bottom: 25px;
+    line-height: 1.8;
 }
 
-.mission-title {
-    color: #d4af37;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 25px 0 10px;
-}
-
-.objective {
-    color: #d4af37;
-    font-weight: bold;
-    margin: 0 0 10px;
-}
-
-.transcript-box {
-    background: #151515;
-    border: 1px solid #333;
-    border-radius: 6px;
-    padding: 20px;
+.mission-button {
+    width: 100%;
+    background: #d4af37;
+    color: #0b0b0b;
+    border: none;
+    padding: 14px 15px;
     margin-top: 10px;
-    line-height: 1.6;
-}
-
-.dialogue {
-    margin: 0 0 10px;
-    line-height: 1.6;
-}
-
-.speaker {
+    text-align: left;
+    font-size: 17px;
     font-weight: bold;
-    color: #ddd;
+    cursor: pointer;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.mission-button:hover,
+.mission-button.active {
+    background: #d4af37;
+    color: #0b0b0b;
+}
+
+.content {
+    display: none;
+    padding: 10px 0;
+}
+
+.content.show {
+    display: block;
+}
+
+.label {
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 18px 0 8px;
+}
+
+.text {
+    background: #111;
+    border-left: 2px solid #d4af37;
+    padding: 15px;
+    margin-top: 10px;
+    white-space: pre-line;
+    line-height: 2.2;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-    color: #777;
-    border-top: 1px solid #222;
-    font-size: 13px;
+    padding: 25px 15px;
+    margin-top: 40px;
+    background: #111;
+    border-top: 1px solid #333;
+    color: #888;
 }
 
 @media (max-width: 600px) {
     header {
-        padding: 16px 10px;
+        padding: 20px 15px;
     }
 
-    nav a {
-        display: inline-block;
-        margin: 5px 6px;
+    header h1 {
+        font-size: 24px;
     }
 
-    .container {
-        padding: 15px;
+    nav {
+        gap: 12px;
     }
 
-    .transcript-box {
-        padding: 15px;
+    .quest-title {
+        font-size: 23px;
     }
 }
 </style>
@@ -148,7 +167,8 @@ footer {
     <nav>
         <a href="../index.html">Home</a>
         <a href="../quests.html">Quests</a>
-        <a href="../transcripts.html">Transcripts</a>
+        <a href="../summaries/index.html">Summaries</a>
+        <a href="index.html">Transcripts</a>
         <a href="../extra-lore.html">Extra Lore</a>
         <a href="../factions.html">Factions</a>
         <a href="../timeline.html">Timeline</a>
@@ -160,117 +180,85 @@ footer {
 
 <div class="container">
 
-    <a class="back-link" href="tau-prologue.html">← Back to Prologue to Tau</a>
+    <h2 class="quest-title">Lua</h2>
 
-    <h2>Lua</h2>
+    <a class="back" href="tau-prologue.html">← Back to Prologue to Tau</a>
 
     <div class="quest-description">
         With the Lotus temporarily freed from the grasp of the Indifference, the long-awaited path to Tau can finally be found.
     </div>
 
-    <div class="mission-title">Mission 1. Introduction</div>
-    <div class="objective">Go to Sanctum</div>
+    <button class="mission-button" type="button">
+        1. Introduction
+    </button>
 
-    <div class="transcript-box">
+    <div class="content">
 
-        <p class="dialogue">
-            <span class="speaker">Operator:</span>
-            “So why does it have to be you?”
-        </p>
+        <div class="label">Go to Sanctum</div>
 
-        <p class="dialogue">
-            <span class="speaker">Drifter:</span>
-            “Mileage you've only gone into your own head, Look if that thing gets into me… I guess you know what to do”
-        </p>
+        <div class="text">Operator: So why does it have to be you?
 
-        <p class="dialogue">
-            <span class="speaker">Operator:</span>
-            “Yeah, I do”
-        </p>
+Drifter: Mileage you've only gone into your own head, Look if that thing gets into me… I guess you know what to do
+
+Operator: “Yeah, I do”</div>
 
     </div>
 
-    <div class="mission-title">Mission 2. Lua</div>
+    <button class="mission-button" type="button">
+        2. Lua
+    </button>
 
-    <div class="transcript-box">
+    <div class="content">
 
-        <p class="dialogue">
-            <span class="speaker">Lotus:</span>
-            “You promised the Tenno would be protected!”
-        </p>
+        <div class="text">Lotus: “You promised the Tenno would be protected!”
 
-        <p class="dialogue">
-            <span class="speaker">Ballas:</span>
-            “But your people are persistent, and have not forgiven us”
-        </p>
+Ballas: “But your people are persistent, and have not forgiven us”
 
-        <p class="dialogue">
-            <span class="speaker">Ballas:</span>
-            “Calm, my love It's a minor incursion the Dax are on their way”
-        </p>
+Ballas: “Calm, my love It's a minor incursion the Dax are on their way”
 
-        <p class="dialogue">
-            <span class="speaker">Ballas:</span>
-            “The Void? No! This is insanity! I forbid it”
-        </p>
+Ballas: “The Void? No! This is insanity! I forbid it”
 
-        <p class="dialogue">
-            <span class="speaker">Lotus:</span>
-            “I will burn but my children will be safe”
-        </p>
+Lotus: “I will burn but my children will be safe”
 
-        <p class="dialogue">
-            <span class="speaker">Man in the Wall:</span>
-            “Voidtounge words”
-        </p>
+Man in the Wall: “Voidtounge words”
 
-        <p class="dialogue">
-            <span class="speaker">Man in the Wall:</span>
-            “You can die… or you can watch over them forever that's what you want most isn't it?
-        </p>
+Man in the Wall: “You can die… or you can watch over them forever that's what you want most isn't it?
 
-        <p class="dialogue">
-            <span class="speaker">Drifter:</span>
-            “Let her go”
-        </p>
+Drifter: “Let her go”
 
-        <p class="dialogue">
-            <span class="speaker">Man in the Wall:</span>
-            And why would I want do that?”
-        </p>
+Man in the Wall: And why would I want do that?”
 
-        <p class="dialogue">
-            <span class="speaker">Drifter:</span>
-            “Because what you want is in Tau and you know we need her to get there”
-        </p>
+Drifter: “Because what you want is in Tau and you know we need her to get there”
 
-        <p class="dialogue">
-            <span class="speaker">Drifter:</span>
-            So what’s it gonna be?
-        </p>
+Drifter: So what’s it gonna be?
 
-        <p class="dialogue">
-            <span class="speaker">Man in the Wall:</span>
-            Okay, Killer Let’s see what you got
-        </p>
+Man in the Wall: Okay, Killer Let’s see what you got
 
-        <p class="dialogue">
-            <span class="speaker">Man in the Wall:</span>
-            Go play
-        </p>
+Man in the Wall, Go play
 
-        <p class="dialogue">
-            <span class="speaker">Drifter:</span>
-            I got her Let’s go
-        </p>
+Drifter: I got her Let’s go</div>
 
     </div>
 
 </div>
 
 <footer>
-    The Lorak Codex
+    The Lorak Codex — A book in Warframe.
 </footer>
+
+<script>
+const missionButtons = document.querySelectorAll(".mission-button");
+
+missionButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+        const content = button.nextElementSibling;
+        const isOpen = content.classList.contains("show");
+
+        button.classList.toggle("active", !isOpen);
+        content.classList.toggle("show", !isOpen);
+    });
+});
+</script>
 
 </body>
 </html>
