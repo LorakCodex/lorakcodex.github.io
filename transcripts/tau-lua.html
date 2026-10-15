@@ -78,6 +78,19 @@ h2 {
     color: #ddd;
 }
 
+.mission-title {
+    color: #d4af37;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 25px 0 10px;
+}
+
+.objective {
+    color: #d4af37;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
 .transcript-box {
     background: #151515;
     border: 1px solid #333;
@@ -87,14 +100,14 @@ h2 {
     line-height: 1.6;
 }
 
-.transcript-box h3 {
-    color: #d4af37;
-    margin-top: 0;
-    margin-bottom: 10px;
+.dialogue {
+    margin: 0 0 10px;
+    line-height: 1.6;
 }
 
-.transcript-box p {
-    margin: 0 0 12px;
+.speaker {
+    font-weight: bold;
+    color: #ddd;
 }
 
 footer {
@@ -104,6 +117,25 @@ footer {
     color: #777;
     border-top: 1px solid #222;
     font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 16px 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 6px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .transcript-box {
+        padding: 15px;
+    }
 }
 </style>
 </head>
@@ -136,9 +168,102 @@ footer {
         With the Lotus temporarily freed from the grasp of the Indifference, the long-awaited path to Tau can finally be found.
     </div>
 
+    <div class="mission-title">Mission 1. Introduction</div>
+    <div class="objective">Go to Sanctum</div>
+
     <div class="transcript-box">
-        <h3>Transcript</h3>
-        <p>Transcript coming soon.</p>
+
+        <p class="dialogue">
+            <span class="speaker">Operator:</span>
+            “So why does it have to be you?”
+        </p>
+
+        <p class="dialogue">
+            <span class="speaker">Drifter:</span>
+            “Mileage you've only gone into your own head, Look if that thing gets into me… I guess you know what to do”
+        </p>
+
+        <p class="dialogue">
+            <span class="speaker">Operator:</span>
+            “Yeah, I do”
+        </p>
+
+    </div>
+
+    <div class="mission-title">Mission 2. Lua</div>
+
+    <div class="transcript-box">
+
+        <p class="dialogue">
+            <span class="speaker">Lotus:</span>
+            “You promised the Tenno would be protected!”
+        </p>
+
+        <p class="dialogue">
+            <span class="speaker">Ballas:</span>
+            “But your people are persistent, and have not forgiven us”
+        </p>
+
+        <p class="dialogue">
+            <span class="speaker">Ballas:</span>
+            “Calm, my love It's a minor incursion the Dax are on their way”
+        </p>
+
+        <p class="dialogue">
+            <span class="speaker">Ballas:</span>
+            “The Void? No! This is insanity! I forbid it”
+        </p>
+
+        <p class="dialogue">
+            <span class="speaker">Lotus:</span>
+            “I will burn but my children will be safe”
+        </p>
+
+        <p class="dialogue">
+            <span class="speaker">Man in the Wall:</span>
+            “Voidtounge words”
+        </p>
+
+        <p class="dialogue">
+            <span class="speaker">Man in the Wall:</span>
+            “You can die… or you can watch over them forever that's what you want most isn't it?
+        </p>
+
+        <p class="dialogue">
+            <span class="speaker">Drifter:</span>
+            “Let her go”
+        </p>
+
+        <p class="dialogue">
+            <span class="speaker">Man in the Wall:</span>
+            And why would I want do that?”
+        </p>
+
+        <p class="dialogue">
+            <span class="speaker">Drifter:</span>
+            “Because what you want is in Tau and you know we need her to get there”
+        </p>
+
+        <p class="dialogue">
+            <span class="speaker">Drifter:</span>
+            So what’s it gonna be?
+        </p>
+
+        <p class="dialogue">
+            <span class="speaker">Man in the Wall:</span>
+            Okay, Killer Let’s see what you got
+        </p>
+
+        <p class="dialogue">
+            <span class="speaker">Man in the Wall:</span>
+            Go play
+        </p>
+
+        <p class="dialogue">
+            <span class="speaker">Drifter:</span>
+            I got her Let’s go
+        </p>
+
     </div>
 
 </div>
