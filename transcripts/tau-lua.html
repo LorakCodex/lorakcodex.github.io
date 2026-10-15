@@ -4,7 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lua - Transcripts - The Lorak Codex</title>
+
+<title>Prologue to Tau - Transcripts - The Lorak Codex</title>
 
 <style>
 body{
@@ -76,7 +77,8 @@ nav a:hover{
     box-sizing:border-box;
 }
 
-.mission-button{
+.part-button{
+    display:block;
     width:100%;
     background:#d4af37;
     color:#0b0b0b;
@@ -89,39 +91,22 @@ nav a:hover{
     cursor:pointer;
     border-radius:4px;
     box-sizing:border-box;
+    text-decoration:none;
 }
 
-.mission-button:hover,
-.mission-button.active{
+.part-button:hover{
     background:#d4af37;
     color:#0b0b0b;
 }
 
-.content{
-    display:none;
-    padding:10px 0 10px 0;
-}
-
-.content.show{
-    display:block;
-}
-
-.label{
-    color:#d4af37;
-    font-weight:bold;
-    font-size:18px;
-    margin:18px 0 8px;
-}
-
-.text{
+.part-description{
     background:#111;
     border-left:2px solid #d4af37;
     padding:15px;
     margin-top:10px;
-    white-space:pre-line;
-    line-height:2.2;
+    margin-bottom:15px;
+    line-height:1.8;
     box-sizing:border-box;
-    overflow-wrap:anywhere;
 }
 
 footer{
@@ -154,79 +139,29 @@ footer{
 
 <div class="container">
 
-    <h2 class="quest-title">Lua</h2>
+    <h2 class="quest-title">Prologue to Tau</h2>
 
-    <a href="tau-prologue.html" class="back">← Back to Prologue to Tau</a>
+    <a href="../transcripts.html" class="back">← Back to Transcripts</a>
 
     <div class="quest-description">
         With the Lotus temporarily freed from the grasp of the Indifference, the long-awaited path to Tau can finally be found.
     </div>
 
-    <button class="mission-button">1. Introduction</button>
+    <a href="tau-lua.html" class="part-button">Lua</a>
 
-    <div class="content">
+    <a href="tau-vessel.html" class="part-button">Vessel</a>
 
-        <div class="label">Go to Sanctum</div>
-
-        <div class="text">Operator: So why does it have to be you?
-
-Drifter: Mileage you've only gone into your own head, Look if that thing gets into me… I guess you know what to do
-
-Operator: “Yeah, I do”</div>
-
+    <div class="part-description">
+        A taste for flesh has begun. Praghasa shall feast upon the Moonflesh of Eris… but at what cost?
     </div>
 
-    <button class="mission-button">2. Lua</button>
-
-    <div class="content">
-
-        <div class="text">Lotus: “You promised the Tenno would be protected!”
-
-Ballas: “But your people are persistent, and have not forgiven us”
-
-Ballas: “Calm, my love It's a minor incursion the Dax are on their way”
-
-Ballas: “The Void? No! This is insanity! I forbid it”
-
-Lotus: “I will burn but my children will be safe”
-
-Man in the Wall: “Voidtounge words”
-
-Man in the Wall: “You can die… or you can watch over them forever that's what you want most isn't it?
-
-Drifter: “Let her go”
-
-“Man in the Wall: And why would I want do that?”
-
-Drifter: “Because what you want is in Tau and you know we need her to get there”
-
-Drifter: So what’s it gonna be?
-
-Man in the Wall: Okay, Killer Let’s see what you got
-
-Man in the Wall, Go play
-
-Drifter: I got her Let’s go</div>
-
-    </div>
+    <a href="tau-part-3.html" class="part-button">Part 3</a>
 
 </div>
 
 <footer>
     The Lorak Codex
 </footer>
-
-<script>
-document.querySelectorAll(".mission-button").forEach(button=>{
-    button.addEventListener("click",()=>{
-        button.classList.toggle("active");
-        const content=button.nextElementSibling;
-        if(content){
-            content.classList.toggle("show");
-        }
-    });
-});
-</script>
 
 </body>
 </html>
