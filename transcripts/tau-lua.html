@@ -4,157 +4,132 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Lua - Transcripts - The Lorak Codex</title>
 
 <style>
-* {
-    box-sizing: border-box;
+body{
+    margin:0;
+    background:#0b0b0b;
+    color:#ddd;
+    font-family:Arial,sans-serif;
 }
 
-body {
-    margin: 0;
-    background: #0b0b0b;
-    color: #ddd;
-    font-family: Arial, sans-serif;
+header{
+    background:#111;
+    padding:25px;
+    text-align:center;
+    border-bottom:1px solid #333;
 }
 
-header {
-    background: #111;
-    padding: 25px;
-    border-bottom: 1px solid #333;
+header h1{
+    margin:0;
+    color:#d4af37;
+    letter-spacing:3px;
 }
 
-header h1 {
-    margin: 0;
-    color: #d4af37;
-    letter-spacing: 3px;
+nav{
+    margin-top:15px;
 }
 
-nav {
-    margin-top: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+nav a{
+    color:#d4af37;
+    text-decoration:none;
+    margin:0 10px;
 }
 
-nav a {
-    color: #d4af37;
-    text-decoration: none;
-    font-weight: bold;
+nav a:hover{
+    text-decoration:underline;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.container{
+    max-width:900px;
+    margin:30px auto;
+    padding:0 15px;
 }
 
-.container {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 0 15px;
+.back{
+    display:block;
+    color:#d4af37;
+    text-decoration:none;
+    font-weight:bold;
+    margin-bottom:20px;
 }
 
-.back {
-    display: inline-block;
-    color: #d4af37;
-    text-decoration: none;
-    font-weight: bold;
-    margin-bottom: 20px;
+.back:hover{
+    text-decoration:underline;
 }
 
-.back:hover {
-    text-decoration: underline;
+.quest-title{
+    color:#d4af37;
+    font-size:26px;
+    font-weight:bold;
+    margin-bottom:10px;
+    letter-spacing:1px;
 }
 
-.quest-title {
-    color: #d4af37;
-    font-size: 26px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
+.quest-description{
+    background:#111;
+    border-left:2px solid #d4af37;
+    padding:15px;
+    margin-bottom:25px;
+    line-height:1.8;
+    box-sizing:border-box;
 }
 
-.quest-description {
-    background: #111;
-    border-left: 2px solid #d4af37;
-    padding: 15px;
-    margin-bottom: 25px;
-    line-height: 1.8;
-}
-
-.mission-button {
-    width: 100%;
-    background: #d4af37;
-    color: #0b0b0b;
-    border: none;
-    padding: 14px 15px;
-    margin-top: 10px;
-    text-align: left;
-    font-size: 17px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 4px;
-    box-sizing: border-box;
+.mission-button{
+    width:100%;
+    background:#d4af37;
+    color:#0b0b0b;
+    border:none;
+    padding:14px 15px;
+    margin-top:10px;
+    text-align:left;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:4px;
+    box-sizing:border-box;
 }
 
 .mission-button:hover,
-.mission-button.active {
-    background: #d4af37;
-    color: #0b0b0b;
+.mission-button.active{
+    background:#d4af37;
+    color:#0b0b0b;
 }
 
-.content {
-    display: none;
-    padding: 10px 0;
+.content{
+    display:none;
+    padding:10px 0 10px 0;
 }
 
-.content.show {
-    display: block;
+.content.show{
+    display:block;
 }
 
-.label {
-    color: #d4af37;
-    font-weight: bold;
-    font-size: 18px;
-    margin: 18px 0 8px;
+.label{
+    color:#d4af37;
+    font-weight:bold;
+    font-size:18px;
+    margin:18px 0 8px;
 }
 
-.text {
-    background: #111;
-    border-left: 2px solid #d4af37;
-    padding: 15px;
-    margin-top: 10px;
-    white-space: pre-line;
-    line-height: 2.2;
-    box-sizing: border-box;
-    overflow-wrap: anywhere;
+.text{
+    background:#111;
+    border-left:2px solid #d4af37;
+    padding:15px;
+    margin-top:10px;
+    white-space:pre-line;
+    line-height:2.2;
+    box-sizing:border-box;
+    overflow-wrap:anywhere;
 }
 
-footer {
-    text-align: center;
-    padding: 25px 15px;
-    margin-top: 40px;
-    background: #111;
-    border-top: 1px solid #333;
-    color: #888;
-}
-
-@media (max-width: 600px) {
-    header {
-        padding: 20px 15px;
-    }
-
-    header h1 {
-        font-size: 24px;
-    }
-
-    nav {
-        gap: 12px;
-    }
-
-    .quest-title {
-        font-size: 23px;
-    }
+footer{
+    text-align:center;
+    padding:30px;
+    color:#777;
+    border-top:1px solid #333;
+    margin-top:40px;
 }
 </style>
 </head>
@@ -167,14 +142,13 @@ footer {
     <nav>
         <a href="../index.html">Home</a>
         <a href="../quests.html">Quests</a>
-        <a href="../summaries/index.html">Summaries</a>
-        <a href="index.html">Transcripts</a>
+        <a href="../transcripts.html">Transcripts</a>
         <a href="../extra-lore.html">Extra Lore</a>
         <a href="../factions.html">Factions</a>
         <a href="../timeline.html">Timeline</a>
         <a href="../operations.html">Operations</a>
         <a href="../args.html">ARGs</a>
-        <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
+        <a href="https://discord.gg/X3WsdC8jP4">Discord</a>
     </nav>
 </header>
 
@@ -182,15 +156,13 @@ footer {
 
     <h2 class="quest-title">Lua</h2>
 
-    <a class="back" href="tau-prologue.html">← Back to Prologue to Tau</a>
+    <a href="tau-prologue.html" class="back">← Back to Prologue to Tau</a>
 
     <div class="quest-description">
         With the Lotus temporarily freed from the grasp of the Indifference, the long-awaited path to Tau can finally be found.
     </div>
 
-    <button class="mission-button" type="button">
-        1. Introduction
-    </button>
+    <button class="mission-button">1. Introduction</button>
 
     <div class="content">
 
@@ -204,9 +176,7 @@ Operator: “Yeah, I do”</div>
 
     </div>
 
-    <button class="mission-button" type="button">
-        2. Lua
-    </button>
+    <button class="mission-button">2. Lua</button>
 
     <div class="content">
 
@@ -226,7 +196,7 @@ Man in the Wall: “You can die… or you can watch over them forever that's wha
 
 Drifter: “Let her go”
 
-Man in the Wall: And why would I want do that?”
+“Man in the Wall: And why would I want do that?”
 
 Drifter: “Because what you want is in Tau and you know we need her to get there”
 
@@ -243,19 +213,17 @@ Drifter: I got her Let’s go</div>
 </div>
 
 <footer>
-    The Lorak Codex — A book in Warframe.
+    The Lorak Codex
 </footer>
 
 <script>
-const missionButtons = document.querySelectorAll(".mission-button");
-
-missionButtons.forEach(function(button) {
-    button.addEventListener("click", function() {
-        const content = button.nextElementSibling;
-        const isOpen = content.classList.contains("show");
-
-        button.classList.toggle("active", !isOpen);
-        content.classList.toggle("show", !isOpen);
+document.querySelectorAll(".mission-button").forEach(button=>{
+    button.addEventListener("click",()=>{
+        button.classList.toggle("active");
+        const content=button.nextElementSibling;
+        if(content){
+            content.classList.toggle("show");
+        }
     });
 });
 </script>
