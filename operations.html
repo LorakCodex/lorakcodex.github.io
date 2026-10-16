@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,121 +7,95 @@
 <title>Operations - The Lorak Codex</title>
 
 <style>
-    body {
-        margin: 0;
-        background: #0b0b0b;
-        color: #f5f5f5;
-        font-family: Arial, Helvetica, sans-serif;
-    }
+* {
+    box-sizing: border-box;
+}
 
-    header {
-        background: #111;
-        padding: 20px;
-        text-align: center;
-        border-bottom: 1px solid #d4af37;
-    }
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #ddd;
+    font-family: Arial, sans-serif;
+}
 
-    header h1 {
-        margin: 0;
-        color: #d4af37;
-        letter-spacing: 3px;
-        font-size: 28px;
-    }
+header {
+    background: #111;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
 
-    nav {
-        margin-top: 15px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-    }
+header h1 {
+    color: #d4af37;
+    letter-spacing: 3px;
+}
 
-    nav a {
-        color: #d4af37;
-        text-decoration: none;
-        padding: 7px 10px;
-        border: 1px solid #d4af37;
-        border-radius: 4px;
-        font-size: 14px;
-    }
+nav a {
+    color: #d4af37;
+    text-decoration: none;
+    margin: 0 10px;
+}
 
-    nav a:hover {
-        background: #d4af37;
-        color: #0b0b0b;
-    }
+nav a:hover {
+    text-decoration: underline;
+}
 
-    main {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 30px 20px 50px;
-    }
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
 
-    .back {
-        display: inline-block;
-        margin-bottom: 25px;
-        color: #d4af37;
-        text-decoration: none;
-        font-weight: bold;
-    }
+.back {
+    display: block;
+    color: #d4af37;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
 
-    .back:hover {
-        text-decoration: underline;
-    }
+.operation-button {
+    width: 100%;
+    background: #d4af37;
+    color: #0b0b0b;
+    border: none;
+    padding: 14px 15px;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
 
-    h2 {
-        color: #d4af37;
-        margin-top: 0;
-        letter-spacing: 2px;
-    }
+.operation-button:hover {
+    background: #e5c34e;
+}
 
-    .intro {
-        color: #ccc;
-        line-height: 1.6;
-        margin-bottom: 25px;
-    }
+.operation-content {
+    display: none;
+    padding: 10px 0;
+}
 
-    .operation-button {
-        width: 100%;
-        background: #d4af37;
-        color: #0b0b0b;
-        border: none;
-        padding: 14px 15px;
-        margin-top: 10px;
-        text-align: left;
-        font-size: 17px;
-        font-weight: bold;
-        cursor: pointer;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
+.operation-content.show {
+    display: block;
+}
 
-    .operation-button:hover,
-    .operation-button.active {
-        background: #d4af37;
-        color: #0b0b0b;
-    }
+.operation-text {
+    background: #111;
+    border-left: 2px solid #d4af37;
+    padding: 15px;
+    margin-top: 10px;
+    min-height: 20px;
+}
 
-    .operation-content {
-        display: none;
-        background: #111;
-        border: 1px solid #222;
-        border-top: none;
-        padding: 18px;
-        line-height: 1.6;
-        color: #ddd;
-    }
-
-    .operation-content.show {
-        display: block;
-    }
-
-    footer {
-        text-align: center;
-        padding: 20px;
-        border-top: 1px solid #222;
-        color: #777;
-        font-size: 13px;
-    }
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    border-top: 1px solid #333;
+    margin-top: 40px;
+}
 </style>
 </head>
 
@@ -128,7 +103,6 @@
 
 <header>
     <h1>The Lorak Codex</h1>
-
     <nav>
         <a href="index.html">Home</a>
         <a href="quests.html">Quests</a>
@@ -138,40 +112,118 @@
         <a href="timeline.html">Timeline</a>
         <a href="operations.html">Operations</a>
         <a href="args.html">ARGs</a>
-        <a href="https://discord.gg/X3WsdC8jP4" target="_blank">Discord</a>
+        <a href="https://discord.gg/X3WsdC8jP4">Discord</a>
     </nav>
 </header>
 
-<main>
+<div class="container">
 
     <a class="back" href="index.html">← Back to Home</a>
 
-    <h2>Operations</h2>
+    <div id="operations">
 
-    <p class="intro">
-        Major Operations and large-scale events from throughout the history of the Origin System.
-    </p>
+        <button class="operation-button" onclick="toggleOperation(this)">1. Fusion MOA Event</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
 
-    <!-- Operations will be added here -->
+        <button class="operation-button" onclick="toggleOperation(this)">2. Artifact Defense Event</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
 
-</main>
+        <button class="operation-button" onclick="toggleOperation(this)">3. Informant Event</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">4. Operation: Sling-Stone</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">5. Operation: Arid Fear</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">6. The Gradivus Dilemma</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">7. Operation: Cicero Crisis</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">8. Operation: Oxium Espionage</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">9. Operation: Tethra's Doom</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">10. Operation: Breeding Grounds</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">11. Operation: Cryotic Front</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">12. Operation: Gate Crash</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">13. Operation: Mutalist Incursions</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">14. Operation: Eyes of Blight</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">15. False Profit</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">16. Operation: Tubemen of Regor</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">17. Operation: Shadow Debt</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">18. Operation: Rathuum</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">19. Operation: The Pacifism Defect</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">20. Operation: Ambulas Reborn</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">21. Operation: Plague Star</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">22. Operation: Buried Debts</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">23. Operation: Hostile Mergers</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">24. Operation: Scarlet Spear</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">25. Operation: Orphix Venom</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">26. Operation: Gargoyle's Cry</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">27. Operation: Belly of the Beast</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">28. Operation: Eight Claw</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">29. Operation: Blood of Perita</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+        <button class="operation-button" onclick="toggleOperation(this)">30. Epoch Operation: Taubound</button>
+        <div class="operation-content"><div class="operation-text"></div></div>
+
+    </div>
+</div>
 
 <footer>
     The Lorak Codex
 </footer>
 
 <script>
-    document.querySelectorAll(".operation-button").forEach(button => {
-        button.addEventListener("click", () => {
-            button.classList.toggle("active");
-
-            const content = button.nextElementSibling;
-
-            if (content) {
-                content.classList.toggle("show");
-            }
-        });
-    });
+function toggleOperation(button) {
+    const content = button.nextElementSibling;
+    content.classList.toggle("show");
+}
 </script>
 
 </body>
