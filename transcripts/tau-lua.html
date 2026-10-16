@@ -1,13 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Prologue to Tau - Transcripts - The Lorak Codex</title>
+<title>Prologue to Tau - Lua - Transcripts - The Lorak Codex</title>
 
 <style>
+*{
+    box-sizing:border-box;
+}
+
 body{
     margin:0;
     background:#0b0b0b;
@@ -38,10 +41,6 @@ nav a{
     margin:0 10px;
 }
 
-nav a:hover{
-    text-decoration:underline;
-}
-
 .container{
     max-width:900px;
     margin:30px auto;
@@ -54,10 +53,6 @@ nav a:hover{
     text-decoration:none;
     font-weight:bold;
     margin-bottom:20px;
-}
-
-.back:hover{
-    text-decoration:underline;
 }
 
 .quest-title{
@@ -74,39 +69,23 @@ nav a:hover{
     padding:15px;
     margin-bottom:25px;
     line-height:1.8;
-    box-sizing:border-box;
 }
 
-.part-button{
-    display:block;
-    width:100%;
-    background:#d4af37;
-    color:#0b0b0b;
-    border:none;
-    padding:14px 15px;
-    margin-top:10px;
-    text-align:left;
-    font-size:17px;
+.section-title{
+    color:#d4af37;
+    font-size:18px;
     font-weight:bold;
-    cursor:pointer;
-    border-radius:4px;
-    box-sizing:border-box;
-    text-decoration:none;
+    margin:18px 0 8px;
 }
 
-.part-button:hover{
-    background:#d4af37;
-    color:#0b0b0b;
-}
-
-.part-description{
+.transcript-text{
     background:#111;
     border-left:2px solid #d4af37;
     padding:15px;
     margin-top:10px;
-    margin-bottom:15px;
-    line-height:1.8;
-    box-sizing:border-box;
+    line-height:2.2;
+    white-space:pre-line;
+    overflow-wrap:anywhere;
 }
 
 footer{
@@ -116,46 +95,90 @@ footer{
     border-top:1px solid #333;
     margin-top:40px;
 }
+
+@media(max-width:600px){
+    header{
+        padding:20px 10px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:6px;
+    }
+
+    .quest-title{
+        font-size:23px;
+    }
+
+    .transcript-text{
+        padding:12px;
+    }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>The Lorak Codex</h1>
+    <h1>THE LORAK CODEX</h1>
 
     <nav>
         <a href="../index.html">Home</a>
         <a href="../quests.html">Quests</a>
+        <a href="../summaries.html">Summaries</a>
         <a href="../transcripts.html">Transcripts</a>
         <a href="../extra-lore.html">Extra Lore</a>
         <a href="../factions.html">Factions</a>
         <a href="../timeline.html">Timeline</a>
         <a href="../operations.html">Operations</a>
         <a href="../args.html">ARGs</a>
-        <a href="https://discord.gg/X3WsdC8jP4">Discord</a>
+        <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
     </nav>
 </header>
 
 <div class="container">
 
-    <h2 class="quest-title">Prologue to Tau</h2>
+    <a class="back" href="tau-prologue.html">← Back to Prologue to Tau</a>
 
-    <a href="../transcripts.html" class="back">← Back to Transcripts</a>
+    <div class="quest-title">Lua</div>
 
     <div class="quest-description">
         With the Lotus temporarily freed from the grasp of the Indifference, the long-awaited path to Tau can finally be found.
     </div>
 
-    <a href="tau-lua.html" class="part-button">Lua</a>
+    <div class="section-title">Sanctum Anatomica, Dark Refractory</div>
 
-    <a href="tau-vessel.html" class="part-button">Vessel</a>
+    <div class="transcript-text">Operator: "So why does it have to be you?"
 
-    <div class="part-description">
-        A taste for flesh has begun. Praghasa shall feast upon the Moonflesh of Eris… but at what cost?
-    </div>
+Drifter: "Mileage. You've only gone into your own head. Look, if that thing gets into me... I guess you know what to do."
 
-    <a href="tau-part-3.html" class="part-button">Part 3</a>
+Operator: "Yeah. I do."</div>
+
+    <div class="section-title">Lua, Orokin Era</div>
+
+    <div class="transcript-text">Ballas: "Calm, my love. It's a minor incursion. The Dax are on their way."
+
+Lotus: "You promised the Tenno would be protected!"
+
+Ballas: "But your people are persistent, and have not forgiven us."</div>
+
+    <div class="section-title">At the Void Pendula</div>
+
+    <div class="transcript-text">Ballas: "The Void? No! This is insanity! I forbid it!"
+
+Lotus: "I will burn. But my children will be safe."
+
+The Indifference: "You can die...Or you can watch over them forever. That's what you want most, isn't it?"
+
+Drifter: "Let her go."
+
+The Indifference: "And why would I want to do that?"
+
+Drifter: "Because what you want is in Tau. And you know we need her to get there. So. What's it gonna be?"
+
+The Indifference: "Okay, killer. Let's see what you got. Go play."
+
+Drifter: "I got her. Let's go."</div>
 
 </div>
 
