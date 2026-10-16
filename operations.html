@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Operations - The Lorak Codex</title>
 
 <style>
@@ -30,6 +31,10 @@ header h1 {
     letter-spacing: 3px;
 }
 
+nav {
+    line-height: 2;
+}
+
 nav a {
     color: #d4af37;
     text-decoration: none;
@@ -54,7 +59,16 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
+.page-title {
+    color: #d4af37;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
 .operation-button {
+    display: block;
     width: 100%;
     background: #d4af37;
     color: #0b0b0b;
@@ -64,29 +78,13 @@ nav a:hover {
     text-align: left;
     font-size: 17px;
     font-weight: bold;
+    text-decoration: none;
     cursor: pointer;
     border-radius: 4px;
 }
 
 .operation-button:hover {
     background: #e5c34e;
-}
-
-.operation-content {
-    display: none;
-    padding: 10px 0;
-}
-
-.operation-content.show {
-    display: block;
-}
-
-.operation-text {
-    background: #111;
-    border-left: 2px solid #d4af37;
-    padding: 15px;
-    margin-top: 10px;
-    min-height: 20px;
 }
 
 footer {
@@ -103,6 +101,7 @@ footer {
 
 <header>
     <h1>The Lorak Codex</h1>
+
     <nav>
         <a href="index.html">Home</a>
         <a href="quests.html">Quests</a>
@@ -120,111 +119,133 @@ footer {
 
     <a class="back" href="index.html">← Back to Home</a>
 
-    <div id="operations">
+    <div class="page-title">Operations</div>
 
-        <button class="operation-button" onclick="toggleOperation(this)">1. Fusion MOA Event</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/fusion-moa-event.html">
+        1. Fusion MOA Event
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">2. Artifact Defense Event</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/artifact-defense-event.html">
+        2. Artifact Defense Event
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">3. Informant Event</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/informant-event.html">
+        3. Informant Event
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">4. Operation: Sling-Stone</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-sling-stone.html">
+        4. Operation: Sling-Stone
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">5. Operation: Arid Fear</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-arid-fear.html">
+        5. Operation: Arid Fear
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">6. The Gradivus Dilemma</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/gradivus-dilemma.html">
+        6. The Gradivus Dilemma
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">7. Operation: Cicero Crisis</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-cicero-crisis.html">
+        7. Operation: Cicero Crisis
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">8. Operation: Oxium Espionage</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-oxium-espionage.html">
+        8. Operation: Oxium Espionage
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">9. Operation: Tethra's Doom</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-tethras-doom.html">
+        9. Operation: Tethra's Doom
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">10. Operation: Breeding Grounds</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-breeding-grounds.html">
+        10. Operation: Breeding Grounds
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">11. Operation: Cryotic Front</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-cryotic-front.html">
+        11. Operation: Cryotic Front
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">12. Operation: Gate Crash</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-gate-crash.html">
+        12. Operation: Gate Crash
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">13. Operation: Mutalist Incursions</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-mutalist-incursions.html">
+        13. Operation: Mutalist Incursions
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">14. Operation: Eyes of Blight</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-eyes-of-blight.html">
+        14. Operation: Eyes of Blight
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">15. False Profit</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/false-profit.html">
+        15. False Profit
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">16. Operation: Tubemen of Regor</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-tubemen-of-regor.html">
+        16. Operation: Tubemen of Regor
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">17. Operation: Shadow Debt</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-shadow-debt.html">
+        17. Operation: Shadow Debt
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">18. Operation: Rathuum</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-rathuum.html">
+        18. Operation: Rathuum
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">19. Operation: The Pacifism Defect</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-pacifism-defect.html">
+        19. Operation: The Pacifism Defect
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">20. Operation: Ambulas Reborn</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-ambulas-reborn.html">
+        20. Operation: Ambulas Reborn
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">21. Operation: Plague Star</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-plague-star.html">
+        21. Operation: Plague Star
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">22. Operation: Buried Debts</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-buried-debts.html">
+        22. Operation: Buried Debts
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">23. Operation: Hostile Mergers</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-hostile-mergers.html">
+        23. Operation: Hostile Mergers
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">24. Operation: Scarlet Spear</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-scarlet-spear.html">
+        24. Operation: Scarlet Spear
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">25. Operation: Orphix Venom</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-orphix-venom.html">
+        25. Operation: Orphix Venom
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">26. Operation: Gargoyle's Cry</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-gargoyles-cry.html">
+        26. Operation: Gargoyle's Cry
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">27. Operation: Belly of the Beast</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-belly-of-the-beast.html">
+        27. Operation: Belly of the Beast
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">28. Operation: Eight Claw</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-eight-claw.html">
+        28. Operation: Eight Claw
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">29. Operation: Blood of Perita</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/operation-blood-of-perita.html">
+        29. Operation: Blood of Perita
+    </a>
 
-        <button class="operation-button" onclick="toggleOperation(this)">30. Epoch Operation: Taubound</button>
-        <div class="operation-content"><div class="operation-text"></div></div>
+    <a class="operation-button" href="operations/epoch-operation-taubound.html">
+        30. Epoch Operation: Taubound
+    </a>
 
-    </div>
 </div>
 
 <footer>
     The Lorak Codex
 </footer>
-
-<script>
-function toggleOperation(button) {
-    const content = button.nextElementSibling;
-    content.classList.toggle("show");
-}
-</script>
 
 </body>
 </html>
