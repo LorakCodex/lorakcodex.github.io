@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,6 +66,15 @@
             margin-bottom: 50px;
         }
 
+        .grimoire-image {
+            display: block;
+            width: 100%;
+            max-width: 280px;
+            max-height: 360px;
+            object-fit: contain;
+            margin: 0 auto 25px;
+        }
+
         .intro h2 {
             color: #d4af37;
             font-size: 26px;
@@ -116,6 +124,21 @@
             font-size: 13px;
             margin-top: 40px;
         }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 26px;
+            }
+
+            main {
+                padding: 35px 16px;
+            }
+
+            .grimoire-image {
+                max-width: 230px;
+                max-height: 300px;
+            }
+        }
     </style>
 </head>
 
@@ -141,6 +164,13 @@
 <main>
 
     <section class="intro">
+
+        <img
+            src="Transparency%20test.png"
+            alt="The Lorak Grimoire"
+            class="grimoire-image"
+        >
+
         <h2>I am Lorak.</h2>
 
         <p>
@@ -151,6 +181,7 @@
         <p>
             What follows is an archive of what I have discovered.
         </p>
+
     </section>
 
     <section class="cards">
