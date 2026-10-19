@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Maker - Transcripts</title>
+
+<style>
+    body {
+        margin: 0;
+        background: #0b0b0b;
+        color: #e6e6e6;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+    }
+
+    header {
+        background: #111;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 1px solid #d4af37;
+    }
+
+    h1 {
+        color: #d4af37;
+        letter-spacing: 3px;
+        margin: 0;
+    }
+
+    main {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .back {
+        display: inline-block;
+        color: #d4af37;
+        text-decoration: none;
+        margin-bottom: 20px;
+    }
+
+    .back:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        background: #151515;
+        border-left: 3px solid #d4af37;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .accordion {
+        width: 100%;
+        background: #d4af37;
+        color: #0b0b0b;
+        cursor: pointer;
+        padding: 14px;
+        border: none;
+        text-align: left;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .accordion:hover {
+        background: #e5c65c;
+    }
+
+    .panel {
+        display: none;
+        background: #151515;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .speaker {
+        color: #d4af37;
+        font-weight: bold;
+    }
+
+    .dialogue {
+        margin-bottom: 14px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>The Maker - Transcripts</h1>
+</header>
+
+<main>
+
+<a class="back" href="../transcripts.html">← Back to Transcripts</a>
+
+<div class="description">
+    With the final preparations for New War being set Erra manipulates Natah one final time while he has the chance.
+</div>
+
+<button class="accordion">1. During the Maker</button>
+<div class="panel">
+
+    <div class="dialogue">
+        <span class="speaker">Erra:</span> "We're ready, Natah."
+    </div>
+
+    <div class="dialogue">
+        <span class="speaker">Natah:</span> "So quiet. So dark."
+    </div>
+
+    <div class="dialogue">
+        <span class="speaker">Erra:</span> "It only needs a voice, a spark."
+    </div>
+
+    <div class="dialogue">
+        <span class="speaker">Natah:</span> "But mother--"
+    </div>
+
+    <div class="dialogue">
+        <span class="speaker">Erra:</span> "Mother's gone. This is all that remains. But you have her fire. And more. You can finish what she started..."
+    </div>
+
+    <div class="dialogue">
+        <span class="speaker">Natah:</span> "Finish the war."
+    </div>
+
+    <div class="dialogue">
+        <span class="speaker">Erra:</span> "Bring peace. Bring purity."
+    </div>
+
+    <div class="dialogue">
+        <span class="speaker">Natah:</span> "On Lua. The Lotus... I... attacked you..."
+    </div>
+
+    <div class="dialogue">
+        <span class="speaker">Erra:</span> "You remember..."
+    </div>
+
+    <div class="dialogue">
+        <span class="speaker">Natah:</span> "You died..."
+    </div>
+
+    <div class="dialogue">
+        <span class="speaker">Erra:</span> "Hmm... You don't remember everything, then. Yes, your aphids wounded me. And our forces were depleting fast. I knew I had failed. Failed you, my sister. Failed our family. I had no choice but to retreat."
+    </div>
+
+    <div class="dialogue">
+        <span class="speaker">Natah:</span> "No... You were destroyed, the Tenno made sure of that--"
+    </div>
+
+    <div class="dialogue">
+        <span class="speaker">Erra:</span> "You're still recovering. With all that the Makers did to you, it will take time to heal."
+    </div>
+
+    <div class="dialogue">
+        <span class="speaker">Natah:</span> "He is one of them, isn't he? A Maker."
+    </div>
+
+    <div class="dialogue">
+        <span class="speaker">Erra:</span> "Finish the war, Natah."
+    </div>
+
+</div>
+
+</main>
+
+<script>
+    const accordions = document.querySelectorAll(".accordion");
+
+    accordions.forEach(button => {
+        button.addEventListener("click", function() {
+            const panel = this.nextElementSibling;
+
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
