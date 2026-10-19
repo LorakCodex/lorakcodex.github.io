@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Maker - Transcripts - The Lorak Codex</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #ddd;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #111;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    margin: 0;
+    color: #d4af37;
+    letter-spacing: 3px;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: #d4af37;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.back {
+    display: block;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+.quest-title {
+    color: #d4af37;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.description {
+    background: #111;
+    border-left: 2px solid #d4af37;
+    padding: 15px;
+    margin: 10px 0 20px;
+    line-height: 1.6;
+}
+
+.mission-button {
+    width: 100%;
+    background: #d4af37;
+    color: #0b0b0b;
+    border: none;
+    padding: 14px 15px;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.mission-button:hover,
+.mission-button.active {
+    background: #d4af37;
+    color: #0b0b0b;
+}
+
+.content {
+    display: none;
+    padding: 10px 0;
+}
+
+.content.show {
+    display: block;
+}
+
+.label {
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 18px 0 8px;
+}
+
+.text {
+    background: #111;
+    border-left: 2px solid #d4af37;
+    padding: 15px;
+    margin-top: 10px;
+    white-space: pre-line;
+    line-height: 2.2;
+    overflow-wrap: anywhere;
+}
+
+.speaker {
+    color: #d4af37;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    border-top: 1px solid #333;
+    margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>The Lorak Codex</h1>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../quests.html">Quests</a>
+        <a href="../transcripts.html">Transcripts</a>
+        <a href="../extra-lore.html">Extra Lore</a>
+        <a href="../factions.html">Factions</a>
+        <a href="../timeline.html">Timeline</a>
+        <a href="../operations.html">Operations</a>
+        <a href="../args.html">ARGs</a>
+        <a href="https://discord.gg/X3WsdC8jP4">Discord</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <h2 class="quest-title">The Maker</h2>
+
+    <a href="prelude-to-war.html" class="back">← Back to Prelude to War</a>
+
+    <div class="description">With the final preparations for New War being set Erra manipulates Natah one final time while he has the chance.</div>
+
+    <button class="mission-button">During the Maker</button>
+
+    <div class="content">
+
+        <div class="text"><span class="speaker">Erra:</span> "We're ready, Natah."
+
+<span class="speaker">Natah:</span> "So quiet. So dark."
+
+<span class="speaker">Erra:</span> "It only needs a voice, a spark."
+
+<span class="speaker">Natah:</span> "But mother--"
+
+<span class="speaker">Erra:</span> "Mother's gone. This is all that remains. But you have her fire. And more. You can finish what she started..."
+
+<span class="speaker">Natah:</span> "Finish the war."
+
+<span class="speaker">Erra:</span> "Bring peace. Bring purity."
+
+<span class="speaker">Natah:</span> "On Lua. The Lotus... I... attacked you..."
+
+<span class="speaker">Erra:</span> "You remember..."
+
+<span class="speaker">Natah:</span> "You died..."
+
+<span class="speaker">Erra:</span> "Hmm... You don't remember everything, then. Yes, your aphids wounded me. And our forces were depleting fast. I knew I had failed. Failed you, my sister. Failed our family. I had no choice but to retreat."
+
+<span class="speaker">Natah:</span> "No... You were destroyed, the Tenno made sure of that--"
+
+<span class="speaker">Erra:</span> "You're still recovering. With all that the Makers did to you, it will take time to heal."
+
+<span class="speaker">Natah:</span> "He is one of them, isn't he? A Maker."
+
+<span class="speaker">Erra:</span> "Finish the war, Natah."</div>
+
+    </div>
+
+</div>
+
+<footer>
+    The Lorak Codex
+</footer>
+
+<script>
+document.querySelectorAll(".mission-button").forEach(button => {
+    button.addEventListener("click", () => {
+        button.classList.toggle("active");
+
+        const content = button.nextElementSibling;
+
+        if (content) {
+            content.classList.toggle("show");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
