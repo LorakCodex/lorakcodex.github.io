@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +13,8 @@
 body {
     margin: 0;
     background: #0b0b0b;
-    color: #fff;
+    color: #ddd;
     font-family: Arial, sans-serif;
-    line-height: 1.6;
 }
 
 header {
@@ -27,11 +25,13 @@ header {
 }
 
 header h1 {
+    margin: 0;
     color: #d4af37;
     letter-spacing: 3px;
 }
 
 nav {
+    margin-top: 15px;
     line-height: 2;
 }
 
@@ -54,8 +54,8 @@ nav a:hover {
 .back {
     display: block;
     color: #d4af37;
-    font-weight: bold;
     text-decoration: none;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
@@ -67,57 +67,56 @@ nav a:hover {
     color: #d4af37;
     font-size: 26px;
     font-weight: bold;
-    letter-spacing: 1px;
     margin-bottom: 10px;
-}
-
-.operation-description {
-    background: #111;
-    border-left: 3px solid #d4af37;
-    padding: 15px;
-    margin-bottom: 25px;
-    line-height: 1.8;
-    white-space: pre-wrap;
-    overflow-wrap: anywhere;
+    letter-spacing: 1px;
 }
 
 .mission-button {
-    display: block;
     width: 100%;
-    background: #111;
-    color: #d4af37;
-    border: 1px solid #d4af37;
-    padding: 14px;
+    background: #d4af37;
+    color: #0b0b0b;
+    border: none;
+    padding: 14px 15px;
     margin-top: 10px;
     text-align: left;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
-    font-family: Arial, sans-serif;
     cursor: pointer;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-.mission-button:hover {
-    background: #1c1c1c;
+.mission-button:hover,
+.mission-button.active {
+    background: #d4af37;
+    color: #0b0b0b;
 }
 
-.mission-content {
+.content {
     display: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0;
+}
+
+.content.show {
+    display: block;
 }
 
 .section-heading {
     color: #d4af37;
     font-weight: bold;
-    margin: 10px 0;
+    font-size: 18px;
+    margin: 18px 0 8px;
 }
 
 .text {
     background: #111;
+    border-left: 2px solid #d4af37;
     padding: 15px;
+    margin-top: 10px;
     margin-bottom: 10px;
-    line-height: 1.6;
-    white-space: pre-wrap;
+    white-space: pre-line;
+    line-height: 2.2;
+    box-sizing: border-box;
     overflow-wrap: anywhere;
 }
 
@@ -166,7 +165,7 @@ footer {
     <div class="page-title">Operation: Gargoyle's Cry</div>
 
     <button class="mission-button">Inbox Message</button>
-    <div class="mission-content">
+    <div class="content">
         <div class="text"><div class="section-heading">Your attention, please.</div>
 The Murmur threat demands immediate action. Our first order of business must be surveillance. An early detection system lest we be caught sans trousers.
 
@@ -176,13 +175,13 @@ Your compliance is appreciated. The Vigile Jahu Gargoyle awaits you within your 
     </div>
 
     <button class="mission-button">Operation Synopsis</button>
-    <div class="mission-content">
+    <div class="content">
         <div class="text"><div class="section-heading">Operation Synopsis</div>
 To prevent the Murmur's encroachment into reality, Fibonacci orders that Tenno throughout the System to build a Vigile Jahu Gargoyle to create an Origin System-wide system to detect any Void breaches. However, a last-minute recalibration necessitates the Tenno to hunt down The Fragmented and collect their Curses to ensure the system can warn of both incoming and outgoing threats. On top of that is the presence of Void Angels in Albrecht's Laboratories, who will consume any Curses before the Tenno can return with them. Both The Fragmented and the Void Angels must be defeated in any order before extraction in order to obtain these Curses.</div>
     </div>
 
     <button class="mission-button">Visiting Vigile Jahu Gargoyle</button>
-    <div class="mission-content">
+    <div class="content">
 
         <div class="section-heading">Introduction</div>
         <div class="text">Fibonacci: "Hello? Can you hear me? Allow me to be the first to congratulate you on the laying of this: the foundation stone of a future both stable and secure. Your Dojo may now connect with others to form a mighty bastion against the Murmur's nullifying and relentless expansion. What? A miscalculation, surely."
@@ -243,7 +242,7 @@ Fibonacci: "Papa must believe this aids in conditioning, I suppose."</div>
     </div>
 
     <button class="mission-button">Operation Mission</button>
-    <div class="mission-content">
+    <div class="content">
 
         <div class="section-heading">Introduction</div>
         <div class="text">Fibonacci: "Corrective measures, now! Pluck and de-feather those Void Angels! If you do not leave here with both Plume and Curse, my exceptional error will go forever uncorrected."
@@ -305,7 +304,7 @@ Fibonacci: "Bird, should you vow to forget this... oversight... I do solemnly sw
     </div>
 
     <button class="mission-button">Operation End</button>
-    <div class="mission-content">
+    <div class="content">
         <div class="text"><div class="section-heading">Inbox Message</div>
 The Cry went up, and did not go unanswered
 
@@ -330,9 +329,11 @@ Be proud, Tenno. It is well deserved.</div>
 <script>
 document.querySelectorAll(".mission-button").forEach(button => {
     button.addEventListener("click", () => {
+        button.classList.toggle("active");
         const content = button.nextElementSibling;
-        content.style.display =
-            content.style.display === "block" ? "none" : "block";
+        if (content) {
+            content.classList.toggle("show");
+        }
     });
 });
 </script>
