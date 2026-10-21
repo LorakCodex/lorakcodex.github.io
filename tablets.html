@@ -4,160 +4,115 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Tablets - Extra Lore - The Lorak Codex</title>
 
 <style>
-*{box-sizing:border-box}
-
-body{
-    margin:0;
-    background:#0b0b0b;
-    color:#ddd;
-    font-family:Arial,sans-serif;
+* {
+    box-sizing: border-box;
 }
 
-header{
-    background:#111;
-    padding:25px;
-    text-align:center;
-    border-bottom:1px solid #333;
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #ddd;
+    font-family: Arial, sans-serif;
 }
 
-h1{
-    color:#d4af37;
-    letter-spacing:3px;
-    margin:0;
+header {
+    background: #111;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 1px solid #333;
 }
 
-nav{
-    margin-top:20px;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:12px 16px;
+h1 {
+    color: #d4af37;
+    letter-spacing: 3px;
+    margin: 0;
 }
 
-nav a{
-    color:#d4af37;
-    text-decoration:none;
+nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 16px;
 }
 
-nav a:hover{text-decoration:underline}
-
-.container{
-    max-width:900px;
-    margin:30px auto;
-    padding:0 15px;
+nav a {
+    color: #d4af37;
+    text-decoration: none;
 }
 
-.back{
-    display:inline-block;
-    color:#d4af37;
-    text-decoration:none;
-    margin-bottom:20px;
+nav a:hover {
+    text-decoration: underline;
 }
 
-.back:hover{text-decoration:underline}
-
-.page-title{
-    color:#d4af37;
-    font-size:26px;
-    font-weight:bold;
-    margin-bottom:25px;
-    letter-spacing:1px;
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 15px;
 }
 
-.intro{
-    background:#111;
-    border-left:2px solid #d4af37;
-    padding:15px;
-    margin-bottom:25px;
-    line-height:1.8;
+.back {
+    display: inline-block;
+    color: #d4af37;
+    text-decoration: none;
+    margin-bottom: 20px;
 }
 
-.section-title{
-    color:#d4af37;
-    font-size:21px;
-    margin:30px 0 15px;
-    letter-spacing:1px;
+.back:hover {
+    text-decoration: underline;
 }
 
-.section-description{
-    line-height:1.8;
-    margin-bottom:20px;
-    color:#ccc;
+.page-title {
+    color: #d4af37;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
 }
 
-.tablet{margin-bottom:12px}
-
-.tablet-button{
-    display:block;
-    width:100%;
-    background:#d4af37;
-    color:#0b0b0b;
-    border:none;
-    text-align:left;
-    padding:14px 15px;
-    font-size:16px;
-    font-family:Arial,sans-serif;
-    font-weight:bold;
-    border-radius:4px;
-    cursor:pointer;
-    line-height:1.5;
+.intro {
+    background: #111;
+    border-left: 2px solid #d4af37;
+    padding: 15px;
+    margin-bottom: 25px;
+    line-height: 1.8;
 }
 
-.tablet-button:hover{background:#e4c34f}
-
-.tablet-button:focus-visible{
-    outline:2px solid #fff;
-    outline-offset:3px;
+.collection-button {
+    display: block;
+    width: 100%;
+    background: #d4af37;
+    color: #0b0b0b;
+    text-decoration: none;
+    padding: 16px;
+    margin-bottom: 14px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border-radius: 4px;
+    line-height: 1.5;
 }
 
-.tablet-content{
-    display:none;
-    background:#111;
-    border:1px solid #d4af37;
-    border-radius:4px;
-    margin-top:10px;
-    padding:18px;
-    line-height:1.8;
+.collection-button:hover {
+    background: #e4c34f;
 }
 
-.tablet-content.open{display:block}
-
-.question{
-    font-weight:bold;
-    color:#fff;
-    margin:0 0 15px;
+.collection-button:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
 }
 
-.answer{
-    padding:10px 12px;
-    background:#0b0b0b;
-    border-left:2px solid #555;
-    margin-bottom:8px;
-}
-
-.answer.correct{border-left-color:#d4af37}
-
-.correct-label{
-    color:#d4af37;
-    font-weight:bold;
-}
-
-.location{
-    color:#aaa;
-    font-size:14px;
-    margin-top:15px;
-}
-
-footer{
-    text-align:center;
-    color:#666;
-    padding:40px 20px;
-    font-size:14px;
-    border-top:1px solid #222;
-    margin-top:30px;
+footer {
+    text-align: center;
+    color: #666;
+    padding: 40px 20px;
+    font-size: 14px;
+    border-top: 1px solid #222;
+    margin-top: 30px;
 }
 </style>
 </head>
@@ -165,352 +120,44 @@ footer{
 <body>
 
 <header>
-<h1>The Lorak Codex</h1>
-<nav>
-<a href="index.html">Home</a>
-<a href="quests.html">Quests</a>
-<a href="transcripts.html">Transcripts</a>
-<a href="extra-lore.html">Extra Lore</a>
-<a href="factions.html">Factions</a>
-<a href="timeline.html">Timeline</a>
-<a href="operations.html">Operations</a>
-<a href="args.html">ARGs</a>
-<a href="https://discord.gg/X3WsdC8jP4">Discord</a>
-</nav>
+    <h1>The Lorak Codex</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="quests.html">Quests</a>
+        <a href="transcripts.html">Transcripts</a>
+        <a href="extra-lore.html">Extra Lore</a>
+        <a href="factions.html">Factions</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="operations.html">Operations</a>
+        <a href="args.html">ARGs</a>
+        <a href="https://discord.gg/X3WsdC8jP4">Discord</a>
+    </nav>
 </header>
 
 <div class="container">
 
-<a class="back" href="extra-lore.html">← Back to Extra Lore</a>
+    <a class="back" href="extra-lore.html">← Back to Extra Lore</a>
 
-<div class="page-title">Tablets</div>
+    <div class="page-title">Tablets</div>
 
-<div class="intro">
-Explore tablets and other inscribed lore sources that preserve pieces of history, knowledge, and stories from the Origin System.
-</div>
+    <div class="intro">
+        Explore tablets and other inscribed lore sources that preserve pieces of history, knowledge, and stories from the Origin System.
+    </div>
 
-<h2 class="section-title">Zariman Tablets</h2>
+    <a class="collection-button" href="tablets/zariman.html">
+        Zariman Tablets
+    </a>
 
-<div class="section-description">
-Thirty questions concerning Orokin society, the Zariman expedition, the Void, Duviri, and the mysteries surrounding Albrecht Entrati and the Man in the Wall. The tablets are arranged in a proposed reading order.
-</div>
+    <a class="collection-button" href="tablets/melcantor.html">
+        Mel Cantor Logs
+    </a>
 
-<div id="zariman-tablets">
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">1. The Eighteenth Radiation War</button>
-<div class="tablet-content">
-<p class="question">What event concluded the Eighteenth Radiation War?</p>
-<div class="answer correct">A. The destruction of the Arctic Hive Cluster <span class="correct-label">(Correct)</span></div>
-<div class="answer">B. The assassination of Marcellus Ambrosius Lephantis</div>
-<p class="location">Location: In the Archarbor Enigma chamber</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">2. Orokin Governance</button>
-<div class="tablet-content">
-<p class="question">By what right do the Orokin govern?</p>
-<div class="answer">A. Through intrinsic superiority</div>
-<div class="answer correct">B. This is a Forbidden Question <span class="correct-label">(Correct)</span></div>
-<p class="location">Location: Inside The Citadel</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">3. The Seven Orokin Virtues</button>
-<div class="tablet-content">
-<p class="question">How many principal Orokin Virtues are there?</p>
-<div class="answer">A. Three</div>
-<div class="answer correct">B. Seven <span class="correct-label">(Correct)</span></div>
-<p class="location">Location: In the Netherbarrow, on a porch up some stairs</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">4. Public Architecture</button>
-<div class="tablet-content">
-<p class="question">What should public architecture celebrate?</p>
-<div class="answer">A. Our understanding of geometry and physics</div>
-<div class="answer correct">B. The proven superiority of tiered society <span class="correct-label">(Correct)</span></div>
-<p class="location">Location: At a fountain south of the King's Palace</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">5. Legems</button>
-<div class="tablet-content">
-<p class="question">What are the ideal conditions for contemplating Legems?</p>
-<div class="answer">A. In a dark place remote from distractions</div>
-<div class="answer correct">B. While experiencing the cerebral boost of a light-coil <span class="correct-label">(Correct)</span></div>
-<p class="location">Location: At the Archarbor</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">6. The Serving of the Bitter Tea</button>
-<div class="tablet-content">
-<p class="question">What should one never do at a Serving of the Bitter Tea?</p>
-<div class="answer correct">A. Break silence <span class="correct-label">(Correct)</span></div>
-<div class="answer">B. Flinch, no matter how severe the pain</div>
-<p class="location">Location: In a house hanging from the ceiling in the Netherbarrow</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">7. Kuva</button>
-<div class="tablet-content">
-<p class="question">What is 'kuva'?</p>
-<div class="answer correct">A. Fluid with Void-derived capacity to conduct consciousness <span class="correct-label">(Correct)</span></div>
-<div class="answer">B. The liquid remnants of departed Orokin saints</div>
-<p class="location">Location: In the cave north of Fair Shores Hamlet</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">8. Continuity</button>
-<div class="tablet-content">
-<p class="question">How should you prepare for Continuity, if chosen?</p>
-<div class="answer correct">A. Exercise, bathe, and keep my body pure <span class="correct-label">(Correct)</span></div>
-<div class="answer">B. This is too unlikely to be worth considering</div>
-<p class="location">Location: Inside the house at Lonesome Outlook</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">9. The Extrasolar Rail</button>
-<div class="tablet-content">
-<p class="question">Who is constructing the Extrasolar Rail between Pluto and Tau?</p>
-<div class="answer correct">A. An elite group of loyal servants of the Seven <span class="correct-label">(Correct)</span></div>
-<div class="answer">B. A new, hardy strain of Grineer Void Engineers</div>
-<p class="location">Location: Inside the citadel at Kullervo's Hold</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">10. Colonising Tau</button>
-<div class="tablet-content">
-<p class="question">What will be the primary challenge of colonising Tau?</p>
-<div class="answer correct">A. Remaining industrious in the midst of abundance <span class="correct-label">(Correct)</span></div>
-<div class="answer">B. Unknown native hazards of the environment</div>
-<p class="location">Location: In a cave at Kullervo's Hold</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">11. The Zariman Parades</button>
-<div class="tablet-content">
-<p class="question">What was the purpose of the Zariman Parades?</p>
-<div class="answer">A. To raise capital for the Zariman expedition</div>
-<div class="answer correct">B. To instil awe in those not chosen to participate <span class="correct-label">(Correct)</span></div>
-<p class="location">Location: On a lounge chair near Lunaro Court</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">12. Conceptual Embodiment</button>
-<div class="tablet-content">
-<p class="question">What is Conceptual Embodiment?</p>
-<div class="answer correct">A. Concepts taking on form in the Void <span class="correct-label">(Correct)</span></div>
-<div class="answer">B. The creation of cephalons</div>
-<p class="location">Location: On a desk at the far southeastern peninsula of the Netherbarrow region</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">13. The Palimpsest of Spacetime</button>
-<div class="tablet-content">
-<p class="question">What is the core thesis of The Palimpsest of Spacetime?</p>
-<div class="answer correct">A. Events can be rewritten; traces of the original persist <span class="correct-label">(Correct)</span></div>
-<div class="answer">B. Everything that exists could, at any point, be erased</div>
-<p class="location">Location: At Orion Tower</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">14. Temporal Distortions</button>
-<div class="tablet-content">
-<p class="question">Excess time in the Void can result in:</p>
-<div class="answer correct">A. Temporal distortions, psychological distress <span class="correct-label">(Correct)</span></div>
-<div class="answer">B. The Void poses no risk</div>
-<p class="location">Location: In a small fort north of Throneguard Barracks</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">15. Void Travel</button>
-<div class="tablet-content">
-<p class="question">Is Void travel safe?</p>
-<div class="answer">A. Yes. We are merely passengers</div>
-<div class="answer correct">B. Yes, so long as we control our emotions <span class="correct-label">(Correct)</span></div>
-<p class="location">Location: Near Thrax Gardens</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">16. Void Exposure</button>
-<div class="tablet-content">
-<p class="question">What is your first priority if you are exposed to the Void?</p>
-<div class="answer correct">A. Request the duty cephalon to seal off your environs <span class="correct-label">(Correct)</span></div>
-<div class="answer">B. Call the Lorists, then immolate yourself at a thermo-cubicle</div>
-<p class="location">Location: In the eastern cave under Primrose Village</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">17. Emergency Visual Signals</button>
-<div class="tablet-content">
-<p class="question">Which emergency visual signals can replace lost audio comms?</p>
-<div class="answer correct">A. Vosphene glyphs <span class="correct-label">(Correct)</span></div>
-<div class="answer">B. The Cloud Alphabets of Saravin Wu</div>
-<p class="location">Location: In the cave northeast of Watershed Hamlet</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">18. The Tales of Duviri</button>
-<div class="tablet-content">
-<p class="question">The Tales of Duviri is:</p>
-<div class="answer correct">A. Tools for emotional regulation in the event of Void exposure <span class="correct-label">(Correct)</span></div>
-<div class="answer">B. A fun collection of children's stories</div>
-<p class="location">Location: At the Amphitheatre</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">19. King Thrax</button>
-<div class="tablet-content">
-<p class="question">In Tales of Duviri King Thrax lacks:</p>
-<div class="answer correct">A. The ability to control his emotions <span class="correct-label">(Correct)</span></div>
-<div class="answer">B. Empathy</div>
-<p class="location">Location: On top of the King's Palace</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">20. Mathila</button>
-<div class="tablet-content">
-<p class="question">Why is Mathila excessively joyful?</p>
-<div class="answer">A. She finds beauty in reality</div>
-<div class="answer correct">B. She seeks to avoid reality <span class="correct-label">(Correct)</span></div>
-<p class="location">Location: Inside house above Lunaro Court/Northwind Village</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">21. The Prince of Fire</button>
-<div class="tablet-content">
-<p class="question">What was the Prince of Fire's fatal flaw?</p>
-<div class="answer">A. He disrespected his superior</div>
-<div class="answer correct">B. He failed to master himself <span class="correct-label">(Correct)</span></div>
-<p class="location">Location: On a balcony above Upperhaven</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">22. Bombastine</button>
-<div class="tablet-content">
-<p class="question">Why is Bombastine the most dangerous Courtier?</p>
-<div class="answer correct">A. Envy of another's station undermines the Empire <span class="correct-label">(Correct)</span></div>
-<div class="answer">B. He has venomous blood</div>
-<p class="location">Location: On a table at the northeast corner of the Mainland Hamlets island, overlooking Lonesome Outlook</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">23. The Sorrowful Soprano</button>
-<div class="tablet-content">
-<p class="question">What is the key lesson of The Sorrowful Soprano?</p>
-<div class="answer correct">A. Sorrow is to be endured, not indulged <span class="correct-label">(Correct)</span></div>
-<div class="answer">B. Sorrow should be rejected at all costs</div>
-<p class="location">Location: In the cave west of the Chamber of the Muses</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">24. Sythel</button>
-<div class="tablet-content">
-<p class="question">Does Sythel deserve our contempt?</p>
-<div class="answer">A. Yes – she is a cringing coward</div>
-<div class="answer correct">B. No – her experiences are real to her <span class="correct-label">(Correct)</span></div>
-<p class="location">Location: Inside Sythel's house</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">25. The Galleria</button>
-<div class="tablet-content">
-<p class="question">What invaded the Galleria?</p>
-<div class="answer">A. There is no such place</div>
-<div class="answer correct">B. Nothing you need to worry your head over <span class="correct-label">(Correct)</span></div>
-<p class="location">Location: Behind a bush south of Fair Shores Hamlet</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">26. Albrecht Entrati</button>
-<div class="tablet-content">
-<p class="question">What was the ultimate fate of Albrecht Entrati?</p>
-<div class="answer">A. He is entombed on Lua</div>
-<div class="answer correct">B. That's the question, isn't it, kiddo? <span class="correct-label">(Correct)</span></div>
-<p class="location">Location: In the cave under Moirai Crossing</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">27. The Fingers</button>
-<div class="tablet-content">
-<p class="question">How many fingers are found upon one's hand?</p>
-<div class="answer">A. Five</div>
-<div class="answer correct">B. Where are my fingerbones, kiddo? <span class="correct-label">(Correct)</span></div>
-<p class="location">Location: In the cave east of Fort Wyrmsoul</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">28. The Debt</button>
-<div class="tablet-content">
-<p class="question">Did you forget, kiddo?</p>
-<div class="answer correct">A. You owe me. <span class="correct-label">(Correct)</span></div>
-<div class="answer">B. ERROR – RESPONSE NOT FOUND</div>
-<p class="location">Location: In the cave west of Thrax Gardens</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">29. The Deal</button>
-<div class="tablet-content">
-<p class="question">You wouldn't welch on a deal, would you?</p>
-<div class="answer">A. *CORRUPT FILE DETECTED*</div>
-<div class="answer correct">B. I saved them. All of them. Never said I'd save you. <span class="correct-label">(Correct)</span></div>
-<p class="location">Location: Under the bridge between Mathila's Farm and Moirai Crossing</p>
-</div>
-</div>
-
-<div class="tablet">
-<button class="tablet-button" aria-expanded="false" onclick="toggleTablet(this)">30. The Wall</button>
-<div class="tablet-content">
-<p class="question">What is 'the Wall'?</p>
-<div class="answer">A. The barrier between rational reality and the Void</div>
-<div class="answer correct">B. The Wall of Bone in whiKU NOMA ELU RA KAH, MARA LOHK? <span class="correct-label">(Correct)</span></div>
-<p class="location">Location: Inside the cave under Farbreeze Hamlet</p>
-</div>
-</div>
-
-</div>
 </div>
 
 <footer>
-The Lorak Codex
+    The Lorak Codex
 </footer>
-
-<script>
-function toggleTablet(button){
-    const content = button.nextElementSibling;
-    const isOpen = content.classList.toggle("open");
-    button.setAttribute("aria-expanded", isOpen ? "true" : "false");
-}
-</script>
 
 </body>
 </html>
