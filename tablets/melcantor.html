@@ -1,1 +1,210 @@
-dunny
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mel Cantor's Logs - Tablets - The Lorak Codex</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #ddd;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #111;
+    padding: 22px 15px;
+    text-align: center;
+    border-bottom: 1px solid #d4af37;
+}
+
+header h1 {
+    color: #d4af37;
+    margin: 0;
+    letter-spacing: 3px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px 10px;
+    background: #111;
+}
+
+nav a {
+    color: #d4af37;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+main {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 25px 15px 40px;
+}
+
+h2 {
+    color: #d4af37;
+    text-align: center;
+    margin: 10px 0 20px;
+}
+
+.description {
+    background: #151515;
+    border-left: 3px solid #d4af37;
+    padding: 15px;
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+.back-link {
+    display: inline-block;
+    color: #d4af37;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.back-link:hover {
+    color: #fff;
+}
+
+.log-button {
+    width: 100%;
+    display: block;
+    text-align: left;
+    background: #d4af37;
+    color: #111;
+    border: none;
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin: 0 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.log-button:hover {
+    background: #e6c653;
+}
+
+.log-content {
+    display: none;
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 6px;
+    padding: 18px;
+    margin: 0 0 20px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.log-content.open {
+    display: block;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 10px;
+    color: #888;
+    border-top: 1px solid #222;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav {
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    .log-button {
+        font-size: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>The Lorak Codex</h1>
+</header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../quests.html">Quests</a>
+    <a href="../transcripts.html">Transcripts</a>
+    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="../factions.html">Factions</a>
+    <a href="../timeline.html">Timeline</a>
+    <a href="../operations.html">Operations</a>
+    <a href="../args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4">Discord</a>
+</nav>
+
+<main>
+
+<a class="back-link" href="../tablets.html">← Back to Tablets</a>
+
+<h2>Mel Cantor's Logs</h2>
+
+<div class="description">
+    Mel Cantor recounts the discovery of Nuri aboard the Zariman, the order to glass her, and the events that followed.
+</div>
+
+<button class="log-button" onclick="toggleLog(0)">Mel Cantor's Logs — Entry 1</button>
+<div class="log-content" id="log-0">We'd been searching for days. Every scan, diagnostic, and sweep we could muster. We had an unauthorized passenger, probably some low-life scavenger from our last port of Saturn. With the jump coming we didn't want to take any extra problems with us. Do you know what I went through to be selected for this mission? I earned my spot on the Zariman. That stowaway stole theirs. Who knows what else they stole? Executor Tuvul had already sent his verdict. Find the unauthorized passenger and glass them. If they wanted a spot so badly on the ship, they could have one forever.</div>
+
+<button class="log-button" onclick="toggleLog(1)">Mel Cantor's Logs — Entry 2</button>
+<div class="log-content" id="log-1">I demanded my lab be off limits to their scans. I didn't want any observer effect contaminating my Kuva samples. They may have denied me entry to the Archimedean Collegium but they couldn't deny the legitimacy of my work with Entropic Kuva. Instead, I had the students search the lab. Because, "on the Zariman, everyone does their part." I let command know that I had better ways to spend my time than teaching over-eager brats rudimentary Eternalism. But between you and me, I've always had a soft spot for those kids and in a couple years, who knows, I might be relying on them.</div>
+
+<button class="log-button" onclick="toggleLog(2)">Mel Cantor's Logs — Entry 3</button>
+<div class="log-content" id="log-2">I was the one to find her, right there in my lab. Hiding in a bulkhead locker. She might have been 11, maybe older and just small. The cutest thing. She pulled a Tethyan style dagger on me! But I got her to talk. She said her name was Nuri. What a sweet name for a furious kid. One problem for me? I'd never heard of or seen a child Cephalon before, and if I turned her over, we might make history in all the wrong ways. I hid her in my student body group.</div>
+
+<button class="log-button" onclick="toggleLog(3)">Mel Cantor's Logs — Entry 4</button>
+<div class="log-content" id="log-3">Quinn found out. I was in tears. I screamed at them, "You can't glass a kid! Tuvul wouldn't do that... Send a transmission. Explain the whole thing." Quinn just shook his head. They already had, Tuvul refused. The Executor decreed no exceptions. If Quinn didn't glass Nuri, Tuvul would have him glassed instead, along with anyone else who refused that order. Executor Tuvul demanded a Cephalon.</div>
+
+<button class="log-button" onclick="toggleLog(4)">Mel Cantor's Logs — Entry 5</button>
+<div class="log-content" id="log-4">I couldn't sleep. I couldn't believe they would do this. To a kid, to little Nuri. I have been nothing but loyal, and still they won't do this one small charity? What is it to them? What difference would it make? I snuck into the brig during night protocol. My security clearance got me right past the automated guard station. Nuri looked up at me with eyes that said, 'Are you going to let them do this to me?' We ran. I led her to the Reliquary Drive Chamber and used the manual override to seal the chamber from inside. They couldn't get in, but in all my hurry I forgot about one thing; security could still engage the cryogenic protocol. They were going to freeze us out.</div>
+
+<button class="log-button" onclick="toggleLog(5)">Mel Cantor's Logs — Entry 6</button>
+<div class="log-content" id="log-5">The Reliquary Drive Chamber grew cold. Impossibly cold. We could leave, but they would be waiting to glass us both. Would this be better? To freeze to death. Would that be more merciful for this child? We cradled each other for warmth. Shivering until the shivering stopped. Pain until even the pain gave up. I couldn't fight the sleep much longer, and that's when I heard her... "Okay." Nuri stood up. I tried to follow but my body had gone rigid. Hand outstretched, as if being led, Nuri walked toward the giant Reliquary Drive. She placed her hand upon that severed finger and a swirl of crimson dew whipped up around her. That's when I felt it. Warmth, a thaw. I gathered all my energy and approached her. The warm plasma splashing across me, I could feel my limbs again. I reached out and touched her.</div>
+
+<button class="log-button" onclick="toggleLog(6)">Mel Cantor's Logs — Entry 7</button>
+<div class="log-content" id="log-6">There in the warmth of the Kuva storm my hand touched hers. I looked down to see not a child's hand, but an elderly woman's. We stood atop a snow white mountain, her sacred gowns whipped by wind. I tried to speak to her and the mountain's peak erupted with blood. From within that crimson geyser an eye stared out at me. Into me. Into all of us. My consciousness shriveled. I had never been more insignificant. I was not Mel Cantor, distinguished theorist of the Zariman, I was a speck of dust. We all were. As eternity closed in on me, I heard it. Nuri's voice, both young and ancient, in a tongue both foreign and familiar, "GITHXI, MIG. YOU DO NOT BELONG HERE." The eye blinked. The blood flowed back into the mountain. Old woman Nuri turned to me and said, "I will need you again."</div>
+
+<button class="log-button" onclick="toggleLog(7)">Mel Cantor's Logs — Entry 8</button>
+<div class="log-content" id="log-7">"NO!" Nuri screamed with the defiance only furious children are capable of. Nuri ripped her hand away from the Reliquary Drive. The well of warmth collapsed as the cold ran in on us. The maelstrom of red liquid crystalized and shattered frozen on the floor. The Zariman herself shook violently, knocking us from our feet. Alarms. We ran. We opened the doors expecting to find guards, but everyone in authority had a new crisis to worry about. We found the shuttle bay, and I put her securely in a lander. At the command console, I entered my security clearance and set her on a course for Tethys. Would she be safe there? I didn't know. But maybe if I gave Tuvul his Cephalon, he would forget about her. I sat down on the floor, and waited for security. I earned my spot on the Zariman and now, it would be mine forever.</div>
+
+</main>
+
+<footer>
+    The Lorak Codex
+</footer>
+
+<script>
+function toggleLog(index) {
+    const content = document.getElementById("log-" + index);
+    content.classList.toggle("open");
+}
+</script>
+
+</body>
+</html>
