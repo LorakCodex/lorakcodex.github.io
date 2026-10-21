@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mel Cantor's Logs - Tablets - The Lorak Codex</title>
+<title>Mel Cantor's Logs - The Lorak Codex</title>
 
 <style>
 * {
@@ -87,7 +87,7 @@ h2 {
     text-align: left;
     background: #d4af37;
     color: #111;
-    border: none;
+    border: 1px solid #d4af37;
     border-radius: 6px;
     padding: 14px 16px;
     margin: 0 0 10px;
@@ -100,10 +100,12 @@ h2 {
     background: #e6c653;
 }
 
+/* Gold trim around every expanded dialogue box */
 .log-content {
     display: none;
     background: #151515;
-    border: 1px solid #292929;
+    color: #ddd;
+    border: 2px solid #d4af37 !important;
     border-radius: 6px;
     padding: 18px;
     margin: 0 0 20px;
@@ -114,6 +116,7 @@ h2 {
 
 .log-content.open {
     display: block;
+    border: 2px solid #d4af37 !important;
 }
 
 footer {
@@ -161,7 +164,7 @@ footer {
 
 <main>
 
-<a class="back-link" href="../tablets.html">← Back to Tablets</a>
+<a class="back-link" href="index.html">← Back to Tablets</a>
 
 <h2>Mel Cantor's Logs</h2>
 
