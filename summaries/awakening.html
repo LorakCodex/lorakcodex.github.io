@@ -15,6 +15,7 @@ body {
     background: #0b0b0b;
     color: #ddd;
     font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
 header {
@@ -68,12 +69,37 @@ h2 {
 .summary-box {
     background: #101010;
     border: 1px solid #333;
-    padding: 10px 0 10px 15px;
-    line-height: normal;
+    border-radius: 6px;
+    padding: 15px 20px;
 }
 
-.summary-box p {
-    margin: 8px 0;
+.summary-box ul {
+    margin: 0;
+    padding-left: 25px;
+}
+
+.summary-box li {
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.summary-box li:last-child {
+    margin-bottom: 0;
+}
+
+.summary-box li::marker {
+    color: #d4af37;
+}
+
+.section-title {
+    color: #d4af37;
+    font-weight: bold;
+}
+
+.section-text {
+    display: block;
+    color: #ddd;
+    margin-top: 5px;
 }
 
 .transcript-link {
@@ -123,13 +149,27 @@ footer {
     <h2>Awakening</h2>
 
     <div class="summary-box">
-        <p>• The Awakening: For centuries, the Tenno have been dormant. As the Grineer Empire grows, the Lotus starts waking them up.</p>
+        <ul>
+            <li>
+                <span class="section-title">The Awakening</span>
+                <span class="section-text">For centuries, the Tenno have been dormant. As the Grineer Empire grows, the Lotus starts waking them up.</span>
+            </li>
 
-        <p>• Captain Vor's Plot: Captain Vor hunts down newly awakened Tenno on Earth. Instead of killing the player like ordered by the Twin Queens, he attaches an Ascaris device to control the Warframe.</p>
+            <li>
+                <span class="section-title">Captain Vor's Plot</span>
+                <span class="section-text">Captain Vor hunts down newly awakened Tenno on Earth. Instead of killing the player like ordered by the Twin Queens, he attaches an Ascaris device to control the Warframe.</span>
+            </li>
 
-        <p>• The Intervention: The Lotus remotely surges the player's power systems, letting them break free and fight back against nearby Grineer soldiers.</p>
+            <li>
+                <span class="section-title">The Intervention</span>
+                <span class="section-text">The Lotus remotely surges the player's power systems, letting them break free and fight back against nearby Grineer soldiers.</span>
+            </li>
 
-        <p>• Conclusion: You eventually fight Vor at the end and get picked up by Ordis, your original Orbiter Cephalon.</p>
+            <li>
+                <span class="section-title">Conclusion</span>
+                <span class="section-text">You eventually fight Vor at the end and get picked up by Ordis, your original Orbiter Cephalon.</span>
+            </li>
+        </ul>
     </div>
 
     <a class="transcript-link" href="../transcripts/awakening.html">
