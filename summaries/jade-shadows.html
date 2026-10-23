@@ -4,17 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jade Shadows - Quests - The Lorak Codex</title>
-
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
             background-color: #0b0b0b;
-            color: #ddd;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
             line-height: 1.6;
         }
 
@@ -25,89 +21,94 @@
             border-bottom: 2px solid #d4af37;
         }
 
-        header h1 {
+        h1 {
             color: #d4af37;
             letter-spacing: 3px;
             margin: 0;
         }
 
         nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            padding: 15px;
-            background-color: #111;
+            margin-top: 15px;
         }
 
         nav a {
             color: #d4af37;
             text-decoration: none;
-            font-weight: bold;
+            margin: 0 8px;
         }
 
         nav a:hover {
-            color: #fff;
+            text-decoration: underline;
         }
 
         main {
             max-width: 900px;
-            margin: auto;
-            padding: 20px;
+            margin: 30px auto;
         }
 
         h2 {
             color: #d4af37;
-            border-bottom: 1px solid #d4af37;
-            padding-bottom: 8px;
+            text-align: center;
         }
 
-        .back {
-            display: block;
+        .summary-box {
+            border: 1px solid #d4af37;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 20px;
+            background-color: #111;
+        }
+
+        .summary-box p {
+            margin: 0 0 18px;
+        }
+
+        .summary-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        strong {
             color: #d4af37;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-decoration: none;
         }
 
-        .summary {
-            background: #111;
-            border: 1px solid #333;
-            border-radius: 6px;
-            padding: 15px;
-            margin-bottom: 20px;
-        }
-
-        .summary p {
-            margin: 0;
-        }
-
-        .links a {
+        .transcript-link {
             display: inline-block;
+            background-color: #d4af37;
             color: #0b0b0b;
-            background: #d4af37;
-            padding: 10px 15px;
-            margin: 5px 8px 5px 0;
-            border-radius: 4px;
+            padding: 10px 18px;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: bold;
+        }
+
+        .transcript-link:hover {
+            background-color: #f0cf55;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #d4af37;
+            text-decoration: none;
+            margin-bottom: 15px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
         }
 
         footer {
             text-align: center;
-            padding: 20px;
             color: #888;
+            margin-top: 40px;
+            padding: 20px;
             border-top: 1px solid #333;
-            margin-top: 30px;
         }
     </style>
 </head>
-
 <body>
-    <header>
-        <h1>The Lorak Codex</h1>
-    </header>
 
+<header>
+    <h1>The Lorak Codex</h1>
     <nav>
         <a href="../index.html">Home</a>
         <a href="../quests.html">Quests</a>
@@ -117,25 +118,33 @@
         <a href="../timeline.html">Timeline</a>
         <a href="../operations.html">Operations</a>
         <a href="../args.html">ARGs</a>
-        <a href="https://discord.gg/X3WsdC8jP4">Discord</a>
+        <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
     </nav>
+</header>
 
-    <main>
-        <a class="back" href="../quests.html">← Back to Quest Index</a>
+<main>
+    <a class="back-link" href="../quests.html">← Back to Quests</a>
 
-        <h2>Jade Shadows</h2>
+    <h2>Jade Shadows</h2>
 
-        <div class="summary">
-            <p>Summary coming soon.</p>
-        </div>
+    <div class="summary-box">
+        <p><strong>Sorren’s Past:</strong> Before the collapse of the Orokin Empire, the Stalker was a Low Guardian named Sorren who eventually fell in love with a woman named Jade. Their romantic relationship and her subsequent pregnancy strictly violated Orokin caste laws, as Sorren admits to Jade.</p>
 
-        <div class="links">
-            <a href="../transcripts/jade-shadows.html">View Transcript</a>
-        </div>
-    </main>
+        <p><strong>The Punishment:</strong> As a cruel punishment orchestrated by Executor Ballas, both Sorren and Jade were forcibly transformed into Warframes, with Jade trapped in a state of permanent pregnancy.</p>
 
-    <footer>
-        The Lorak Codex
-    </footer>
+        <p><strong>The Final Moments:</strong> In the present day, Jade’s health rapidly declines. The Stalker raids Corpus ships for anything that might help save her and eventually teams up with the Tenno. Despite his hatred of them, he seeks their help. The Tenno is eventually forced to physically help Jade deliver her baby. After giving birth, Jade disintegrates. The player is then asked to name the baby boy either Sirius or Orion.</p>
+
+        <p><strong>The Escape:</strong> The Stalker eventually faces a Corpus onslaught led by Captain Xeto while carrying his newborn son. Hearing the baby cry, Xeto uncharacteristically orders a ceasefire, allowing the Stalker to escape safely to Lua.</p>
+
+        <p><strong>Conclusion:</strong> After the quest, Hunhow sends the Tenno the blueprint to replicate Jade. The Stalker then abandons his title as the “Shadow Stalker” and becomes the Protector Stalker, dedicating his life to fatherhood.</p>
+    </div>
+
+    <a class="transcript-link" href="../transcripts/jade-shadows.html">View Transcript</a>
+</main>
+
+<footer>
+    <p>© The Lorak Codex</p>
+</footer>
+
 </body>
 </html>
