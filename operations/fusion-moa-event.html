@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -172,7 +171,11 @@ footer {
 
     <button class="mission-button">Operation Synopsis</button>
     <div class="content">
-        <div class="text">The Fusion MOA event was Warframe’s very first Operation. The objective was to face a Fusion MOA, which was a new enemy type at the time and was later added as a permanent enemy type in a subsequent update. The rewards for killing the Fusion MOA were a Frost Prime Blueprint and 100,000 Credits. The Operation lasted three days.</div>
+        <div class="text">The Fusion MOA event was Warframe’s very first Operation. The objective was to face a Fusion MOA, which was a new enemy type at the time and was later added as a permanent enemy type in a subsequent update.
+
+The rewards for killing the Fusion MOA were a Frost Prime Blueprint and 100,000 Credits. The top 100 Tenno who killed the most Fusion MOAs received a Thunderbolt Mod on top of that, while the top 25 Tenno who killed the most Fusion MOAs received a Handspring Mod. Finally, the top 10 received the Retribution Mod.
+
+The Mods in the Operation were released alongside the Operation. The Operation lasted three days.</div>
     </div>
 
     <button class="mission-button">Operation Mission</button>
@@ -200,7 +203,9 @@ However, the Lotus is pleased. Very pleased. In future expect real-time Operatio
 document.querySelectorAll(".mission-button").forEach(button => {
     button.addEventListener("click", () => {
         button.classList.toggle("active");
+
         const content = button.nextElementSibling;
+
         if (content) {
             content.classList.toggle("show");
         }
