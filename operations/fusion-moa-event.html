@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,6 +84,7 @@ nav a:hover {
     font-weight: bold;
     cursor: pointer;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
 .mission-button:hover,
@@ -100,6 +102,13 @@ nav a:hover {
     display: block;
 }
 
+.section-heading {
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 18px 0 8px;
+}
+
 .text {
     background: #111;
     border-left: 2px solid #d4af37;
@@ -108,6 +117,7 @@ nav a:hover {
     margin-bottom: 10px;
     white-space: pre-line;
     line-height: 2.2;
+    box-sizing: border-box;
     overflow-wrap: anywhere;
 }
 
@@ -157,7 +167,17 @@ footer {
 
     <button class="mission-button">Operation Synopsis</button>
     <div class="content">
-        <div class="text">The Fusion MOA event was Warframe's very first Operation. The objective was to face a Fusion MOA, which was a new enemy type at the time and was later added as a permanent enemy type in a subsequent update. The reward for killing the Fusion MOA was a Frost Prime Blueprint, and the Operation lasted three days.</div>
+        <div class="text">The Fusion MOA event was Warframe’s very first Operation. The objective was to face a Fusion MOA, which was a new enemy type at the time and was later added as a permanent enemy type in a subsequent update. The rewards for killing the Fusion MOA were a Frost Prime Blueprint and 100,000 Credits. The Operation lasted three days.</div>
+    </div>
+
+    <button class="mission-button">Operation End</button>
+    <div class="content">
+        <div class="text"><div class="section-heading">Notice</div>
+The following Tenno have been added to the Corpus most-wanted list in connection with a recent incident in the Europa region. The Corpus board has declared years imprisonment in their research facilities equal to the number of Fusion Moas killed by the offender.
+
+Reports indicate 2.3 million Fusion Moas were destroyed in two days. The remaining prototypes have scattered throughout Corpus-controlled space.
+
+However, the Lotus is pleased. Very pleased. In future expect real-time Operation data for lists like this. The top 100 will receive new Mod technology to further the destruction of our enemies.</div>
     </div>
 
 </div>
