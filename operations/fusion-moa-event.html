@@ -1,11 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Fusion MOA Event - The Lorak Codex</title>
+<title>Fusion MOA Event - Operations - The Lorak Codex</title>
 
 <style>
 * {
@@ -27,11 +25,13 @@ header {
 }
 
 header h1 {
+    margin: 0;
     color: #d4af37;
     letter-spacing: 3px;
 }
 
 nav {
+    margin-top: 15px;
     line-height: 2;
 }
 
@@ -54,40 +54,67 @@ nav a:hover {
 .back {
     display: block;
     color: #d4af37;
-    font-weight: bold;
     text-decoration: none;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
-.operation-title {
+.back:hover {
+    text-decoration: underline;
+}
+
+.page-title {
     color: #d4af37;
     font-size: 26px;
     font-weight: bold;
-    letter-spacing: 1px;
     margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
-.operation-description {
-    background: #111;
-    border-left: 2px solid #d4af37;
-    padding: 15px;
-    margin-bottom: 25px;
-    line-height: 1.8;
-}
-
-.section-title {
-    color: #d4af37;
-    font-size: 18px;
+.mission-button {
+    width: 100%;
+    background: #d4af37;
+    color: #0b0b0b;
+    border: none;
+    padding: 14px 15px;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 17px;
     font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.mission-button:hover,
+.mission-button.active {
+    background: #d4af37;
+    color: #0b0b0b;
+}
+
+.content {
+    display: none;
+    padding: 10px 0;
+}
+
+.content.show {
+    display: block;
+}
+
+.section-heading {
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 18px;
     margin: 18px 0 8px;
 }
 
-.operation-text {
+.text {
     background: #111;
     border-left: 2px solid #d4af37;
     padding: 15px;
     margin-top: 10px;
-    line-height: 1.8;
+    margin-bottom: 10px;
+    white-space: pre-line;
+    line-height: 2.2;
     overflow-wrap: anywhere;
 }
 
@@ -98,6 +125,17 @@ footer {
     border-top: 1px solid #333;
     margin-top: 40px;
 }
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 4px 6px;
+    }
+}
 </style>
 </head>
 
@@ -105,7 +143,6 @@ footer {
 
 <header>
     <h1>The Lorak Codex</h1>
-
     <nav>
         <a href="../index.html">Home</a>
         <a href="../quests.html">Quests</a>
@@ -121,21 +158,13 @@ footer {
 
 <div class="container">
 
-    <a class="back" href="../operations.html">
-        ← Back to Operations
-    </a>
+    <a class="back" href="../operations.html">← Back to Operations</a>
 
-    <div class="operation-title">
-        Fusion MOA Event
-    </div>
+    <div class="page-title">Fusion MOA Event</div>
 
-    <div class="operation-description">
-        The first Operation in Warframe, held in May 2013.
-    </div>
-
-    <div class="section-title">Overview</div>
-    <div class="operation-text">
-        Details about the Fusion MOA Event can be added here.
+    <button class="mission-button">Operation Summary</button>
+    <div class="content">
+        <div class="text">The Fusion MOA event was Warframe's very first Operation. The objective was to face a Fusion MOA, which was a new enemy type at the time and was later added as a permanent enemy type in a subsequent update. The reward for killing the Fusion MOA was a Frost Prime Blueprint, and the Operation lasted three days.</div>
     </div>
 
 </div>
@@ -143,6 +172,18 @@ footer {
 <footer>
     The Lorak Codex
 </footer>
+
+<script>
+document.querySelectorAll(".mission-button").forEach(button => {
+    button.addEventListener("click", () => {
+        button.classList.toggle("active");
+        const content = button.nextElementSibling;
+        if (content) {
+            content.classList.toggle("show");
+        }
+    });
+});
+</script>
 
 </body>
 </html>
