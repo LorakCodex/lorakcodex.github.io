@@ -164,33 +164,46 @@ footer {
 
     <div class="page-title">Fusion MOA Event</div>
 
-    <button class="mission-button">Intel Videos</button>
-    <div class="content">
-        <div class="text"></div>
-    </div>
-
     <button class="mission-button">Operation Synopsis</button>
     <div class="content">
-        <div class="text">The Fusion MOA event was Warframe’s very first Operation. The objective was to face a Fusion MOA, which was a new enemy type at the time and was later added as a permanent enemy type in a subsequent update.
+
+        <div class="text"><div class="section-heading">Operation Synopsis</div>
+The Fusion MOA event was Warframe’s very first Operation. The objective was to face a Fusion MOA, which was a new enemy type at the time and was later added as a permanent enemy type in a subsequent update.
 
 The rewards for killing the Fusion MOA were a Frost Prime Blueprint and 100,000 Credits. The top 100 Tenno who killed the most Fusion MOAs received a Thunderbolt Mod on top of that, while the top 25 Tenno who killed the most Fusion MOAs received a Handspring Mod. Finally, the top 10 received the Retribution Mod.
 
 The Mods in the Operation were released alongside the Operation. The Operation lasted three days.</div>
+
     </div>
 
     <button class="mission-button">Operation Mission</button>
     <div class="content">
-        <div class="text"></div>
+
+        <div class="section-heading">Introduction</div>
+        <div class="text">Operation Mission began when players logged in and selected the Operation mission, at which point they’d get two quotes from the Lotus.</div>
+
+        <div class="section-heading">Lotus</div>
+        <div class="text">Lotus: "The Corpus have deployed millions of Orokin-infused Moas in Europa. All Tenno must work together to eradicate this threat."
+
+[With a picture of Fusion MOA]</div>
+
+        <div class="section-heading">Lotus</div>
+        <div class="text">Lotus: "If we wipe out this entire force in time, their point of origin will be revealed. We suspect a valuable Relic may be of use to us."
+
+[With a picture of Frost Prime Blueprint, which was obscured until a Fusion MOA was killed.]</div>
+
     </div>
 
     <button class="mission-button">Operation End</button>
     <div class="content">
+
         <div class="text"><div class="section-heading">Notice</div>
 The following Tenno have been added to the Corpus most-wanted list in connection with a recent incident in the Europa region. The Corpus board has declared years imprisonment in their research facilities equal to the number of Fusion Moas killed by the offender.
 
 Reports indicate 2.3 million Fusion Moas were destroyed in two days. The remaining prototypes have scattered throughout Corpus-controlled space.
 
 However, the Lotus is pleased. Very pleased. In future expect real-time Operation data for lists like this. The top 100 will receive new Mod technology to further the destruction of our enemies.</div>
+
     </div>
 
 </div>
@@ -203,9 +216,7 @@ However, the Lotus is pleased. Very pleased. In future expect real-time Operatio
 document.querySelectorAll(".mission-button").forEach(button => {
     button.addEventListener("click", () => {
         button.classList.toggle("active");
-
         const content = button.nextElementSibling;
-
         if (content) {
             content.classList.toggle("show");
         }
