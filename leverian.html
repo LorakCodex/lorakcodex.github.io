@@ -59,6 +59,11 @@
             color: #fff;
         }
 
+        nav a:focus-visible {
+            outline: 2px solid #fff;
+            outline-offset: 3px;
+        }
+
         main {
             max-width: 1000px;
             margin: 0 auto;
@@ -80,38 +85,44 @@
 
         .entry-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
             gap: 12px;
+            align-items: stretch;
         }
 
         .entry-list a.entry-button,
         .entry-list a.entry-button:link,
-        .entry-list a.entry-button:visited,
-        .entry-list a.entry-button:hover,
-        .entry-list a.entry-button:active,
-        .entry-list a.entry-button:focus {
-            display: block;
+        .entry-list a.entry-button:visited {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 48px;
             padding: 12px 16px;
             border: 1px solid #d4af37;
-            border-radius: 4px;
-            background: #d4af37 !important;
-            background-color: #d4af37 !important;
-            color: #111 !important;
+            border-radius: 8px;
+            background: #d4af37;
+            color: #111;
             text-align: center;
-            text-decoration: none !important;
+            text-decoration: none;
+            font-size: 16px;
             font-weight: bold;
+            line-height: 1.35;
+            overflow-wrap: anywhere;
             cursor: pointer;
+            -webkit-appearance: none;
+            appearance: none;
+            transition: background-color 0.15s ease, border-color 0.15s ease;
         }
 
-        .entry-list a.entry-button:hover {
+        .entry-list a.entry-button:hover,
+        .entry-list a.entry-button:active {
             border-color: #f0d46b;
-            background: #f0d46b !important;
-            background-color: #f0d46b !important;
-            color: #111 !important;
+            background: #f0d46b;
+            color: #111;
         }
 
-        .entry-list a.entry-button:focus-visible,
-        nav a:focus-visible {
+        .entry-list a.entry-button:focus-visible {
             outline: 2px solid #fff;
             outline-offset: 3px;
         }
@@ -157,7 +168,7 @@
     <section class="entry-list" aria-label="Leverian entries">
         <a class="entry-button" href="leverian/ash.html">Ash</a>
         <a class="entry-button" href="leverian/atlas.html">Atlas</a>
-        <a class="entry-button" href="/leverian/dante.html">Dante</a>
+        <a class="entry-button" href="leverian/dante.html">Dante</a>
         <a class="entry-button" href="leverian/gauss.html">Gauss</a>
         <a class="entry-button" href="leverian/grendel.html">Grendel</a>
         <a class="entry-button" href="leverian/ivara.html">Ivara</a>
