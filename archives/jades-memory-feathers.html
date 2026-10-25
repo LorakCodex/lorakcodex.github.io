@@ -4,158 +4,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jade's Memory Feathers - The Lorak Codex</title>
+    <title>Jade's Memory Feathers — The Lorak Codex</title>
     <style>
-        body {
-            background: #0b0b0b;
-            color: #ddd;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
+        * {
+            box-sizing: border-box;
         }
+
+        body {
+            margin: 0;
+            background: #0b0b0b;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+        }
+
         header {
-            text-align: center;
             background: #111;
-            padding: 20px;
+            padding: 25px 15px;
+            text-align: center;
             border-bottom: 2px solid #d4af37;
         }
-        h1 {
+
+        header h1 {
             color: #d4af37;
             letter-spacing: 3px;
+            margin: 0;
         }
-        a.back {
+
+        main {
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .back-link {
             display: inline-block;
             color: #d4af37;
             text-decoration: none;
-            margin: 20px 0;
+            margin-bottom: 20px;
         }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
         .description {
             border: 1px solid #d4af37;
-            padding: 15px;
-            margin-bottom: 20px;
-            line-height: 1.6;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 22px;
+            background: #111;
         }
+
         .memory-button {
+            display: block;
             width: 100%;
+            padding: 14px 18px;
+            margin: 12px 0 0;
+            border: 1px solid #d4af37;
+            border-radius: 8px;
             background: #d4af37;
             color: #0b0b0b;
-            border: none;
-            border-radius: 6px;
-            padding: 14px;
-            margin: 8px 0;
             text-align: left;
             font-size: 16px;
             font-weight: bold;
             cursor: pointer;
         }
-        .memory-button::after {
-            content: "+";
+
+        .memory-button:hover {
+            background: #e6c75a;
+        }
+
+        .memory-button .indicator {
             float: right;
+            margin-left: 12px;
         }
-        .memory-button[aria-expanded="true"]::after {
-            content: "−";
-        }
+
         .memory-content {
             display: none;
+            padding: 18px;
+            margin-top: 0;
+            background: #111;
             border: 1px solid #d4af37;
-            padding: 15px;
-            margin-bottom: 12px;
-            line-height: 1.7;
-            white-space: pre-line;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
         }
+
         .memory-content.open {
             display: block;
         }
-        .location {
+
+        .memory-content h2 {
+            margin: 0 0 14px;
             color: #d4af37;
-            font-weight: bold;
+            font-size: 17px;
+            letter-spacing: 1px;
+        }
+
+        .memory-text {
+            white-space: pre-wrap;
+        }
+
+        footer {
+            margin-top: 35px;
+            padding: 20px 15px;
+            text-align: center;
+            color: #888;
+            border-top: 1px solid #333;
         }
     </style>
 </head>
 <body>
+
 <header>
     <h1>Jade's Memory Feathers</h1>
 </header>
 
 <main>
-    <a class="back" href="../extra-lore.html">← Back to Extra Lore</a>
+    <a class="back-link" href="../extra-lore.html">← Back to Extra Lore</a>
 
     <div class="description">
-        Seven memory feathers honouring Jade, discovered at Teshin's Retreat
-        in the Relays after completing the Jade Shadows quest. Each feather
-        preserves a memory from Jade's past.
+        The seven Memory Feathers preserve Jade's memories, revealing her love for her child, her relationship with Sorren, and the cruelty inflicted upon them by the Orokin.
     </div>
 
-    <button class="memory-button" aria-expanded="false"
-        aria-controls="memory1" onclick="toggleMemory(this, 'memory1')">
-        Memory Feather 01
+    <button class="memory-button" onclick="toggleMemory(this, 'memory1')" aria-expanded="false">
+        Memory Feather 1
+        <span class="indicator">+</span>
     </button>
     <div class="memory-content" id="memory1">
-        <p class="location">BEDSIDE. LAIR. URANUS.</p>
-        <p>[Insert the complete in-game text for Memory Feather 01.]</p>
+        <h2>BEDSIDE. LAIR. URANUS.</h2>
+        <div class="memory-text">I will live, little one. We will live.</div>
     </div>
 
-    <button class="memory-button" aria-expanded="false"
-        aria-controls="memory2" onclick="toggleMemory(this, 'memory2')">
-        Memory Feather 02
+    <button class="memory-button" onclick="toggleMemory(this, 'memory2')" aria-expanded="false">
+        Memory Feather 2
+        <span class="indicator">+</span>
     </button>
     <div class="memory-content" id="memory2">
-        <p class="location">CREVASSE. LUA.</p>
-        <p>[Insert the complete in-game text for Memory Feather 02.]</p>
+        <h2>CREVASSE. LUA.</h2>
+        <div class="memory-text">The Executor smirked down at me. "What is a life but a mass of unfulfilled potential? Just like the life that would have grown within you. But you chose to spite Us. And for that sin, you will mother only ashes and oblivion. Jade."
+
+I screamed defiance in his face, but my voice was razors and steel.
+
+Did you hear me, my beloved child? Did you feel my promise? Whatever they have done to us, I SHALL bring you into the world. I WILL see your face shining down on me.
+
+I will raise you to the skies over Lua as my mother lifted me and show you the first mother they desecrated, radiant in blue. When you cry, I will cry too.</div>
     </div>
 
-    <button class="memory-button" aria-expanded="false"
-        aria-controls="memory3" onclick="toggleMemory(this, 'memory3')">
-        Memory Feather 03
+    <button class="memory-button" onclick="toggleMemory(this, 'memory3')" aria-expanded="false">
+        Memory Feather 3
+        <span class="indicator">+</span>
     </button>
     <div class="memory-content" id="memory3">
-        <p class="location">HIBERNATION POD. JADE LIGHT EXECUTION CHAMBER. LUA.</p>
-        <p>[Insert the complete in-game text for Memory Feather 03.]</p>
+        <h2>HIBERNATION POD. JADE LIGHT EXECUTION CHAMBER. LUA.</h2>
+        <div class="memory-text">They keep me in what they imagine to be sleep in between the executions. I pass the time dreaming of us. The games we can still play.
+
+I close my mask.
+
+Mummy is gone!
+
+I open my mask.
+
+Here she is!
+
+Over and over.
+
+The Dax murmur behind their hands.</div>
     </div>
 
-    <button class="memory-button" aria-expanded="false"
-        aria-controls="memory4" onclick="toggleMemory(this, 'memory4')">
-        Memory Feather 04
+    <button class="memory-button" onclick="toggleMemory(this, 'memory4')" aria-expanded="false">
+        Memory Feather 4
+        <span class="indicator">+</span>
     </button>
     <div class="memory-content" id="memory4">
-        <p class="location">RUINS. OROKIN MANSION. VENUS.</p>
-        <p>[Insert the complete in-game text for Memory Feather 04.]</p>
+        <h2>RUINS. OROKIN MANSION. VENUS.</h2>
+        <div class="memory-text">Your father blamed himself. As if love could ever be a crime! As if I had no say in the matter!
+
+So now he repents. In his changed skin, he serves them, "like a devoted dog." Ballas gloats to me of how they dangle the promise of me – of us – over his head.
+
+"He lives in hope of seeing you again, one day. I have promised him this. You should be proud."
+
+He wants me to hate. I shall not. I own myself.</div>
     </div>
 
-    <button class="memory-button" aria-expanded="false"
-        aria-controls="memory5" onclick="toggleMemory(this, 'memory5')">
-        Memory Feather 05
+    <button class="memory-button" onclick="toggleMemory(this, 'memory5')" aria-expanded="false">
+        Memory Feather 5
+        <span class="indicator">+</span>
     </button>
     <div class="memory-content" id="memory5">
-        <p class="location">BATTLEFIELD. THARSIS.</p>
-        <p>[Insert the complete in-game text for Memory Feather 05.]</p>
+        <h2>BATTLEFIELD. THARSIS.</h2>
+        <div class="memory-text">There is a child in my head. Not you, my love. Some battle-shattered thing, a ghost, a dream. She calls me by a name I do not choose.
+
+What are you? I ask.
+
+"Your Operator," the child says. "C'mon."
+
+What did they DO to you?
+
+"Let's go! We're being called up! Time to fight!"
+
+My hand raises of its own volition. It is trembling. I hear the unvoiced tears in her thoughts.
+
+"I can do this. I'm Tenno. I can do this."
+
+I repeat, softly, firmly: What did they do to you?
+
+I feel the child curl up, fetal. She whimpers.
+
+"I… I want my mom."
+
+With my mind, I embrace her. I sing her the old songs of Cathal-Rah and the riddle-verses of Lyrim of Haq. I tell her the winding, meandering story of Lankity Hopkin. I am a thing all clouds and feathers. I rock her to sleep.
+
+And so I go to war, and none suspect. I am as much the warrior as I ever was. With bow and scythe, I fight for the people I despise against a foe that deserves their victory. Because I know the reckoning will come.</div>
     </div>
 
-    <button class="memory-button" aria-expanded="false"
-        aria-controls="memory6" onclick="toggleMemory(this, 'memory6')">
-        Memory Feather 06
+    <button class="memory-button" onclick="toggleMemory(this, 'memory6')" aria-expanded="false">
+        Memory Feather 6
+        <span class="indicator">+</span>
     </button>
     <div class="memory-content" id="memory6">
-        <p class="location">WRECKAGE. PLUTO TERMINUS.</p>
-        <p>[Insert the complete in-game text for Memory Feather 06.]</p>
+        <h2>WRECKAGE. PLUTO TERMINUS.</h2>
+        <div class="memory-text">When the drums struck, I saw him. Changed, just as I was changed. But the medal was his. There is no other like it.
+
+My Sorren. And he did not know me.
+
+I took him. I flew. Through the blood and storm and insanity, I flew.</div>
     </div>
 
-    <button class="memory-button" aria-expanded="false"
-        aria-controls="memory7" onclick="toggleMemory(this, 'memory7')">
-        Memory Feather 07
+    <button class="memory-button" onclick="toggleMemory(this, 'memory7')" aria-expanded="false">
+        Memory Feather 7
+        <span class="indicator">+</span>
     </button>
     <div class="memory-content" id="memory7">
-        <p class="location">URANUS. TOMB. THE SENTIENT.</p>
-        <p>[Insert the complete in-game text for Memory Feather 07.]</p>
+        <h2>URANUS. TOMB. THE SENTIENT.</h2>
+        <div class="memory-text">He could not have known it, but in taunting me, Ballas gave me hope.
+
+"There is plentiful strength within you – but only to keep you preserved as you are now. Your child, alas, will never grow. Even if you fed it with all the strength in your body! Perhaps if you lay lifeless for a year, the child would twitch a little. A century and its heart might begin to beat. A thousand years, and who knows? Perhaps you might feel a kick."
+
+And so, I lie here. Stubborn as the day is long, as my father used to say.
+
+I promised that you would live, little one. I will keep that promise.
+
+With your father watching over us, I will give you the gift of myself.
+
+And one day, these metal fingers of mine will dip in slippery paint and draw a smiley sun and a house and a dog, and all of us together, and I will hear you laugh.</div>
     </div>
 </main>
 
+<footer>
+    The Lorak Codex
+</footer>
+
 <script>
-function toggleMemory(button, id) {
-    const content = document.getElementById(id);
-    const isOpen = content.classList.toggle('open');
-    button.setAttribute('aria-expanded', isOpen);
-}
+    function toggleMemory(button, memoryId) {
+        const content = document.getElementById(memoryId);
+        const indicator = button.querySelector('.indicator');
+        const isOpen = content.classList.toggle('open');
+
+        button.setAttribute('aria-expanded', String(isOpen));
+        indicator.textContent = isOpen ? '−' : '+';
+    }
 </script>
+
 </body>
 </html>
