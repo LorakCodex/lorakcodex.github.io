@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dante's Leverian, Drusus Leverian's account, and the history of Dante in Warframe.">
-    <title>Dante's Leverian - The Lorak Codex</title>
+    <meta name="description" content="Explore the Leverian collection in The Lorak Codex, preserving Warframe lore and the stories of its Warframes.">
+    <title>Leverian | The Lorak Codex</title>
 
-    <link rel="icon" type="image/png" href="../lorak-codex-favicon-48x48.png">
+    <link rel="icon" type="image/png" href="/lorak-codex-favicon-48x48.png">
 
     <style>
         * {
@@ -26,7 +26,7 @@
             background: #111;
             padding: 25px 15px;
             text-align: center;
-            border-bottom: 2px solid #d4af37;
+            border-bottom: 1px solid #d4af37;
         }
 
         header h1 {
@@ -35,11 +35,16 @@
             margin: 0;
         }
 
+        header p {
+            color: #ccc;
+            margin: 8px 0 0;
+        }
+
         nav {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            gap: 10px;
             padding: 15px;
             background: #111;
             border-bottom: 1px solid #333;
@@ -48,6 +53,7 @@
         nav a {
             color: #d4af37;
             text-decoration: none;
+            padding: 6px 10px;
         }
 
         nav a:hover {
@@ -55,304 +61,115 @@
         }
 
         main {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 25px 15px 40px;
         }
 
-        .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #d4af37;
-            text-decoration: none;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-
-        h2 {
-            color: #d4af37;
-            text-align: center;
-            margin: 0 0 20px;
-        }
-
-        .description {
-            background: #111;
+        .intro {
             border: 1px solid #d4af37;
             border-radius: 8px;
-            padding: 15px;
+            padding: 20px;
             margin-bottom: 25px;
-            text-align: center;
+            background: #111;
         }
 
-        .entry {
-            margin-bottom: 12px;
+        .intro h2 {
+            color: #d4af37;
+            margin-top: 0;
+        }
+
+        .entry-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
         }
 
         .entry-button {
-            width: 100%;
             display: block;
-            padding: 12px 16px;
+            width: 100%;
+            padding: 14px 16px;
             border: 1px solid #d4af37;
             border-radius: 8px;
             background: #d4af37;
             color: #0b0b0b;
-            font-family: inherit;
+            text-align: center;
+            text-decoration: none;
             font-size: 16px;
             font-weight: bold;
-            text-align: left;
-            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
         }
 
         .entry-button:hover {
-            background: #e6c653;
+            background: #0b0b0b;
+            color: #d4af37;
         }
 
-        .entry-button::after {
-            content: "+";
-            float: right;
-            font-size: 18px;
-        }
-
-        .entry-button.active::after {
-            content: "−";
-        }
-
-        .entry-content {
-            display: none;
-            margin-top: 8px;
-            padding: 16px;
-            background: #111;
-            border: 1px solid #d4af37;
-            border-radius: 8px;
-        }
-
-        .entry-content.open {
-            display: block;
-        }
-
-        .entry-content p {
-            margin: 0 0 16px;
-        }
-
-        .entry-content p:last-child {
-            margin-bottom: 0;
+        .entry-button:focus-visible,
+        nav a:focus-visible {
+            outline: 2px solid #fff;
+            outline-offset: 3px;
         }
 
         footer {
             text-align: center;
             padding: 20px 15px;
-            color: #888;
             border-top: 1px solid #333;
-            background: #111;
+            color: #999;
+            font-size: 14px;
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>The Lorak Codex</h1>
-</header>
+    <header>
+        <h1>The Lorak Codex</h1>
+        <p>A Book of Warframe Lore</p>
+    </header>
 
-<nav>
-    <a href="../index.html">Home</a>
-    <a href="../quests.html">Quests</a>
-    <a href="../transcripts.html">Transcripts</a>
-    <a href="../extra-lore.html">Extra Lore</a>
-    <a href="../factions.html">Factions</a>
-    <a href="../timeline.html">Timeline</a>
-    <a href="../operations.html">Operations</a>
-    <a href="../args.html">ARGs</a>
-    <a href="https://discord.gg/X3WsdC8jP4">Discord</a>
-</nav>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="quests.html">Quests</a>
+        <a href="transcripts.html">Transcripts</a>
+        <a href="extra-lore.html">Extra Lore</a>
+        <a href="factions.html">Factions</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="operations.html">Operations</a>
+        <a href="args.html">ARGs</a>
+        <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
+    </nav>
 
-<main>
-    <a class="back-link" href="leverian.html">← Back to Leverian</a>
+    <main>
+        <section class="intro">
+            <h2>The Leverian</h2>
+            <p>
+                The Leverian preserves the stories, histories and artifacts
+                associated with Warframe's many legends. Explore the individual
+                entries below.
+            </p>
+        </section>
 
-    <h2>Dante's Leverian</h2>
+        <section class="entry-list" aria-label="Leverian entries">
 
-    <div class="description">
-        Drusus Leverian recounts his friendship with Dante and his desperate attempt to preserve the Leverian.
-    </div>
+            <a class="entry-button" href="leverian/ash.html">Ash</a>
+            <a class="entry-button" href="leverian/atlas.html">Atlas</a>
+            <a class="entry-button" href="leverian/dante.html">Dante</a>
+            <a class="entry-button" href="leverian/gauss.html">Gauss</a>
+            <a class="entry-button" href="leverian/grendel.html">Grendel</a>
+            <a class="entry-button" href="leverian/ivara.html">Ivara</a>
+            <a class="entry-button" href="leverian/lavos.html">Lavos</a>
+            <a class="entry-button" href="leverian/nezha.html">Nezha</a>
+            <a class="entry-button" href="leverian/nova.html">Nova</a>
+            <a class="entry-button" href="leverian/styanax.html">Styanax</a>
+            <a class="entry-button" href="leverian/voruna.html">Voruna</a>
 
-    <div class="entry">
-        <button class="entry-button" type="button" aria-expanded="false" onclick="toggleEntry(this)">
-            Inbox Message
-        </button>
-        <div class="entry-content">
-            <p>I have made a tremendous mistake... Tenno. Please. The Leverian desperately needs your help. Come see me in DANTE'S LEVERIAN, as soon as possible.</p>
+        </section>
+    </main>
 
-            <p>Drusus: "The Leverian... it was floundering, you understand? Going under! All that work I put into it, and so few visited, let alone donated. Oh, I don't mean you, of course. I know you're a friend to the Leverian. It just... wasn't enough. So when Parvos made me an offer... I thought, why not? Just let it go. Let it all go. I took the deal, Tenno. I shouldn't have, but I did. Oh, if only Dante were still around. Please, you must come see me."</p>
-        </div>
-    </div>
-
-    <div class="entry">
-        <button class="entry-button" type="button" aria-expanded="false" onclick="toggleEntry(this)">
-            Entering
-        </button>
-        <div class="entry-content">
-            <p>Ah, hello, friend. You find me now amidst the bones of all I am. Of the thing that mattered most to me in my too-long life. You know, I wasn't sure it was possible to be less than a man, for I was a man, once. This room was to be a shrine to one of my dearest friends, but now that shall never come to pass. Look around, and I will recount what was meant to be.</p>
-        </div>
-    </div>
-
-    <div class="entry">
-        <button class="entry-button" type="button" aria-expanded="false" onclick="toggleEntry(this)">
-            Unfinished Shrine
-        </button>
-        <div class="entry-content">
-            <p>I've made such a terrible mistake, you see. In a universe at its own throat, where every living thing works daily to keep body and soul together, there's not much appetite for history. For stories.</p>
-
-            <p>The Leverian may not be a real place - a place you can reach out and touch - but to reality it was anchored. And reality demands a tithe. It takes coin to keep this place rezzed. This shrine to memory. And... a savvy businessman I was not.</p>
-
-            <p>To be less than a man is to be a fool. And fool I was.</p>
-        </div>
-    </div>
-
-    <div class="entry">
-        <button class="entry-button" type="button" aria-expanded="false" onclick="toggleEntry(this)">
-            Loss
-        </button>
-        <div class="entry-content">
-            <p>Did I never tell you of Dante? No. I suppose I didn't. I suppose I hadn't the fortitude. The entirety of the Leverian is shaped by the lack of him - though perhaps only in ways that I can see.</p>
-
-            <p>Though by definition a weapon of war, Dante was, first and foremost, a student of history. And, he was my friend. Truthfully, much of the Leverian would not exist were it not for that bold, two-fisted academician's devotion to both myself and the cause of better understanding our history, and ourselves.</p>
-
-            <p>It shames me to think of what he would have to say about what I have done. To our shared endeavor.</p>
-        </div>
-    </div>
-
-    <div class="entry">
-        <button class="entry-button" type="button" aria-expanded="false" onclick="toggleEntry(this)">
-            Folly
-        </button>
-        <div class="entry-content">
-            <p>Parvos Granum. You know the name. He of the gilded hand, and gilded tongue. For an age he has sought what Dante and I had gathered together. Our collected treasures. For one such as Granum there is no such thing as 'enough.'</p>
-
-            <p>In an age with no appetite for memory, maintaining a shrine to our shared history seemed folly. And so, in a low moment, I signed it all away.</p>
-        </div>
-    </div>
-
-    <div class="entry">
-        <button class="entry-button" type="button" aria-expanded="false" onclick="toggleEntry(this)">
-            Regret
-        </button>
-        <div class="entry-content">
-            <p>I do not know what possessed me, in that moment. I have no need for money, or food, or shelter, or care. Perhaps I merely felt my time was done, that the past had served its use, and me along with it.</p>
-
-            <p>Whatever the reason I allowed myself an instant to feel my misery to be greater than my life's purpose. A momentary indulgence that may be paid by every future generation until the sun goes dark.</p>
-        </div>
-    </div>
-
-    <div class="entry">
-        <button class="entry-button" type="button" aria-expanded="false" onclick="toggleEntry(this)">
-            Friendship
-        </button>
-        <div class="entry-content">
-            <p>I would give much for my friend to have been here. Dante and I, we tempered each other's unique compulsions.</p>
-
-            <p>You would have liked Dante, I feel. His end began, as it did for so many souls, with the Entrati family. The patriarch of that benighted family had fallen into decadence and disrepute, his name sullied by controversy and implications of madness.</p>
-
-            <p>Then an erstwhile associate of mine - a gentleman by the name of Loid, and Master Entrati's man for more than a lifetime - well, vanished. Loid, his Master, and his entire lineage. Just... gone.</p>
-        </div>
-    </div>
-
-    <div class="entry">
-        <button class="entry-button" type="button" aria-expanded="false" onclick="toggleEntry(this)">
-            Failing
-        </button>
-        <div class="entry-content">
-            <p>There were rumors, of course. Master Entrati was known at that time for outlandish claims and questionable science relating to... voices he was hearing, I believe. Gods from beyond the veil and whatnot.</p>
-
-            <p>After the disappearances, Dante, never one to let a good mystery go, insisted on infiltrating the Entrati manse and learning the truth for himself. I, however, being more familiar with the, uh, confidential details of Master Entrati's... interests... urged him otherwise. I suppose you wonder why I would do such a thing, if I believed Master Entrati to be fit for little more than the asylum.</p>
-
-            <p>Loid was, as I said, a dear friend. We spoke often. His last missive to me was a simple one.</p>
-
-            <p>"We end as we began."</p>
-
-            <p>As a student of history and its occult apocrypha I know the terrible import of those words. And so I cautioned Dante to remain by my side. He promised to do so, then did otherwise. And I never saw him again.</p>
-
-            <p>Perhaps I was not so deft at tempering him, as he was of me. And that, I suppose, was my first great failing. The parent of this second, and most final, one.</p>
-        </div>
-    </div>
-
-    <div class="entry">
-        <button class="entry-button" type="button" aria-expanded="false" onclick="toggleEntry(this)">
-            Dante
-        </button>
-        <div class="entry-content">
-            <p>I imagine you've surmised why I have summoned you here. To ask that, in the name of whatever friendship we share, to lend your aid to my impossible predicament. To help preserve not me, not this shadow of a man I once was, but to keep this monument to history alive - so that future generations may learn from it, and never repeat our most shameful mistakes.</p>
-
-            <p>Granum's obsession with that bygone age demands pieces of such. Ironic, really, that one man's interest in history serves only to strip an edifice whose singular purpose was to protect it. But there remains one slim hope: the sourcing of artifacts from places other than the Leverian.</p>
-
-            <p>Sourced by you, at my direction. Help me, friend. Help me, that my one, great and final, mistake not be the error that turns our collective history and the work of lifetimes to a single, miserable use: making a rich man richer.</p>
-        </div>
-    </div>
-
-    <div class="entry">
-        <button class="entry-button" type="button" aria-expanded="false" onclick="toggleEntry(this)">
-            Helping Drusus
-        </button>
-        <div class="entry-content">
-            <p>Inbox Message:</p>
-
-            <p>Tenno,</p>
-
-            <p>I have only just now learned of my old friend Drusus Leverian's predicament. I believe I can help you help him. Albrecht's old Conduit network has everything Drusus will need.</p>
-
-            <p>Access the Conduits in the AMARTUS node of Deimos or through the Sanctum Anatomica.</p>
-
-            <p>Come see me afterward, I may even be able to help you recover his trusted colleague, the Warframe Dante.</p>
-
-            <p>Loid</p>
-        </div>
-    </div>
-
-    <div class="entry">
-        <button class="entry-button" type="button" aria-expanded="false" onclick="toggleEntry(this)">
-            Dante Prex
-        </button>
-        <div class="entry-content">
-            <p>You... found him, Friend. And Dante's tale deserves to be known. So... allow me to relate it, as he passes it to me.</p>
-
-            <p>Dante... ventured... to the... deafeningly... silenced halls of the... doomed... Entrati lineage, encountering... automated defenses, gone senile and violent, chanting in an... unright dialect that slurred thought and... annihilated... hope. That wrongtongued language invaded Dante's mind - infecting it with the one thing he was defenseless against: the promise of knowledge.</p>
-
-            <p>It may be said that a parasite is life from without the body fighting to exist within the body, despite the body, even as it risks the body. What, then, do we call knowledge from beyond our reality demanding to be let in?</p>
-
-            <p>Poor Dante. If only he had recited to me sooner the wrongtongued words he had heard. I could have told him, you know, that I had heard that language before. Once. Long ago. From the lips of Parvos Granum.</p>
-
-            <p>Dante found it, you see. Dante found The Book.</p>
-
-            <p>The Dante I knew was many things, but he was not weak. He struggled, fought, refused its knowledge. There was a moment, I knew, when that chill Indifference felt it had won. In those moments I was with him, wrestling the foul thing he had unlocked. Impossibly, though it cost him dearly, he was winning. But miserably, I knew the equation was not so simple as that.</p>
-
-            <p>I told him: Dante, what you have found can never be brought forth. Parvos must never know of this.</p>
-
-            <p>I felt the chill, the awful loneliness, of understanding wash through him.</p>
-
-            <p>I sensed the moment he chose, and I felt Dante give up. When he died, I almost died with him.</p>
-
-            <p>But the Book, the word, did not permit Dante to die. The violent diplomacy which ensued rewrit the very fabric of who he was. I understood things, learned things, on that journey with my old friend, from night to day. Things which could not survive in this world, but forever made a lie, to me, of science.</p>
-
-            <p>What became of him, and what stars he may have traveled to, is unknown to me. What that wrongtongued Voice may murmur in his mind, on long nights, I'm not sure I would want to know. It teaches because it longs to be known, and in being known it exists. And in existing, it survives.</p>
-        </div>
-    </div>
-</main>
-
-<footer>
-    The Lorak Codex
-</footer>
-
-<script>
-    function toggleEntry(button) {
-        const content = button.nextElementSibling;
-        const isOpen = content.classList.contains("open");
-
-        content.classList.toggle("open", !isOpen);
-        button.classList.toggle("active", !isOpen);
-        button.setAttribute("aria-expanded", String(!isOpen));
-    }
-</script>
+    <footer>
+        The Lorak Codex — A Book of Warframe Lore
+    </footer>
 
 </body>
 </html>
