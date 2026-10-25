@@ -102,6 +102,7 @@
             border-radius: 8px;
             padding: 12px 16px;
             font-weight: bold;
+            transition: background-color 0.2s ease, color 0.2s ease;
         }
 
         .section summary::-webkit-details-marker {
@@ -113,6 +114,15 @@
             float: right;
             font-size: 18px;
             line-height: 1.4;
+        }
+
+        .section summary:hover,
+        .section summary:focus,
+        .section summary:active {
+            background: #d4af37;
+            background-color: #d4af37;
+            color: #0b0b0b;
+            border-color: #d4af37;
         }
 
         .section[open] summary {
