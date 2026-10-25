@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executor Tuvul's Logs - The Lorak Codex</title>
+    <style>
+        body {
+            background: #0b0b0b;
+            color: #ddd;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            background: #111;
+            padding: 20px;
+            border-bottom: 2px solid #d4af37;
+        }
+        h1 {
+            color: #d4af37;
+            letter-spacing: 3px;
+        }
+        a.back {
+            display: inline-block;
+            color: #d4af37;
+            text-decoration: none;
+            margin: 20px 0;
+        }
+        .description {
+            border: 1px solid #d4af37;
+            padding: 15px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .log-button {
+            width: 100%;
+            background: #d4af37;
+            color: #0b0b0b;
+            border: none;
+            border-radius: 6px;
+            padding: 14px;
+            margin: 8px 0;
+            text-align: left;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .log-button::after {
+            content: "+";
+            float: right;
+        }
+        .log-button[aria-expanded="true"]::after {
+            content: "−";
+        }
+        .log-content {
+            display: none;
+            border: 1px solid #d4af37;
+            padding: 15px;
+            margin-bottom: 12px;
+            line-height: 1.7;
+            white-space: pre-line;
+        }
+        .log-content.open {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Executor Tuvul's Logs</h1>
+</header>
+
+<main>
+    <a class="back" href="../extra-lore.html">← Back to Extra Lore</a>
+
+    <div class="description">
+        A collection of lore fragments associated with Executor Tuvul,
+        one of the Seven Executors of the Orokin Empire and the patron
+        of the Zariman Ten Zero colony ship.
+    </div>
+
+    <button class="log-button" aria-expanded="false"
+        aria-controls="log1" onclick="toggleLog(this, 'log1')">
+        Executor Tuvul Fragment 01
+    </button>
+    <div class="log-content" id="log1">
+        <p>[Insert the complete in-game text for Fragment 01.]</p>
+    </div>
+
+    <button class="log-button" aria-expanded="false"
+        aria-controls="log2" onclick="toggleLog(this, 'log2')">
+        Executor Tuvul Fragment 02
+    </button>
+    <div class="log-content" id="log2">
+        <p>[Insert the complete in-game text for Fragment 02.]</p>
+    </div>
+
+    <button class="log-button" aria-expanded="false"
+        aria-controls="log3" onclick="toggleLog(this, 'log3')">
+        Executor Tuvul Fragment 03
+    </button>
+    <div class="log-content" id="log3">
+        <p>[Insert the complete in-game text for Fragment 03.]</p>
+    </div>
+
+    <button class="log-button" aria-expanded="false"
+        aria-controls="log4" onclick="toggleLog(this, 'log4')">
+        Executor Tuvul Fragment 04
+    </button>
+    <div class="log-content" id="log4">
+        <p>[Insert the complete in-game text for Fragment 04.]</p>
+    </div>
+</main>
+
+<script>
+function toggleLog(button, id) {
+    const content = document.getElementById(id);
+    const isOpen = content.classList.toggle('open');
+    button.setAttribute('aria-expanded', isOpen);
+}
+</script>
+</body>
+</html>
