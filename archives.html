@@ -1,77 +1,48 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Archives | The Lorak Codex</title>
-
+    <title>Archives - The Lorak Codex</title>
     <style>
         body {
-            margin: 0;
             background: #0b0b0b;
-            color: white;
+            color: #ddd;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
         }
 
         header {
+            text-align: center;
             background: #111;
             padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid #d4af37;
+            border-bottom: 2px solid #d4af37;
         }
 
         h1 {
             color: #d4af37;
             letter-spacing: 3px;
-            margin: 0;
-        }
-
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            padding: 15px;
-            background: #111;
-        }
-
-        nav a {
-            color: #d4af37;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: white;
         }
 
         main {
             max-width: 900px;
-            margin: auto;
-            padding: 20px;
+            margin: 0 auto;
         }
 
         .back {
-            display: block;
+            display: inline-block;
             color: #d4af37;
             text-decoration: none;
-            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .description {
+            border: 1px solid #d4af37;
+            padding: 15px;
             margin-bottom: 20px;
-        }
-
-        .back:hover {
-            color: white;
-        }
-
-        h2 {
-            color: #d4af37;
-            margin-bottom: 10px;
-        }
-
-        .intro {
-            line-height: 1.7;
-            margin-bottom: 20px;
+            line-height: 1.6;
         }
 
         .archive-button {
@@ -81,46 +52,31 @@
             background: #d4af37;
             color: #0b0b0b;
             text-decoration: none;
-            text-align: left;
+            border-radius: 6px;
+            padding: 14px;
+            margin: 8px 0;
+            font-size: 16px;
             font-weight: bold;
-            padding: 14px 16px;
-            border: none;
-            border-radius: 4px;
-            margin-top: 12px;
         }
 
         .archive-button:hover {
-            background: #f0d46b;
+            background: #e6c65c;
         }
     </style>
 </head>
-
 <body>
 
 <header>
-    <h1>The Lorak Codex</h1>
+    <h1>Archives</h1>
 </header>
-
-<nav>
-    <a href="index.html">Home</a>
-    <a href="quests.html">Quests</a>
-    <a href="transcripts.html">Transcripts</a>
-    <a href="timeline.html">Timeline</a>
-    <a href="operations.html">Operations</a>
-    <a href="args.html">ARGs</a>
-    <a href="extra-lore.html">Extra Lore</a>
-</nav>
 
 <main>
     <a class="back" href="extra-lore.html">← Back to Extra Lore</a>
 
-    <h2>Archives</h2>
-
-    <p class="intro">
-        Explore Codex lore entries documenting Warframes, mysterious figures,
-        and other subjects whose histories are preserved within the Origin System.
-        Entries are arranged in the chosen timeline order.
-    </p>
+    <div class="description">
+        A collection of archived records, historical accounts, lore documents
+        and other discoveries from across the Origin System.
+    </div>
 
     <a class="archive-button" href="archives/excalibur-prime.html">
         1. Excalibur Prime
@@ -156,6 +112,14 @@
 
     <a class="archive-button" href="archives/synthesis-imprints.html">
         9. Synthesis Imprints
+    </a>
+
+    <a class="archive-button" href="archives/jades-memory-feathers.html">
+        10. Jade's Memory Feathers
+    </a>
+
+    <a class="archive-button" href="archives/executor-tuvul-logs.html">
+        11. Executor Tuvul's Logs
     </a>
 
 </main>
