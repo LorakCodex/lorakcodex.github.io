@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthesis Imprints - The Lorak Codex</title>
+    <link rel="icon" type="image/png" href="../lorak-codex-favicon-48x48.png">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #0b0b0b;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #111;
+            padding: 25px 15px;
+            text-align: center;
+            border-bottom: 2px solid #d4af37;
+        }
+
+        header h1 {
+            color: #d4af37;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px;
+            background: #111;
+            border-bottom: 1px solid #333;
+        }
+
+        nav a {
+            color: #d4af37;
+            text-decoration: none;
+            padding: 5px 9px;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 16px;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #d4af37;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .page-description {
+            border: 1px solid #d4af37;
+            background: #151515;
+            padding: 18px;
+            margin-bottom: 25px;
+            border-radius: 6px;
+        }
+
+        .page-description h2 {
+            color: #d4af37;
+            margin-top: 0;
+        }
+
+        .imprint {
+            margin-bottom: 18px;
+        }
+
+        .imprint-button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid #d4af37;
+            border-radius: 6px;
+            background: #d4af37;
+            color: #111;
+            font-size: 17px;
+            font-weight: bold;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .imprint-button:hover {
+            background: #e6c85a;
+        }
+
+        .imprint-button:focus-visible {
+            outline: 2px solid #fff;
+            outline-offset: 3px;
+        }
+
+        .toggle-symbol {
+            margin-left: 15px;
+            font-size: 22px;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .imprint-content {
+            display: none;
+            padding: 20px;
+            margin-top: 8px;
+            background: #111;
+            border: 1px solid #d4af37;
+            border-radius: 6px;
+            overflow-wrap: anywhere;
+        }
+
+        .imprint-content.open {
+            display: block;
+        }
+
+        .passage {
+            margin: 0;
+            white-space: pre-line;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: #111;
+            border-top: 1px solid #333;
+            text-align: center;
+            color: #999;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 23px;
+            }
+
+            .imprint-button {
+                font-size: 15px;
+                padding: 12px;
+            }
+
+            .imprint-content {
+                padding: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>The Lorak Codex</h1>
+</header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../quests.html">Quests</a>
+    <a href="../transcripts.html">Transcripts</a>
+    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="../timeline.html">Timeline</a>
+    <a href="../operations.html">Operations</a>
+    <a href="../args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4">Discord</a>
+</nav>
+
+<main>
+    <a class="back-link" href="../archives.html">← Back to Archives</a>
+
+    <section class="page-description">
+        <h2>Synthesis Imprints</h2>
+        Synthesis Imprints preserve accounts and recollections from individuals whose experiences reveal fragments of the Orokin era and the events surrounding its collapse.
+    </section>
+
+    <section class="imprint">
+        <button class="imprint-button" type="button" aria-expanded="false" aria-controls="imprint-1" onclick="toggleImprint(this)">
+            <span>1. Anti Moa</span>
+            <span class="toggle-symbol">+</span>
+        </button>
+        <div class="imprint-content" id="imprint-1">
+            <p class="passage">"How long are you going to tinker with that thing?" Father asks.
+He's one to talk. Ever since we entered this junk belt, all he's done is tap on that console. This whole time he's just sat there, eyes fixed on the radar, dirty fingers tapping the drum beat to some manic song with no structure or rhythm.
+I ignore him and try to go back to work on the robot. Father's tap-tap gets faster and more intense. Is he trying to get to me? I can't concentrate.
+"Tell me again why we don't just approach at full speed from open space? Couldn't we just slam into the Rail and punch?" I ask.
+"Because that's what we used to do." He's annoyed, but at this point I don't care. Our convoy of transports has skulked through this junk belt for days, the viewscreen an endless parade of rocks and garbage.
+"We could have been through that Rail a long time ago," I say.
+"Maybe," he shrugs.
+"And why can't I ride in Umpal's ship?"
+"This again?" he snaps back. "You know why."
+Umpal is my best and only friend; there weren't many young people in our group and Umpal is the only one close to my age. Truth be told, he was the only person my age I'd ever met. He was on another transport; they said it was for security reasons.
+We are on a trade mission, my first time outside our node. These trips were dangerous, but Father said it was essential I learn the business. The whole convoy is loaded down with items we have scraped together through months of local trade. It was mostly salvage, with some ferrite spread between the different transports. Rumour was that Umpal's transport might even have some rubedo in the hold. We are heading to another survivor colony a few nodes away. They had other rare resources, but more importantly, they were close enough to the Sun to grow food and that was what this mission was really about.
+Before we left Umpal and I drew wires to see which one of us got to bring the robot we were building; I won. It was bits and pieces of scavenged Orokin tech slammed together but it was a robot and it could walk. Father didn't think much of it, but I was proud. I hoped to trade it for some rare parts when we hit the colony, enough to build a bigger, second walker. Maybe even one that could carry a full-size cannon.
+"Does this look anything like you remember from the Orokin days?" I ask in a futile attempt to break the tension.
+"That thing, yeah, we had ones that walked on two legs like that, but…" his finger stops its tapping and he takes a long look at the robot before continuing, "but… they were different."
+"Don't you miss it?" I ask.
+"What?" he says.
+"You know, the empire?"
+"I don't think about it." He's back to tapping on the nav console.
+"What about your corpus, don't you miss them? Your father?" I say.
+"Orokin didn't have parents like you do; it was done differently then." He takes a deep breath and turns to look at me. "Listen, the corpus who raised me are dead. Do you know why they are dead?"
+"Because of the plague?" I say.
+"Because they couldn't forget the past. I survived by worrying about two things: today and tomorrow. That is the only reason I'm alive. That is the only reason you exist. You want to remember something, remember that."
+"Yeah, okay." I shrug. He's given this speech before. I had learned the hard way not to push things when he got like this. I go back to working on the robot.
+After a few minutes of silence I hear him exhale, "Look, we're almost to the Rail. After the punch you can go over to Umpal's transport, okay?"
+I nod and smile, "Okay."
+The next few hours go by quickly. As we get closer to the Rail, the density of obstacles in the belt increases. The ship's nav module calls out course correction after course correction as we dodge debris. I watch the other transports in our convoy do the same. Our progress is slowed to a crawl, but Father swears avoiding detection is worth it.
+I am trying to splice a connection deep in the robot's chest cavity when the alarms sound. The radar screen lights up. I look up to see one of the other transports veer off course; seconds later something crashes into their hull. There's a blue flash of electricity and their ship goes dark. Then two more crashes and two more flashes. These are interceptor pods, a Grineer trap.
+My father jumps up and begins yelling instructions to our nav system. "Full power, take us up and out of the belt."
+"That's Umpal's ship they're boarding…."
+His face collapses into a frown. "It is."
+"They'll kill him. We have to do something." I plead.
+"We keep going. They can't take us all." I can barely hear him through his clenched teeth.
+"Umpal is corpus to us! We can't abandon him," I shout.
+"We have to, that's how we survive." His voice grows louder.
+"What if it was us? Wouldn't you want them to—"
+His fist slams the nav console as he whips around to glare at me. "What are you going to do? Fight off those Grineer with your Moa?"
+I look down at the robot, a mess of parts and wires that can barely walk, let alone shoot. Neither of us say another word. Out of the viewscreen I watch as Umpal's crippled ship, now swarmed by Grineer, shrink into blackness</p>
+        </div>
+    </section>
+
+    <section class="imprint">
+        <button class="imprint-button" type="button" aria-expanded="false" aria-controls="imprint-2" onclick="toggleImprint(this)">
+            <span>2. Arid Eviscerator</span>
+            <span class="toggle-symbol">+</span>
+        </button>
+        <div class="imprint-content" id="imprint-2">
+            <p class="passage">The faces of the survivors, all lined up for evacuation, were etched with confusion when the lift doors closed in front of them.
+We descended to the hum of the lift flying through the tower. I turned and smiled at Avantus. "I was beginning to believe you were going to bring them all with us."
+"Nonsense, Bilsa, that's simply not feasible." Avantus replied. "You know we need to find safety and re-establish the Congress of Executors. We have no time for a rescue mission. Besides, those people know their place and they just did their duty. I will see to it they are honoured when our Orokin Empire returns to glory."
+We were safe for the moment. When the Infestation took over, the entire Tower went into lockdown. Avantus' Executor status meant that she, and by extension I, were among the few people who could move freely about the massive vessel.
+When the lift slowed, I overrode the controls to keep the doors closed. We listened for what seemed like forever. "Do you hear anything?" I said.
+"No, I don't smell anything either; let's go," said Avantus raising her pistol. The doors opened to a darkened room. The light of the lift illuminated scattering figures, but this wasn't the Infested; we were still alive.
+"You there. Step forth," Avantus commanded, and out of the shadows came several burly figures.
+"Grineer soldiers!" I said with an almost childlike excitement as others joined them.
+"Grineer workers, useless to us," said Avantus. Despite everything, she still looked glorious in her full regalia and golden syandana.
+"Have you not been taught protocol?" I shouted. "An Executor stands before you." The workers looked at each other, puzzled, then the biggest one kneeled and bowed before us. One by one the other Grineer followed.
+Avantus shook her head in disbelief and went to the nearby console to turn on the lights. We were in the mechanical workshop. Tools in cases lined the walls and supply crates edged the room.
+"That precept said the hangar is through the next hall." Avantus stepped around the still-kneeling Grineer and toward the rear doors.
+"No, stop!" protested the big Grineer. "Danger." We kept walking, but sure enough when we got close the doors shook and moaned with the scraping of claws.
+"Those imbeciles," Avantus cursed. "They said this sector wasn't compromised."
+"It doesn't sound like that many. Can we fight through?" I asked.
+"What? Just the two of us, with pistols and no Corrupted?" she snapped.
+"What about…." I motioned to the Grineer workers.
+"With no weapons? There's not enough of them to be decoys," she said.
+We paced in silence until one of the Grineer, that big one, ran to a tool case on the wall and tried to force it open.
+Avantus noticed this and waved her hands over the nearby console to unlock the case.
+The rest of the workers rushed over and grabbed the bigger grinder saws and plasma cutters. They put on safety equipment as if it were body armour.
+"Always wanting to cut something, I see," said Avantus to the worker.
+The big one nodded and smiled. Did he have any idea what those things might do to him?
+They lined up shoulder to shoulder against the door, while we stood a few paces behind with a couple more at our side. The Infested thumped and howled; they could sense us. Their stench penetrated the doors and attacked our nostrils.
+Avantus looked over at me, "Bilsa, it goes without saying, we won't be sharing that ship with the likes of these."
+I gave her a sideways look; why would she say that in front of them?
+"Oh child, they do not have the comprehension." She laughed. "They are content to do the job they were bred to do, only now they get to cut Infested flesh instead of scrap metal." I looked at the Grineer. They did seem unfazed.
+"Grineer… work!" commanded Avantus and the Grineer revved up their saws. I opened the hall doors and a wave of Infested crashed and collapsed against a solid wall of blades. Viscera pooled at our feet. A monster would tear one down only to have another Grineer take its place. "Move!" she yelled and the Grineer wall marched forward, a line of death that eviscerated anything in its path.
+We reached the hangar doors at the end of the hall and prepared for the worst; on the other side could be hundreds. Avantus gave the Grineer a moment to shake the guts out of their tools and catch their breath, then she nodded for me to release the locks. We all braced ourselves as the doors opened to… nothing, no Infested, just a lone ship on the other side of a massive hangar. Relieved, we sprinted across the open expanse.
+As we approached the ship Avantus said, "Bilsa, you open the shuttle," and then added quietly, "I'll make sure we don't have any guests for our trip." I went to work at the nearest console and the Grineer encircled me to fend off any possible threats. Avantus stood at the ship's entrance with a few more of the grunts guarding her.
+"More coming." She pointed at a swarm of Infested charging from where we came. "Grineer, attack them. GO!" she bellowed.
+The Grineer stiffened. Their blades roared, but they stayed their ground.
+Incensed, she cried louder, "I said go, NOW!" but the Grineer did not move from the shuttle door.
+"It's open," I shouted, turning just in time to see the biggest Grineer drive his saw right through Avantus' spine. The high-pitched whir of metal on bone masked her screams and she collapsed to the floor. Her pearl-white robes were now dyed crimson. Her dead eyes looked through me.
+I started to run but was struck in the face and knocked to my knees.
+The big Grineer loomed over me. "Now you work for us. Make the shuttle go."</p>
+        </div>
+    </section>
+
+    <section class="imprint">
+        <button class="imprint-button" type="button" aria-expanded="false" aria-controls="imprint-3" onclick="toggleImprint(this)">
+            <span>3. Corrupted Ancient</span>
+            <span class="toggle-symbol">+</span>
+        </button>
+        <div class="imprint-content" id="imprint-3">
+            <p class="passage">"She's dead," said Dax Menz, growing impatient.
+"No, she's not." I knew it.
+Our shuttle touched down in the ancient city centre of New Uxmal for the second time in two days. We rushed to the entrance of the lower chambers, a labyrinth of tunnels carved into the rock. Behind us marched a full complement of bodyguards and Moas.
+Menz asked again, "How can you be sure?"
+"We've been connected for a century and a half. I'm sure." It felt odd to be speaking aloud about something that Remballa and I had always just kept between us. That feeling of attachment, that anxiety that welled up within one of us when the other wasn't right. That emptiness I felt when I thought they'd killed her and the joy when the connection came rushing back this morning.
+We were twins bred for purpose, cloned and then modified so that we could both interface with the Lora Device. The Orokin had a visage imbued with variation, beauty and symmetry, but we had the Lora nodes protruding from our right temples. Their skin was silken; ours was weaved with ribbons of metallic fascia that snaked around our bodies and into the Lora Device embedded in our palms. We made them uncomfortable and they made that known; that is, until they were sick or hurt and then we were saviours. That never bothered me though; I loved my sister and we had each other. I wasn't about to leave her in the middle of this nightmare.
+Hesitation was building in Menz's face. I had command authority but if he balked, the soldiers would follow him. I needed to force his support. "If you were Tenno, there'd be no question."
+"The Betrayers…." He stopped himself. "Look, Remballa's gone. The Infested killed her yesterday, we both saw it." His frustration was building. "Dammit, this was supposed to be a relief mission, we can't—"
+"It still is a relief mission," I interrupted. "You want to go back to retirement, Menz, or are you still a Dax?" I knew that stung.
+Menz stiffened. He'd been cast aside before. He wasn't about to let duty slip through his fingers again. Menz stared into me. "Are you willing to risk becoming one of those things for a feeling?"
+I nodded. The answer was yes, for this feeling.
+"Very well, Lorist Ontella." Menz turned to his squad. "Ready up."
+We entered the subterranean passage. Weapon lights illuminated chiselled red stone as we marched deeper into the blackness, past shops and apartments, all carved into the rock aeons ago. This city was as old as Mars' atmosphere. Everything was silent, save for the occasional snap of bone under a soldier's boot. Three days ago this was a busy thoroughfare; now, bloodied scraps of clothing littered the route like confetti. We emerged from the tunnels into a cavernous arcade, the Old Market Road. This is where she had led me.
+"We're close," I said.
+"Here they come," shouted Dax Menz, and creatures began to drive at us from every door and window. All teeth and claws and eyes that looked looked so familiar. What kind of animal has eyes like that?
+"Square formation!" Menz commanded. We backed up to a wall and the Moas moved to form a perimeter, with the bodyguards behind them and me in the middle.
+I closed my eyes and focused the device. Through it I could feel each one of the bodyguards. A sergeant was slashed through the leg and I directed my energy toward him; his wound closed and he resumed fighting. Acid spit burned another soldier's chest; I pushed energy to her, eased the pain, then reversed the damage; she would live. This was so much harder without Remballa. Another soldier was bit on the throat, he's dying, there was nothing I could do, so I ease his pain and let him go. The rate of fire slowed – had we pushed them back?
+I opened my eyes to see the Moas' beams incinerate the last few attackers. I was drained. I wasn't a combat Lorist. Remballa and I were relief workers, used in disasters and outbreaks, not this.
+I felt a surge of that familiar connection. Remballa's energy pulsed through me. "She's coming," I shouted.
+"What?" Dax Menz's head whipped around to look at me.
+"I don't know," I said, pointing at a hall exit, "she's coming, from that direction."
+"More Infested!" shouted a soldier who motioned to the same exit.
+A mess of figures shambled forth. These were different, bigger and slower. I could feel my sister in there somehow, it was so strong. The Moas opened fire. I wanted to tell them to stop but how could I? I felt plasma beams burn the creatures and then I felt Remballa heal them. Why? Multiple connections now, I felt her many times over. It didn't make sense, until it did; she was those things, all of them. They took our fire and kept coming. I felt her, no, them, shudder as bullets ripped through flesh and then as flesh was made new again. They were Lorist Infested: my sister the healer, remade as monster and here to kill us.
+More rushed in. I felt the healing in them too. I focused just as the first wave broke through our lines. Moas were toppled, soldiers were tackled, teeth tore flesh. I was overwhelmed, I couldn't control it, their pain fed back through me and I collapsed. Something's jaws latched onto my foot. Infection pulsed into my veins.
+And then I felt it, a new presence, another healer? I'd felt this before… was it, it couldn't be…. I opened my eyes only to be blinded by an intense flash, followed by a crash, like a thousand crystal goblets all being shattered at once. All went silent. The Infested were dead. I felt nothing now.
+My eyes readjusted. I was surrounded by bodies. I saw something run away, a streak of silver and gold. It shot straight up the cavern wall and out into the sunshine above.
+I didn't have time to think. I took a breath and a wave of pain surged through my entire body. The Infestation had already taken my leg; soon it would claim the rest of my body. I didn't care, my sister was gone, this was my time.
+A shadow cast itself over me. I looked up. It was Menz, alive. He stared down without speaking and then unsheathed his massive combat blade and raised it high above his head.
+"Menz, wait," I mumbled, "I'm sorry."
+With sudden and sure force his blade sliced down and through me. I contorted with the pain. His hands grabbed my shoulders. "Heal yourself!"
+The adrenaline must have struck at that moment because I bolted up, still stunned; he had cut the infected leg clean off.
+"Dammit, Ontella!" Menz was shaking me hard now. "Heal yourself!"
+Instinct took over. I snapped into focus and sent all the energy I had left through the device and down to the wound. I stopped the bleeding and neutralised the remaining toxin. I nearly passed out; I had nothing left.
+Menz hoisted me onto his shoulder, "I'm taking us back to the shuttle," and he began to walk out of there. A few scattered survivors and robots pulled themselves along behind us.
+As we approached safety I coughed and whispered to Menz, "I can feel her again."
+"She's dead."
+"Yes, she is."</p>
+        </div>
+    </section>
+
+    <section class="imprint">
+        <button class="imprint-button" type="button" aria-expanded="false" aria-controls="imprint-4" onclick="toggleImprint(this)">
+            <span>4. Detron Crewman</span>
+            <span class="toggle-symbol">+</span>
+        </button>
+        <div class="imprint-content" id="imprint-4">
+            <p class="passage">They opened the chamber door just in time for me to see it happen: the Archimedian erupting into a flash, jade-like and blinding. I knew her. She was the greatest scholar of genetics who ever lived. Except now she was nothing but mist and gore.
+A voice boomed from within, "The Crewmen project is cancelled. Send in the next."
+The rifles at my back tried to urge me inside. Old faces filled the dome's projections, immense and god-like. I walked into the centre of the room and the scorched scent choked my lungs. All around me they watched, bored, as I knelt upon the darkened judgement disc.
+The projection of Executor Ballas swelled large in front of me. I could see his purity, his symmetry, the beauty of his glittering gold irises. His voice thundered, "The Principles are clear. Your sentence is death. May the Void forgive you."
+As the judgement disc began to light, I stood, took a deep breath and spoke, "She will not forgive you."
+Laughter broke out among the faces of the dome. Others asked, "What did he say?" Ballas only smiled. "You challenge us, Archemedian?"
+"I do. Kill me and the Empire you are sworn to uphold dies with me."
+Ballas turned his head as the judgement disc went suddenly dark. "An appeal comes at a price. Should you fail, you and your corpus will pay dearly."
+"They already suffer in this growing wasteland. They have already paid. Will you also sacrifice the royal futures by ignoring my solution?"
+"Your solution is an abomination; like you, it will be annihilated." Ballas motioned to a guard in the corner. "Present the evidence."
+The chamber doors opened and a mass of guards entered, guns trained inward. As they reached the centre, they parted, revealing a small cart. Atop the cart was a motionless creature, no larger than a hand. Its body was symmetrical, star-shaped, with a seamless, matte-black shell.
+A new projection, that of Executor Tuvul ballooned into the space. "It looks harmless."
+"Harmless?" Ballas boomed in Tuvul's direction. He turned to the centre of the dome. "Show them."
+On command, the guards backed away from the cart and readied their weapons. Their leader took careful aim and fired a whisper round into the body of my creation. Two of the limbs tore off the frame, revealing a glossy, gelatinous interior.
+Silence gripped the dome as Tuvul shook his head. Then suddenly, the creature moved, convulsed; the hard surface started undulating. In a moment the wound closed and the thing was whole again. Beside it another machine had grown from its severed parts. Their surfaces had changed however – brighter, harder, resilient to whisper rounds now. Ballas looked triumphant as voting lights began to appear on the judgement disc.
+My green death was coming, so I roared at them, "Did our ancestors, burned by fire, reject its power? No. They conquered their fear and learned to control it. The Seven Principles are a joke."
+His projection swooped down to me, "The Orokin is the law and the law is the Orokin. We are unbending. Your appeal is denied."
+Tuvul interrupted, "Our laws are sacred but do not forget The Plan, Ballas." His visage turned down to me. "Countless other ventures have failed The Plan; how will this machine fulfil its design?"
+I tried to catch my breath and speak. "The crossing to the Tau system is perilous. Adaptation and replication are the only way a terraforming journey can be made. They will build an interstellar Rail as they travel. They will adapt to the host planet and prepare it for our arrival. They will save you."
+Tuvul peered down at me. "And when it completes its task, what will prevent it from turning against us, as the Seven Principles say?"
+"The flaw."
+Tuvul's eyes narrowed. "The flaw?"
+"The Void is poison to them. Once they have reached Tau they will be marooned there. To travel the Rail here would destroy them. Whatever the risks, the Origin System will be—"
+Ballas shouted, "Enough! Dereliction of the law threatens the entire empire. Which one of you will risk this?" Ballas was growing increasingly frustrated.
+"The empire is already at risk," cried the shrill voice of another Executor. "Or perhaps you haven't noticed from your cosy position on Mars." To this there was a round of applause and the judgement disk remained unchanged.
+"Ballas, you lack consensus," shouted Executor Tuvul.
+His projection seemed to shrink smaller until he finally broke his silence. "Archimedian Perintol, against my better judgement," his disgust was palpable, "your appeal has been accepted. You are free to go."
+One by one the projections of each Executor in the Tribunal flickered off and the guards ushered me into the hall. There I stood, rapt with shock when I heard his footsteps behind me. "You did better than I thought you would." It was Ballas: the man, not the projection. "It would seem nobody truly knows they want a thing until you threaten to take it away." He broke into a smile. "Wouldn't you agree, Archimedian?"</p>
+        </div>
+    </section>
+
+    <section class="imprint">
+        <button class="imprint-button" type="button" aria-expanded="false" aria-controls="imprint-5" onclick="toggleImprint(this)">
+            <span>5. Guardsman</span>
+            <span class="toggle-symbol">+</span>
+        </button>
+        <div class="imprint-content" id="imprint-5">
+            <p class="passage">I had been stuck on this ship for so long I had almost forgotten what an Orokin of his station sounded like. I cherished each word he spoke.
+"Bilsa," Alarez's voice pulsed out of my console, "we're here to help, but I need to get this straight: you're being held hostage by a…"
+"…by a Grineer," I whispered.
+"A Grineer?" His scepticism was palpable.
+"Yes, named Veytok."
+"He has a name?"
+"Won't let me call him by anything else." I needed him to believe me but I could tell he was struggling. "The other Grineer are different; they're still slow but they listen to him and do exactly what he says. It must be a mutation—"
+"Impossible." I could tell he didn't believe me. "Something like that would have been caught during production and destroyed; only the military Grineer are given—"
+"Should have been caught but wasn't," I interrupted. "Look, the only reason I'm still alive is the genetic lockouts. I'm Sectarus class; this ship's cephalon listens to me exclusively. The Grineer need me. Stars, you have no idea what it's like living with these—"
+"Did you say Sectarus class?" Now he was interested.
+"…everything is filthy." I was rambling. "They manufacture filth. My robes have gone from yellow to black. I'm so tired, I don't even feel Orokin anymore."
+"Did you say you're Sectarus class?" His voice betrayed his impatience.
+"Of course, aren't you?"
+"We're going to initiate docking," he said.
+I looked out the viewscreen. The massive Executorial Frigate begin to pivot toward our tiny Runner. Its marblesque exterior was aglow in the light of the Sun. How I missed those white hallways with their perfect golden trim, all busy with Orokin of high station discussing the business of empire. I belonged on that ship; it was my birthright.
+"Stop," I exclaimed in a half-shout, half-whisper. "You don't understand, he's dangerous. We've been raiding other ships, gathering Grineer. Stars, I've done things." I could feel the emotion and fear in my voice. "I… I've helped him mass an army of sorts."
+"Right, a Grineer army." He paused for a moment, then took an audible breath. "Bilsa, listen, whatever you've done, you had no choice. You know what's happening in the System; there's honour to be found in surviving," he asked.
+"What do you mean, 'what's happening in the System'?" I asked.
+"The Executors, the Council, they're all dead or missing; even most of the Sectarus is gone, you might be the last." His voice was cracked. "Do you understand? The System's falling apart but we can rebuild it."
+There was a thud outside the hull. Had they docked?
+"What about the Tenno?"
+"The Betrayers?" he asked. "Hopefully gone."
+"Wait," I asked, "are you saying your Executorial Frigate has no Sectarus class or Executor? How are you piloting?"
+He ignored my question. "We've docked. Hurry now, open the airlock doors so we can help you."
+"It's too dangerous," I said, "they're waiting for you. You'll be slaughtered."
+"Bilsa, you have no idea what's going on out here. Everything is in chaos. You're lucky we found you. Nobody can be trusted, but I can help. Open the airlock doors."
+"I can't; if I open those doors they'll kill you all. Just talk to me for a while. It's been so long."
+"Bilsa." His voice was getting louder. "The Orokin are gone. The infrastructure, the Rails, none of it works; it's all locked out." Was he actually berating me? "The Infestation is everywhere, riots…."
+"…but they'll kill you—"
+Alarez cut me off. "The Moon is gone."
+"You're not making sense, Alarez," I said.
+"Nothing makes sense anymore," he shouted. "Open those doors!"
+"Alarez?"
+"I'm sorry, it's just that we don't have much time." He began to calm. "Where is this Veytok now?" asked Alarez.
+"All the Grineer are in the docking bay, it's impassable…." I paused and thought for a second. "Wait, there's a different way. The emergency hatch, you could extend a maintenance tunnel, come in through the top of the ship."
+"And avoid the Grineer entirely. Now you're thinking like a Sectarus. Are you alone right now?" asked Alarez.
+"Yes. Since they saw your ship, it's like I don't even exist. When you get here, I'll try to seal them in the airlock remotely. That should hold them for a while, hurry."
+I took one last look at the now-grimy bridge that had become my home. I stepped onto the compact elevator that connected the Runner's decks. At the top level was a systems room used to access the ship's many segments. I looked up at the hatch on the ceiling when I heard the couplers whiz into place.
+"Cephalon, execute now," I called out.
+"Understood, Sectarus Bilsa," replied the ship's cephalon.
+Moments later the hatch slid open. Dark eyes stared down at me from behind a Dax's helmet mask. He said nothing.
+I addressed him, "Well met, Dax."
+Silently, the Dax scanned the room with his rifle before jumping down and taking position in front of me. In quick succession, three more guards fell in behind him. The guards were bloodied and battle-scarred, their equipment mismatched and worn. Alarez followed. His symmetry was off and his eyes were dull. Was he even Enginus class?
+"Thank the stars you're here." I reached out to greet him but the Dax grabbed me.
+"Hold her down," said Alarez.
+He pulled out a device which I recognised instantly as a genetic descrambler. Where did he get that from?
+"My apologies, Bilsa; you seem sweet but I can't miss this chance." He threw a switch on the descrambler. "A sample of your genetic code is all I need for full access to the Executorial." He pointed the descrambler at me. "This won't hurt."
+My skin got instantly hot and then cooled again as waves of radiation passed through me. "Look at you all," I said. "You're just as tarnished as I. It's really over, isn't it?"
+"The Empire? I'm afraid so." He lowered the descrambler. "There."
+"Will you kill me then?" I asked, my eyes fixed on the floor.
+"Can't have you outrank me," he sighed. "But first you'll command your cephalon to cut off life support to the Grineer in the Runner's airlock."
+I looked up at him. "I can't do that."
+Alarez smiled. "Of course you can."
+"I wish I could, but I already told the cephalon to open the airlock. They're on your ship." Confusion washed over Alarez's face just as a drop of blood fell from the hatch above and splashed on the Dax's helmet. His eyes darted up just in time to see Veytok's massive frame fall upon him, driving a machete deep into the Dax's chest. With that, the doors opened behind me as more Grineer flooded the tiny room. The guardsmen stood no chance.
+Alarez, the only one left alive, stood frozen. "Bilsa, what's going on?"
+"I warned you not to come," I said. "I told you they would kill you all."
+He was beside himself, "You're working with Grineer?"
+"Alarez, you were right. The System is a mess and I can't trust anyone, but these Grineer and I, we've come to an understanding." I smiled as I got to my feet. "But please, will you talk to me for just a while longer? These Grineer are so dull. Where are you from? I don't recognise your—"
+Veytok grabbed Alarez and tore his throat open, his red splattering my robes.
+"I told you I wanted him alive!" I shouted.
+"No trust," he said. His words sounded clearer every day. "We have the Frigate and the lab. Don't need him."
+"Do you always have to kill them before I can visit?" I said.
+Veytok grunted. "You are Grineer now, don't need visits."</p>
+        </div>
+    </section>
+
+    <section class="imprint">
+        <button class="imprint-button" type="button" aria-expanded="false" aria-controls="imprint-6" onclick="toggleImprint(this)">
+            <span>6. Lancer</span>
+            <span class="toggle-symbol">+</span>
+        </button>
+        <div class="imprint-content" id="imprint-6">
+            <p class="passage">The smashing is like music.
+PFFT, CRACK.
+My machine's striking pin rams the rock in front of me. A rush of bits crumbles from the rock and rolls over my boots. I see glinting in the rubble. I like it when it shines; it means I'm serving well. I thrust my shovel in, its plasma blades slicing clean through the chunks. It vibrates, so I switch on its inducer and the shiny bits clink on. Then I throw them into the sorter and jump out of the way of the next strike.
+PFFT, CRACK.
+More rumble, more shining. This is a good day. All of us, shovelling to the beat of the machines. Only a fraction of a cycle left on this rock, days really. I keep thinking: What will the next rock be like?
+PFFT, CRACK.
+The Outer Terminus has many rocks. Good rocks, I like it here. I shovel again and jump out of the way of the next smash.
+PFFT….
+The machines stop and it goes dark. Why have the machines stopped? Why is it dark? A voice reverberates all around, a thundering whisper:
+"MERELY FRAMED."
+The rock shakes like never before. Gravel rains in the darkness. I choke on the dust and struggle to find my balance on the shifting ground. The voice booms again. It is in the air. It is in the rock. It is in my head.
+"MERELY SHAPED THEY ARE CALLED."
+My ears ring like sirens. Then I hear new smashing, it is coming from down the tunnel. Not rhythmic smashing, not the music, something else and I do not like it. There are other voices too, screaming voices. They make me think of the way we scream when there is an accident, when one of us gets caught in a sorter. There is much screaming. The voice grows louder.
+"THERE WAS NO THEIR MOTHER."
+Out of the darkness a new light rounds the distant corner and shines down the tunnel. Our lights do not look like this. It is a part of something big and it moves wildly. Running? Yes, running through our line. Our machines fly up and then slam back down. Miners are smashed and crushed into tiny pieces. I am scared.
+I am angry. Why is this happening? Is that an Orokin? No, we serve the Orokin. The Orokin are golden. This is something else. I pick up my shovel.
+"THERE WAS NO THEIR FATHER."
+The light is close now. I find my footing and grip my shovel like I do when I chip ore. The light sends a machine flying at me. I jump but I am too slow. It crashes into my chest and pins my legs to the floor. I try to breathe but I cannot breathe. I look up and the light charges toward me. I raise my shovel just before it tramples into me. There's a clink. The light catches itself on my shovel's blade, forcing the shovel's butt deep into the hard ground. The light explodes under its own force. All is black.
+For a moment there is silence. I pull on the shovel but it is wedged between the ground and that thing. Then, the shovel pulses like it does when I strike a shiny chunk of ore. Without thinking, I flick on the shovel's inducer. The voice screams. Everything shakes. I like hearing this scream, I do not know why. I use everything I have left to force the shovel in deeper. The thing reels back. I can feel it running. It is running away.
+Everything goes quiet again, so I close my eyes.
+***
+"Over here. I found one." A wave of pain rushes through my chest. My eyes dart open. There's a light; I try to get out of the way but I cannot move. The light shouts, "Hurry, he's not going to last very long."
+I try to talk, but a new voice speaks instead, "Doesn't matter; if he can survive that, then they want his sample for the next batch."
+They are lifting me onto something. I catch glimpses of shimmering gold.
+"This is a bad idea. I mean, would you trust a Grineer soldier?" The figure presses something into my arm and I want to sleep again.
+The new voice laughs. "Do we have any other choice?"</p>
+        </div>
+    </section>
+
+    <section class="imprint">
+        <button class="imprint-button" type="button" aria-expanded="false" aria-controls="imprint-7" onclick="toggleImprint(this)">
+            <span>7. Runner</span>
+            <span class="toggle-symbol">+</span>
+        </button>
+        <div class="imprint-content" id="imprint-7">
+            <p class="passage">"First, my crew were torn down and consumed. Then my segments were ripped out and crushed. Now I lay blind, but feel its growth through each failed system. And with nothing but time remaining, Jordas is forced to wonder: will its complete infiltration bring some vicious mercy, or a new nightmare?"
+
+—Jordas, Ship Cephalon, 3rd Class Frigate</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>The Lorak Codex</p>
+</footer>
+
+<script>
+    function toggleImprint(button) {
+        const contentId = button.getAttribute("aria-controls");
+        const content = document.getElementById(contentId);
+        const symbol = button.querySelector(".toggle-symbol");
+        const isOpen = button.getAttribute("aria-expanded") === "true";
+
+        button.setAttribute("aria-expanded", String(!isOpen));
+        content.classList.toggle("open", !isOpen);
+        symbol.textContent = isOpen ? "+" : "−";
+    }
+</script>
+
+</body>
+</html>
