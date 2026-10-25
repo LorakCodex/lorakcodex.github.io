@@ -7,12 +7,16 @@
     <title>The Vitruvian — The Lorak Codex</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             background: #0b0b0b;
-            color: #f0f0f0;
+            color: #e0e0e0;
             font-family: Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         header {
@@ -22,16 +26,16 @@
             border-bottom: 2px solid #d4af37;
         }
 
-        h1 {
+        header h1 {
             color: #d4af37;
             letter-spacing: 3px;
             margin: 0;
         }
 
         main {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 0 15px;
         }
 
         .back-link {
@@ -46,73 +50,64 @@
         }
 
         .description {
-            background: #171717;
+            background: #111;
             border: 1px solid #d4af37;
             border-radius: 8px;
             padding: 16px;
-            margin-bottom: 24px;
+            margin-bottom: 22px;
         }
 
-        .record-button {
+        .entry-section {
+            margin-bottom: 12px;
+        }
+
+        .entry-button {
             display: block;
             width: 100%;
-            box-sizing: border-box;
             padding: 14px 18px;
-            margin: 12px 0 0;
+            border: 1px solid #d4af37;
+            border-radius: 8px;
             background: #d4af37;
-            color: #111;
-            border: none;
-            border-radius: 7px;
+            color: #0b0b0b;
+            text-align: left;
             font-size: 16px;
             font-weight: bold;
-            text-align: left;
             cursor: pointer;
         }
 
-        .record-button:hover {
-            background: #e5c65b;
+        .entry-button:hover {
+            background: #e6c75a;
         }
 
-        .record-button::after {
-            content: "+";
+        .indicator {
             float: right;
-            font-size: 20px;
-            line-height: 1;
+            margin-left: 12px;
         }
 
-        .record-button[aria-expanded="true"]::after {
-            content: "−";
-        }
-
-        .record-content {
+        .entry-content {
             display: none;
+            padding: 18px;
+            margin-top: 8px;
             background: #111;
             border: 1px solid #d4af37;
-            border-top: none;
-            border-radius: 0 0 7px 7px;
-            padding: 16px;
+            border-radius: 8px;
+            overflow-wrap: anywhere;
         }
 
-        .record-content.open {
+        .entry-content.open {
             display: block;
         }
 
-        .record-content h2 {
-            color: #d4af37;
-            margin-top: 0;
-        }
-
-        .placeholder {
-            color: #c9c9c9;
+        .entry-text {
+            white-space: pre-wrap;
         }
 
         footer {
             margin-top: 35px;
-            padding: 18px;
+            padding: 20px 15px;
             text-align: center;
-            background: #111;
-            border-top: 1px solid #d4af37;
-            color: #999;
+            color: #888;
+            border-top: 1px solid #333;
         }
     </style>
 </head>
@@ -127,68 +122,65 @@
     <a class="back-link" href="../archives.html">← Back to Archives</a>
 
     <div class="description">
-        <p>
-            The Vitruvian is an Orokin device encountered during The Sacrifice.
-            It contains recorded information that reveals more about the
-            creation of Warframes and the history behind them.
-        </p>
-        <p>
-            This archive preserves the Vitruvian's recorded lore separately
-            from the quest transcript, allowing its information to be
-            consulted independently.
-        </p>
+        The Vitruvian is an Orokin device encountered during The Sacrifice. Its recorded entries reveal the history of the Warframes, the Infestation, and the Tenno.
     </div>
 
-    <button class="record-button"
-        aria-expanded="false"
-        aria-controls="vitruvian-record-1"
-        onclick="toggleRecord(this, 'vitruvian-record-1')">
-        1. Initial Record
-    </button>
-    <div class="record-content" id="vitruvian-record-1">
-        <h2>Initial Record</h2>
-        <p class="placeholder">
-            Insert the corresponding original in-game Vitruvian text here.
-        </p>
+    <div class="entry-section">
+        <button class="entry-button" onclick="toggleEntry(this, 'entry1')" aria-expanded="false">
+            First Entry: Enemy
+            <span class="indicator">+</span>
+        </button>
+        <div class="entry-content" id="entry1">
+            <div class="entry-text">It is with the greatest of risk that I commit this recording. The codices within reveal the hidden weakness of your most feared enemy. My creations. My Frames of War.</div>
+        </div>
     </div>
 
-    <button class="record-button"
-        aria-expanded="false"
-        aria-controls="vitruvian-record-2"
-        onclick="toggleRecord(this, 'vitruvian-record-2')">
-        2. Warframe Creation
-    </button>
-    <div class="record-content" id="vitruvian-record-2">
-        <h2>Warframe Creation</h2>
-        <p class="placeholder">
-            Insert the corresponding original in-game Vitruvian text here.
-        </p>
+    <div class="entry-section">
+        <button class="entry-button" onclick="toggleEntry(this, 'entry2')" aria-expanded="false">
+            Second Entry: Blasphemy
+            <span class="indicator">+</span>
+        </button>
+        <div class="entry-content" id="entry2">
+            <div class="entry-text">What led us here? You did. You vile blasphemies. Machines... thinking... breeding... You were to bear us a new, promised land. But when you arrived at that distant world... you knew that in time, we would bring ruin to it as well. As we had to Earth. And so it was... we came to war.</div>
+        </div>
     </div>
 
-    <button class="record-button"
-        aria-expanded="false"
-        aria-controls="vitruvian-record-3"
-        onclick="toggleRecord(this, 'vitruvian-record-3')">
-        3. The Sacrifice
-    </button>
-    <div class="record-content" id="vitruvian-record-3">
-        <h2>The Sacrifice</h2>
-        <p class="placeholder">
-            Insert the corresponding original in-game Vitruvian text here.
-        </p>
+    <div class="entry-section">
+        <button class="entry-button" onclick="toggleEntry(this, 'entry3')" aria-expanded="false">
+            Third Entry: Warframes
+            <span class="indicator">+</span>
+        </button>
+        <div class="entry-content" id="entry3">
+            <div class="entry-text">Our hubris shone like a black star... for our technology, our war-machines were your kin. How easily you turned them against us. We were forced to older means. Not circuits, nor light... but flesh and disease. Our horrors past, our ravaged outer colonies... became gardens!
+
+We cultured the Infestation, conceiving of a hybrid. Transformed, but only just. The 'Helminth' was created, born to yield these new warriors, worthy of battle against you. The great and terrible Hunhow.
+
+We took our greatest, volunteers or not, and polluted them with these cultured reagents. They transformed. They became Infested...
+
+... but only just. Their skin blossomed into sword-steel. Their organs, interlinked with untold resilience. Yet their minds were free of the Infested madness. Or so we thought. We set them upon the battlefield, bio-drones under our command.
+
+The Warframes... All of them... failures. Surprised? They turned on us, just as you did. And so we had no choice but to commit them to grave. This is all you know, Hunhow, but there is a hidden half, a secret, that lies within a place forbidden to you and your kind. I speak of the Void.</div>
+        </div>
     </div>
 
-    <button class="record-button"
-        aria-expanded="false"
-        aria-controls="vitruvian-additional"
-        onclick="toggleRecord(this, 'vitruvian-additional')">
-        Additional Records
-    </button>
-    <div class="record-content" id="vitruvian-additional">
-        <h2>Additional Records</h2>
-        <p class="placeholder">
-            Add further Vitruvian entries here if needed.
-        </p>
+    <div class="entry-section">
+        <button class="entry-button" onclick="toggleEntry(this, 'entry4')" aria-expanded="false">
+            Fourth Entry: Tenno
+            <span class="indicator">+</span>
+        </button>
+        <div class="entry-content" id="entry4">
+            <div class="entry-text">Before the vain faith - our people held Dualism as truth. That all things were of two parts. Mind and body. Consciousness and matter. Of our world... and the Void. It was from there that our answer finally came.
+
+Distorted by vague horrors, we kept the Zariman survivors within a secret Reservoir. They were the missing half. Transference-linked: the Warframes, the body - and they, the mind. I give you now the coordinates and codes to this place. But do not underestimate these devils, Hunhow. They did what we could not. We had created monsters we couldn't--
+
+--We had created monsters we couldn't control. We drugged them, tortured them, eviscerated them... We brutalized their minds... but it did not work. Until they came.
+
+And it was not their force of will - not their Void devilry - not their alien darkness... it was something else.
+
+It was that somehow, from within the derelict-horror, they had learned a way to see inside an ugly, broken thing--
+
+And take away its pain.</div>
+        </div>
     </div>
 
 </main>
@@ -198,12 +190,13 @@
 </footer>
 
 <script>
-    function toggleRecord(button, recordId) {
-        const content = document.getElementById(recordId);
-        const isOpen = button.getAttribute("aria-expanded") === "true";
+    function toggleEntry(button, entryId) {
+        const content = document.getElementById(entryId);
+        const indicator = button.querySelector('.indicator');
+        const isOpen = content.classList.toggle('open');
 
-        button.setAttribute("aria-expanded", String(!isOpen));
-        content.classList.toggle("open", !isOpen);
+        button.setAttribute('aria-expanded', String(isOpen));
+        indicator.textContent = isOpen ? '−' : '+';
     }
 </script>
 
