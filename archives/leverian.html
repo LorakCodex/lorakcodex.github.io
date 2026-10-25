@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Leverian — The Lorak Codex</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #0b0b0b;
+            color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #111;
+            padding: 25px 15px;
+            text-align: center;
+            border-bottom: 2px solid #d4af37;
+        }
+
+        h1 {
+            color: #d4af37;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #d4af37;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .description {
+            background: #171717;
+            border: 1px solid #d4af37;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+
+        .exhibit-button {
+            display: block;
+            width: 100%;
+            padding: 14px 18px;
+            margin: 12px 0 0;
+            background: #d4af37;
+            color: #111;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .exhibit-button:hover {
+            background: #e5c65b;
+        }
+
+        .exhibit-button::after {
+            content: "+";
+            float: right;
+            font-size: 20px;
+            line-height: 1;
+        }
+
+        .exhibit-button[aria-expanded="true"]::after {
+            content: "−";
+        }
+
+        .exhibit-content {
+            display: none;
+            background: #111;
+            border: 1px solid #d4af37;
+            border-top: none;
+            border-radius: 0 0 7px 7px;
+            padding: 16px;
+        }
+
+        .exhibit-content.open {
+            display: block;
+        }
+
+        .exhibit-content h2 {
+            color: #d4af37;
+            margin-top: 0;
+        }
+
+        .placeholder {
+            color: #c9c9c9;
+        }
+
+        footer {
+            margin-top: 35px;
+            padding: 18px;
+            text-align: center;
+            background: #111;
+            border-top: 1px solid #d4af37;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>The Leverian</h1>
+</header>
+
+<main>
+    <a class="back-link" href="../archives.html">← Back to Archives</a>
+
+    <div class="description">
+        <p>
+            The Leverian is a museum of Warframe legends curated by Curator
+            Drusus Leverian. Each exhibit preserves an account of a Warframe's
+            history, deeds and the stories surrounding it. This archive collects
+            the Leverian exhibits and their associated lore.
+        </p>
+    </div>
+
+    <button class="exhibit-button"
+        aria-expanded="false"
+        aria-controls="exhibit-gauss"
+        onclick="toggleExhibit(this, 'exhibit-gauss')">
+        Gauss
+    </button>
+    <div class="exhibit-content" id="exhibit-gauss">
+        <h2>The Saint of Altra</h2>
+        <p class="placeholder">
+            Insert the original in-game Leverian text for Gauss here.
+        </p>
+    </div>
+
+    <button class="exhibit-button"
+        aria-expanded="false"
+        aria-controls="exhibit-grendel"
+        onclick="toggleExhibit(this, 'exhibit-grendel')">
+        Grendel
+    </button>
+    <div class="exhibit-content" id="exhibit-grendel">
+        <h2>Grendel Leverian</h2>
+        <p class="placeholder">
+            Insert the original in-game Leverian text for Grendel here.
+        </p>
+    </div>
+
+    <button class="exhibit-button"
+        aria-expanded="false"
+        aria-controls="exhibit-ivara"
+        onclick="toggleExhibit(this, 'exhibit-ivara')">
+        Ivara
+    </button>
+    <div class="exhibit-content" id="exhibit-ivara">
+        <h2>Ivara Leverian</h2>
+        <p class="placeholder">
+            Insert the original in-game Leverian text for Ivara here.
+        </p>
+    </div>
+
+    <button class="exhibit-button"
+        aria-expanded="false"
+        aria-controls="exhibit-nezha"
+        onclick="toggleExhibit(this, 'exhibit-nezha')">
+        Nezha
+    </button>
+    <div class="exhibit-content" id="exhibit-nezha">
+        <h2>Nezha Leverian</h2>
+        <p class="placeholder">
+            Insert the original in-game Leverian text for Nezha here.
+        </p>
+    </div>
+
+    <button class="exhibit-button"
+        aria-expanded="false"
+        aria-controls="exhibit-octavia"
+        onclick="toggleExhibit(this, 'exhibit-octavia')">
+        Octavia
+    </button>
+    <div class="exhibit-content" id="exhibit-octavia">
+        <h2>Octavia Leverian</h2>
+        <p class="placeholder">
+            Insert the relevant lore text for Octavia here.
+        </p>
+    </div>
+
+    <button class="exhibit-button"
+        aria-expanded="false"
+        aria-controls="exhibit-atlas"
+        onclick="toggleExhibit(this, 'exhibit-atlas')">
+        Atlas
+    </button>
+    <div class="exhibit-content" id="exhibit-atlas">
+        <h2>Atlas Leverian</h2>
+        <p class="placeholder">
+            Insert the original in-game Leverian text for Atlas here.
+        </p>
+    </div>
+
+    <button class="exhibit-button"
+        aria-expanded="false"
+        aria-controls="exhibit-nidus"
+        onclick="toggleExhibit(this, 'exhibit-nidus')">
+        Nidus
+    </button>
+    <div class="exhibit-content" id="exhibit-nidus">
+        <h2>Nidus Leverian</h2>
+        <p class="placeholder">
+            Insert the relevant lore text for Nidus here.
+        </p>
+    </div>
+
+    <button class="exhibit-button"
+        aria-expanded="false"
+        aria-controls="exhibit-baruuk"
+        onclick="toggleExhibit(this, 'exhibit-baruuk')">
+        Baruuk
+    </button>
+    <div class="exhibit-content" id="exhibit-baruuk">
+        <h2>Baruuk Leverian</h2>
+        <p class="placeholder">
+            Insert the relevant lore text for Baruuk here.
+        </p>
+    </div>
+
+    <button class="exhibit-button"
+        aria-expanded="false"
+        aria-controls="exhibit-titania"
+        onclick="toggleExhibit(this, 'exhibit-titania')">
+        Titania
+    </button>
+    <div class="exhibit-content" id="exhibit-titania">
+        <h2>Titania Leverian</h2>
+        <p class="placeholder">
+            Insert the relevant lore text for Titania here.
+        </p>
+    </div>
+
+    <button class="exhibit-button"
+        aria-expanded="false"
+        aria-controls="exhibit-dante"
+        onclick="toggleExhibit(this, 'exhibit-dante')">
+        Dante
+    </button>
+    <div class="exhibit-content" id="exhibit-dante">
+        <h2>Dante's Leverian</h2>
+        <p class="placeholder">
+            Insert the original in-game Leverian text for Dante here.
+        </p>
+    </div>
+
+    <button class="exhibit-button"
+        aria-expanded="false"
+        aria-controls="exhibit-additional"
+        onclick="toggleExhibit(this, 'exhibit-additional')">
+        Additional Exhibits
+    </button>
+    <div class="exhibit-content" id="exhibit-additional">
+        <h2>Additional Exhibits</h2>
+        <p class="placeholder">
+            Add further Leverian exhibits and their associated lore here.
+        </p>
+    </div>
+
+</main>
+
+<footer>
+    The Lorak Codex
+</footer>
+
+<script>
+    function toggleExhibit(button, exhibitId) {
+        const content = document.getElementById(exhibitId);
+        const isOpen = button.getAttribute("aria-expanded") === "true";
+
+        button.setAttribute("aria-expanded", String(!isOpen));
+        content.classList.toggle("open", !isOpen);
+    }
+</script>
+
+</body>
+</html>
