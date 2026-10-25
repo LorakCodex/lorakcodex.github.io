@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Vitruvian — The Lorak Codex</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #0b0b0b;
+            color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #111;
+            padding: 25px 15px;
+            text-align: center;
+            border-bottom: 2px solid #d4af37;
+        }
+
+        h1 {
+            color: #d4af37;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #d4af37;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .description {
+            background: #171717;
+            border: 1px solid #d4af37;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+
+        .record-button {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 14px 18px;
+            margin: 12px 0 0;
+            background: #d4af37;
+            color: #111;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .record-button:hover {
+            background: #e5c65b;
+        }
+
+        .record-button::after {
+            content: "+";
+            float: right;
+            font-size: 20px;
+            line-height: 1;
+        }
+
+        .record-button[aria-expanded="true"]::after {
+            content: "−";
+        }
+
+        .record-content {
+            display: none;
+            background: #111;
+            border: 1px solid #d4af37;
+            border-top: none;
+            border-radius: 0 0 7px 7px;
+            padding: 16px;
+        }
+
+        .record-content.open {
+            display: block;
+        }
+
+        .record-content h2 {
+            color: #d4af37;
+            margin-top: 0;
+        }
+
+        .placeholder {
+            color: #c9c9c9;
+        }
+
+        footer {
+            margin-top: 35px;
+            padding: 18px;
+            text-align: center;
+            background: #111;
+            border-top: 1px solid #d4af37;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>The Vitruvian</h1>
+</header>
+
+<main>
+    <a class="back-link" href="../archives.html">← Back to Archives</a>
+
+    <div class="description">
+        <p>
+            The Vitruvian is an Orokin device encountered during The Sacrifice.
+            It contains recorded information that reveals more about the
+            creation of Warframes and the history behind them.
+        </p>
+        <p>
+            This archive preserves the Vitruvian's recorded lore separately
+            from the quest transcript, allowing its information to be
+            consulted independently.
+        </p>
+    </div>
+
+    <button class="record-button"
+        aria-expanded="false"
+        aria-controls="vitruvian-record-1"
+        onclick="toggleRecord(this, 'vitruvian-record-1')">
+        1. Initial Record
+    </button>
+    <div class="record-content" id="vitruvian-record-1">
+        <h2>Initial Record</h2>
+        <p class="placeholder">
+            Insert the corresponding original in-game Vitruvian text here.
+        </p>
+    </div>
+
+    <button class="record-button"
+        aria-expanded="false"
+        aria-controls="vitruvian-record-2"
+        onclick="toggleRecord(this, 'vitruvian-record-2')">
+        2. Warframe Creation
+    </button>
+    <div class="record-content" id="vitruvian-record-2">
+        <h2>Warframe Creation</h2>
+        <p class="placeholder">
+            Insert the corresponding original in-game Vitruvian text here.
+        </p>
+    </div>
+
+    <button class="record-button"
+        aria-expanded="false"
+        aria-controls="vitruvian-record-3"
+        onclick="toggleRecord(this, 'vitruvian-record-3')">
+        3. The Sacrifice
+    </button>
+    <div class="record-content" id="vitruvian-record-3">
+        <h2>The Sacrifice</h2>
+        <p class="placeholder">
+            Insert the corresponding original in-game Vitruvian text here.
+        </p>
+    </div>
+
+    <button class="record-button"
+        aria-expanded="false"
+        aria-controls="vitruvian-additional"
+        onclick="toggleRecord(this, 'vitruvian-additional')">
+        Additional Records
+    </button>
+    <div class="record-content" id="vitruvian-additional">
+        <h2>Additional Records</h2>
+        <p class="placeholder">
+            Add further Vitruvian entries here if needed.
+        </p>
+    </div>
+
+</main>
+
+<footer>
+    The Lorak Codex
+</footer>
+
+<script>
+    function toggleRecord(button, recordId) {
+        const content = document.getElementById(recordId);
+        const isOpen = button.getAttribute("aria-expanded") === "true";
+
+        button.setAttribute("aria-expanded", String(!isOpen));
+        content.classList.toggle("open", !isOpen);
+    }
+</script>
+
+</body>
+</html>
