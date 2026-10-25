@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the Warframe Leverian entries in The Lorak Codex.">
-    <title>Leverian | The Lorak Codex</title>
-    <link rel="icon" type="image/png" href="/lorak-codex-favicon-48x48.png">
+    <meta name="description" content="The Dante Leverian dialogue, preserved in The Lorak Codex.">
+    <title>Dante Leverian | The Lorak Codex</title>
+    <link rel="icon" type="image/png" href="../lorak-codex-favicon-48x48.png">
 
     <style>
         * {
@@ -17,13 +17,13 @@
             background: #0b0b0b;
             color: #e0e0e0;
             font-family: Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         header {
             background: #111;
-            padding: 25px 15px;
             text-align: center;
+            padding: 25px 15px;
             border-bottom: 1px solid #d4af37;
         }
 
@@ -58,15 +58,21 @@
             color: #fff;
         }
 
-        nav a:focus-visible {
-            outline: 2px solid #fff;
-            outline-offset: 3px;
-        }
-
         main {
-            max-width: 1000px;
+            max-width: 950px;
             margin: 0 auto;
             padding: 25px 15px 40px;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #d4af37;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+        .back-link:hover {
+            color: #fff;
         }
 
         .intro {
@@ -82,48 +88,58 @@
             margin-top: 0;
         }
 
-        .entry-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
-            gap: 12px;
-            align-items: stretch;
+        .section {
+            margin-bottom: 14px;
         }
 
-        .entry-list a.entry-button,
-        .entry-list a.entry-button:link,
-        .entry-list a.entry-button:visited {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            min-height: 48px;
-            padding: 12px 16px;
+        .section summary {
+            cursor: pointer;
+            list-style: none;
+            background: #d4af37;
+            color: #0b0b0b;
             border: 1px solid #d4af37;
             border-radius: 8px;
-            background: #d4af37;
-            color: #111;
-            text-align: center;
-            text-decoration: none;
-            font-size: 16px;
+            padding: 12px 16px;
             font-weight: bold;
-            line-height: 1.35;
-            overflow-wrap: anywhere;
-            cursor: pointer;
-            -webkit-appearance: none;
-            appearance: none;
-            transition: background-color 0.15s ease, border-color 0.15s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .entry-list a.entry-button:hover,
-        .entry-list a.entry-button:active {
-            border-color: #f0d46b;
-            background: #f0d46b;
-            color: #111;
+        .section summary::-webkit-details-marker {
+            display: none;
         }
 
-        .entry-list a.entry-button:focus-visible {
-            outline: 2px solid #fff;
-            outline-offset: 3px;
+        .section summary::after {
+            content: "+";
+            font-size: 20px;
+            line-height: 1;
+            margin-left: 12px;
+            flex-shrink: 0;
+        }
+
+        .section[open] summary {
+            border-radius: 8px 8px 0 0;
+        }
+
+        .section[open] summary::after {
+            content: "−";
+        }
+
+        .dialogue {
+            border: 1px solid #d4af37;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            background: #111;
+            padding: 18px;
+        }
+
+        .dialogue p {
+            margin: 0 0 16px;
+        }
+
+        .dialogue p:last-child {
+            margin-bottom: 0;
         }
 
         footer {
@@ -144,44 +160,36 @@
 </header>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="quests.html">Quests</a>
-    <a href="transcripts.html">Transcripts</a>
-    <a href="extra-lore.html">Extra Lore</a>
-    <a href="factions.html">Factions</a>
-    <a href="timeline.html">Timeline</a>
-    <a href="operations.html">Operations</a>
-    <a href="args.html">ARGs</a>
+    <a href="../index.html">Home</a>
+    <a href="../quests.html">Quests</a>
+    <a href="../transcripts.html">Transcripts</a>
+    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="../factions.html">Factions</a>
+    <a href="../timeline.html">Timeline</a>
+    <a href="../operations.html">Operations</a>
+    <a href="../args.html">ARGs</a>
     <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
 </nav>
 
 <main>
+    <a class="back-link" href="../leverian.html">← Back to Leverian</a>
+
     <section class="intro">
-        <h2>The Leverian</h2>
+        <h2>Dante — Leverian</h2>
         <p>
-            Explore the Leverian entries and the stories behind these Warframes.
-            Each entry has its own page, keeping the collection organised as it grows.
+            The story of Dante, Drusus Leverian's friend, and the events
+            surrounding the fate of the Leverian.
         </p>
     </section>
 
-    <section class="entry-list" aria-label="Leverian entries">
-        <a class="entry-button" href="/leverian/ash.html">Ash</a>
-        <a class="entry-button" href="/leverian/atlas.html">Atlas</a>
-        <a class="entry-button" href="/leverian/dante.html">Dante</a>
-        <a class="entry-button" href="/leverian/gauss.html">Gauss</a>
-        <a class="entry-button" href="/leverian/grendel.html">Grendel</a>
-        <a class="entry-button" href="/leverian/ivara.html">Ivara</a>
-        <a class="entry-button" href="/leverian/lavos.html">Lavos</a>
-        <a class="entry-button" href="/leverian/nezha.html">Nezha</a>
-        <a class="entry-button" href="/leverian/nova.html">Nova</a>
-        <a class="entry-button" href="/leverian/styanax.html">Styanax</a>
-        <a class="entry-button" href="/leverian/voruna.html">Voruna</a>
-    </section>
-</main>
+    <details class="section">
+        <summary>1. Inbox Message</summary>
+        <div class="dialogue">
+            <p>I have made a tremendous mistake... Tenno. Please. The Leverian desperately needs your help. Come see me in DANTE'S LEVERIAN, as soon as possible.</p>
 
-<footer>
-    The Lorak Codex — A Book of Warframe Lore
-</footer>
+            <p>Drusus: "The Leverian... it was floundering, you understand? Going under! All that work I put into it, and so few visited, let alone donated. Oh, I don't mean you, of course. I know you're a friend to the Leverian. It just... wasn't enough. So when Parvos made me an offer... I thought, why not? Just let it go. Let it all go. I took the deal, Tenno. I shouldn't have, but I did. Oh, if only Dante were still around. Please, you must come see me."</p>
+        </div>
+    </details>
 
-</body>
-</html>
+    <details class="section">
+       
