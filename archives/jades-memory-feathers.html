@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jade's Memory Feathers - The Lorak Codex</title>
+    <style>
+        body {
+            background: #0b0b0b;
+            color: #ddd;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            background: #111;
+            padding: 20px;
+            border-bottom: 2px solid #d4af37;
+        }
+        h1 {
+            color: #d4af37;
+            letter-spacing: 3px;
+        }
+        a.back {
+            display: inline-block;
+            color: #d4af37;
+            text-decoration: none;
+            margin: 20px 0;
+        }
+        .description {
+            border: 1px solid #d4af37;
+            padding: 15px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .memory-button {
+            width: 100%;
+            background: #d4af37;
+            color: #0b0b0b;
+            border: none;
+            border-radius: 6px;
+            padding: 14px;
+            margin: 8px 0;
+            text-align: left;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .memory-button::after {
+            content: "+";
+            float: right;
+        }
+        .memory-button[aria-expanded="true"]::after {
+            content: "−";
+        }
+        .memory-content {
+            display: none;
+            border: 1px solid #d4af37;
+            padding: 15px;
+            margin-bottom: 12px;
+            line-height: 1.7;
+            white-space: pre-line;
+        }
+        .memory-content.open {
+            display: block;
+        }
+        .location {
+            color: #d4af37;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Jade's Memory Feathers</h1>
+</header>
+
+<main>
+    <a class="back" href="../extra-lore.html">← Back to Extra Lore</a>
+
+    <div class="description">
+        Seven memory feathers honouring Jade, discovered at Teshin's Retreat
+        in the Relays after completing the Jade Shadows quest. Each feather
+        preserves a memory from Jade's past.
+    </div>
+
+    <button class="memory-button" aria-expanded="false"
+        aria-controls="memory1" onclick="toggleMemory(this, 'memory1')">
+        Memory Feather 01
+    </button>
+    <div class="memory-content" id="memory1">
+        <p class="location">BEDSIDE. LAIR. URANUS.</p>
+        <p>[Insert the complete in-game text for Memory Feather 01.]</p>
+    </div>
+
+    <button class="memory-button" aria-expanded="false"
+        aria-controls="memory2" onclick="toggleMemory(this, 'memory2')">
+        Memory Feather 02
+    </button>
+    <div class="memory-content" id="memory2">
+        <p class="location">CREVASSE. LUA.</p>
+        <p>[Insert the complete in-game text for Memory Feather 02.]</p>
+    </div>
+
+    <button class="memory-button" aria-expanded="false"
+        aria-controls="memory3" onclick="toggleMemory(this, 'memory3')">
+        Memory Feather 03
+    </button>
+    <div class="memory-content" id="memory3">
+        <p class="location">HIBERNATION POD. JADE LIGHT EXECUTION CHAMBER. LUA.</p>
+        <p>[Insert the complete in-game text for Memory Feather 03.]</p>
+    </div>
+
+    <button class="memory-button" aria-expanded="false"
+        aria-controls="memory4" onclick="toggleMemory(this, 'memory4')">
+        Memory Feather 04
+    </button>
+    <div class="memory-content" id="memory4">
+        <p class="location">RUINS. OROKIN MANSION. VENUS.</p>
+        <p>[Insert the complete in-game text for Memory Feather 04.]</p>
+    </div>
+
+    <button class="memory-button" aria-expanded="false"
+        aria-controls="memory5" onclick="toggleMemory(this, 'memory5')">
+        Memory Feather 05
+    </button>
+    <div class="memory-content" id="memory5">
+        <p class="location">BATTLEFIELD. THARSIS.</p>
+        <p>[Insert the complete in-game text for Memory Feather 05.]</p>
+    </div>
+
+    <button class="memory-button" aria-expanded="false"
+        aria-controls="memory6" onclick="toggleMemory(this, 'memory6')">
+        Memory Feather 06
+    </button>
+    <div class="memory-content" id="memory6">
+        <p class="location">WRECKAGE. PLUTO TERMINUS.</p>
+        <p>[Insert the complete in-game text for Memory Feather 06.]</p>
+    </div>
+
+    <button class="memory-button" aria-expanded="false"
+        aria-controls="memory7" onclick="toggleMemory(this, 'memory7')">
+        Memory Feather 07
+    </button>
+    <div class="memory-content" id="memory7">
+        <p class="location">URANUS. TOMB. THE SENTIENT.</p>
+        <p>[Insert the complete in-game text for Memory Feather 07.]</p>
+    </div>
+</main>
+
+<script>
+function toggleMemory(button, id) {
+    const content = document.getElementById(id);
+    const isOpen = content.classList.toggle('open');
+    button.setAttribute('aria-expanded', isOpen);
+}
+</script>
+</body>
+</html>
