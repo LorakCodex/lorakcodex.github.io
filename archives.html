@@ -4,66 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Archives - The Lorak Codex</title>
+    <title>Archives — The Lorak Codex</title>
+
     <style>
         body {
-            background: #0b0b0b;
-            color: #ddd;
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            background: #0b0b0b;
+            color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
         }
 
         header {
-            text-align: center;
             background: #111;
-            padding: 20px;
+            padding: 25px 15px;
+            text-align: center;
             border-bottom: 2px solid #d4af37;
         }
 
         h1 {
             color: #d4af37;
             letter-spacing: 3px;
+            margin: 0;
         }
 
         main {
             max-width: 900px;
             margin: 0 auto;
+            padding: 20px;
         }
 
-        .back {
+        .back-link {
             display: inline-block;
             color: #d4af37;
             text-decoration: none;
-            margin: 20px 0;
+            margin-bottom: 20px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
         }
 
         .description {
+            background: #171717;
             border: 1px solid #d4af37;
-            padding: 15px;
-            margin-bottom: 20px;
-            line-height: 1.6;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 24px;
         }
 
         .archive-button {
             display: block;
             width: 100%;
             box-sizing: border-box;
+            padding: 14px 18px;
+            margin: 12px 0 0;
             background: #d4af37;
-            color: #0b0b0b;
-            text-decoration: none;
-            border-radius: 6px;
-            padding: 14px;
-            margin: 8px 0;
+            color: #111;
+            border: none;
+            border-radius: 7px;
             font-size: 16px;
             font-weight: bold;
+            text-align: left;
+            text-decoration: none;
         }
 
         .archive-button:hover {
-            background: #e6c65c;
+            background: #e5c65b;
+        }
+
+        footer {
+            margin-top: 35px;
+            padding: 18px;
+            text-align: center;
+            background: #111;
+            border-top: 1px solid #d4af37;
+            color: #999;
         }
     </style>
 </head>
+
 <body>
 
 <header>
@@ -71,11 +91,14 @@
 </header>
 
 <main>
-    <a class="back" href="extra-lore.html">← Back to Extra Lore</a>
+    <a class="back-link" href="extra-lore.html">← Back to Extra Lore</a>
 
     <div class="description">
-        A collection of archived records, historical accounts, lore documents
-        and other discoveries from across the Origin System.
+        <p>
+            Welcome to the Archives of The Lorak Codex. This collection
+            preserves Warframe's historical records, recovered documents,
+            ancient texts and other sources of lore.
+        </p>
     </div>
 
     <a class="archive-button" href="archives/excalibur-prime.html">
@@ -126,7 +149,15 @@
         12. The Leverian
     </a>
 
+    <a class="archive-button" href="archives/vitruvian.html">
+        13. The Vitruvian
+    </a>
+
 </main>
+
+<footer>
+    The Lorak Codex
+</footer>
 
 </body>
 </html>
