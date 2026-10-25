@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epoch Operation: Taubound - Operations - The Lorak Codex</title>
+
+    <style>
+        body {
+            background-color: #0b0b0b;
+            color: #ddd;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #d4af37;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: #d4af37;
+            margin: 0 8px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #d4af37;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .mission-button {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #d4af37;
+            color: #111;
+            border: none;
+            border-radius: 4px;
+            padding: 14px 15px;
+            margin-top: 10px;
+            text-align: left;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .mission-button:hover {
+            background-color: #c5a02e;
+        }
+
+        .content {
+            display: none;
+            padding: 10px 0;
+        }
+
+        .content.show {
+            display: block;
+        }
+
+        .section-heading {
+            color: #d4af37;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .text {
+            background-color: #111;
+            border-left: 2px solid #d4af37;
+            padding: 15px;
+            margin: 10px 0;
+            white-space: pre-line;
+            line-height: 2.2;
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            background-color: #111;
+            color: #888;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>THE LORAK CODEX</h1>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../quests.html">Quests</a>
+        <a href="../transcripts.html">Transcripts</a>
+        <a href="../extra-lore.html">Extra Lore</a>
+        <a href="../factions.html">Factions</a>
+        <a href="../timeline.html">Timeline</a>
+        <a href="../operations.html">Operations</a>
+        <a href="../args.html">ARGs</a>
+        <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <a class="back-link" href="../operations.html">← Back to Operations</a>
+
+    <h2 style="color: #d4af37;">Epoch Operation: Taubound</h2>
+
+    <button class="mission-button" onclick="toggleContent(this)">
+        Inbox Message
+    </button>
+    <div class="content">
+        <div class="section-heading">The Fate Of All Flesh</div>
+        <div class="text">Tenno. We must work to keep Eris clear of Infested so that Praghasa may feed.
+
+If you harvest any viable Moonflesh from Eris, take it to Mother. She will need them.
+
+With what I am asking of her, we must be certain that this succeeds.</div>
+    </div>
+
+    <button class="mission-button" onclick="toggleContent(this)">
+        Praghasa Login Messages
+    </button>
+    <div class="content">
+    </div>
+
+    <button class="mission-button" onclick="toggleContent(this)">
+        Operation Synopsis
+    </button>
+    <div class="content">
+        <div class="text">To help establish a path to Tau, the Lotus enlists the help of Praghasa. In order for this to work, Praghasa needs to feed, but to do so without risking the destruction of the balance, the flesh she consumes must be regenerative.
+
+The Tenno were then tasked with collecting Moonflesh from Eris. Loid aided this effort by sending in a Vessel for the Tenno to face the Infested on the surface of Eris, providing Praghasa with her first bit of Moonflesh and allowing the Operation to begin.</div>
+    </div>
+
+    <button class="mission-button" onclick="toggleContent(this)">
+        Operation Mission
+    </button>
+    <div class="content">
+        <div class="text">With Tau in sight, Operation Taubound tasks you with acquiring regenerative Moonflesh from Eris units in regular Eris missions or by completing the Alerts that appear. The Moonflesh is then fed to Praghasa so that Praghasa can help make the path to Tau clearer.</div>
+    </div>
+
+    <button class="mission-button" onclick="toggleContent(this)">
+        Operation End
+    </button>
+    <div class="content">
+    </div>
+
+</div>
+
+<footer>
+    The Lorak Codex
+</footer>
+
+<script>
+    function toggleContent(button) {
+        button.classList.toggle("active");
+
+        const content = button.nextElementSibling;
+        content.classList.toggle("show");
+    }
+</script>
+
+</body>
+</html>
