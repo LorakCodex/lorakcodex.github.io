@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Tenets - The Lorak Codex</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #111;
+    padding: 25px 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    color: #d4af37;
+    letter-spacing: 3px;
+    margin: 0;
+    font-size: 28px;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 15px 40px;
+}
+
+h2 {
+    color: #d4af37;
+    margin-top: 0;
+}
+
+.back {
+    display: block;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+.description {
+    line-height: 1.6;
+    border: 1px solid #d4af37;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 25px;
+}
+
+.fragment {
+    margin-top: 10px;
+}
+
+.fragment-button {
+    display: block;
+    width: 100%;
+    background: #d4af37;
+    color: #0b0b0b;
+    border: none;
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.fragment-button:hover {
+    background: #e5c451;
+}
+
+.fragment-button::after {
+    content: "+";
+    float: right;
+    font-size: 18px;
+}
+
+.fragment-button.active::after {
+    content: "−";
+}
+
+.fragment-content {
+    display: none;
+    background: #111;
+    border: 1px solid #66551d;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.fragment-content p {
+    margin: 0 0 14px 0;
+}
+
+.fragment-content p:last-child {
+    margin-bottom: 0;
+}
+
+.scan-count {
+    color: #d4af37;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #66551d;
+    color: #777;
+    font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>THE LORAK CODEX</h1>
+</header>
+
+<main>
+    <a class="back" href="fragments.html">← Back to Fragments</a>
+
+    <h2>The Tenets</h2>
+
+    <p class="description">
+        The Tenets tell the story of Parvos Granum and the beginnings of the Corpus. Each fragment reveals another part of his life and the philosophy that shaped his empire.
+    </p>
+
+    <div class="fragment">
+        <button class="fragment-button" onclick="toggleFragment(this)" aria-expanded="false">
+            1. Humble Beginnings
+        </button>
+        <div class="fragment-content">
+            <div class="scan-count">Scans required: 1</div>
+
+            <p>Day after day we toiled, my father, my brother Cladius, pulling grains for the Orokin takers in the city, as our kind had done for generations. We were young, but the work made us old. Our backs ached, our hands bled, the sun tortured our skin. In the worst times, it felt as though death would claim us before the day was through. It was on one such afternoon that I was fated to first hear that glorious sound. A whisper I strained to hear. In a tongue not of man, but of something… else. Something… grander. A language I understood instinctively. The language of Desire. It said:</p>
+
+            <p>"Fear not poverty. Poverty is the bitter soil in which sweet desire blossoms."</p>
+        </div>
+    </div>
+
+    <div class="fragment">
+        <button class="fragment-button" onclick="toggleFragment(this)" aria-expanded="false">
+            2. To the City
+        </button>
+        <div class="fragment-content">
+            <div class="scan-count">Scans required: 1</div>
+
+            <p>The more we toiled, the more impatient I grew. A fire raged inside me. I wanted more. I deserved more.</p>
+
+            <p>But how? The whisper washed over me, louder now than before:</p>
+
+            <p>"Fortune despises the idle man. Stasis is death. Always move forward."</p>
+
+            <p>And so, with only the whisper to guide me, I straightened my back, wiped the dirt off my hands, and left.</p>
+        </div>
+    </div>
+
+    <div class="fragment">
+        <button class="fragment-button" onclick="toggleFragment(this)" aria-expanded="false">
+            3. What Right Do They Have?
+        </button>
+        <div class="fragment-content">
+            <div class="scan-count">Scans required: 1</div>
+
+            <p>The city. Those towers. I was struck with awe. What glorious totems of greed those Orokin had built. Built on our backs. Their wealth was my wealth. I was starved, while our masters were fat and full and warm. They flaunted their wealth, left it sitting there for the taking: priceless gemstones decorating the tower gates. I was afraid, but the whisper gave me courage.</p>
+
+            <p>"Be envious. Covet. Then, take what you desire."</p>
+
+            <p>So, that is what I did.</p>
+        </div>
+    </div>
+
+    <div class="fragment">
+        <button class="fragment-button" onclick="toggleFragment(this)" aria-expanded="false">
+            4. The Taking
+        </button>
+        <div class="fragment-content">
+            <div class="scan-count">Scans required: 1</div>
+
+            <p>I was brash and bold. I struck at midday. I cried, "I take what I am owed!" as I ripped jewels from their tower gates and ran.</p>
+
+            <p>I did not get far.</p>
+
+            <p>For my blasphemy they dragged me to the town square, throwing me to the ground in front of the sneering crowd of Orokin servants that mingled there.</p>
+
+            <p>The guards held aloft my satchel, containing the proof of my crime. I grasped at it, determined to reclaim what was mine. He snatched my arm, held me high and… with a dash of his plasma dagger… severed my left hand. The crowd jeered. Yet, I felt no pain, only clarity, for the whisper was with me again. It said:</p>
+
+            <p>"Deception is the sword of wisdom. Be wise."</p>
+
+            <p>They took my hand that day, but they did not take what I had earned.</p>
+        </div>
+    </div>
+
+    <div class="fragment">
+        <button class="fragment-button" onclick="toggleFragment(this)" aria-expanded="false">
+            5. Crawling Back
+        </button>
+        <div class="fragment-content">
+            <div class="scan-count">Scans required: 1</div>
+
+            <p>I crawled back to the fields, where I collapsed before my father and my brother. I was so near death, they read my Nava rites. My brother Cladius bemoaned me as a fool. How could I have abandoned them? Guilt washed over me. I asked the whisper, was he right? And the whisper replied:</p>
+
+            <p>"Beware the idle man who would lull you back to idleness."</p>
+
+            <p>Hearing this, I felt the life force stream back into me. I sat up. They protested. I stood and they tried to pull me down. I was too strong. There was now a fire in my chest that would not be denied.</p>
+        </div>
+    </div>
+
+    <div class="fragment">
+        <button class="fragment-button" onclick="toggleFragment(this)" aria-expanded="false">
+            6. The Gemstone
+        </button>
+        <div class="fragment-content">
+            <div class="scan-count">Scans required: 1</div>
+
+            <p>Moving swiftly away from sickbed to field, I fell to my knees beneath that relentless sun, my chest afire. As it moved to my throat, robbing me of breath, certain death had finally found me, I made one last heave.</p>
+
+            <p>I spat it out: a molten red gemstone of the purest, clearest rubedo.</p>
+
+            <p>Swallowing that stone would have killed a man of weaker will, but not a man sustained by the power of Desire.</p>
+
+            <p>It was worth more than my family had earned in ten generations. It would fetch enough to feed us all for a lifetime. As I stared into its brilliant facets, a familiar voice rushed through me.</p>
+
+            <p>"Contentment is idleness. Desire inspires action. Nurture all desires."</p>
+
+            <p>And so, with my brother and father pleading for my return, I once again left for the city.</p>
+        </div>
+    </div>
+
+    <div class="fragment">
+        <button class="fragment-button" onclick="toggleFragment(this)" aria-expanded="false">
+            7. A New Beginning
+        </button>
+        <div class="fragment-content">
+            <div class="scan-count">Scans required: 1</div>
+
+            <p>In desire I was wealthy, but in strategy I was empty-handed. I listened for the whisper. It said:</p>
+
+            <p>"Money begets money."</p>
+
+            <p>With my jewel as collateral, I secured a loan. And with that sum, I gave my own loans. To poor men, like me, who desired more. With each loan, I dispensed truths I had learned from the whisper. Those men went out into the world, and they too made loans, and their money too begat money. Word spread fast. Men flocked to hear me. I told them of the evils of contentment and idleness. I taught them the gift of Desire.</p>
+        </div>
+    </div>
+
+    <div class="fragment">
+        <button class="fragment-button" onclick="toggleFragment(this)" aria-expanded="false">
+            8. Giving Back
+        </button>
+        <div class="fragment-content">
+            <div class="scan-count">Scans required: 1</div>
+
+            <p>In time, my money multiplied into multitudes. With this wealth, I made my body whole again.</p>
+
+            <p>Then news came: Father had collapsed in the field. I rushed back to my family's humble farm to be by his side, but his death was sudden. Cladius mourned. But I was committed to ending the brutal labour my family and people had endured for generations. The whisper approved. It said:</p>
+
+            <p>"Charity is power. More charity is more power."</p>
+        </div>
+    </div>
+
+    <div class="fragment">
+        <button class="fragment-button" onclick="toggleFragment(this)" aria-expanded="false">
+            9. Bury the Past
+        </button>
+        <div class="fragment-content">
+            <div class="scan-count">Scans required: 1</div>
+
+            <p>Cladius begged me to stop my mega-dozers. "If you build a city on these fields, what will we eat?" To which I replied, "Just as I consumed the gemstone that fed my fortune, our people will eat the wealth I have bestowed upon them."</p>
+
+            <p>"What of our home," he cried, "our traditions?" I pondered this until the whisper gave me the words:</p>
+
+            <p>"Shun sentimentality. It is a weakness that binds the idle man."</p>
+        </div>
+    </div>
+
+    <div class="fragment">
+        <button class="fragment-button" onclick="toggleFragment(this)" aria-expanded="false">
+            10. A New Empire
+        </button>
+        <div class="fragment-content">
+            <div class="scan-count">Scans required: 1</div>
+
+            <p>I believe my father would have smiled with pride as I smashed my family home into the dirt. It saddens me that Father did not live to see the glory of Corposium, the city I erected upon our meagre land. Men of Desire will always be outnumbered by idle men, men of fear. But small men can never hold back men of Strength, and Desire.</p>
+
+            <p>"Fulfil desire, and others will follow."</p>
+        </div>
+    </div>
+
+    <div class="fragment">
+        <button class="fragment-button" onclick="toggleFragment(this)" aria-expanded="false">
+            11. We Are Corpus
+        </button>
+        <div class="fragment-content">
+            <div class="scan-count">Scans required: 1</div>
+
+            <p>My gift to the future is an idea: an idea that wealth need not settle as a crust upon the upper echelons of the populace. No. Any poor grain farmer can, should he feed his Desire and apply his wisdom, take fortune for himself. The more, the better. And, when men of fortune come together under great leadership, their potential is exponential.</p>
+
+            <p>Just as my money replaced what the Orokin took from me and made my body whole again, our collective Desire will create a new body. A body forged of fortune and unencumbered by idleness or sentimentality.</p>
+
+            <p>"Ours is the grasping golden hand. We are desire. We are Corpus."</p>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    The Lorak Codex
+</footer>
+
+<script>
+function toggleFragment(button) {
+    const content = button.nextElementSibling;
+    const isOpen = content.style.display === "block";
+
+    content.style.display = isOpen ? "none" : "block";
+    button.classList.toggle("active", !isOpen);
+    button.setAttribute("aria-expanded", String(!isOpen));
+}
+</script>
+
+</body>
+</html>
