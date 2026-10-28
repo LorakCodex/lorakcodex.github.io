@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,7 @@
 
 body {
     margin: 0;
-    padding: 20px;
+    padding: 0;
     background: #0b0b0b;
     color: #ddd;
     font-family: Arial, sans-serif;
@@ -20,10 +21,10 @@ body {
 }
 
 header {
+    background: #111;
     text-align: center;
-    padding: 15px 0;
-    border-bottom: 2px solid #d4af37;
-    margin-bottom: 25px;
+    padding: 25px 15px;
+    border-bottom: 1px solid #333;
 }
 
 header h1 {
@@ -37,9 +38,30 @@ header h1 {
     letter-spacing: 2px;
 }
 
+nav {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #292929;
+}
+
+nav a {
+    color: #d4af37;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #f0d778;
+}
+
 main {
     max-width: 900px;
     margin: auto;
+    padding: 30px 20px;
 }
 
 .back {
@@ -113,9 +135,19 @@ footer {
     color: #d4af37;
     border-top: 1px solid #d4af37;
     margin-top: 40px;
-    padding: 20px 0;
+    padding: 20px;
     letter-spacing: 3px;
     font-size: 12px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        gap: 12px 18px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
 }
 </style>
 </head>
@@ -127,9 +159,21 @@ footer {
     <div class="subtitle">FRAGMENT LORE</div>
 </header>
 
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../quests.html">Quests</a>
+    <a href="../transcripts.html">Transcripts</a>
+    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="../factions.html">Factions</a>
+    <a href="../timeline.html">Timeline</a>
+    <a href="../operations.html">Operations</a>
+    <a href="../args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
+</nav>
+
 <main>
 
-<a class="back" href="fragments.html">← Back to Fragments</a>
+<a class="back" href="../fragments.html">← Back to Fragments</a>
 
 <h2>THE TALE OF TWO SISTERS</h2>
 
