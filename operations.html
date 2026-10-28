@@ -1,250 +1,165 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Operations - The Lorak Codex</title>
+    <title>Extra Lore | The Lorak Codex</title>
+    <meta name="description" content="Explore Warframe extra lore on The Lorak Codex, including fragments, tablets, archives and interviews revealing the history and mysteries of the Origin System.">
 
-<style>
-* {
-    box-sizing: border-box;
-}
+    <style>
+        body {
+            margin: 0;
+            background: #0b0b0b;
+            color: #e6e6e6;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-body {
-    margin: 0;
-    background: #0b0b0b;
-    color: #ddd;
-    font-family: Arial, sans-serif;
-}
+        header {
+            background: #111;
+            border-bottom: 1px solid #333;
+            padding: 30px 20px;
+            text-align: center;
+        }
 
-header {
-    background: #111;
-    padding: 25px;
-    text-align: center;
-    border-bottom: 1px solid #333;
-}
+        header h1 {
+            margin: 0;
+            color: #d4af37;
+            font-size: 32px;
+            letter-spacing: 3px;
+        }
 
-header h1 {
-    color: #d4af37;
-    letter-spacing: 3px;
-}
+        header p {
+            margin-top: 10px;
+            color: #999;
+            font-size: 14px;
+        }
 
-nav {
-    line-height: 2;
-}
+        nav {
+            background: #151515;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 15px;
+            border-bottom: 1px solid #292929;
+        }
 
-nav a {
-    color: #d4af37;
-    text-decoration: none;
-    margin: 0 10px;
-}
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+        }
 
-nav a:hover {
-    text-decoration: underline;
-}
+        nav a:hover {
+            color: #d4af37;
+        }
 
-.container {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 0 15px;
-}
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 50px 20px;
+        }
 
-.back {
-    display: block;
-    color: #d4af37;
-    font-weight: bold;
-    text-decoration: none;
-    margin-bottom: 20px;
-}
+        .back {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #d4af37;
+            text-decoration: none;
+            font-size: 14px;
+        }
 
-.page-title {
-    color: #d4af37;
-    font-size: 26px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
+        .back:hover {
+            text-decoration: underline;
+        }
 
-.operation-button {
-    display: block;
-    width: 100%;
-    background: #d4af37;
-    color: #0b0b0b;
-    border: none;
-    padding: 14px 15px;
-    margin-top: 10px;
-    text-align: left;
-    font-size: 17px;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-    border-radius: 4px;
-}
+        h2 {
+            color: #d4af37;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
 
-.operation-button:hover {
-    background: #e5c34e;
-}
+        .intro {
+            color: #aaa;
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
 
-footer {
-    text-align: center;
-    padding: 30px;
-    color: #777;
-    border-top: 1px solid #333;
-    margin-top: 40px;
-}
-</style>
+        .lore-button {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            background: #d4af37;
+            color: #0b0b0b;
+            text-decoration: none;
+            padding: 15px;
+            margin-top: 12px;
+            border-radius: 4px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .lore-button:hover {
+            background: #d4af37;
+            color: #0b0b0b;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid #292929;
+            color: #666;
+            font-size: 13px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-    <h1>The Lorak Codex</h1>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="quests.html">Quests</a>
-        <a href="transcripts.html">Transcripts</a>
-        <a href="extra-lore.html">Extra Lore</a>
-        <a href="factions.html">Factions</a>
-        <a href="timeline.html">Timeline</a>
-        <a href="operations.html">Operations</a>
-        <a href="args.html">ARGs</a>
-        <a href="https://discord.gg/X3WsdC8jP4">Discord</a>
-    </nav>
+    <h1>THE LORAK CODEX</h1>
+    <p>Archives of history, transcripts and forgotten truths.</p>
 </header>
 
-<div class="container">
+<nav>
+    <a href="index.html">Home</a>
+    <a href="quests.html">Quests</a>
+    <a href="transcripts.html">Transcripts</a>
+    <a href="extra-lore.html">Extra Lore</a>
+    <a href="factions.html">Factions</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="operations.html">Operations</a>
+    <a href="args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank">Discord</a>
+</nav>
+
+<main>
 
     <a class="back" href="index.html">← Back to Home</a>
 
-    <div class="page-title">Operations</div>
+    <h2>Extra Lore</h2>
 
-    <a class="operation-button" href="operations/fusion-moa-event.html">
-        1. Fusion MOA Event
-    </a>
+    <p class="intro">
+        Explore lore that exists outside the main quest transcripts, including
+        fragments, tablets, written archives, and interviews revealing the
+        history and mysteries of the Origin System.
+    </p>
 
-    <a class="operation-button" href="operations/artifact-defense-event.html">
-        2. Artifact Defense Event
-    </a>
+    <a class="lore-button" href="fragments.html">Fragments</a>
 
-    <a class="operation-button" href="operations/informant-event.html">
-        3. Informant Event
-    </a>
+    <a class="lore-button" href="tablets.html">Tablets</a>
 
-    <a class="operation-button" href="operations/operation-sling-stone.html">
-        4. Operation: Sling-Stone
-    </a>
+    <a class="lore-button" href="archives.html">Archives</a>
 
-    <a class="operation-button" href="operations/operation-arid-fear.html">
-        5. Operation: Arid Fear
-    </a>
+    <a class="lore-button" href="interviews-with-lore.html">Interviews with Lore</a>
 
-    <a class="operation-button" href="operations/gradivus-dilemma.html">
-        6. The Gradivus Dilemma
-    </a>
-
-    <a class="operation-button" href="operations/operation-cicero-crisis.html">
-        7. Operation: Cicero Crisis
-    </a>
-
-    <a class="operation-button" href="operations/operation-oxium-espionage.html">
-        8. Operation: Oxium Espionage
-    </a>
-
-    <a class="operation-button" href="operations/operation-tethras-doom.html">
-        9. Operation: Tethra's Doom
-    </a>
-
-    <a class="operation-button" href="operations/operation-breeding-grounds.html">
-        10. Operation: Breeding Grounds
-    </a>
-
-    <a class="operation-button" href="operations/operation-cryotic-front.html">
-        11. Operation: Cryotic Front
-    </a>
-
-    <a class="operation-button" href="operations/operation-gate-crash.html">
-        12. Operation: Gate Crash
-    </a>
-
-    <a class="operation-button" href="operations/operation-mutalist-incursions.html">
-        13. Operation: Mutalist Incursions
-    </a>
-
-    <a class="operation-button" href="operations/operation-eyes-of-blight.html">
-        14. Operation: Eyes of Blight
-    </a>
-
-    <a class="operation-button" href="operations/false-profit.html">
-        15. False Profit
-    </a>
-
-    <a class="operation-button" href="operations/operation-tubemen-of-regor.html">
-        16. Operation: Tubemen of Regor
-    </a>
-
-    <a class="operation-button" href="operations/operation-shadow-debt.html">
-        17. Operation: Shadow Debt
-    </a>
-
-    <a class="operation-button" href="operations/operation-rathuum.html">
-        18. Operation: Rathuum
-    </a>
-
-    <a class="operation-button" href="operations/operation-pacifism-defect.html">
-        19. Operation: The Pacifism Defect
-    </a>
-
-    <a class="operation-button" href="operations/operation-ambulas-reborn.html">
-        20. Operation: Ambulas Reborn
-    </a>
-
-    <a class="operation-button" href="operations/operation-plague-star.html">
-        21. Operation: Plague Star
-    </a>
-
-    <a class="operation-button" href="operations/operation-buried-debts.html">
-        22. Operation: Buried Debts
-    </a>
-
-    <a class="operation-button" href="operations/operation-hostile-mergers.html">
-        23. Operation: Hostile Mergers
-    </a>
-
-    <a class="operation-button" href="operations/operation-scarlet-spear.html">
-        24. Operation: Scarlet Spear
-    </a>
-
-    <a class="operation-button" href="operations/operation-orphix-venom.html">
-        25. Operation: Orphix Venom
-    </a>
-
-    <a class="operation-button" href="operations/operation-gargoyles-cry.html">
-        26. Operation: Gargoyle's Cry
-    </a>
-
-    <a class="operation-button" href="operations/operation-belly-of-the-beast.html">
-        27. Operation: Belly of the Beast
-    </a>
-
-    <a class="operation-button" href="operations/operation-eight-claw.html">
-        28. Operation: Eight Claw
-    </a>
-
-    <a class="operation-button" href="operations/operation-blood-of-perita.html">
-        29. Operation: Blood of Perita
-    </a>
-
-    <a class="operation-button" href="operations/epoch-operation-taubound.html">
-        30. Epoch Operation: Taubound
-    </a>
-
-</div>
+</main>
 
 <footer>
-    The Lorak Codex
+    The Lorak Codex · A fan-made Warframe lore archive
 </footer>
 
 </body>
