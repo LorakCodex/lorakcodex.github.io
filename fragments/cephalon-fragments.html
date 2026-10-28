@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cephalon Fragments - The Lorak Codex</title>
+<meta name="description" content="Explore Warframe Cephalon Fragment lore, planetary entries and Ordis's hidden transmissions in The Lorak Codex.">
 
 <style>
 * {
@@ -36,21 +38,20 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 18px;
-    padding: 15px 10px;
-    background: #111;
+    gap: 20px;
+    padding: 15px;
+    background: #151515;
+    border-bottom: 1px solid #292929;
 }
 
-nav a,
-.back {
-    color: #d4af37;
+nav a {
+    color: #ccc;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 14px;
 }
 
-nav a:hover,
-.back:hover {
-    color: #fff0a8;
+nav a:hover {
+    color: #d4af37;
 }
 
 main {
@@ -72,6 +73,13 @@ h2 {
 .back {
     display: block;
     margin-bottom: 20px;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back:hover {
+    color: #fff0a8;
 }
 
 .location-button,
@@ -147,9 +155,13 @@ footer {
     font-size: 12px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     header h1 {
         font-size: 20px;
+    }
+
+    nav {
+        gap: 12px 18px;
     }
 
     main {
@@ -168,8 +180,14 @@ footer {
 
 <nav>
     <a href="../index.html">Home</a>
-    <a href="../fragments.html">Fragments</a>
+    <a href="../quests.html">Quests</a>
+    <a href="../transcripts.html">Transcripts</a>
     <a href="../extra-lore.html">Extra Lore</a>
+    <a href="../factions.html">Factions</a>
+    <a href="../timeline.html">Timeline</a>
+    <a href="../operations.html">Operations</a>
+    <a href="../args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
 </nav>
 
 <main>
@@ -199,35 +217,35 @@ footer {
         </button>
 
         <div class="location-content" id="ordis-content">
-            <button class="entry-button" data-ordis-entry="0">
+            <button class="entry-button" data-ordis-entry="0" aria-expanded="false">
                 Hidden Transmission 1
             </button>
             <div class="entry-content" data-ordis-content="0">
                 <p class="coming-soon">Dialogue coming soon.</p>
             </div>
 
-            <button class="entry-button" data-ordis-entry="1">
+            <button class="entry-button" data-ordis-entry="1" aria-expanded="false">
                 Hidden Transmission 2
             </button>
             <div class="entry-content" data-ordis-content="1">
                 <p class="coming-soon">Dialogue coming soon.</p>
             </div>
 
-            <button class="entry-button" data-ordis-entry="2">
+            <button class="entry-button" data-ordis-entry="2" aria-expanded="false">
                 Hidden Transmission 3
             </button>
             <div class="entry-content" data-ordis-content="2">
                 <p class="coming-soon">Dialogue coming soon.</p>
             </div>
 
-            <button class="entry-button" data-ordis-entry="3">
+            <button class="entry-button" data-ordis-entry="3" aria-expanded="false">
                 Hidden Transmission 4
             </button>
             <div class="entry-content" data-ordis-content="3">
                 <p class="coming-soon">Dialogue coming soon.</p>
             </div>
 
-            <button class="entry-button" data-ordis-entry="4">
+            <button class="entry-button" data-ordis-entry="4" aria-expanded="false">
                 Hidden Transmission 5
             </button>
             <div class="entry-content" data-ordis-content="4">
@@ -250,16 +268,6 @@ footer {
 </footer>
 
 <script>
-/*
- * Add the original fragment dialogue inside each entry's dialogue field
- * when it has been verified.
- *
- * Example:
- * dialogue: `Original dialogue goes here.`
- *
- * Until then, entries display "Dialogue coming soon."
- */
-
 const locations = [
     {
         name: "Earth",
@@ -393,7 +401,7 @@ const locations = [
 
 const fragmentList = document.getElementById("fragment-list");
 
-locations.forEach((location, locationIndex) => {
+locations.forEach(location => {
     const locationButton = document.createElement("button");
     locationButton.className = "location-button";
     locationButton.textContent = location.name;
@@ -404,12 +412,11 @@ locations.forEach((location, locationIndex) => {
 
     locationButton.addEventListener("click", () => {
         const isOpen = locationContent.style.display === "block";
-
         locationContent.style.display = isOpen ? "none" : "block";
         locationButton.setAttribute("aria-expanded", String(!isOpen));
     });
 
-    location.entries.forEach((entry, entryIndex) => {
+    location.entries.forEach(entry => {
         const entryButton = document.createElement("button");
         entryButton.className = "entry-button";
         entryButton.textContent = entry.name;
@@ -419,16 +426,13 @@ locations.forEach((location, locationIndex) => {
         entryContent.className = "entry-content";
 
         const dialogue = document.createElement("p");
-        dialogue.className = entry.dialogue
-            ? ""
-            : "coming-soon";
+        dialogue.className = entry.dialogue ? "" : "coming-soon";
         dialogue.textContent = entry.dialogue || "Dialogue coming soon.";
 
         entryContent.appendChild(dialogue);
 
         entryButton.addEventListener("click", () => {
             const isOpen = entryContent.style.display === "block";
-
             entryContent.style.display = isOpen ? "none" : "block";
             entryButton.setAttribute("aria-expanded", String(!isOpen));
         });
