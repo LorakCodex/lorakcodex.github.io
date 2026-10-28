@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,6 +31,26 @@ header h1 {
     letter-spacing: 3px;
     margin: 0;
     font-size: 28px;
+}
+
+nav {
+    background: #151515;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #292929;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d4af37;
 }
 
 main {
@@ -126,6 +147,12 @@ footer {
     color: #777;
     font-size: 13px;
 }
+
+@media (max-width: 600px) {
+    nav {
+        gap: 12px 18px;
+    }
+}
 </style>
 </head>
 
@@ -134,6 +161,18 @@ footer {
 <header>
     <h1>THE LORAK CODEX</h1>
 </header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../quests.html">Quests</a>
+    <a href="../transcripts.html">Transcripts</a>
+    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="../factions.html">Factions</a>
+    <a href="../timeline.html">Timeline</a>
+    <a href="../operations.html">Operations</a>
+    <a href="../args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
+</nav>
 
 <main>
     <a class="back" href="../fragments.html">← Back to Fragments</a>
