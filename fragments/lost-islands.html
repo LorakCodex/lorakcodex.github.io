@@ -1,1 +1,392 @@
-1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Lost Islands of Duviri - The Lorak Codex</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #111;
+    padding: 25px 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    color: #d4af37;
+    letter-spacing: 3px;
+    margin: 0;
+    font-size: 28px;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 15px 40px;
+}
+
+h2 {
+    color: #d4af37;
+    margin-top: 0;
+}
+
+.back {
+    display: block;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+.description {
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.chapter {
+    margin-top: 10px;
+}
+
+.chapter-button {
+    display: block;
+    width: 100%;
+    background: #d4af37;
+    color: #0b0b0b;
+    border: none;
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.chapter-button:hover {
+    background: #e5c451;
+}
+
+.chapter-button::after {
+    content: "+";
+    float: right;
+    font-size: 18px;
+}
+
+.chapter-button.active::after {
+    content: "−";
+}
+
+.chapter-content {
+    display: none;
+    background: #111;
+    border: 1px solid #66551d;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.chapter-content p {
+    margin: 0 0 14px 0;
+}
+
+.chapter-content p:last-child {
+    margin-bottom: 0;
+}
+
+.scan-count {
+    color: #d4af37;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #66551d;
+    color: #777;
+    font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>THE LORAK CODEX</h1>
+</header>
+
+<main>
+    <a class="back" href="fragments.html">← Back to Fragments</a>
+
+    <h2>The Lost Islands of Duviri</h2>
+
+    <p class="description">
+        Accounts of Duviri's vanished islands, recorded by Acrithis.
+        These entries recount the strange histories, terrible events, and
+        forgotten mysteries of the lands once scattered throughout the Kingdom.
+    </p>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            1. Scholars Landing
+        </button>
+        <div class="chapter-content">
+            <div class="scan-count">Scans required: 9</div>
+
+            <p>In all the ages of Thrax's reign, only two strangers have ever known to come to Duviri.</p>
+
+            <p>One was the monk, Teshin, who fell from the sky into the lake on the island we now call Hermit's Landing. Seemingly lifeless, he was dragged ashore by Mathila who nursed his return to health. I have never known a constitution to match his; yet unlike us, he has... deteriorated... with the passing of time.</p>
+
+            <p>The other stranger came far earlier in Thrax's reign, before even the Bleeding Earth.</p>
+
+            <p>This stranger had haunted eyes and a downcast mien, and spoke of the Wall and the worlds beyond. He wore his hair like looped snakes, and his voice carried an accent unlike any in Duviri.</p>
+
+            <p>With the King's permission, he constructed a great laboratory of light-smoking mirrors and Void-lanthorns, which he claimed was the match of one he had once owned in a former life. The island where it stood was known as Scholar's Landing.</p>
+
+            <p>The time would come, the stranger said, when Duviri would be needed. There was work of repentance to be done, and he could not do it alone. What he meant by this I cannot say; and cannot now ask, for Scholar's Landing vanished overnight.</p>
+
+            <p>But I shall watch, and wait, and hope.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            2. We Are Not What We Were
+        </button>
+        <div class="chapter-content">
+            <div class="scan-count">Scans required: 9</div>
+
+            <p>I am naturally curious. I can hardly help it. And so I set this down for any that follow in my footsteps, who wonder - as I have - about our home.</p>
+
+            <p>Today, Duviri is a mere scattering of islands, set about the Palace as if they had spilled forth from it. But in the dawning time, when the Kingdom was new, it was a Kingdom worthy of the name.</p>
+
+            <p>From horizon to horizon lay island after island, each one different, bearing distinctive color and life.</p>
+
+            <p>I have flown on Kaithe-back until the Archarbor was lost to sight, and then on again, have been unable to number the lands over which I flew. Every one of them raise its banners to Thrax.</p>
+
+            <p>Nothing remains of those islands now. Not a tree, not a leaf, not a grain of sand.</p>
+
+            <p>It seems some of the Lost Islands were smashed by Thrax the King, as a child might smash a toy. Others have been obliterated by hazards unknown; the Void is an ocean, it is said, and monsters dwell in its depths. But the fast majority of the islands have simply fallen to the Void's creeping encroachment, as the tides wear away at the land.</p>
+
+            <p>I dream of a Lost Island returning one happy day, or an entirely new island appearing, birthed from the Void. But this place has not changed in so long, except for the worse, and there is no reason for hope. One day, I am sure, the Void will engulf us all.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            3. Watcher’s Island
+        </button>
+        <div class="chapter-content">
+            <div class="scan-count">Scans required: 9</div>
+
+            <p>In the splendid lands on this side of the Wall lives happy Mathila; and she has two children.</p>
+
+            <p>She also had a husband, in her yesterdays. When I have attempted to talk to her about him she has simply frozen, like a rat before a snake.</p>
+
+            <p>His name was Garmi, and he was keeper of the Seriglass Lighthouse on Watcher's Island.</p>
+
+            <p>The lighthouse served no true purpose, yet he kept its lamp burning, beaming out into the Void as if to call travelers home.</p>
+
+            <p>Now... before his death, Garmi confided in me that he felt his role was important; he was keeping 'it' at bay.</p>
+
+            <p>Void Storms were not unknown in Duviri, but the storm I shall speak of was unlike others. It hung in a red veil across the sky. There was a great sound like tearing metal, and all at once a pelting rain fell. Not water, but broken metal chains, in lengths and coils and great rattling whipstrands.</p>
+
+            <p>The falling chains shattered roofs and windows, slashed through screaming livestock, and maimed the fools who had not come in from the streets.</p>
+
+            <p>found Garmi's log in the toppled ruin of the lighthouse. With admirable presence of mind, he describes a form steadily approaching out of the Void. A monstrous hand, possessed of only three fingers and a thumb.</p>
+
+            <p>With the lighthouse gone, Watcher's Island crumbled and was gone too within three spirals.</p>
+
+            <p>Garmi has no grave nor memorial, as if he had never lived. But I remember, And so, I record.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            4. Lake Verula
+        </button>
+        <div class="chapter-content">
+            <div class="scan-count">Scans required: 9</div>
+
+            <p>For Lake Verula to be lost and forgotten is a lasting bittering to me. There was a time when it was Duviri's festival spot. On the anniversary of Thrax's coronation, the citizenry would build ceremonial floating islands. On these they would drift, sing, play music and light fragrant lanterns in honor of Thrax.</p>
+
+            <p>Attracted by the music, the rainbow eels would rise from the lake bed, poke their iridescent heads above the water, and sing.</p>
+
+            <p>Luscinia had a school of them that followed her across the lake and floundered on the shore when she disembarked, as if they yearned to remain with her.</p>
+
+            <p>We could not know that down on the lake bed, a portal to the Undercroft and formed. Predatory creatures writhed in. They were golden, slender, with massive fanged bivalved maws. And they were ravenous. They devoured the rainbow eels, and then they devoured each other until only a handful were left.</p>
+
+            <p>Lake Verula had no more magic after that. Thrax ordered the lake drained, but the golden maws merely burrowed into Duviri's crust, where to this day they can sometimes be found plundering our pools.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            5. The Galleria
+        </button>
+        <div class="chapter-content">
+            <div class="scan-count">Scans required: 9</div>
+
+            <p>How I loved the Galleria. It was and island of simple beauty, where white statues rose out of the ground as if they had grown there. They were classical in their features, masked in due propriety, each bearing an instrument or an emblem of their craft. I gave them names: the Scribe, the Scryer, the Shawzinist.</p>
+
+            <p>On days when the mist of Thrax's sorrow hung among the marble columns a sober chill seemed to drape the Galleria. One could not wish for a better spot to cool a burning head. This kingdom is often mad, but this was a space for sanity.</p>
+
+            <p>That peace was shattered one morning as I drove my carriage there. I witness a vast form break up from the ground and clumsily probe the area around it.</p>
+
+            <p>I took the thing for a gigantic worm or slug, until one of my escorting Dax pointed out the colossal fingernail on its 'head'.</p>
+
+            <p>We turned on our heel and made for the Palace, where I gave Dominus Thrax the best account of what I had seen. On hearing that a single monstrous finger had burst up through the green sward, Thrax took terrible fright.</p>
+
+            <p>Despite my entreaties, he sacrificed the entire island before any more of the entity could emerge.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            6. The Doll Mausoleum
+        </button>
+        <div class="chapter-content">
+            <div class="scan-count">Scans required: 9</div>
+
+            <p>The Necropolis Island was once one of the largest in Duviri, and the strangest. It appeared to be a sprawling burial ground, littered with gravestones, wooden crosses, sarcophagi and ornate tombs. But those who broke into these places found that there were no bodies to loot. Not a cadaver, not a skull, not even a tooth.</p>
+
+            <p>Instead, each coffin contained a simulacrum of the human form, in various stages of decay. Entire skeletons carved out of wood. Corpses of rotting straw stuffed into old clothes. Mouldering faces sculpted in crumbling clay. Little bones laboriously whittled down from large bones.</p>
+
+            <p>I have never been able to make any sense of it.</p>
+
+            <p>The Doll Mausoleum did not even attempt to imitate an authentic burial structure. It was built to far too small a scale. The cavities within it were tiny, each one holding a coffin that contained a miniature human figure. These were all genders, often with brightly coloured hair, all wearing odd one-piece hooded suits of black leather.</p>
+
+            <p>Thrax was known to visit the Mausoleum, alone. I do not know what he did there.</p>
+
+            <p>Now the place is lost to the Void. A mystery that shall remain so, forever. Isn't that maddening?</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            7. The Caves of Academe
+        </button>
+        <div class="chapter-content">
+            <div class="scan-count">Scans required: 9</div>
+
+            <p>There was a time when the children of Duviri were educated.</p>
+
+            <p>Upon the island of Academe, within its chalky caves, in rough-hewn classrooms lit by burning blue gas, sages taught them everything they would need to know. They learned of the Seven Principles, the geometries, the primords, the harmonics and resonances, the sacred stories, and most importantly, the unquestionable benignity of Dominus Thrax.</p>
+
+            <p>And then, not long after the Rain of Chains, the first of the Hollow Children appeared.</p>
+
+            <p>They joined the others for class, sitting at the back, silent and attentive. Their eyes were a deep and lustrous black, their mouths fixed in a constant grin. None of the sages saw them enter or leave.</p>
+
+            <p>The Hollow Children did not speak, nor did they participate in class in any way, except to giggle unnervingly when the subject of the Void was mentioned.</p>
+
+            <p>When adults came to collect their children, they noticed an additional oddity. Among the Hollow Children were exact duplicates of themselves when they were younger. Each day there were more of them.</p>
+
+            <p>Thrax ordered the island destroyed, but when Lodun descended from the sky to ravage it, the Orowyrm found it had broken free of its own accord.</p>
+
+            <p>Thrax did not give the order to pursue.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            8. Manipura Island
+        </button>
+        <div class="chapter-content">
+            <div class="scan-count">Scans required: 9</div>
+
+            <p>The island of Manipura was Duviri's vineyard. The Calaventi merchant sisterhood had villas there. Their tenant farmers raised succulent grapes to be turned into wine, which was taken as tribute to be shared among the Dax.</p>
+
+            <p>Tribute day was a great celebration in the Dax barracks, as the veiled Yaskutai would pour bowl after bowl of wine, comrades would show old wounds and tell tall tales of how they were come by, and old songs would be sung late into the night.</p>
+
+            <p>The Calaventi were proud. They considered themselves reflections of the 'true' Orokin, and though they bent the knee to Thrax, they did not respect him.</p>
+
+            <p>With his changeable moods and his short stature, Thrax was - they whispered - merely an upstart, an imitator.</p>
+
+            <p>It was the servants who alerted Thrax to their masters' insolence. If they were expected to be rewarded for this, more fool them.</p>
+
+            <p>A terrible Orowyrm was sent to, and I quote, 'trample the Calaventi sisterhood as they trample their grapes'. With no warning, the Orowyrm burst through the island from beneath, shattering it to fragments.</p>
+
+            <p>If the Dax of Duviri resent the loss of their wine-tribute, they know better than to speak of it.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            9. The Island of Lorn
+        </button>
+        <div class="chapter-content">
+            <div class="scan-count">Scans required: 9</div>
+
+            <p>When Duviri came into being there were many islands whose contents were - to put it bluntly - horrific. The Execution Cyst, the Golden Hive, the Inversion Tree, Stitcher's Gulch and the Bountiful Swamp were all notorious, but each met a natural end, engulfed by the Void. Lorn was exiled deliberately.</p>
+
+            <p>The Island of Lorn was a desolate, bleak outcrop where ghosts would scream accusations against anyone who came close enough to hear. Shunned by all, it was ultimately severed from Duviri and set adrift in the Void, where it can still occasionally be heard screaming to this day.</p>
+
+            <p>Islands are usually unmoored or otherwise destroyed by command of the King. Here, though, it was the local citizenry who rose up and cast the offending island out, smashing the bridges with their tools and dragging it away using ropes and flying Kaithes.</p>
+
+            <p>Lorn was notable for its curious shrines, many of which were dismantled and their component stones taken from the island by royal order. One comes across them occasionally, and it is possible - though not advisable - to reassemble them. To do so risks a local outbreak of ghosts, an offense punishable by death should the Dax catch you at it.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            10. The Bleeding Earth
+        </button>
+        <div class="chapter-content">
+            <div class="scan-count">Scans required: 9</div>
+
+            <p>The island was called Cornucopia, for its fecundity. The soil, dark and rich, yielded tubers and greens that shimmered with life. Wagons laden with tribute would go tottering up to the Palace in procession.</p>
+
+            <p>All this was, of course, the will of the King; for what is a kingdom without its peasants? Thus had he created the islands, and thus they remained, day after indolent day.</p>
+
+            <p>Then, on a morning like any other, Farmer Hovrel drove his spade into the earth and brought up blood.</p>
+
+            <p>Blood welled up from the gash like crimson oil. As Hovrel looked on, stupefied, the rivulet reached the road and... began to pool. The shocked cries of other farmers rang out as their furrows, too, began to fill with blood.</p>
+
+            <p>The stuff was dark, almost black. It had a heavy metallic odor suffused with grave spices. One venturesome soul tasted it. His eyes instantly became pitch-black orbs, his voice a smoky whisper.</p>
+
+            <p>Panic ensued. Was this a curse? The judgment of Dominus Thrax?</p>
+
+            <p>The Dax came swiftly, the roads were barricaded, and Cornucopia was isolated from Duviri.</p>
+
+            <p>Later that day, a great Orowyrm shattered the bridges. The island was set adrift, inhabitants and all. The last sight I had of them was a row of wide-eyed, pleading faces watching me steadily as they vanished into the Void.</p>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    The Lorak Codex
+</footer>
+
+<script>
+function toggleChapter(button) {
+    const content = button.nextElementSibling;
+    const isOpen = content.style.display === "block";
+
+    content.style.display = isOpen ? "none" : "block";
+    button.classList.toggle("active", !isOpen);
+    button.setAttribute("aria-expanded", String(!isOpen));
+}
+</script>
+
+</body>
+</html>
