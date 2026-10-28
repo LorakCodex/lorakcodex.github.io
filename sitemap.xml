@@ -2,11 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://lorakcodex.github.io/</loc></url>
   <url><loc>https://lorakcodex.github.io/extra-lore.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/albrechts-notes.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/isleweaver.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/kuria.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/lost-islands.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/tenets.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/fragments.html</loc></url>
+
+  <url><loc>https://lorakcodex.github.io/fragments/albrechts-notes.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/fragments/cephalon-fragments.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/fragments/isleweaver.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/fragments/kuria.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/fragments/lost-islands.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/fragments/tenets.html</loc></url>
+
   <url><loc>https://lorakcodex.github.io/tablets.html</loc></url>
 
   <url><loc>https://lorakcodex.github.io/summaries/the-lotus-eaters.html</loc></url>
