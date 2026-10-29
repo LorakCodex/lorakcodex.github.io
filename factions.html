@@ -6,13 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Warframe Factions and Their Lore | The Lorak Codex</title>
-<meta name="description" content="Explore the factions of Warframe through The Lorak Codex. Discover their origins, leaders, beliefs, histories and roles in the Origin System.">
+<meta name="description" content="Explore Warframe faction lore, including the Grineer, Corpus, Infested, Orokin, Sentients, Tenno, Narmer, Murmur, Scaldra and Techrot.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://lorakcodex.github.io/factions.html">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Warframe Factions and Their Lore | The Lorak Codex">
-<meta property="og:description" content="Explore the history, origins and conflicts of Warframe's factions in The Lorak Codex.">
+<meta property="og:description" content="Explore the origins, histories and conflicts of Warframe's factions in The Lorak Codex.">
 <meta property="og:url" content="https://lorakcodex.github.io/factions.html">
 <meta property="og:site_name" content="The Lorak Codex">
 
@@ -75,6 +75,7 @@ h2 {
 h1 {
     letter-spacing: 1px;
     font-size: 28px;
+    line-height: 1.4;
 }
 
 .intro {
@@ -84,31 +85,36 @@ h1 {
     margin: 20px 0 30px;
 }
 
+.intro p:first-child {
+    margin-top: 0;
+}
+
+.intro p:last-child {
+    margin-bottom: 0;
+}
+
 .faction-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 15px;
 }
 
 .faction-card {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
     padding: 18px;
     background: #111;
     border: 1px solid #3a3320;
     border-left: 3px solid #d4af37;
     border-radius: 4px;
     color: #ddd;
-    text-decoration: none;
-    transition: background 0.2s ease;
-}
-
-.faction-card:hover {
-    background: #19170f;
 }
 
 .faction-card h2 {
     margin: 0 0 8px;
     font-size: 20px;
+    line-height: 1.4;
 }
 
 .faction-card p {
@@ -116,9 +122,11 @@ h1 {
 }
 
 .status {
+    display: block;
     color: #aaa;
     font-size: 14px;
-    margin-top: 25px;
+    margin-top: auto;
+    padding-top: 20px;
 }
 
 footer {
@@ -127,6 +135,20 @@ footer {
     color: #777;
     border-top: 1px solid #333;
     margin-top: 40px;
+}
+
+@media (max-width: 480px) {
+    .site-title {
+        font-size: 1.6em;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .faction-list {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
 </head>
@@ -141,7 +163,7 @@ footer {
         <a href="quests.html">Quests</a>
         <a href="transcripts.html">Transcripts</a>
         <a href="extra-lore.html">Extra Lore</a>
-        <a href="factions.html">Factions</a>
+        <a href="factions.html" aria-current="page">Factions</a>
         <a href="timeline.html">Timeline</a>
         <a href="operations.html">Operations</a>
         <a href="args.html">ARGs</a>
@@ -155,15 +177,16 @@ footer {
 
     <section class="intro">
         <p>
-            The Origin System is shaped by empires, corporations, ancient
-            civilisations and forces whose origins reach back to the Old War.
-            Their ambitions and conflicts form a major part of Warframe's story.
+            The Origin System is shaped by empires, corporations,
+            ancient civilisations and forces whose origins reach
+            back to the Old War. Their ambitions and conflicts form
+            a major part of Warframe's story.
         </p>
 
         <p>
-            This archive explores the factions of Warframe, examining their
-            origins, leadership, beliefs, history and connections to the wider
-            narrative of the Origin System.
+            This archive explores the factions of Warframe, examining
+            their origins, leadership, beliefs, history and connections
+            to the wider narrative of the Origin System.
         </p>
     </section>
 
@@ -172,20 +195,33 @@ footer {
 
         <div class="faction-list">
 
-            <a class="faction-card" href="factions/Grineer.html">
+            <div class="faction-card">
                 <h2>The Grineer</h2>
                 <p>
-                    A militaristic empire descended from cloned workers
-                    created under the Orokin. Explore their origins,
-                    genetic decay and expansion under the Queens.
+                    They say there is power in numbers - the Grineer are
+                    living proof. Wretched from centuries of cloning that
+                    has left their genetics in decay, this horde expands
+                    their vile empire through brute force, conquering
+                    anyone who tries to stop them.
                 </p>
-            </a>
+                <span class="status">Dedicated archive coming soon.</span>
+            </div>
 
             <div class="faction-card">
                 <h2>The Corpus</h2>
                 <p>
-                    A powerful commercial organisation driven by profit,
-                    advanced technology and the pursuit of wealth.
+                    The Corpus embody the cold vacuum of space - heartless
+                    and bent on taking anything left unprotected. Driven
+                    by profits, the Corpus Board’s small numbers are
+                    supplemented by their legion of robot proxies,
+                    optimized for quick and efficient destruction. The
+                    Corpus are a merchant cult, built on the foundation
+                    of salvaged technology and robotics. They scavenge
+                    the outer systems, greedy for the Old War salvage.
+                    Their most sought after of all - the Tenno and their
+                    WARFRAME armor. Those captured are treated as
+                    salvage; meticulously dissected, integrated. The
+                    remains are sold to the highest bidder.
                 </p>
                 <span class="status">Dedicated archive coming soon.</span>
             </div>
@@ -193,8 +229,14 @@ footer {
             <div class="faction-card">
                 <h2>The Infested</h2>
                 <p>
-                    A spreading biomechanical infestation that transforms
-                    organic and mechanical life.
+                    The Infestation is more than a disease - it is a
+                    horror of twisted flesh, monsters made into reality.
+                    The blight consumes its victims, transforming them
+                    into unrecognizable atrocities controlled by rabid
+                    impulse. The Infested are a single-minded scourge
+                    that belongs in the realm of nightmares, but instead
+                    chooses to invade ships and colonies, leaving only
+                    death and destruction in its wake.
                 </p>
                 <span class="status">Dedicated archive coming soon.</span>
             </div>
@@ -202,8 +244,14 @@ footer {
             <div class="faction-card">
                 <h2>The Orokin</h2>
                 <p>
-                    The ruling civilisation of a lost golden age whose
-                    legacy continues to shape the Origin System.
+                    The highly revered Orokin civilization built
+                    sovereignty on a culture of art, technology and
+                    architecture. To prove oneself worthy of elevated
+                    social status, one must face Orokin trials in the
+                    golden and majestic Halls of Ascension. At one time
+                    a utopian society of omniscient leadership, the great
+                    Orokin Era ended in a divine realization of their
+                    own ignorance.
                 </p>
                 <span class="status">Dedicated archive coming soon.</span>
             </div>
@@ -211,8 +259,9 @@ footer {
             <div class="faction-card">
                 <h2>The Sentients</h2>
                 <p>
-                    Adaptive beings connected to the Old War and the
-                    history of the Tau system.
+                    Whispers from the Old War have begun to escape the
+                    deepest shadows. What terrible secret calls out to
+                    be discovered?
                 </p>
                 <span class="status">Dedicated archive coming soon.</span>
             </div>
@@ -240,6 +289,29 @@ footer {
                 <p>
                     Strange manifestations associated with the
                     Indifference and the mysteries of the Void.
+                </p>
+                <span class="status">Dedicated archive coming soon.</span>
+            </div>
+
+            <div class="faction-card">
+                <h2>The Scaldra</h2>
+                <p>
+                    The nation of Höllvania has responded to the Techrot
+                    outbreak with ruthless aggression. Introducing The
+                    Scaldra, a new faction for you to test your mettle
+                    against in Warframe: 1999
+                </p>
+                <span class="status">Dedicated archive coming soon.</span>
+            </div>
+
+            <div class="faction-card">
+                <h2>The Techrot</h2>
+                <p>
+                    Take down the Techrot in all its myriad forms.
+                    Left to fester in Höllvania's underground, the
+                    rapidly mutating Infested has created all new
+                    threat varieties capable of wreaking havoc on
+                    the unprepared.
                 </p>
                 <span class="status">Dedicated archive coming soon.</span>
             </div>
