@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ghoul Fragments - The Lorak Codex</title>
+<meta name="description" content="Explore the Ghoul Fragments on The Lorak Codex, documenting the Grineer Ghouls, Sigor Savah's research, and accounts from the Plains of Eidolon.">
+<link rel="canonical" href="https://lorakcodex.github.io/fragments/ghoul-fragments.html">
+<meta name="robots" content="index, follow">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #111;
+    padding: 25px 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    color: #d4af37;
+    letter-spacing: 3px;
+    margin: 0;
+    font-size: 28px;
+}
+
+nav {
+    background: #151515;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #292929;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 15px 40px;
+}
+
+h2 {
+    color: #d4af37;
+    margin-top: 0;
+}
+
+.back {
+    display: block;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+.description {
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.chapter {
+    margin-top: 10px;
+}
+
+.chapter-button {
+    display: block;
+    width: 100%;
+    background: #d4af37;
+    color: #0b0b0b;
+    border: none;
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.chapter-button:hover {
+    background: #e5c451;
+}
+
+.chapter-button::after {
+    content: "+";
+    float: right;
+    font-size: 18px;
+}
+
+.chapter-button.active::after {
+    content: "−";
+}
+
+.chapter-content {
+    display: none;
+    background: #111;
+    border: 1px solid #66551d;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.chapter-content p {
+    margin: 0 0 14px 0;
+}
+
+.chapter-content p:last-child {
+    margin-bottom: 0;
+}
+
+.scan-count {
+    color: #d4af37;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px !important;
+}
+
+.section-heading {
+    color: #d4af37;
+    font-size: 16px;
+    margin: 18px 0 10px;
+}
+
+.section-heading:first-of-type {
+    margin-top: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #66551d;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        gap: 12px 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>THE LORAK CODEX</h1>
+</header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../quests.html">Quests</a>
+    <a href="../transcripts.html">Transcripts</a>
+    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="../factions.html">Factions</a>
+    <a href="../timeline.html">Timeline</a>
+    <a href="../operations.html">Operations</a>
+    <a href="../args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
+</nav>
+
+<main>
+
+    <a class="back" href="../fragments.html">← Back to Fragments</a>
+
+    <h2>Ghoul Fragments</h2>
+
+    <p class="description">
+        Accounts and transmissions documenting the Grineer Ghouls and the unusual lifeforms encountered by Sigor Savah.
+    </p>
+
+    <!-- DEVOURER -->
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Devourer
+        </button>
+
+        <div class="chapter-content">
+            <p class="scan-count">Scans required: 4</p>
+
+            <h3 class="section-heading">Interviews in the Field</h3>
+
+            <p>“It came through the wall. All I remember is the roar, the open maw... the rank foulness of its breath. The lolling tongue. And... the way two of my friends were crushed between it and our grain silo. The way it seemed to fall in love with tearing them apart, over and over and over..."</p>
+
+            <p>Interviews in the Field, Eidolon Plains, conducted by Sigor Savah.</p>
+
+            <h3 class="section-heading">Sigor Savah Transmission</h3>
+
+            <p>Every living thing longs to be whole. Every living thing yearns to defy death. If from death you returned, yet the part you loved best did not... what then?</p>
+        </div>
+    </div>
+
+    <!-- AUGUR -->
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Augur
+        </button>
+
+        <div class="chapter-content">
+            <p class="scan-count">Scans required: 4</p>
+
+            <h3 class="section-heading">Interviews in the Field</h3>
+
+            <p>“Its arms shot forward, the drills ratcheting outward... passing in and out of Horvath's body like it was nothing. I can still hear the screech of the drills. The maddening chatter of its teeth. Horvath's screams.”</p>
+
+            <p>Interviews in the Field, Eidolon Plains, conducted by Sigor Savah.</p>
+
+            <h3 class="section-heading">Sigor Savah Transmission</h3>
+
+            <p>My name is Sigor Savah, morphology specialist with Nef Anyo's Venusian terraforming expedition. I was tasked with decoding the Orokin gene record of what had once been a preserve, and reviving select specimens for study. This is an account of my encounter with lifeform VK-7, a larger-than-average kavat specimen possessed of... atypical behavioral characteristics.</p>
+
+            <p>Specimen VK-7, unlike the others, did not come from a gene record. She was found frozen, in a sealed closet close to the environmental control station. Her unassuming tomb for millennia. Here, then, was an intact example of Orokin-era fauna.</p>
+
+            <p>I was Corpus: a scientist second and a businessman first. VK-7 – an Orokin-strain kavat of unusual size and patterning... well... I could think of several members of the nobility who would pay a fortune for such a thing. Enough to buy a handsome slice of any planetoid of my choosing.</p>
+        </div>
+    </div>
+
+    <!-- THE EXPIRED -->
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            The Expired
+        </button>
+
+        <div class="chapter-content">
+            <p class="scan-count">Scans required: 4</p>
+
+            <h3 class="section-heading">Interviews in the Field</h3>
+
+            <p>“It came at me, wailing, like a lost thing screaming for help. Then it wrapped its clay-cold arms about me... and here I am. Barely anything left of me now, lying in this bed, except a few stories... and the memory of its face. Like a newborn child."</p>
+
+            <p>Interviews in the Field, Eidolon Plains, conducted by Sigor Savah.</p>
+
+            <h3 class="section-heading">Sigor Savah Transmission</h3>
+
+            <p>I had the corpse lain on a dissection rack, ready for a full surgical examination. Then, like any animal dreaming, the paw... ...twitched. I glanced at the vitals scanner, expecting to see some anomalous electrical reaction taking place, contracting ancient muscles... But no... What I saw there was a beating heart.</p>
+
+            <p>I did not revive specimen VK-7. Before my eyes she willed herself back to life. It was... the most... beautiful... thing I had ever seen.</p>
+
+            <p>Some speak of feeling a connection to something greater than themselves, to which I laughed, as any right-thinking Corpus would. Life is profit, profit is life. But, in that moment... watching that animal claw her way out of death's dark pit... though I did not admit to myself... something in me was forever changed.</p>
+        </div>
+    </div>
+
+    <!-- RICTUS -->
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Rictus
+        </button>
+
+        <div class="chapter-content">
+            <p class="scan-count">Scans required: 4</p>
+
+            <h3 class="section-heading">Interviews in the Field</h3>
+
+            <p>Konzu gave us standing orders. Shoot the sawmen first. We’d seen what they had done to our brothers and sisters. That was not going to happen to us."</p>
+
+            <p>Interviews in the Field, Eidolon Plains, conducted by Sigor Savah.</p>
+
+            <h3 class="section-heading">Sigor Savah Transmission</h3>
+
+            <p>I found her sharp gaze unsettling. The way she would watch my every move from her cage unnerved me. When a visitor came I would watch VK-7 studying their habits. In time she came to anticipate regular arrivals, having memorized their schedules. On the morning of my fourth shift I entered my laboratory to find her cage door open and VK-7 gone.</p>
+
+            <p>One consequence of breathing life back into a world is unintentionally resurrecting life forms and viruses one finds less desirable. The Infestation is both of those things. Reports returned of some hives sites found destroyed... and then of a large beast found at others. An animal intelligent enough to learn and react to Corpus behaviors and patterns. Some claimed it had learned to measure ammunition expenditure to better attack when a target was most vulnerable. Needless to say almost none who attacked the beast survived. This had to be Specimen VK-7.</p>
+        </div>
+    </div>
+
+    <!-- GHOULS -->
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Ghouls
+        </button>
+
+        <div class="chapter-content">
+            <p>Content coming soon.</p>
+        </div>
+    </div>
+
+    <!-- OVERWHELMING NUMBERS -->
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Overwhelming Numbers
+        </button>
+
+        <div class="chapter-content">
+            <p>Content coming soon.</p>
+        </div>
+    </div>
+
+    <!-- A TIDE OF CLAWS AND FLESH -->
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            A Tide of Claws and Flesh
+        </button>
+
+        <div class="chapter-content">
+            <p>Content coming soon.</p>
+        </div>
+    </div>
+
+    <!-- DOCTOR TENGUS -->
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Doctor Tengus
+        </button>
+
+        <div class="chapter-content">
+            <p>Content coming soon.</p>
+        </div>
+    </div>
+
+    <!-- STRENGTH IN NUMBERS -->
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Strength in Numbers
+        </button>
+
+        <div class="chapter-content">
+            <p>Content coming soon.</p>
+        </div>
+    </div>
+
+    <!-- SHOCK TROOPS -->
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Shock Troops
+        </button>
+
+        <div class="chapter-content">
+            <p>Content coming soon.</p>
+        </div>
+    </div>
+
+    <!-- BORN TO DIE -->
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Born to Die
+        </button>
+
+        <div class="chapter-content">
+            <p>Content coming soon.</p>
+        </div>
+    </div>
+
+    <!-- UNSTOPPABLE -->
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Unstoppable
+        </button>
+
+        <div class="chapter-content">
+            <p>Content coming soon.</p>
+        </div>
+    </div>
+
+    <!-- A NEW PHASE -->
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            A New Phase
+        </button>
+
+        <div class="chapter-content">
+            <p>Content coming soon.</p>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    The Lorak Codex
+</footer>
+
+<script>
+function toggleChapter(button) {
+    const content = button.nextElementSibling;
+    const isOpen = content.style.display === "block";
+
+    content.style.display = isOpen ? "none" : "block";
+    button.classList.toggle("active", !isOpen);
+    button.setAttribute("aria-expanded", String(!isOpen));
+}
+</script>
+
+</body>
+</html>
