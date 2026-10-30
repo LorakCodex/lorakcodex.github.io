@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mask of the Lost One Fragments - The Lorak Codex</title>
+<meta name="description" content="Explore the Mask of the Lost One Fragments, documenting the ancient Sentient, the lost Warframe, and Nakak's transmissions from the Plains of Eidolon.">
+<link rel="canonical" href="https://lorakcodex.github.io/fragments/mask-of-the-lost-one-fragments.html">
+<meta name="robots" content="index, follow">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #111;
+    padding: 25px 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    color: #d4af37;
+    letter-spacing: 3px;
+    margin: 0;
+    font-size: 28px;
+}
+
+nav {
+    background: #151515;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #292929;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 15px 40px;
+}
+
+h2 {
+    color: #d4af37;
+    margin-top: 0;
+}
+
+.back {
+    display: block;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+.description {
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.chapter {
+    margin-top: 10px;
+}
+
+.chapter-button {
+    display: block;
+    width: 100%;
+    background: #d4af37;
+    color: #0b0b0b;
+    border: none;
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.chapter-button:hover {
+    background: #e5c451;
+}
+
+.chapter-button::after {
+    content: "+";
+    float: right;
+    font-size: 18px;
+}
+
+.chapter-button.active::after {
+    content: "−";
+}
+
+.chapter-content {
+    display: none;
+    background: #111;
+    border: 1px solid #66551d;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.chapter-content p {
+    margin: 0 0 14px 0;
+}
+
+.chapter-content p:last-child {
+    margin-bottom: 0;
+}
+
+.scan-count {
+    color: #d4af37;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px !important;
+}
+
+.section-heading {
+    color: #d4af37;
+    font-size: 16px;
+    margin: 18px 0 10px;
+}
+
+.section-heading:first-of-type {
+    margin-top: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #66551d;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        gap: 12px 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>THE LORAK CODEX</h1>
+</header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../quests.html">Quests</a>
+    <a href="../transcripts.html">Transcripts</a>
+    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="../factions.html">Factions</a>
+    <a href="../timeline.html">Timeline</a>
+    <a href="../operations.html">Operations</a>
+    <a href="../args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
+</nav>
+
+<main>
+
+    <a class="back" href="../fragments.html">← Back to Fragments</a>
+
+    <h2>Mask of the Lost One Fragments</h2>
+
+    <p class="description">
+        Fragments and transmissions recounting the ancient Sentient beneath the Plains of Eidolon and the forgotten Warframe who once stood against it.
+    </p>
+
+    <!-- A NEW THREAT LOOMS -->
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            A New Threat Looms
+        </button>
+
+        <div class="chapter-content">
+            <p class="scan-count">Scans required: 1</p>
+
+            <h3 class="section-heading">Fragment Lore</h3>
+
+            <p>A vision comes, something new is stirring within the ground. Seeking a body to call its own; longing to strike those who sent it to the grave.</p>
+
+            <h3 class="section-heading">Nakak Transmission</h3>
+
+            <p>Why do I remember this? The land here, killing hot, full of strangeness. This is where Gara vanquished the Sentient! Where its essence fell into the ground, trapped in some unworldly between. It wanted out. At moon-rise its ghostly tendrils would emerge, seeking form, seeking... return.</p>
+
+            <p>And this... this was the warden... a Warframe. I can see it, like a dream repeating... The tendril emerging, night after night, and the warden, night after night, cutting it down... Until the warden himself was lost. How?</p>
+        </div>
+    </div>
+
+    <!-- A TERROR LONG FORGOTTEN -->
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            A Terror Long Forgotten
+        </button>
+
+        <div class="chapter-content">
+            <p class="scan-count">Scans required: 1</p>
+
+            <h3 class="section-heading">Fragment Lore</h3>
+
+            <p>A fragment of the ancient Sentient that once terrorized these plains.</p>
+
+            <h3 class="section-heading">Nakak Transmission</h3>
+
+            <p>Ugh... here we go again. I remember... the pool glows, the tendril emerges... and this Warframe draws its weapon to destroy it yet again... wait... no.</p>
+
+            <p>He does not strike this time, he watches. Why? The phantom tendril grips trees and rocks, probing for substance... then fear returns and the lost one slashes the phantom, sending it back to its purgatory...</p>
+        </div>
+    </div>
+
+    <!-- THE LOST ONE -->
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            The Lost One
+        </button>
+
+        <div class="chapter-content">
+            <p class="scan-count">Scans required: 1</p>
+
+            <h3 class="section-heading">Fragment Lore</h3>
+
+            <p>Once the warden of the plains, tasked with protecting the Unum's tower and striking down the ghostly Eidolon forms that rose from the depths every night. Night after night, he cut them down. Not allowing them to take form. The one night, he disappeared, lost... forever.</p>
+
+            <h3 class="section-heading">Nakak Transmission</h3>
+
+            <p>I see... the tendril once again. Instead of striking it... the lost one... he extends a hand to the Eidolon?! Khanung!</p>
+
+            <p>What was he thinking? He's like Mukha on the tower. Every day, Mukha clamored across the tower ledges and scaffolds - nothing happened, day in and day out... Routine took his fear away. Uhh...</p>
+
+            <p>Tenno - I see the tendril has him now. The lost one. He's become an anchor for the Eidolon - to pull itself into our world! The lost one struggles, pulling back, but it's too late! The Eidolon begins to emerge. But... the lost one realizes - he stops... he lets go...</p>
+
+            <p>And so he falls. Falls from this world of the living and down, down, into the next. Mukha, that was so stupid.</p>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    The Lorak Codex
+</footer>
+
+<script>
+function toggleChapter(button) {
+    const content = button.nextElementSibling;
+    const isOpen = content.style.display === "block";
+
+    content.style.display = isOpen ? "none" : "block";
+    button.classList.toggle("active", !isOpen);
+    button.setAttribute("aria-expanded", String(!isOpen));
+}
+</script>
+
+</body>
+</html>
