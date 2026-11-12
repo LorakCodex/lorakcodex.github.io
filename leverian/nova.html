@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nova Leverian | The Lorak Codex</title>
+    <meta name="description" content="Explore the Nova Leverian from Warframe, narrated by Drusus Leverian. Discover the story of Nova, Holsom Yurr, and the Masker's Theodolite.">
+
+    <link rel="canonical" href="https://lorakcodex.github.io/leverian/nova.html">
+    <link rel="icon" type="image/png" href="../lorak-codex-favicon-48x48.png?v=3">
+
+<style>
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #e6e6e6;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #111;
+    border-bottom: 1px solid #333;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #d4af37;
+    font-size: 32px;
+    letter-spacing: 3px;
+}
+
+header p {
+    margin-top: 10px;
+    color: #999;
+    font-size: 14px;
+}
+
+nav {
+    background: #151515;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #292929;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.back-link {
+    color: #d4af37;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    color: #d4af37;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.chapter {
+    margin-bottom: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.chapter-button {
+    background: #d4af37;
+    color: #111;
+    cursor: pointer;
+    padding: 14px 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.chapter-button:hover {
+    background: #e5c65c;
+}
+
+.chapter-content {
+    display: none;
+    background: #151515;
+    padding: 18px;
+    border: 1px solid #333;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+}
+
+.chapter-content p {
+    margin: 0 0 12px;
+}
+
+.chapter-content p:last-child {
+    margin-bottom: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid #292929;
+    color: #a0a0a0;
+    font-size: 13px;
+    margin-top: 40px;
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 26px;
+    }
+
+    .container {
+        padding: 20px 16px;
+    }
+}
+</style>
+
+<script>
+function toggleChapter(id) {
+    const content = document.getElementById(id);
+
+    if (content.style.display === "block") {
+        content.style.display = "none";
+    } else {
+        content.style.display = "block";
+    }
+}
+</script>
+</head>
+
+<body>
+
+<header>
+    <h1>THE LORAK CODEX</h1>
+    <p>Archives of history, transcripts and forgotten truths.</p>
+</header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../quests.html">Quests</a>
+    <a href="../transcripts.html">Transcripts</a>
+    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="../factions.html">Factions</a>
+    <a href="../timeline.html">Timeline</a>
+    <a href="../operations.html">Operations</a>
+    <a href="../args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank">Discord</a>
+</nav>
+
+<div class="container">
+
+    <a class="back-link" href="../archives/leverian.html">← Back to Leverian</a>
+
+    <h2>Nova – Leverian</h2>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter('introduction')">Introduction</button>
+        <div class="chapter-content" id="introduction">
+            <p>Drusus Leverian: Nova. Mercurial, unpredictable, and a miraculous example of harnessed antimatter.</p>
+
+            <p>It would be a bold fool indeed who tried to tame lightning.</p>
+
+            <p>One such individual was Holsom Yurr, a freelance problem-solver who commanded high fees for his low morals – a deficiency that netted him great success in endeavours where a conscience would have held others back.</p>
+
+            <p>He is the only figure known to have secured a back-channel charter permitting him to selectively raid certain Rails, so long as Orokin ships were avoided.</p>
+
+            <p>The story of Nova and Yurr survives via the captain and security logs of the Orokin vessel Masker's Theodolite.</p>
+
+            <p>It survives because it was deemed to be… of historical importance.</p>
+
+            <p>Orokin investigators scrutinised every frame of security footage, each line of the captain's log, for assurance that the outcome of this encounter was indeed true.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter('radia')">Radia Syandana</button>
+        <div class="chapter-content" id="radia">
+            <p>Drusus Leverian: The passenger vessel Masker's Theodolite reported critical problems with her engines.</p>
+
+            <p>Nova, mistress of antimatter, was deployed to relight the Theodolite's antimatter reactor before the vessel was drawn into the gravity well of a nearby planetoid.</p>
+
+            <p>10.800 passengers were at risk.</p>
+
+            <p>Clipping this syandana to herself, she exited her Lander.</p>
+
+            <p>The interior of the ship was deathly quiet, but then: chaos.</p>
+
+            <p>Behind her, the section of the ship securing her Lander was detonated and blown free.</p>
+
+            <p>Stranding her, for the time being.</p>
+
+            <p>From deeper inside the ship: cries for help.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter('yurr')">Homsom Yurr's Armour</button>
+        <div class="chapter-content" id="yurr">
+            <p>Drusus Leverian: Nova sped toward the shouts of trapped crewmen.</p>
+
+            <p>Eight were locked in Flow Control behind a hardened glass wall.</p>
+
+            <p>Opening a wormhole between herself and them, she phased the crewmen to safety as their compartment flooded with lethal gas.</p>
+
+            <p>Booming from speakers in every hallway, Holsom Yurr declared himself.</p>
+
+            <p>Holsom Yurr: the man who, at one time, had run the Pluto resistance.</p>
+
+            <p>Who spent three years terrorising the Rails between Jupiter and Venus just to prove that he could.</p>
+
+            <p>Who took that notoriety and translated it into a career: security, political assassination, courier runs, torture, graft, blackmail, and, in one case so it was said, genocide.</p>
+
+            <p>There were graves already dug for him by the many who wanted him dead.</p>
+
+            <p>Word was, Holsom already had a tomb prepared for himself on some distant moon, with a table piled high with riches and a chair just waiting for him to be sat in for eternity.</p>
+
+            <p>A man capable of anything, and a man who would rather die than lose.</p>
+
+            <p>A man easily recognised by the signature item before you.</p>
+
+            <p>It was, so they say, an item of great personal significance to the old rogue.</p>
+
+            <p>Why, and what history it shared with him, is a matter of some speculation.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter('flux')">Nova Flux Helmet</button>
+        <div class="chapter-content" id="flux">
+            <p>Drusus Leverian: Unaware she was being led into a trap built just for her, I don't imagine Nova took any special precautions.</p>
+
+            <p>This Flux model helm, for example, was fairly standard.</p>
+
+            <p>The appealing venting displayed her antimatter nature, an announcement of power as much as an evocation of beauty.</p>
+
+            <p>[stammers] W-where were we? Ah yes. Nova and the rescued crew moved for the escape pods.</p>
+
+            <p>Once they were clear, she would about-face and find some way to free the remaining ten thousand seven hundred and ninety-two.</p>
+
+            <p>Alas, thuds and clangs resounded as every life pod ejected into space. Empty.</p>
+
+            <p>Yurr clarified, boomingly, that escape was not an option.</p>
+
+            <p>To punctuate this assertion, bulkheads slammed down in every corridor shipwide.</p>
+
+            <p>The only path Yurr left open, worryingly, was the one that led directly to the Theodolite's antimatter reactor.</p>
+
+            <p>The very thing Nova had come to save. What was the old pirate playing at?</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter('hikou')">Hikou</button>
+        <div class="chapter-content" id="hikou">
+            <p>Drusus Leverian: Yurr answered Nova's unspoken question.</p>
+
+            <p>He had jettisoned the antimatter core.</p>
+
+            <p>Without that, it was impossible for the reactor to function, and the Theodolite would smash into the planetoid in a matter of minutes.</p>
+
+            <p>Yurr had been paid, by persons unknown, to neutralise Nova completely.</p>
+
+            <p>Yurr, a man who prided himself upon an ignorance of the impossible, had agreed.</p>
+
+            <p>And devised this trap. Nova was a being created to contain and harness antimatter.</p>
+
+            <p>The antimatter drive no longer had a fuel core.</p>
+
+            <p>His proposition was simple: Nova would enter the reactor chamber, crack her own containment, and kickstart a new reaction using her own body as fuel.</p>
+
+            <p>She could save 10.800 lives, but only at the cost of her own.</p>
+
+            <p>She had minutes to decide. With a flick of her wrist, Nova's Hikou throwing stars took out every camera in eyeshot, killing Yurr's surveillance of them.</p>
+
+            <p>This done, she turned to the technicians she had just saved.</p>
+
+            <p>She would need their help.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter('alamos')">Alamos Sniper Skin</button>
+        <div class="chapter-content" id="alamos">
+            <p>Drusus Leverian: Nova walked to her doom. As she entered the reactor's chamber, Yurr smugly assured her she was doing the right thing.</p>
+
+            <p>Within the reactor's observation room, the technicians nodded assent.</p>
+
+            <p>This was going to be close. From the bridge, Yurr sealed the reactor chamber's blast doors.</p>
+
+            <p>Seconds later, on Nova's signal, the technicians overrode that command.</p>
+
+            <p>The doors shot upwards and Nova wormholed out of the chamber and back into the corridor.</p>
+
+            <p>Leaving that portal open, she created another – straight up, into the vent system.</p>
+
+            <p>On the bridge, Yurr had little time to react, but react he did: ordering all prisoners to be killed.</p>
+
+            <p>In that moment a portal flashed into existence – Nova launching herself amidst pirate captain and crew.</p>
+
+            <p>And showed them what she was made of.</p>
+
+            <p>In a blinding flash, Yurr and every mercenary on that bridge were deeply infused with Nova's antimatter, starting a chain reaction within them.</p>
+
+            <p>Yurr realised what was happening, but too late.</p>
+
+            <p>With a few precise shots from her Syrah-customised sniper rifle, Nova neutralised those mercenaries who were quicker off the mark before grabbing Yurr by his brightly irradiated hair.</p>
+
+            <p>Hurling him back through her network of wormholes, Nova sent Holsom Yurr pinging from portal to portal before tumbling out into the reactor chamber.</p>
+
+            <p>The wormholes collapsed.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter('nova')">Nova</button>
+        <div class="chapter-content" id="nova">
+            <p>Drusus Leverian: Yurr struggled to his feet as every molecule in his body approached critical.</p>
+
+            <p>Behind the glass, the technicians gave him a final, grim salute before slamming the blast door closed.</p>
+
+            <p>Holsom Yurr, pirate and legend, went nova.</p>
+
+            <p>The reactor caught the reaction. The technicians harnessed it, and the engines of the Masker's Theodolite roared to life.</p>
+
+            <p>It was, indeed, the boldest of fools who attempted to leash lightning.</p>
+
+            <p>And so a notorious rogue, said to be unkillable, met his end in the attempt.</p>
+
+            <p>As the historical record now demonstrates.</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    The Lorak Codex · A fan-made Warframe lore archive
+</footer>
+
+</body>
+</html>
