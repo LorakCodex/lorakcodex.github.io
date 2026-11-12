@@ -1,72 +1,128 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url><loc>https://lorakcodex.github.io/</loc></url>
   <url><loc>https://lorakcodex.github.io/extra-lore.html</loc></url>
   <url><loc>https://lorakcodex.github.io/fragments.html</loc></url>
   <url><loc>https://lorakcodex.github.io/factions.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/archives.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/args.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/operations.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/quests.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/tablets.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/timeline.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/transcripts.html</loc></url>
+
+  <!-- Factions -->
   <url><loc>https://lorakcodex.github.io/factions/grineer.html</loc></url>
 
-  <url><loc>https://lorakcodex.github.io/fragments/albrechts-notes.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/fragments/cephalon-fragments.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/fragments/ghoul-fragments.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/fragments/isleweaver.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/fragments/kuria.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/fragments/lost-islands.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/fragments/tenets.html</loc></url>
-
-  <url><loc>https://lorakcodex.github.io/tablets.html</loc></url>
-
-  <url><loc>https://lorakcodex.github.io/summaries/the-lotus-eaters.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/summaries/the-new-war.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/summaries/the-teacher.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/summaries/awakening.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/summaries/jade-shadows-constellations.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/summaries/jade-shadows.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/summaries/old-peace.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/summaries/the-waverider.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/summaries/heart-of-deimos.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/summaries/vors-prize.html</loc></url>
-
-  <url><loc>https://lorakcodex.github.io/tablets/melcantor.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/tablets/zariman.html</loc></url>
-
-  <url><loc>https://lorakcodex.github.io/operations/epoch-operation-taubound.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/operations/fusion-moa-event.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/operations/operation-blood-of-perita.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/operations/operation-eight-claw.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/operations/operation-gargoyles-cry.html</loc></url>
-
-  <url><loc>https://lorakcodex.github.io/leverian/dante.html</loc></url>
-
+  <!-- Archives -->
   <url><loc>https://lorakcodex.github.io/archives/albrechts-requiems.html</loc></url>
   <url><loc>https://lorakcodex.github.io/archives/ember-prime.html</loc></url>
   <url><loc>https://lorakcodex.github.io/archives/excalibur-prime.html</loc></url>
   <url><loc>https://lorakcodex.github.io/archives/executor-tuvul-logs.html</loc></url>
   <url><loc>https://lorakcodex.github.io/archives/garuda.html</loc></url>
   <url><loc>https://lorakcodex.github.io/archives/jades-memory-feathers.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/archives/leverian.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/archives/mag-prime.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/archives/operator-report.html</loc></url>
   <url><loc>https://lorakcodex.github.io/archives/rhino-prime.html</loc></url>
   <url><loc>https://lorakcodex.github.io/archives/seven-crimes-of-kullervo.html</loc></url>
   <url><loc>https://lorakcodex.github.io/archives/shadow-stalker.html</loc></url>
   <url><loc>https://lorakcodex.github.io/archives/synthesis-imprints.html</loc></url>
   <url><loc>https://lorakcodex.github.io/archives/vitruvian.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/archives/mag-prime.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/archives/operator-report.html</loc></url>
 
+  <!-- Fragments -->
+  <url><loc>https://lorakcodex.github.io/fragments/albrechts-notes.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/fragments/cephalon-fragments.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/fragments/ghoul-fragments.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/fragments/glass-shard.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/fragments/isleweaver.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/fragments/kuria.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/fragments/lost-islands.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/fragments/mask-of-the-lost-one-fragments.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/fragments/partnership.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/fragments/somachord-fragments.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/fragments/tenets.html</loc></url>
+
+  <!-- Operations -->
+  <url><loc>https://lorakcodex.github.io/operations/epoch-operation-taubound.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/operations/fusion-moa-event.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/operations/operation-blood-of-perita.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/operations/operation-eight-claw.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/operations/operation-gargoyles-cry.html</loc></url>
+
+  <!-- Quest Summaries -->
+  <url><loc>https://lorakcodex.github.io/summaries/a-man-of-few-words.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/angels-of-the-zariman.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/apostasy-prologue.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/awakening.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/call-of-the-tempestarii.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/chains-of-harrow.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/heart-of-deimos.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/hex.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/howl-of-the-kubrow.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/jade-shadows-constellations.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/jade-shadows.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/mask-of-the-revenant.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/natah.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/octavias-anthem.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/old-peace.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/once-awake.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/patient-zero.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/prelude-to-war.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/rising-tide.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/sands-of-inaros.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/sayas-vigil.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/stolen-dreams.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/tau-2026.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/tau-prologue.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/the-archwing.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/the-deadlock-protocol.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/the-duviri-paradox.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/the-glast-gambit.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/the-jordas-precept.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/the-limbo-theorem.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/the-lotus-eaters.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/the-new-strange.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/the-new-war.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/the-sacrifice.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/the-second-dream.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/the-silver-grove.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/the-teacher.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/the-war-within.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/the-waverider.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/veilbreaker.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/vors-prize.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/vox-solaris.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/summaries/whispers-in-the-walls.html</loc></url>
+
+  <!-- Tablets -->
+  <url><loc>https://lorakcodex.github.io/tablets/melcantor.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/tablets/zariman.html</loc></url>
+
+  <!-- Leverian -->
+  <url><loc>https://lorakcodex.github.io/leverian/dante.html</loc></url>
+
+  <!-- Transcripts -->
+  <url><loc>https://lorakcodex.github.io/transcripts/apostasy-prologue.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/transcripts/awakening.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/transcripts/chimera-prologue.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/transcripts/erra.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/transcripts/jade-shadows-constellations.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/transcripts/jade-shadows.html</loc></url>
   <url><loc>https://lorakcodex.github.io/transcripts/once-awake.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/transcripts/prelude-to-war.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/transcripts/saya-vigil.html</loc></url>
   <url><loc>https://lorakcodex.github.io/transcripts/tau-lua.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/transcripts/tau-part-3.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/transcripts/tau-prologue.html</loc></url>
   <url><loc>https://lorakcodex.github.io/transcripts/tau-vessel.html</loc></url>
+  <url><loc>https://lorakcodex.github.io/transcripts/the-lotus-eaters.html</loc></url>
   <url><loc>https://lorakcodex.github.io/transcripts/the-maker.html</loc></url>
   <url><loc>https://lorakcodex.github.io/transcripts/the-new-war.html</loc></url>
   <url><loc>https://lorakcodex.github.io/transcripts/the-teacher.html</loc></url>
   <url><loc>https://lorakcodex.github.io/transcripts/the-waverider.html</loc></url>
   <url><loc>https://lorakcodex.github.io/transcripts/veilbreaker.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/transcripts/jade-shadows-constellations.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/transcripts/erra.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/transcripts/chimera-prologue.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/transcripts/apostasy-prologue.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/transcripts/awakening.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/transcripts/prelude-to-war.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/transcripts/the-lotus-eaters.html</loc></url>
-  <url><loc>https://lorakcodex.github.io/transcripts/jade-shadows.html</loc></url>
+
 </urlset>
