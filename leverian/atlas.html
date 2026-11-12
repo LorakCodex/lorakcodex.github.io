@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Atlas Leverian | The Lorak Codex</title>
+<meta name="description" content="Explore the complete Atlas Leverian story, narrated by Drusus Leverian, including the tale of Temple Telamon and the asteroid.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://lorakcodex.github.io/leverian/atlas.html">
+<link rel="icon" type="image/png" href="../lorak-codex-favicon-48x48.png">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #111;
+    padding: 25px 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    color: #d4af37;
+    letter-spacing: 3px;
+    margin: 0;
+    font-size: 28px;
+}
+
+nav {
+    background: #151515;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #292929;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 15px 40px;
+}
+
+.back {
+    display: block;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    color: #d4af37;
+    margin-top: 0;
+}
+
+.description {
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.chapter {
+    margin-top: 10px;
+}
+
+.chapter-button {
+    display: block;
+    width: 100%;
+    background: #d4af37;
+    color: #0b0b0b;
+    border: none;
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.chapter-button:hover {
+    background: #e5c451;
+}
+
+.chapter-button:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+.chapter-button::after {
+    content: "+";
+    float: right;
+    font-size: 18px;
+}
+
+.chapter-button.active::after {
+    content: "−";
+}
+
+.chapter-content {
+    display: none;
+    background: #111;
+    border: 1px solid #66551d;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.chapter-content p {
+    margin: 0 0 14px 0;
+}
+
+.chapter-content p:last-child {
+    margin-bottom: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #66551d;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        gap: 12px 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>THE LORAK CODEX</h1>
+</header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../quests.html">Quests</a>
+    <a href="../transcripts.html">Transcripts</a>
+    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="../factions.html">Factions</a>
+    <a href="../timeline.html">Timeline</a>
+    <a href="../operations.html">Operations</a>
+    <a href="../args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
+</nav>
+
+<main>
+    <a class="back" href="../archives/leverian.html">← Back to Leverian</a>
+
+    <h2>Atlas — Leverian</h2>
+
+    <p class="description">
+        The story of Atlas, the stone destroyer, and his battle against
+        Temple Telamon, as told by Drusus Leverian.
+    </p>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Introduction
+        </button>
+        <div class="chapter-content">
+            <p>Drusus Leverian: This is Atlas. Hard as stone. Is it any surprise that his story begins with an asteroid? Temple Telamon had cast a spell on the indentured masses with a song that heralded the coming of a great stone destroyer. A god who would shatter the world and lead them to a great rebirth. The Orokin mocked the cult's off-key singing, their spasmodic dancing, but the spell only grew stronger. Telamon broadcasts would oft-times wedge into controlled channels to spread their doomsday message. For the suffocated lower castes, the notion of something more powerful than their Orokin masters must have been intoxicating. A brutal Orokin crackdown seemed to be working… until… an asteroid was detected on a collision course with Earth. The Telamons celebrated it as prophecy writ true. Divine intervention. For the first time in living memory, the Orokin showed vulnerability. It did not matter that the destruction would be total. For the Temple, this was a sign of a new age.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Atlas Shikoro Helmet
+        </button>
+        <div class="chapter-content">
+            <p>Drusus Leverian: A probe was sent to the asteroid, perhaps seeking proof of divine intervention. It found intervention, though it was anything but divine. The rock had been fitted with colossal steering thrusters and, manning those thrusters, a bevy of well-armed Telamon. Having taken fate into their own hands, they set about a final convulsive dance aboard that rock. Battlecruisers, Orgon missiles, a gale force of Dax… the Orokin could have resolved this in any number of ways. But their enemy was not the Telamons themselves. It was their ideas. Atlas, alone, was sent. As he crashed onto that rock, his Shikoro helm greeted the cultists. Note the angled ballistic plating and reinforced neck protection. He would soon need both.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Tableau of Telamon
+        </button>
+        <div class="chapter-content">
+            <p>Drusus Leverian: For years, historians felt this Tale of Telamon quite improbable, an artefact of Orokin propaganda-myth. Then, on our system's outer edge, we found a debris field of small rocks and dust in a lazy elliptical orbit. Upon these rocks, we find the remains of peculiar stone statuary. The petrified figures, clearly Temple members, have been frozen into a tableau of struggle and death. Or was it, perhaps, a dance? This remarkable find forces us to rethink the entire tale as fact.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Stratum Syandana
+        </button>
+        <div class="chapter-content">
+            <p>Drusus Leverian: The Stratum syandana. Reserved and austere, until you turn it over and reveal the glowing hue of the amethyst crystal within. A breathtaking geode. Imagine its spiralling ribbons as Atlas tore toward the killer asteroid's thrusters. His plan must have been to reorient them and push the rock away from Earth. But, as the story goes, as he neared, the cultists detonated the thrusters' footings and sent them careening into space. They were no longer needed. Mass and inertia would carry the rock to its fate. Atlas was out of options. Or so the Telamons thought.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Tekko
+        </button>
+        <div class="chapter-content">
+            <p>Drusus Leverian: The Tekko are, perhaps, my favourite pieces in this gallery. Note the intricate, ornate mouldings, the complex blades. Quite the contrast from Atlas' otherwise workmanlike appearance. The beauty and craftsmanship conceal the true purpose of the Tekko, as indentations found in cultists' skulls attest. I have to wonder what frenzied dance would have been interrupted – or, if the whiplash strikes and jabs of the Tekko might have blended into the crowd's fitful celebration?</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Rumbler
+        </button>
+        <div class="chapter-content">
+            <p>Drusus Leverian: Before you, a rare sight: two Rumblers, painstakingly recreated from fragments of the aforementioned Tableau. How these inert and rigid formations are compelled to life by Atlas defies reason. Yet, it is true. Consider the confusion of those Telamons as the very stone they worshipped came to life and set upon them. How could they retaliate against such a thing? Like sparring with a landslide.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Atlas
+        </button>
+        <div class="chapter-content">
+            <p>Drusus Leverian: Earth swelled on the horizon, as the cult mocked Atlas with their chorus: The stone shall shatter all! Across the System, every Telamon echoed that final hymn. Children, as far as Neptune, turned their heads from greasy broth and gazed toward Earth. Would that careening stone change… everything? Atlas kneeled down, head and hands pressed to the ground in apparent defeat as the Telamon's hymn grew even louder. But Atlas was listening, feeling – the way the stone trembled to the hymn's pitch. The faults within the asteroid became vivid to him… and so a new song rose up. Rumblers. Erupting in a god-like rhythm, beating along the faults until Atlas, alone, struck the final, resonant chord. A tremor forked through the rock until… all at once, the great asteroid exploded, its dust falling as scintillating rain sparking across the atmosphere… and then… gone. The Telamon's song fell silent, and children, as far as Neptune, turned away and swirled their spoons in greasy broth.</p>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    The Lorak Codex
+</footer>
+
+<script>
+function toggleChapter(button) {
+    const content = button.nextElementSibling;
+    const isOpen = content.style.display === "block";
+
+    content.style.display = isOpen ? "none" : "block";
+    button.classList.toggle("active", !isOpen);
+    button.setAttribute("aria-expanded", String(!isOpen));
+}
+</script>
+
+</body>
+</html>
