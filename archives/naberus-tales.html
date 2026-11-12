@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naberus Tales - The Lorak Codex</title>
+<meta name="description" content="Explore the Naberus Tales on The Lorak Codex, featuring Whispering Naberus, Wild Hunt and Dagath's Hollow.">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #111;
+    padding: 25px 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    color: #d4af37;
+    letter-spacing: 3px;
+    margin: 0;
+    font-size: 28px;
+}
+
+nav {
+    background: #151515;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #292929;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 15px 40px;
+}
+
+h2 {
+    color: #d4af37;
+    margin-top: 0;
+}
+
+.back {
+    display: block;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+.description {
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.chapter {
+    margin-top: 10px;
+}
+
+.chapter-button {
+    display: block;
+    width: 100%;
+    background: #d4af37;
+    color: #0b0b0b;
+    border: none;
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.chapter-button:hover {
+    background: #e5c451;
+}
+
+.chapter-button::after {
+    content: "+";
+    float: right;
+    font-size: 18px;
+}
+
+.chapter-button.active::after {
+    content: "−";
+}
+
+.chapter-content {
+    display: none;
+    background: #111;
+    border: 1px solid #66551d;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.chapter-content p {
+    margin: 0 0 14px 0;
+}
+
+.chapter-content p:last-child {
+    margin-bottom: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #66551d;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        gap: 12px 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>THE LORAK CODEX</h1>
+</header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../quests.html">Quests</a>
+    <a href="../transcripts.html">Transcripts</a>
+    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="../factions.html">Factions</a>
+    <a href="../timeline.html">Timeline</a>
+    <a href="../operations.html">Operations</a>
+    <a href="../args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
+</nav>
+
+<main>
+
+    <a class="back" href="../archives.html">← Back to Archives</a>
+
+    <h2>Naberus Tales</h2>
+
+    <p class="description">
+        Stories told by Grandmother for the Naberus celebration, recounting
+        tales of Orokin cruelty, ancient fears and the origins of Dagath.
+    </p>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            1. Whispering Nabarus Mobile Tale
+        </button>
+
+        <div class="chapter-content">
+
+            <p>Would you like to hear a story for Naberus? One that I told my grandchildren when they were small? Very well!</p>
+
+            <p>Long ago, in the Orokin days, a golden people lived in spoiled luxury. If a body wore out, why, they would take a new one as easily as plucking a Maprico. Such was the mystery of the Kuva.</p>
+
+            <p>So what became of death and disease? Oh, they were abundant, but not for the Orokin. They were above petty death. Such was their contempt that they decreed a special day on which to make fun of it.</p>
+
+            <p>On Naberus, the night of memory, the shining people laughed at death. They dressed in costumes that recalled the old days. Of mortality. Skulls grinned. Hallways guttered with demon-lights. For one night, beauty was banished. Rot and monstrosity held sway.</p>
+
+            <p>Now on one very special Naberus, three pretty Orokin were bored, as Orokin so often were. Naberus no longer holds its magic for me, sighed one. Masks and costumes are for children, grumbled another. Why follow the crowd, mused the third? Are we not the very elite of the elite? Haha! Up, my kissingtons, my luscious loves; send for blue Kuva and hot lights; I have a sport that will mend all! And in the corridor, behind a curtain, a solitary, silent girl heard them and said nothing.</p>
+
+            <p>Then the three were very wicked, for what do you think they did? Down into the streets, they went, and they caught three poor Ostrons and bore them back to their gilded halls. One, they peeled like a fruit and decked out with glassy splinters, and his naked jaws went chitter-chatter-snap, and it echoed all around. Scarlet footprints he left. Another's limbs they twisted, and wretched his neck, and made a bundle of him, until he scuttled upsy-downsy like a horrid crab, with his sockets all empty and his stretched-out nose snuffling. The third they pulled thin in hand and foot. She walked spindly-wise on long tiptoes like a spider, and her entrails hung delicately down. She whispered, split-tongued and hissing, as she went.</p>
+
+            <p>Fine costumes we've made, chortled the three Orokin. Let us now try them on, and visit our friends! What shrieking there will be! Oh! Our names will live forever in the Court, for such a prank as this! Now. The silent girl brought them their blue Kuva, so they could take on these twisted bodies for only a short time before returning to their own. They drank and slept and woke in their three. Horrid. Forms. Off they went, down the stairs, out the door, into the city, into the night of banners and masks and wild hilarity. Chitter-chatter-snap, scuttle-buttle, whispery-hisspery. As you can imagine, there were many screams and laughs. Such cleverness. Such wit!</p>
+
+            <p>But in a high room of the tower, the silent girl looked at the faces of the three sleeping Orokin. She went and opened a little ivory door that she was not supposed to know about, and drew forth a flask that she would have been glassed for even looking at. A flask of crimson Kuva. The scarlet seal upon Continuity. Permanent.</p>
+
+            <p>And she tipped it. Down three. Cruel. Throats.</p>
+
+            <p>With a little laugh, she went skating away, never to return. There were many screams that Naberus night. But when the sun came up, none screamed so loud as the three who found they were trapped in the hideous bodies that they themselves had fashioned.</p>
+
+            <p>Forever and ever.</p>
+
+            <p>So listen carefully, Tenno, and beware. For you may hear them coming tonight. Whispery-hisspery on long stalking bones. Scuttle-buttle with his eyes all empty. And skinless, dripping-handed, chitter-chatter-snap.</p>
+
+            <p>Happy Naberus!</p>
+
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            2. Wild Hunt Totem
+        </button>
+
+        <div class="chapter-content">
+
+            <p>Fear. Such a delightful word. It teaches us to beware the dark and all the things within it that go snippity-snap, eager to rend your innards from your belly, to stuff their own hungry guts. Ooh! This puts me in mind of one of my favorite tales. For there is one legend older than all the rest, one that, as civility beat back the wild, as centuries turned into millenia, has evolved along with us. The fear of fangs, of shadows, of teeth that flash in the dark. The story of a wolf waiting in the shadows - ready to rip out our throats.</p>
+
+            <p>It was on one fateful Naberus night that a hapless Grineer soldier discovered that one should not wander off into the deep woods alone... for alone, you may not be. A howl split the darkness that sent a shiver down the spine. Though all the horrors of war that this Grineer had seen in all his years... there was something about the sound. It tapped into the very thing that is born as we are born, sputtering and mewling into this uncaring world. Fear.</p>
+
+            <p>He was alone. He was being hunted. And he. Was. Afraid. Into the night the Grineer soldier ran, over stump and through darkened glade. With the sound of the beast growing closer, louder, howling, jaw slather-snapping - A misplaced foot, an ill-timed step, and the ground came rushing up to meet him. Rolling onto his back he sought to defend himself, at last catching sight of his pursuer.</p>
+
+            <p>Primal terror had come for him. A twisted shape, bulbous, stinking, fetid... jaws drooling with ooze and ire - an infected kubrodon. Lifting his marelok, his shaking hand took aim. Bang! A single shot killed the beast dead. He laughed at his own foolishness! He, a mighty soldier, afraid of a single sad and infested kubrodon!</p>
+
+            <p>Hubris - my dear Tenno - is responsible for more tragedy than this world than any other inclination we may have. Remember that, and someday it may save you. For notice he did not that the slain beast's family had encircled him. The creatures descended, sinking teeth into flesh, peeling sinew from bone, spreading their infested blood into him. How he screamed, fighting off the monsters as best he could. Fists pounded into fur as he fought like the beasts around him. It was all he had left. One heartbeat would be all that one could spare him from the grave.</p>
+
+            <p>In the end, he survived. Torn and shredded, bleeding and bitten, but alive. He thought that his arduous saga had come to an end. Until he heard that dreadful howl once more. Though... this time? ...It came from him. Flesh twisting, bones snapping, the noises that left his agonized form were bestial. Wild. Feral. Soon, it was he who stalked the night. It was he who tasted blood upon his fangs. It was he who inspired the fear of the hunt.</p>
+
+            <p>Oh Fret not, though, dearheart - for even the hunters can be hunted. The beast can be felled, and trophies can be made of those who were brought low. But mark me, Tenno. For perhaps, this Naberus night, when you think yourself the pinnacle of the hunt... You had best be wary of the eyes peering at you from the dark. Lest you be next.</p>
+
+            <p>Happy Naberus...</p>
+
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            3. Dagath’s Hollow Tale
+        </button>
+
+        <div class="chapter-content">
+
+            <p>There once was a Dax cavalarywoman, the lover of an Orokin couple named Corphel and Irilia. What was her name? We do not know, for they never used it. They called her by many pet names, though, for an exotic pet she was to them. Little Sweetness. Tender Petal. Wild Rider. Had a mere Dax been known to be engaging in relations with her betters, she would have been executed on the spot. But the couple's power and influence were such that the affair would never be publicly addressed.</p>
+
+            <p>Still they feared to use her name, for names have power. Many gifts they gave her. Fine armor. Rubedo rings. And a horse of her own, on the condition that she never, ever named it. Names were for people, not possessions. So long as it remained a mere nameless thing, she would never love it more than them. But the rider could not bear to deny her friend the simple kindness of a name. So she whispered into its ear: you are Rakhali, freshness-after-rain.</p>
+
+            <p>And just as the couple had feared, she came to love the horse so dearly. This was intolerable to them. The horse had to go. An accidental impalement was arranged. But fate played a cruel trick, and both rider and horse were impaled. Corphel and Irilia hastened to her side. Ignoring the dying horse, they fretted over their lover as she coughed blood. Continuity was out of the question. In desperation, they turned to a certain... expert, and pleaded with him to let her live forever. He returned the rider to them, transformed to a warrior of living steel. Her sweet and pretty face looked upon them with a smile that would never fade.</p>
+
+            <p>For all their talk of 'forever', they wearied of her immediately. Now that the relationship was no longer taboo, they abandoned it. Parties became awkward when the rider stood vacantly by, useless as an abandoned doll. She had to go, they agreed. So arrangements were made with a master of industry, and the rider - all unknowing - accompanied the couple to a facility. She lay down obediently when instructed, showed no emotion when the restraints clamped her limbs, and made not a sound when the full force of the dissolution beam blazed through her head and out of the back of her steel skull. The couple were satisfied. Their sentimental mistake was dead, and furthermore, the smiling doll's face was erased. Now they could erase it from memory.</p>
+
+            <p>I doubt I need to tell you what faceless thing clambered jerkily from the facility's waste disposal heap, in the still of a Naberus night. How she sought for her Dax Nikana, and found only the overseer's whip-blade. Confused, vacant, she wandered. Why was she alone? Where was her loyal Rakhali? She reached deep into despair and memory, and summoned up a ghost-horse to run alongside her on the night winds. Now, at least, she was no longer alone. She groped for other memories, came up with hands overflowing with betrayal. When the morning sun rose on Corphel and Irilia, they were faceless too, and quite still.</p>
+
+            <p>After that, she wandered without purpose, and the legends of the hollow rider grew. And so we come to my part in her story. You must understand, dear, that it is terribly bad luck to be out on Naberus with no gift to give a reveler. And yet that was my plight as I stood, my old bones aching, before the dreadful figure on the road, many years ago. 'I have no face,' the figure before me seemed to say, in a whispering voice that spoke in my mind. 'I have no name. Only a need. And you come before me empty-handed this Naberus night?'</p>
+
+            <p>'I do have one thing to give, if it please you,' I said to her. 'My name. When you ride away, you shall be Dagath. And I shall be only Grandmother.' And that is the story of how I lost my name, and kept my head, though many others have since lost theirs. For with her name came a new purpose. Dagath, you see, means 'the mirror that accuses'. They say that none now can look into the gulf where once her face was, without their own sins rising to accuse them, and a swift, sharp sentence following.</p>
+
+            <p>A happy Naberus to you all!</p>
+
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    The Lorak Codex
+</footer>
+
+<script>
+function toggleChapter(button) {
+    const content = button.nextElementSibling;
+    const isOpen = content.style.display === "block";
+
+    content.style.display = isOpen ? "none" : "block";
+    button.classList.toggle("active", !isOpen);
+    button.setAttribute("aria-expanded", String(!isOpen));
+}
+</script>
+
+</body>
+</html>
