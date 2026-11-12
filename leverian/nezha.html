@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nezha Leverian | The Lorak Codex</title>
+<meta name="description" content="Explore the Nezha Leverian story, narrated by Drusus Leverian, telling the tale of the Massacre of Reshantur and the children protected by Nezha.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://lorakcodex.github.io/leverian/nezha.html">
+<link rel="icon" type="image/png" href="../lorak-codex-favicon-48x48.png">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #111;
+    padding: 25px 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    color: #d4af37;
+    letter-spacing: 3px;
+    margin: 0;
+    font-size: 28px;
+}
+
+nav {
+    background: #151515;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #292929;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 15px 40px;
+}
+
+.back {
+    display: block;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    color: #d4af37;
+    margin-top: 0;
+}
+
+.description {
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.chapter {
+    margin-top: 10px;
+}
+
+.chapter-button {
+    display: block;
+    width: 100%;
+    background: #d4af37;
+    color: #0b0b0b;
+    border: none;
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.chapter-button:hover {
+    background: #e5c451;
+}
+
+.chapter-button:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+.chapter-button::after {
+    content: "+";
+    float: right;
+    font-size: 18px;
+}
+
+.chapter-button.active::after {
+    content: "−";
+}
+
+.chapter-content {
+    display: none;
+    background: #111;
+    border: 1px solid #66551d;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.chapter-content p {
+    margin: 0 0 14px 0;
+}
+
+.chapter-content p:last-child {
+    margin-bottom: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #66551d;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        gap: 12px 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>THE LORAK CODEX</h1>
+</header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../quests.html">Quests</a>
+    <a href="../transcripts.html">Transcripts</a>
+    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="../factions.html">Factions</a>
+    <a href="../timeline.html">Timeline</a>
+    <a href="../operations.html">Operations</a>
+    <a href="../args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
+</nav>
+
+<main>
+    <a class="back" href="../archives/leverian.html">← Back to Leverian</a>
+
+    <h2>Nezha — Leverian</h2>
+
+    <p class="description">
+        The story of Nezha, the mercurial firemonger, and the Massacre of
+        Reshantur, as told by Drusus Leverian.
+    </p>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Introduction
+        </button>
+        <div class="chapter-content">
+            <p>Drusus Leverian: Nezha. The mercurial firemonger. The clarion of hope. However foul the decadent excesses of the Orokin Empire, the aftermath of its collapse was arguably worse. But, the darkest times often give rise to the brightest legends. We've seen that happen often, haven't we? Tales of a being called Nezha predate the Orokin fall. They speak of a swift warrior who leaves trails of fire, summoning barbed spears from the very earth. But it is during a time of unsurpassed brutality, at a moment of wanton slaughter, that this most blazingly improbable of warframes first proves to be more than a myth.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Teng Dagger
+        </button>
+        <div class="chapter-content">
+            <p>Drusus Leverian: This blade! A tongue of exquisite flame in cold metal. It was unearthed by a poor farmer of Reshantur, as he followed his hulking plow-beasts across fields he would never own. Another might have bravely kept the dagger. But records suggest he handed it into his overseer on the spot, a half-cup of rice his princely reward. With no Dax to keep the peace, and no Parvos Granum to hold the Corpus Board together, bloody land grabs were routine. The fertile fields of Reshantur changed hands many times. With each hostile takeover, slain workers became fertiliser for the next yield of crops – tended by the survivors – and so it went. This created what you might call a staffing problem. If all the surviving adults are working the fields, then who is left to defend them?</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Buzhou Syandana
+        </button>
+        <div class="chapter-content">
+            <p>Drusus Leverian: Children. That's who. This dismal little relic was once part of a… of a syandana, shall we say. Though not of Orokin make, clearly. No. Its young owner wove this from a fertiliser sack. There were many such capes found at the site. Enough for an army. Moas were expensive, you see. Children… they were cheap. And plentiful. It made good business sense to arm them. Not the very youngest, of course – just the near-adults. The still unbroken. Those who understood the stakes. The young defenders of Reshantur took their duty seriously. They formed into a little clan, trained every day in the ruins of an old temple, and even made themselves a uniform of sorts – part of which you see before you now. But this humble cape was modelled on something even older. The syandana of Nezha himself – displayed here, before you.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Chakram
+        </button>
+        <div class="chapter-content">
+            <p>Drusus Leverian: This chakram was found in the ruins of the Reshantur temple along with fragments of stories, scrawled on slates in an immature hand, and oaths of dedication to a figure of legend. It seems the child-soldiers of Reshantur took courage from the tales of Nezha, adopting him as patron and protector. Their scratchings evince a firm belief that Nezha would bless them with victory should they fight without fear, and abandon them should they ever fear. So, they swore, they would defend the fields to the last drop of their blood. Clever manipulation. I wonder who put that idea into their heads. At any rate, they accepted it on faith. At least, until the Massacre of Reshantur.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Improvised Divine Spear
+        </button>
+        <div class="chapter-content">
+            <p>Drusus Leverian: This spear, modelled on Nezha's own, was found buried in scorched soil. Note the size. Records of the attack are nigh impossible to find. Not surprising. The massacre was almost certainly covered up to protect what the Corpus regarded as sensitive business practices. Imagine the children, Tenno, wearing their pathetic syandanas, bearing flimsy weapons, but with heads high – as warriors. Think of them rushing at their far superior foes, without fear… and imagine what those foes did. To this day, the fields of Reshantur cannot be ploughed. The blades of ploughs are dented and destroyed by an earth that, still, remains thickly seeded with shot, and shells, and the cold brass teeth of war. But that is not why the event is called the Massacre of Reshantur. The children charged. The Corpus took easy aim. Not one child's heart fluttered. And then? Flame.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Nezha Circa Helmet
+        </button>
+        <div class="chapter-content">
+            <p>Drusus Leverian: The Corpus surveyor Jena Xasparin says she found a solitary child, wearing this helmet, in the midst of a charnel field of remains. But they were the remains of Corpus troops. Some dismembered, some impaled… all burned. Nezha did it, the boy said calmly. He flew down from the sky and tore the enemy asunder with wheels of flame. When a child fell, he would raise them up again. Nezha moved quick as a scimitar, and the earth burned where his feet touched. Now the others had gone with Nezha, part of his celestial army. The boy had stayed behind to tell the story. To Xasparin, the boy was merely traumatised, the massacre probably a mutiny within the Corpus ranks. But Reshantur has been excavated, and every single one of the thousands of blackened bones that were gene-tagged… had belonged to an adult.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Nezha
+        </button>
+        <div class="chapter-content">
+            <p>Drusus Leverian: And at last, we meet Nezha face to face, in all his unquestionable reality. Did this warframe model itself on the myths, to take on the mantle of a mythic hero? Or were the myths left in the warframe's wake, a blazing trail to light the way? Ah. History will always be some manner of educated guesswork, and occasionally one of faith. Perhaps in some deeper stratum, we will find the lost children of Reshantur, sad little clusters of bones, not saved at all. But I have faith we will not. I leave you with this: why do you suppose it was the child soldiers that Nezha chose to protect? Any war has its innocent casualties, but these seem to have called to him. What could a warframe, a lethal specialist warrior, possibly have in common with a child? That riddle, I fear, must remain a riddle</p>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    The Lorak Codex
+</footer>
+
+<script>
+function toggleChapter(button) {
+    const content = button.nextElementSibling;
+    const isOpen = content.style.display === "block";
+
+    content.style.display = isOpen ? "none" : "block";
+    button.classList.toggle("active", !isOpen);
+    button.setAttribute("aria-expanded", String(!isOpen));
+}
+</script>
+
+</body>
+</html>
