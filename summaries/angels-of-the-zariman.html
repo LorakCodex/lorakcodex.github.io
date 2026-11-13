@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angels of the Zariman - Quests - The Lorak Codex</title>
+    <title>Angels of the Zariman - Quest Summaries - The Lorak Codex</title>
 
     <style>
         * {
@@ -12,70 +12,72 @@
 
         body {
             margin: 0;
+            background: #0b0b0b;
+            color: #e0e0e0;
             font-family: Arial, sans-serif;
-            background-color: #0b0b0b;
-            color: #ddd;
-            line-height: 1.6;
         }
 
         header {
-            background-color: #111;
-            padding: 20px;
+            background: #111;
+            padding: 25px 15px;
             text-align: center;
-            border-bottom: 2px solid #d4af37;
+            border-bottom: 1px solid #333;
         }
 
         header h1 {
             color: #d4af37;
             letter-spacing: 3px;
             margin: 0;
+            font-size: 28px;
         }
 
         nav {
+            background: #151515;
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            flex-wrap: wrap;
+            gap: 20px;
             padding: 15px;
-            background-color: #111;
+            border-bottom: 1px solid #292929;
         }
 
         nav a {
-            color: #d4af37;
+            color: #ccc;
             text-decoration: none;
-            font-weight: bold;
+            font-size: 14px;
         }
 
         nav a:hover {
-            color: #fff;
+            color: #d4af37;
         }
 
         main {
             max-width: 900px;
             margin: auto;
-            padding: 20px;
+            padding: 25px 15px 40px;
         }
 
         h2 {
             color: #d4af37;
-            border-bottom: 1px solid #d4af37;
-            padding-bottom: 8px;
         }
 
         .back {
-            display: block;
+            display: inline-block;
             color: #d4af37;
+            text-decoration: none;
             font-weight: bold;
             margin-bottom: 20px;
-            text-decoration: none;
+        }
+
+        .back:hover {
+            text-decoration: underline;
         }
 
         .summary {
             background: #111;
             border: 1px solid #333;
-            border-radius: 6px;
             padding: 15px;
-            margin-bottom: 20px;
+            line-height: 1.6;
         }
 
         .summary p {
@@ -86,28 +88,32 @@
             margin-bottom: 0;
         }
 
-        .links a {
+        .transcript {
             display: inline-block;
-            color: #0b0b0b;
+            margin-top: 20px;
             background: #d4af37;
+            color: #0b0b0b;
             padding: 10px 15px;
-            margin: 5px 8px 5px 0;
-            border-radius: 4px;
-            text-decoration: none;
             font-weight: bold;
+            text-decoration: none;
+        }
+
+        .transcript:hover {
+            background: #f0d060;
         }
 
         footer {
             text-align: center;
             padding: 20px;
-            color: #888;
-            border-top: 1px solid #333;
-            margin-top: 30px;
+            border-top: 1px solid #66551d;
+            color: #777;
+            font-size: 13px;
         }
     </style>
 </head>
 
 <body>
+
     <header>
         <h1>The Lorak Codex</h1>
     </header>
@@ -139,13 +145,12 @@
             <p>• <strong>The Conclusion:</strong> The Chosen Operator works to purge contamination, defend the ship, and defeat Kira in the Void realm to reclaim their lost home from the Void Angel.</p>
         </div>
 
-        <div class="links">
-            <a href="../transcripts/angels-of-the-zariman.html">View Transcript</a>
-        </div>
+        <a class="transcript" href="../transcripts/angels-of-the-zariman.html">View Transcript</a>
     </main>
 
     <footer>
         The Lorak Codex
     </footer>
+
 </body>
 </html>
