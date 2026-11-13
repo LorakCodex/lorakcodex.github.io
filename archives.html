@@ -6,10 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Archives | The Lorak Codex</title>
-
-<meta name="description" content="Explore the Warframe lore archives of The Lorak Codex, featuring Orokin records, historical accounts, character records, Prime trailers and other archived lore.">
-
+<meta name="description" content="Explore archived Warframe lore, historical records, transmissions, documents and other discoveries collected by The Lorak Codex.">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://lorakcodex.github.io/archives.html">
+<link rel="icon" type="image/png" href="lorak-codex-favicon-48x48.png">
 
 <style>
 * {
@@ -19,47 +19,69 @@
 body {
     margin: 0;
     background: #0b0b0b;
-    color: #ddd;
+    color: #e0e0e0;
     font-family: Arial, sans-serif;
-    line-height: 1.7;
 }
 
 header {
     background: #111;
     padding: 25px 15px;
     text-align: center;
-    border-bottom: 1px solid #66551d;
+    border-bottom: 1px solid #333;
 }
 
 header h1 {
     color: #d4af37;
     letter-spacing: 3px;
     margin: 0;
+    font-size: 28px;
+}
+
+nav {
+    background: #151515;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #292929;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d4af37;
 }
 
 main {
     max-width: 900px;
-    margin: auto;
-    padding: 25px 15px;
+    margin: 0 auto;
+    padding: 25px 15px 40px;
+}
+
+.back {
+    display: block;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.back:hover {
+    text-decoration: underline;
 }
 
 h2 {
     color: #d4af37;
-    text-align: center;
-}
-
-.back-link {
-    display: inline-block;
-    color: #d4af37;
-    text-decoration: none;
-    margin-bottom: 20px;
-}
-
-.back-link:hover {
-    text-decoration: underline;
+    margin-top: 0;
 }
 
 .intro {
+    line-height: 1.6;
     margin-bottom: 25px;
 }
 
@@ -72,26 +94,36 @@ h2 {
 .archive-button {
     display: block;
     width: 100%;
-    padding: 14px 18px;
     background: #d4af37;
-    color: #111;
-    border-radius: 8px;
+    color: #0b0b0b;
     text-decoration: none;
+    padding: 14px 16px;
+    border-radius: 5px;
     font-weight: bold;
-    transition: background 0.2s;
+    text-align: left;
 }
 
 .archive-button:hover {
-    background: #e5c65c;
+    background: #e5c451;
+}
+
+.archive-button:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
 }
 
 footer {
     text-align: center;
-    padding: 25px 15px;
+    padding: 20px;
+    border-top: 1px solid #66551d;
     color: #777;
     font-size: 13px;
-    border-top: 1px solid #333;
-    margin-top: 35px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        gap: 12px 18px;
+    }
 }
 </style>
 </head>
@@ -102,53 +134,99 @@ footer {
     <h1>THE LORAK CODEX</h1>
 </header>
 
+<nav>
+    <a href="index.html">Home</a>
+    <a href="quests.html">Quests</a>
+    <a href="transcripts.html">Transcripts</a>
+    <a href="extra-lore.html">Extra Lore</a>
+    <a href="factions.html">Factions</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="operations.html">Operations</a>
+    <a href="args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
+</nav>
+
 <main>
 
-<a class="back-link" href="extra-lore.html">← Back to Extra Lore</a>
+    <a class="back" href="extra-lore.html">← Back to Extra Lore</a>
 
-<h2>Archives</h2>
+    <h2>Archives</h2>
 
-<div class="intro">
-    <p>
-        A collection of archived Warframe lore, including Orokin records, historical accounts, character records, Prime trailers and other preserved knowledge from across the Origin System.
+    <p class="intro">
+        Archived records, historical documents, transmissions and other pieces of Warframe lore.
     </p>
-</div>
 
-<div class="archive-list">
+    <div class="archive-list">
 
-    <a class="archive-button" href="archives/excalibur-prime.html">1. Excalibur Prime</a>
+        <a class="archive-button" href="Archives/excalibur-prime.html">
+            1. Excalibur Prime
+        </a>
 
-    <a class="archive-button" href="archives/ember-prime.html">2. Ember Prime</a>
+        <a class="archive-button" href="Archives/ember-prime.html">
+            2. Ember Prime
+        </a>
 
-    <a class="archive-button" href="archives/rhino-prime.html">3. Rhino Prime</a>
+        <a class="archive-button" href="Archives/rhino-prime.html">
+            3. Rhino Prime
+        </a>
 
-    <a class="archive-button" href="archives/mag-prime.html">4. Mag Prime</a>
+        <a class="archive-button" href="Archives/mag-prime.html">
+            4. Mag Prime
+        </a>
 
-    <a class="archive-button" href="archives/shadow-stalker.html">5. Shadow Stalker</a>
+        <a class="archive-button" href="Archives/shadow-stalker.html">
+            5. Shadow Stalker
+        </a>
 
-    <a class="archive-button" href="archives/albrechts-requiems.html">6. Albrecht's Requiems</a>
+        <a class="archive-button" href="Archives/albrechts-requiems.html">
+            6. Albrecht's Requiems
+        </a>
 
-    <a class="archive-button" href="archives/seven-crimes-of-kullervo.html">7. The Seven Crimes of Kullervo</a>
+        <a class="archive-button" href="Archives/seven-crimes-of-kullervo.html">
+            7. The Seven Crimes of Kullervo
+        </a>
 
-    <a class="archive-button" href="archives/garuda.html">8. Garuda</a>
+        <a class="archive-button" href="Archives/garuda.html">
+            8. Garuda
+        </a>
 
-    <a class="archive-button" href="archives/synthesis-imprints.html">9. Synthesis Imprints</a>
+        <a class="archive-button" href="Archives/synthesis-imprints.html">
+            9. Synthesis Imprints
+        </a>
 
-    <a class="archive-button" href="archives/jades-memory-feathers.html">10. Jade's Memory Feathers</a>
+        <a class="archive-button" href="Archives/jades-memory-feathers.html">
+            10. Jade's Memory Feathers
+        </a>
 
-    <a class="archive-button" href="archives/executor-tuvul-logs.html">11. Executor Tuvul's Logs</a>
+        <a class="archive-button" href="Archives/executor-tuvul-logs.html">
+            11. Executor Tuvul's Logs
+        </a>
 
-    <a class="archive-button" href="archives/leverian.html">12. The Leverian</a>
+        <a class="archive-button" href="Archives/leverian.html">
+            12. The Leverian
+        </a>
 
-    <a class="archive-button" href="archives/vitruvian.html">13. The Vitruvian</a>
+        <a class="archive-button" href="Archives/vitruvian.html">
+            13. The Vitruvian
+        </a>
 
-    <a class="archive-button" href="archives/cordylon.html">14. Cephalon Cordylon</a>
+        <a class="archive-button" href="Archives/cordylon.html">
+            14. Cephalon Cordylon
+        </a>
 
-    <a class="archive-button" href="archives/naberus-tales.html">15. Naberus Tales</a>
+        <a class="archive-button" href="Archives/naberus-tales.html">
+            15. Naberus Tales
+        </a>
 
-    <a class="archive-button" href="archives/prime-trailers.html">16. Prime Warframe Trailers</a>
+        <a class="archive-button" href="Archives/prime-warframe-trailers.html">
+            16. Prime Warframe Trailers
+        </a>
 
-</div>
+        <a class="archive-button" href="Archives/unauthorised-broadcasts.html">
+            17. Transcriptions of Unauthorised Broadcasts
+        </a>
+
+    </div>
 
 </main>
 
