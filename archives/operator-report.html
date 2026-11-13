@@ -1,198 +1,204 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operator Report - The Lorak Codex</title>
 
-    <title>Operator Report - The Lorak Codex</title>
+<style>
+* {
+    box-sizing: border-box;
+}
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+}
 
-        body {
-            margin: 0;
-            background: #0b0b0b;
-            color: #ddd;
-            font-family: Arial, sans-serif;
-        }
+header {
+    background: #111;
+    padding: 25px 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
 
-        header {
-            background: #111;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid #d4af37;
-        }
+header h1 {
+    color: #d4af37;
+    letter-spacing: 3px;
+    margin: 0;
+    font-size: 28px;
+}
 
-        h1 {
-            color: #d4af37;
-            letter-spacing: 3px;
-            margin: 0;
-        }
+nav {
+    background: #151515;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #292929;
+}
 
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            padding: 15px;
-            background: #111;
-        }
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
 
-        nav a {
-            color: #d4af37;
-            text-decoration: none;
-            font-weight: bold;
-        }
+nav a:hover {
+    color: #d4af37;
+}
 
-        nav a:hover {
-            color: white;
-        }
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 15px 40px;
+}
 
-        main {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
+h2 {
+    color: #d4af37;
+    margin-top: 0;
+}
 
-        .back {
-            display: block;
-            color: #d4af37;
-            text-decoration: none;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
+.back {
+    display: block;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
-        .back:hover {
-            color: white;
-        }
+.back:hover {
+    text-decoration: underline;
+}
 
-        h2 {
-            color: #d4af37;
-            margin-bottom: 10px;
-        }
+.intro {
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
 
-        .intro {
-            line-height: 1.7;
-            margin-bottom: 25px;
-        }
+.requiem {
+    margin-bottom: 20px;
+}
 
-        .requiem {
-            margin-bottom: 20px;
-        }
+.requiem-button {
+    display: block;
+    width: 100%;
+    padding: 14px 16px;
+    background: #d4af37;
+    color: #0b0b0b;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
-        .requiem-button {
-            display: block;
-            width: 100%;
-            padding: 14px 16px;
-            background: #d4af37;
-            color: #0b0b0b;
-            border: none;
-            border-radius: 4px;
-            text-align: left;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-        }
+.requiem-button:hover {
+    background: #e5c451;
+}
 
-        .requiem-button:hover {
-            background: #f0d46b;
-        }
+.requiem-button:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
 
-        .requiem-button:focus-visible {
-            outline: 2px solid white;
-            outline-offset: 3px;
-        }
+.requiem-content {
+    display: none;
+    margin-top: 10px;
+    padding: 18px;
+    background: #111;
+    border: 1px solid #66551d;
+    border-radius: 5px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
 
-        .requiem-content {
-            display: none;
-            margin-top: 10px;
-            padding: 18px;
-            background: #111;
-            border: 1px solid #d4af37;
-            border-radius: 4px;
-            line-height: 1.8;
-            overflow-wrap: anywhere;
-        }
+.requiem-content.open {
+    display: block;
+}
 
-        .requiem-content.open {
-            display: block;
-        }
+.meaning {
+    color: #d4af37;
+    font-weight: bold;
+    margin: 0 0 12px;
+}
 
-        .meaning {
-            color: #d4af37;
-            font-weight: bold;
-            margin: 0 0 12px;
-        }
+.passage {
+    margin: 0;
+    white-space: pre-line;
+}
 
-        .passage {
-            margin: 0;
-            white-space: pre-line;
-        }
+.file-entry {
+    margin-bottom: 14px;
+}
 
-        .file-entry {
-            margin-bottom: 14px;
-        }
+.file-entry:last-child {
+    margin-bottom: 0;
+}
 
-        .file-entry:last-child {
-            margin-bottom: 0;
-        }
+.file-heading {
+    color: #d4af37;
+    font-weight: bold;
+    margin: 0 0 12px;
+}
 
-        .file-heading {
-            color: #d4af37;
-            font-weight: bold;
-            margin: 0 0 12px;
-        }
+.report-paragraph {
+    margin: 0 0 14px;
+}
 
-        .report-paragraph {
-            margin: 0 0 14px;
-        }
+.report-paragraph:last-child {
+    margin-bottom: 0;
+}
 
-        .report-paragraph:last-child {
-            margin-bottom: 0;
-        }
+.report-list {
+    margin: 0 0 14px;
+    padding-left: 25px;
+}
 
-        .report-list {
-            margin: 0 0 14px;
-            padding-left: 25px;
-        }
+.report-list li {
+    margin-bottom: 8px;
+}
 
-        .report-list li {
-            margin-bottom: 8px;
-        }
+.report-list li:last-child {
+    margin-bottom: 0;
+}
 
-        .report-list li:last-child {
-            margin-bottom: 0;
-        }
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #66551d;
+    color: #777;
+    font-size: 13px;
+}
 
-        footer {
-            margin-top: 30px;
-            padding: 20px;
-            background: #111;
-            border-top: 1px solid #d4af37;
-            text-align: center;
-            color: #999;
-            font-size: 13px;
-        }
-    </style>
+@media (max-width: 600px) {
+    nav {
+        gap: 12px 18px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>The Lorak Codex</h1>
+    <h1>THE LORAK CODEX</h1>
 </header>
 
 <nav>
     <a href="../index.html">Home</a>
     <a href="../quests.html">Quests</a>
     <a href="../transcripts.html">Transcripts</a>
+    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="../factions.html">Factions</a>
     <a href="../timeline.html">Timeline</a>
     <a href="../operations.html">Operations</a>
     <a href="../args.html">ARGs</a>
-    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
 </nav>
 
 <main>
@@ -205,31 +211,21 @@
     </p>
 
     <section class="requiem">
-        <button class="requiem-button"
-                type="button"
-                aria-expanded="false"
-                onclick="toggleRequiem(this)">
+        <button class="requiem-button" type="button" aria-expanded="false" onclick="toggleRequiem(this)">
             C:\Redacted Files
         </button>
 
         <div class="requiem-content">
 
-            <!-- OPERATOR.TXT -->
             <section class="file-entry">
-                <button class="requiem-button"
-                        type="button"
-                        aria-expanded="false"
-                        onclick="toggleRequiem(this)">
+                <button class="requiem-button" type="button" aria-expanded="false" onclick="toggleRequiem(this)">
                     Operator.txt
                 </button>
 
                 <div class="requiem-content">
                     <p class="file-heading">1. THE OPERATOR</p>
-
                     <p class="report-paragraph">The Laboratories are sealed.</p>
-
                     <p class="report-paragraph">OUR TASK: Watch for the chosen OPERATOR.</p>
-
                     <p class="meaning">xx KNOWN DATA xx</p>
 
                     <ul class="report-list">
@@ -256,322 +252,195 @@
                 </div>
             </section>
 
-            <!-- LOTUS.TXT -->
             <section class="file-entry">
-                <button class="requiem-button"
-                        type="button"
-                        aria-expanded="false"
-                        onclick="toggleRequiem(this)">
+                <button class="requiem-button" type="button" aria-expanded="false" onclick="toggleRequiem(this)">
                     Lotus.txt
                 </button>
 
                 <div class="requiem-content">
                     <p class="file-heading">2. THE LOTUS</p>
-
                     <p class="report-paragraph">A suitable Tenno candidate has been found.</p>
-
                     <p class="report-paragraph">The reawakened Tenno is being guided by THE LOTUS, the same entity who led the Tenno at the end of the Old War.</p>
-
                     <p class="report-paragraph">THE LOTUS is known to be a former SENTIENT previously named NATAH. She was captured and converted to her current state during the Old War by EXECUTOR BALLAS, a high-ranking Orokin.</p>
-
                     <p class="report-paragraph">EXECUTOR BALLAS is theorized to have modeled the appearance and persona of THE LOTUS upon his deceased lover MARGULIS, an Archimedean scientist executed for her devotion to the Tenno.</p>
-
                     <p class="report-paragraph">THE LOTUS appears to be just as devoted to the Tenno as Margulis was. She has not, however, divulged the secret of her Sentient origin to them.</p>
-
                     <p class="report-paragraph">Continuing to monitor.</p>
                 </div>
             </section>
 
-            <!-- CONFLICT.TXT -->
             <section class="file-entry">
-                <button class="requiem-button"
-                        type="button"
-                        aria-expanded="false"
-                        onclick="toggleRequiem(this)">
+                <button class="requiem-button" type="button" aria-expanded="false" onclick="toggleRequiem(this)">
                     Conflict.txt
                 </button>
 
                 <div class="requiem-content">
                     <p class="file-heading">THE CONFLICT</p>
-
                     <p class="report-paragraph">Tenno candidate has engaged with several hostile forces.</p>
-
                     <p class="report-paragraph">The GRINEER are degraded descendants of the cloned worker force that once served the Orokin. They are brutal combatants concerned only with the amassing of power and territory. Left unchecked, they slaughter, enslave and plunder civilians.</p>
-
                     <p class="report-paragraph">The CORPUS are a merchant cult devoted to profit. They make extensive use of robotics. They exploit civilians economically and violently protect their 'investments'.</p>
-
                     <p class="report-paragraph">The INFESTATION is a biomechanical plague, apparently controlled by one or more hive minds. Its corrupts organic and mechanical targets, converting them into mutated servants.</p>
-
                     <p class="report-paragraph">Continuing to monitor.</p>
                 </div>
             </section>
 
-            <!-- VOID.TXT -->
             <section class="file-entry">
-                <button class="requiem-button"
-                        type="button"
-                        aria-expanded="false"
-                        onclick="toggleRequiem(this)">
+                <button class="requiem-button" type="button" aria-expanded="false" onclick="toggleRequiem(this)">
                     Void.txt
                 </button>
 
                 <div class="requiem-content">
                     <p class="file-heading">THE VOID</p>
-
                     <p class="report-paragraph">The Tenno has discovered abandoned Orokin towers within The Void. These towers were intended to act as sanctuaries from Sentient attack during the Old War, since the Void is intensely damaging to Sentients.</p>
-
                     <p class="meaning">xx SUPPLEMENTARY INFORMATION xx</p>
-
                     <p class="report-paragraph">Much of Orokin society was dependent upon the Void. It was used as a shortcut through space and as a source of energy. Its full potential was first theorized by Albrecht Entrati within these very laboratories.</p>
-
                     <p class="report-paragraph">It is Albrecht Entrati who this device serves.</p>
-
                     <p class="report-paragraph">It is Albrecht Entrati who has instructed us to locate the chosen Operator.</p>
-
                     <p class="meaning">xx SIGNIFICANT DEVELOPMENT xx</p>
-
                     <p class="report-paragraph">The Tenno has encountered the Entrati Family on Deimos. The Family remains unaware of the existence of these laboratories. The Necraloid is an exception. Its memory is, however, suppressed until the activation of the Kalymos Sequence.</p>
-
                     <p class="report-paragraph">Continuing to monitor.</p>
                 </div>
             </section>
 
-            <!-- HUNHOW.TXT -->
             <section class="file-entry">
-                <button class="requiem-button"
-                        type="button"
-                        aria-expanded="false"
-                        onclick="toggleRequiem(this)">
+                <button class="requiem-button" type="button" aria-expanded="false" onclick="toggleRequiem(this)">
                     Hunhow.txt
                 </button>
 
                 <div class="requiem-content">
                     <p class="meaning">xx SIGNIFICANT DEVELOPMENT xx</p>
-
                     <p class="report-paragraph">The Tenno subject has learned of the Lotus's Sentient nature, including her original name, NATAH.</p>
-
                     <p class="report-paragraph">A Dax, TESHIN, has presented himself as a rival mentor, claiming that the Lotus cannot be trusted.</p>
-
                     <p class="report-paragraph">The Tenno has encountered Natah's 'father', the Sentient war-leader HUNHOW, whose remains lie beneath the oceans of Uranus. HUNHOW had expected Natah to destroy the Tenno in accordance with her original mandate.</p>
-
                     <p class="report-paragraph">The Lotus continues to reject her Sentient nature and seems concerned to retain to the Tenno's trust.</p>
-
                     <p class="report-paragraph">Continuing to monitor.</p>
                 </div>
             </section>
 
-            <!-- STALKER.TXT -->
             <section class="file-entry">
-                <button class="requiem-button"
-                        type="button"
-                        aria-expanded="false"
-                        onclick="toggleRequiem(this)">
+                <button class="requiem-button" type="button" aria-expanded="false" onclick="toggleRequiem(this)">
                     Stalker.txt
                 </button>
 
                 <div class="requiem-content">
                     <p class="report-paragraph">Since awakening, the Tenno has been pursued by THE STALKER.</p>
-
                     <p class="report-paragraph">Appearance and combat capability suggest THE STALKER is a surviving Low Guardian, a former protector of the Orokin.</p>
-
                     <p class="report-paragraph">Evidence implies that the Orokin Empire fell at the hands of the Tenno themselves. THE STALKER's motive may therefore be revenge.</p>
-
                     <p class="meaning">xx SIGNIFICANT DEVELOPMENT xx</p>
-
                     <p class="report-paragraph">HUNHOW and THE STALKER are working together. THE STALKER has been sent to find THE RESERVOIR, a place believed to conceal the Tenno's gravest secret.</p>
-
                     <p class="report-paragraph">The Tenno has set off in pursuit, aided by the Corpus technocrat Alad V.</p>
-
                     <p class="meaning">xx SIGNIFICANT DEVELOPMENT xx</p>
-
                     <p class="report-paragraph">The Reservoir has been located. It is on the moons, 'Lua', previously believed destroyed, but in fact concealed within the Void.</p>
-
                     <p class="report-paragraph">Continuing to monitor.</p>
                 </div>
             </section>
 
-            <!-- ZARIMAN.TXT -->
             <section class="file-entry">
-                <button class="requiem-button"
-                        type="button"
-                        aria-expanded="false"
-                        onclick="toggleRequiem(this)">
+                <button class="requiem-button" type="button" aria-expanded="false" onclick="toggleRequiem(this)">
                     Zariman.txt
                 </button>
 
                 <div class="requiem-content">
                     <p class="file-heading">THE ZARIMAN</p>
-
                     <p class="meaning">xx SIGNIFICANT DEVELOPMENT xx</p>
-
                     <p class="report-paragraph">The Tenno has discovered the truth of their identity. They are a human child, one of many kept within Cryopods on Lua in the Reservoir.</p>
-
                     <p class="report-paragraph">These children were passengers on the Zariman Ten-Zero, the colony ship bound for Tau and lost to the Void. When recovered, they were found to have developed parahuman abilities.</p>
-
                     <p class="report-paragraph">Despite Margulis's protests, they were placed into a state of lucid dreaming and used as Warframe pilots.</p>
-
                     <p class="report-paragraph">Continuing to monitor.</p>
                 </div>
             </section>
 
-            <!-- QUEENS.TXT -->
             <section class="file-entry">
-                <button class="requiem-button"
-                        type="button"
-                        aria-expanded="false"
-                        onclick="toggleRequiem(this)">
+                <button class="requiem-button" type="button" aria-expanded="false" onclick="toggleRequiem(this)">
                     Queens.txt
                 </button>
 
                 <div class="requiem-content">
                     <p class="file-heading">THE QUEENS</p>
-
                     <p class="report-paragraph">The Tenno has encountered the Grineer Queens, the semi-mythical leaders of the Grineer.</p>
-
                     <p class="report-paragraph">The Elder Queen, aged and diseased, had planned to transfer her mind into the Tenno's young body. This process, 'Continuity', was common among the Orokin Elites and was used to extend their lifespans indefinitely.</p>
-
                     <p class="report-paragraph">Teshin Dax helped the Tenno to resist the Elder Queen, who has now been eliminated. Only the younger 'Worm Queen' remains.</p>
-
                     <p class="report-paragraph">The Tenno has recovered much of their lost training. Suitability to fulfill the role of CHOSEN OPERATOR has been exponentially increased.</p>
-
                     <p class="report-paragraph">Continuing to monitor.</p>
                 </div>
             </section>
 
-            <!-- SENTINEL.TXT -->
             <section class="file-entry">
-                <button class="requiem-button"
-                        type="button"
-                        aria-expanded="false"
-                        onclick="toggleRequiem(this)">
+                <button class="requiem-button" type="button" aria-expanded="false" onclick="toggleRequiem(this)">
                     Sentinel.txt
                 </button>
 
                 <div class="requiem-content">
                     <p class="file-heading">THE SENTINEL</p>
-
                     <p class="report-paragraph">The Tenno has been made aware of Rell, a fellow Tenno who was outcast by his peers.</p>
-
                     <p class="report-paragraph">Rell had voluntarily assumed the duty of keeping the Origin System safe from a Void-based entity referred to as 'The Man In The Wall'.</p>
-
                     <p class="report-paragraph">With Rell's death, that responsibility has now transferred to the Tenno.</p>
-
                     <p class="meaning">xx CRITICAL DEVELOPMENT xx</p>
-
                     <p class="report-paragraph">'The Man In The Wall' is identical with the entity known to us as 'The Indifference'.</p>
-
                     <p class="report-paragraph">Albrecht Entrati is ultimately responsible for attracting its attention to the Origin System.</p>
-
                     <p class="report-paragraph">Albrecht Entrati may be ultimately responsible for its existence.</p>
-
                     <p class="report-paragraph">Parameter confirmed. The Tenno is the Chosen Operator. We await the correct moment to activate the Kalymos Sequence.</p>
-
                     <p class="report-paragraph">Continuing to monitor.</p>
                 </div>
             </section>
 
-            <!-- BALLAS.TXT -->
             <section class="file-entry">
-                <button class="requiem-button"
-                        type="button"
-                        aria-expanded="false"
-                        onclick="toggleRequiem(this)">
+                <button class="requiem-button" type="button" aria-expanded="false" onclick="toggleRequiem(this)">
                     Ballas.txt
                 </button>
 
                 <div class="requiem-content">
                     <p class="file-heading">BALLAS</p>
-
                     <p class="report-paragraph">Executor Ballas is now known to have colluded with Hunhow during the Old War in an attempt to betray the Tenno to the Sentients.</p>
-
                     <p class="report-paragraph">Executor Ballas is now known to have survived the collapse of the Orokin Empire.</p>
-
                     <p class="report-paragraph">Significant Sentient forces are now known to have amassed, undetected, at the periphery of the Origin System during the span of time since the Old War.</p>
-
                     <p class="report-paragraph">Executor Ballas has now manipulated the Lotus for his own ends, compelling her to resume her Sentient identity, NATAH, in order to use her as proxy commander of the Sentient forces</p>
-
                     <p class="meaning">xx SIGNIFICANT DEVELOPMENT xx</p>
-
                     <p class="report-paragraph">Ballas has led the Sentients in a renewed attack on the Origin System. ERRA, the brother of Natah, is acting as joint commander.</p>
-
                     <p class="report-paragraph">The factions of the Origin System have formed an alliance against this common foe.</p>
-
                     <p class="meaning">xx SIGNIFICANT DEVELOPMENT xx</p>
-
                     <p class="report-paragraph">The Tenno's personal timeline has been disrupted. Knowing he cannot kill the Tenno, Ballas has opted to imprison them within their own history. The Tenno will be unable to escape this loop without the paradoxical intervention of an outside force.</p>
-
                     <p class="report-paragraph">Continuing to monitor.</p>
                 </div>
             </section>
 
-            <!-- DRIFTER.TXT -->
             <section class="file-entry">
-                <button class="requiem-button"
-                        type="button"
-                        aria-expanded="false"
-                        onclick="toggleRequiem(this)">
+                <button class="requiem-button" type="button" aria-expanded="false" onclick="toggleRequiem(this)">
                     Drifter.txt
                 </button>
 
                 <div class="requiem-content">
                     <p class="file-heading">THE DRIFTER</p>
-
                     <p class="report-paragraph">The Zariman vessel, adrift for an unknown time within the Void, now acts as a containment field for unrealized possibilities.</p>
-
                     <p class="report-paragraph">One such possibility is an alternate version of the TENNO. This individual escaped into the Void on their own initiative, rather than being rescued and taken into the Origin System as the Tenno were. Within the Void they established a realm, "Duviri", in which to live.</p>
-
                     <p class="report-paragraph">This individual, the DRIFTER, has now entered the Origin System.</p>
-
                     <p class="meaning">xx SIGNIFICANT DEVELOPMENT xx</p>
-
                     <p class="report-paragraph">Ballas has established himself as ruler of the Origin System.</p>
-
                     <p class="report-paragraph">Through his 'Narmer' cult, all citizens have been forced to wear headpieces that distort perceived reality. Ballas is thus able to dictate exactly what the wearer experiences.</p>
-
                     <p class="report-paragraph">Erra continues to act as Ballas's enforcer, using composite creatures called ARCHONS as muscle.</p>
-
                     <p class="meaning">xx SIGNIFICANT DEVELOPMENT xx</p>
-
                     <p class="report-paragraph">With the assistance of Hunhow and the Stalker, the Drifter has fought back against Ballas, destroying the Archons.</p>
-
                     <p class="report-paragraph">The Tenno has been freed from their recursive timeline and now coexists with the Drifter.</p>
-
                     <p class="meaning">xx SIGNIFICANT DEVELOPMENT xx</p>
-
                     <p class="report-paragraph">Ballas is dead. The Lotus, now free from Ballas's conditioning, has chosen a preferred primary name and form.</p>
-
                     <p class="report-paragraph">Continuing to monitor.</p>
                 </div>
             </section>
 
-            <!-- KALYMOS.TXT -->
             <section class="file-entry">
-                <button class="requiem-button"
-                        type="button"
-                        aria-expanded="false"
-                        onclick="toggleRequiem(this)">
+                <button class="requiem-button" type="button" aria-expanded="false" onclick="toggleRequiem(this)">
                     Kalymos.txt
                 </button>
 
                 <div class="requiem-content">
                     <p class="file-heading">THE KALYMOS SEQUENCE</p>
-
                     <p class="meaning">xx CRITICAL DEVELOPMENT xx</p>
-
                     <p class="report-paragraph">In a deranged attempt to transport himself and his cult to Tau, Ballas opened portals between the Void and conventional reality on an unprecedented scale.</p>
-
                     <p class="report-paragraph">This has attracted the attention of THE INDIFFERENCE, whose freedom of action appears to have drastically increased.</p>
-
                     <p class="report-paragraph">The threat posed by THE INDIFFERENCE is now at a critical level.</p>
-
                     <p class="report-paragraph">The Laboratories have come under fresh assault from the Murmur. Unless the Sleeper is awoken, Albrecht Entrati's legacy will perish.</p>
-
                     <p class="meaning">xx CONCLUSION xx</p>
-
                     <p class="report-paragraph">Contacting The Necraloid.</p>
-
                     <p class="report-paragraph">Activating the Kalymos Sequence.</p>
-
                     <p class="report-paragraph">Awaiting the Chosen Operator.</p>
                 </div>
             </section>
@@ -586,12 +455,12 @@
 </footer>
 
 <script>
-    function toggleRequiem(button) {
-        const content = button.nextElementSibling;
-        const isOpen = content.classList.toggle("open");
+function toggleRequiem(button) {
+    const content = button.nextElementSibling;
+    const isOpen = content.classList.toggle("open");
 
-        button.setAttribute("aria-expanded", isOpen);
-    }
+    button.setAttribute("aria-expanded", isOpen);
+}
 </script>
 
 </body>
