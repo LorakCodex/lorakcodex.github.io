@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +17,38 @@ body {
     font-family: Arial, sans-serif;
 }
 
+header {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #d4af37;
+}
+
+header h1 {
+    color: #d4af37;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+nav {
+    background: #151515;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
 .container {
     max-width: 900px;
     margin: 30px auto;
@@ -28,6 +61,10 @@ body {
     text-decoration: none;
     font-weight: bold;
     margin-bottom: 20px;
+}
+
+.back:hover {
+    text-decoration: underline;
 }
 
 .quest-title {
@@ -104,14 +141,38 @@ body {
     box-sizing: border-box;
     overflow-wrap: anywhere;
 }
+
+@media (max-width: 600px) {
+    nav {
+        gap: 12px 18px;
+    }
+}
 </style>
 </head>
 
 <body>
+
+<header>
+    <h1>THE LORAK CODEX</h1>
+</header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../quests.html">Quests</a>
+    <a href="../transcripts.html">Transcripts</a>
+    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="../factions.html">Factions</a>
+    <a href="../timeline.html">Timeline</a>
+    <a href="../operations.html">Operations</a>
+    <a href="../args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
+</nav>
+
 <div class="container">
 
-<h1 class="quest-title">Saya's Vigil</h1>
 <a class="back" href="../transcripts.html">← Back to Transcripts</a>
+
+<h1 class="quest-title">Saya's Vigil</h1>
 
 <div class="quest-description">On the Plains of Eidolon a mystery has lain buried for years: one that will mend or destroy a heart, and open the door to a hidden past.</div>
 
