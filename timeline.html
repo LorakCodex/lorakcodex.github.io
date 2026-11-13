@@ -1,93 +1,120 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Timeline - The Lorak Codex</title>
+<meta name="description" content="Explore the history of the Warframe universe through The Lorak Codex timeline, from the pre-Orokin era to the modern era and beyond.">
 
 <style>
-    body {
-        margin: 0;
-        background: #0b0b0b;
-        color: #ddd;
-        font-family: Arial, sans-serif;
-    }
+* {
+    box-sizing: border-box;
+}
 
-    header {
-        background: #111;
-        padding: 25px;
-        text-align: center;
-        border-bottom: 1px solid #333;
-    }
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+}
 
-    h1 {
-        color: #d4af37;
-        letter-spacing: 3px;
-        margin: 0;
-    }
+header {
+    background: #111;
+    padding: 25px 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
 
+header h1 {
+    color: #d4af37;
+    letter-spacing: 3px;
+    margin: 0;
+    font-size: 28px;
+}
+
+nav {
+    background: #151515;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #292929;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 15px 40px;
+}
+
+.era-button {
+    display: block;
+    width: 100%;
+    background: #d4af37;
+    color: #0b0b0b;
+    border: none;
+    padding: 14px 16px;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.era-button:hover {
+    background: #e5c451;
+}
+
+.era-button::after {
+    content: "+";
+    float: right;
+    font-size: 18px;
+}
+
+.era-button.active::after {
+    content: "−";
+}
+
+.era-content {
+    display: none;
+    background: #111;
+    border: 1px solid #66551d;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.era-content.show {
+    display: block;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #66551d;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
     nav {
-        margin-top: 20px;
+        gap: 12px 18px;
     }
-
-    nav a {
-        color: #d4af37;
-        text-decoration: none;
-        margin: 0 8px;
-    }
-
-    nav a:hover {
-        text-decoration: underline;
-    }
-
-    .container {
-        max-width: 900px;
-        margin: 30px auto;
-        padding: 0 15px;
-    }
-
-    .era-button {
-        width: 100%;
-        background: #151515;
-        color: #d4af37;
-        border: 1px solid #333;
-        padding: 18px;
-        margin-top: 12px;
-        text-align: left;
-        font-size: 18px;
-        font-weight: bold;
-        cursor: pointer;
-        border-radius: 6px;
-    }
-
-    .era-button:hover {
-        background: #1d1d1d;
-    }
-
-    .era-button.active {
-        background: #1d1d1d;
-    }
-
-    .era-content {
-        display: none;
-        background: #111;
-        border-left: 2px solid #d4af37;
-        padding: 18px;
-        margin-top: 5px;
-        line-height: 1.6;
-    }
-
-    .era-content.show {
-        display: block;
-    }
-
-    footer {
-        text-align: center;
-        color: #666;
-        padding: 40px 20px;
-        font-size: 14px;
-    }
+}
 </style>
 </head>
 
@@ -95,80 +122,79 @@
 
 <header>
     <h1>THE LORAK CODEX</h1>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="quests.html">Quests</a>
-        <a href="transcripts.html">Transcripts</a>
-        <a href="extra-lore.html">Extra Lore</a>
-        <a href="#">Factions</a>
-        <a href="timeline.html">Timeline</a>
-        <a href="operations.html">Operations</a>
-        <a href="args.html">ARGs</a>
-        <a href="https://discord.gg/X3WsdC8jP4">Discord</a>
-    </nav>
 </header>
 
-<div class="container">
+<nav>
+    <a href="index.html">Home</a>
+    <a href="quests.html">Quests</a>
+    <a href="transcripts.html">Transcripts</a>
+    <a href="extra-lore.html">Extra Lore</a>
+    <a href="factions.html">Factions</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="operations.html">Operations</a>
+    <a href="args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
+</nav>
 
-    <button class="era-button">Pre-Orokin Era</button>
+<main>
+
+    <button class="era-button" type="button" aria-expanded="false">Pre-Orokin Era</button>
     <div class="era-content">
         Timeline to be redone.
     </div>
 
-    <button class="era-button">Orokin Era</button>
+    <button class="era-button" type="button" aria-expanded="false">Orokin Era</button>
     <div class="era-content">
         Timeline to be redone.
     </div>
 
-    <button class="era-button">Old War</button>
+    <button class="era-button" type="button" aria-expanded="false">Old War</button>
     <div class="era-content">
         Timeline to be redone.
     </div>
 
-    <button class="era-button">Collapse</button>
+    <button class="era-button" type="button" aria-expanded="false">Collapse</button>
     <div class="era-content">
         Timeline to be redone.
     </div>
 
-    <button class="era-button">Post-Collapse</button>
+    <button class="era-button" type="button" aria-expanded="false">Post-Collapse</button>
     <div class="era-content">
         Timeline to be redone.
     </div>
 
-    <button class="era-button">Modern Era</button>
+    <button class="era-button" type="button" aria-expanded="false">Modern Era</button>
     <div class="era-content">
         Timeline to be redone.
     </div>
 
-    <button class="era-button">The New War</button>
+    <button class="era-button" type="button" aria-expanded="false">The New War</button>
     <div class="era-content">
         Timeline to be redone.
     </div>
 
-    <button class="era-button">Post-New War</button>
+    <button class="era-button" type="button" aria-expanded="false">Post-New War</button>
     <div class="era-content">
         Timeline to be redone.
     </div>
 
-</div>
+</main>
 
 <footer>
     The Lorak Codex
 </footer>
 
 <script>
-    document.querySelectorAll(".era-button").forEach(button => {
-        button.addEventListener("click", () => {
-            button.classList.toggle("active");
+document.querySelectorAll(".era-button").forEach(button => {
+    button.addEventListener("click", () => {
+        const content = button.nextElementSibling;
+        const isOpen = !content.classList.contains("show");
 
-            const content = button.nextElementSibling;
-
-            if (content) {
-                content.classList.toggle("show");
-            }
-        });
+        content.classList.toggle("show", isOpen);
+        button.classList.toggle("active", isOpen);
+        button.setAttribute("aria-expanded", String(isOpen));
     });
+});
 </script>
 
 </body>
