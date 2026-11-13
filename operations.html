@@ -31,18 +31,25 @@ header h1 {
     letter-spacing: 3px;
 }
 
+/* Navigation */
 nav {
-    line-height: 2;
+    background: #151515;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #292929;
 }
 
 nav a {
-    color: #d4af37;
+    color: #ccc;
     text-decoration: none;
-    margin: 0 10px;
+    font-size: 14px;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #d4af37;
 }
 
 .container {
@@ -89,10 +96,21 @@ nav a:hover {
 
 footer {
     text-align: center;
-    padding: 30px;
-    color: #777;
-    border-top: 1px solid #333;
+    padding: 30px 20px;
+    color: #a0a0a0;
+    border-top: 1px solid #292929;
     margin-top: 40px;
+    font-size: 13px;
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 26px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
 }
 </style>
 </head>
@@ -101,19 +119,19 @@ footer {
 
 <header>
     <h1>The Lorak Codex</h1>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="quests.html">Quests</a>
-        <a href="transcripts.html">Transcripts</a>
-        <a href="extra-lore.html">Extra Lore</a>
-        <a href="factions.html">Factions</a>
-        <a href="timeline.html">Timeline</a>
-        <a href="operations.html">Operations</a>
-        <a href="args.html">ARGs</a>
-        <a href="https://discord.gg/X3WsdC8jP4">Discord</a>
-    </nav>
 </header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="quests.html">Quests</a>
+    <a href="transcripts.html">Transcripts</a>
+    <a href="extra-lore.html">Extra Lore</a>
+    <a href="factions.html">Factions</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="operations.html">Operations</a>
+    <a href="args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
+</nav>
 
 <div class="container">
 
