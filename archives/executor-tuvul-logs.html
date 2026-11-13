@@ -18,28 +18,53 @@
             margin: 0;
             padding: 20px;
         }
+
         header {
             text-align: center;
             background: #111;
             padding: 20px;
             border-bottom: 2px solid #d4af37;
         }
+
         h1 {
             color: #d4af37;
             letter-spacing: 3px;
         }
+
+        nav {
+            background: #151515;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 15px;
+            border-bottom: 1px solid #292929;
+        }
+
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
         a.back {
             display: inline-block;
             color: #d4af37;
             text-decoration: none;
             margin: 20px 0;
         }
+
         .description {
             border: 1px solid #d4af37;
             padding: 15px;
             margin-bottom: 20px;
             line-height: 1.6;
         }
+
         .log-button {
             width: 100%;
             background: #d4af37;
@@ -53,13 +78,16 @@
             font-weight: bold;
             cursor: pointer;
         }
+
         .log-button::after {
             content: "+";
             float: right;
         }
+
         .log-button[aria-expanded="true"]::after {
             content: "−";
         }
+
         .log-content {
             display: none;
             border: 1px solid #d4af37;
@@ -68,15 +96,36 @@
             line-height: 1.7;
             white-space: pre-line;
         }
+
         .log-content.open {
             display: block;
         }
+
+        @media (max-width: 600px) {
+            nav {
+                gap: 12px 18px;
+            }
+        }
     </style>
 </head>
+
 <body>
+
 <header>
     <h1>Executor Tuvul's Logs</h1>
 </header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../quests.html">Quests</a>
+    <a href="../transcripts.html">Transcripts</a>
+    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="../factions.html">Factions</a>
+    <a href="../timeline.html">Timeline</a>
+    <a href="../operations.html">Operations</a>
+    <a href="../args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
+</nav>
 
 <main>
     <a class="back" href="../extra-lore.html">← Back to Extra Lore</a>
@@ -127,5 +176,6 @@ function toggleLog(button, id) {
     button.setAttribute('aria-expanded', isOpen);
 }
 </script>
+
 </body>
 </html>
