@@ -1,175 +1,182 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Albrecht's Requiems | Warframe Lore Archive | The Lorak Codex</title>
+<meta name="description" content="Explore all eight of Albrecht Entrati's Requiems in The Lorak Codex, including Xata, Jahu, Vome, Fass, Ris, Khra, Netra and Lohk, with their meanings and passages from Warframe lore.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://lorakcodex.github.io/archives/albrechts-requiems.html">
 
-    <title>Albrecht's Requiems | Warframe Lore Archive | The Lorak Codex</title>
-    <meta name="description" content="Explore all eight of Albrecht Entrati's Requiems in The Lorak Codex, including Xata, Jahu, Vome, Fass, Ris, Khra, Netra and Lohk, with their meanings and passages from Warframe lore.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://lorakcodex.github.io/archives/albrechts-requiems.html">
+<style>
+* {
+    box-sizing: border-box;
+}
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+}
 
-        body {
-            margin: 0;
-            background: #0b0b0b;
-            color: #ddd;
-            font-family: Arial, sans-serif;
-        }
+header {
+    background: #111;
+    padding: 25px 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
 
-        header {
-            background: #111;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid #d4af37;
-        }
+header h1 {
+    color: #d4af37;
+    letter-spacing: 3px;
+    margin: 0;
+    font-size: 28px;
+}
 
-        h1 {
-            color: #d4af37;
-            letter-spacing: 3px;
-            margin: 0;
-        }
+nav {
+    background: #151515;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #292929;
+}
 
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            padding: 15px;
-            background: #111;
-        }
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
 
-        nav a {
-            color: #d4af37;
-            text-decoration: none;
-            font-weight: bold;
-        }
+nav a:hover {
+    color: #d4af37;
+}
 
-        nav a:hover {
-            color: white;
-        }
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 15px 40px;
+}
 
-        main {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
+h2 {
+    color: #d4af37;
+    margin-top: 0;
+}
 
-        .back {
-            display: block;
-            color: #d4af37;
-            text-decoration: none;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
+.back {
+    display: block;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
-        .back:hover {
-            color: white;
-        }
+.back:hover {
+    text-decoration: underline;
+}
 
-        h2 {
-            color: #d4af37;
-            margin-bottom: 10px;
-        }
+.intro {
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
 
-        .intro {
-            line-height: 1.7;
-            margin-bottom: 25px;
-        }
+.requiem {
+    margin-top: 10px;
+}
 
-        .requiem {
-            margin-bottom: 10px;
-        }
+.requiem-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: #d4af37;
+    color: #0b0b0b;
+    border: none;
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
-        .requiem-button {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            padding: 14px 18px;
-            border: 1px solid #d4af37;
-            border-radius: 8px;
-            background: #d4af37;
-            color: #0b0b0b;
-            text-align: left;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-        }
+.requiem-button:hover {
+    background: #e5c451;
+}
 
-        .requiem-button:hover {
-            background: #f0d46b;
-        }
+.requiem-button:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
 
-        .requiem-button:focus-visible {
-            outline: 2px solid white;
-            outline-offset: 3px;
-        }
+.button-symbol {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 12px;
+    flex-shrink: 0;
+}
 
-        .button-symbol {
-            font-size: 20px;
-            font-weight: bold;
-            margin-left: 12px;
-            flex-shrink: 0;
-        }
+.requiem-content {
+    display: none;
+    background: #111;
+    border: 1px solid #66551d;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
 
-        .requiem-content {
-            display: none;
-            margin-top: 10px;
-            padding: 18px;
-            background: #111;
-            border: 1px solid #d4af37;
-            border-radius: 4px;
-            line-height: 1.8;
-            overflow-wrap: anywhere;
-        }
+.requiem-content.open {
+    display: block;
+}
 
-        .requiem-content.open {
-            display: block;
-        }
+.meaning {
+    color: #d4af37;
+    font-weight: bold;
+    margin: 0 0 12px;
+}
 
-        .meaning {
-            color: #d4af37;
-            font-weight: bold;
-            margin: 0 0 12px;
-        }
+.passage {
+    margin: 0;
+    white-space: pre-line;
+}
 
-        .passage {
-            margin: 0;
-            white-space: pre-line;
-        }
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #66551d;
+    color: #777;
+    font-size: 13px;
+}
 
-        footer {
-            margin-top: 30px;
-            padding: 20px;
-            background: #111;
-            border-top: 1px solid #d4af37;
-            text-align: center;
-            color: #999;
-            font-size: 13px;
-        }
-    </style>
+@media (max-width: 600px) {
+    nav {
+        gap: 12px 18px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>The Lorak Codex</h1>
+    <h1>THE LORAK CODEX</h1>
 </header>
 
 <nav>
     <a href="../index.html">Home</a>
     <a href="../quests.html">Quests</a>
     <a href="../transcripts.html">Transcripts</a>
+    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="../factions.html">Factions</a>
     <a href="../timeline.html">Timeline</a>
     <a href="../operations.html">Operations</a>
     <a href="../args.html">ARGs</a>
-    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
 </nav>
 
 <main>
@@ -183,14 +190,10 @@
     </p>
 
     <section class="requiem">
-        <button class="requiem-button"
-                type="button"
-                aria-expanded="false"
-                onclick="toggleRequiem(this)">
+        <button class="requiem-button" type="button" aria-expanded="false" onclick="toggleRequiem(this)">
             <span>1. Xata</span>
             <span class="button-symbol">+</span>
         </button>
-
         <div class="requiem-content">
             <p class="meaning">Truth.</p>
             <p class="passage">It began long before us, we who now live our perfect and dull, endless lives. It began long before these moon-palaces and body-markets hurling around our golden Sun. It began long before our light-coil thinkers, our radiation wars, our oil, smoke…. It began with us. The continuity and its twin, wanderlust. The need for unseen shores deep in our marrow. No judge, jester, queen, or king can escape this old blood. We are nomads, eternal. And when no ocean, mountain, or sky could contain us… our gaze hungered star-ward. Afar, they mocked us with their brittle light. Winking and jeering like dangling Ayatans forever out of reach, illuminating the truth: immortal as we are – we die with the Sun. That's where I come in.</p>
@@ -198,14 +201,10 @@
     </section>
 
     <section class="requiem">
-        <button class="requiem-button"
-                type="button"
-                aria-expanded="false"
-                onclick="toggleRequiem(this)">
+        <button class="requiem-button" type="button" aria-expanded="false" onclick="toggleRequiem(this)">
             <span>2. Jahu</span>
             <span class="button-symbol">+</span>
         </button>
-
         <div class="requiem-content">
             <p class="meaning">Form.</p>
             <p class="passage">My departure was a day less than any other. When I stepped inside the Bell, I saw no crowd through its seriglass. No sceptical onlookers. No regal sendoff. They all had given up on me and my paradoxical formulations. The wasted years had all shown the Void to be just that. Nothing. No energy. No entanglement. No form. To space-faring ambitions, a dead end. On the day, my laboratory was mostly vacant of witnesses; most of all, of expectation. Only my sluggish attendants, my sagacious kavat Kalymos, and, of course, my daughter. I had raised her alone, but with inconsistent vigour. In those eyes, her mother's, I did see a terrible reflection. Of a man that did not exist. A brave and principled man about to make history. In truth, he was a Void himself. An outcast, a joke, a nothing. Driven by my humiliation. Failure had made me bitter and reckless. I would dive into the depths myself to prove them all wrong. I gave the signal. My daughter grasped the lever. Kalymos then belted out a desperate, rasping growl. But, it was too late.</p>
@@ -213,14 +212,10 @@
     </section>
 
     <section class="requiem">
-        <button class="requiem-button"
-                type="button"
-                aria-expanded="false"
-                onclick="toggleRequiem(this)">
+        <button class="requiem-button" type="button" aria-expanded="false" onclick="toggleRequiem(this)">
             <span>3. Vome</span>
             <span class="button-symbol">+</span>
         </button>
-
         <div class="requiem-content">
             <p class="meaning">Order.</p>
             <p class="passage">The calipers yawed open the wall between worlds, stretching there a black, trapezoidal gap. A door. A mouth. It yawned in the light of the room, splintering it to mesmerising, unearthly hues. And I, inside the Bell, dropping obliquely toward it from my gallows. Mass and time rippled as a sudden vortex jawed before me. My head was vapour; my feet, lodestone. The Bell around me flexed like a rat paralysed in a winding, gulping snake. I faltered in the awe of it, stumbling against the seriglass and, with that, shifted the Bell's path through the wall. It grazed the caliper membrane, the edge of the door. No worldly edge was as thin, as sharp as could split even light. As the Bell faintly grazed it, the seriglass was all at once rendered like strips of flesh by Dax blade. My enclosure was beheaded in an instant, but still, I fell… sideways… into the Void.</p>
@@ -228,14 +223,10 @@
     </section>
 
     <section class="requiem">
-        <button class="requiem-button"
-                type="button"
-                aria-expanded="false"
-                onclick="toggleRequiem(this)">
+        <button class="requiem-button" type="button" aria-expanded="false" onclick="toggleRequiem(this)">
             <span>4. Fass</span>
             <span class="button-symbol">+</span>
         </button>
-
         <div class="requiem-content">
             <p class="meaning">Chaos.</p>
             <p class="passage">Death was on me; I was certain. I was face-down, eyes clenched. My heart pulsing the last of its seconds, and my lungs burning the last of their air. A sudden nostalgia gripped me. I grasped desperately for memory, of a storm just passed, the fumbling pitch of a child's song… yet all these thoughts seemed to steal away from my mind like smoke through a vent. I would die empty. I then became aware of another sensation. Physical. A web of pain, needles itching into my arm. At once I realised: I was alive! Lying in the Bell's shattered seriglass! I groped the ground. Warm stone. The floor of my laboratory. So: I had never left… and so: I had failed. Again. I heard a crunch alongside me. Someone stepping through the shattered glass. With great shame, I gasped and raised my head to face my daughter above me. But as I opened my eyes, it wasn't her. It was me.</p>
@@ -243,14 +234,10 @@
     </section>
 
     <section class="requiem">
-        <button class="requiem-button"
-                type="button"
-                aria-expanded="false"
-                onclick="toggleRequiem(this)">
+        <button class="requiem-button" type="button" aria-expanded="false" onclick="toggleRequiem(this)">
             <span>5. Ris</span>
             <span class="button-symbol">+</span>
         </button>
-
         <div class="requiem-content">
             <p class="meaning">Light.</p>
             <p class="passage">The senselessness of it, the paradoxic, the vague untime form. I was alone, but not. For I stood there confronted by myself. A twin, but no brother. A reflection, but with dimension. Behind him, no horizon, but a vast broiling sea of caustic light pierced at random by black-pin stars. And closer, around me, a gale of flowing vapour. Profane in colour, billowing relentlessly into the nascent lack, seeking all directions. I was standing on a precipice of familiar stone, jagged and unanchored, as though cleaved directly from the very floor of my laboratory. I wondered at the vapour's path, smoking outward more, leaving behind now, the walls, the filigree gold, the rare cuts of marble from my home. I knew at once the vapour's source. I turned away, back toward the wall, the trapezoid I had yawed into it. Vapour erupted inward at the gap, but not just from there. For as I rolled my eyes back, I saw the same… a great-steam of scintillation, smoking from my skull. Dumb in awe, I faced toward my chimerical twin. He spoke.</p>
@@ -258,14 +245,10 @@
     </section>
 
     <section class="requiem">
-        <button class="requiem-button"
-                type="button"
-                aria-expanded="false"
-                onclick="toggleRequiem(this)">
+        <button class="requiem-button" type="button" aria-expanded="false" onclick="toggleRequiem(this)">
             <span>6. Khra</span>
             <span class="button-symbol">+</span>
         </button>
-
         <div class="requiem-content">
             <p class="meaning">Time.</p>
             <p class="passage">An old name, unspoken in the centuries since my mother reared me. A soft hiss, soothing as a viper's gaze. "Little Bengel." The other reached out, offering his hand, gliding toward me without moving, as though the distance between us was now collapsing. A confusion, most euphoric, filled my mind. With the shred of wit that remained, I decided that I should run for my life. At once, crazed and frantic, I fled. But I made no forward progress. Instead, the world compressed evermore around me, as though I were an anchor pulling the shore to reach. When I arrived at the door, or rather, the door arrived at me, I howled, hurling myself inside. Out. And then and there, I was. Lost and unlost. Howling on the floor in harmony with my wretched Kalymos. Lacerated in flesh and heart. Scattered as the bell glass. Spilling blood and stomach on the cold, stone floor. But I sensed the other there, at the wall's breach behind me, reaching still. I screamed, but my voice was gone. Forever. I looked, but my eyes would never see again. I swept my fist across the floor, snatching broken shards. And in gripping tightly, I filled my hands with ink. "Close it!" I wrote.</p>
@@ -273,14 +256,10 @@
     </section>
 
     <section class="requiem">
-        <button class="requiem-button"
-                type="button"
-                aria-expanded="false"
-                onclick="toggleRequiem(this)">
+        <button class="requiem-button" type="button" aria-expanded="false" onclick="toggleRequiem(this)">
             <span>7. Netra</span>
             <span class="button-symbol">+</span>
         </button>
-
         <div class="requiem-content">
             <p class="meaning">Decay.</p>
             <p class="passage">Time, to us, is all but conquered. Our sacred kuva moves us on to new skin. We numb to our daily, yearly, trifles… and remedy those memories that bring lasting misery. With all our misdeeds, our excess, our indignity… we are haunted by nothing. But not for me. For with each passing day, there grew within a tumorous idea. It was minute in those early days: the pale reaching digits severed on the floor… studied with reverence, with greed. And it swelled larger in the latter days: the regal domes, the Rail dedications, the unholy Zariman parade. I had put the stars within reach, but at what cost? I never spoke of him, that man, trapped in the wall. And while there have been countless souls who have followed me through, with their light-skippers, and field-wave skins and vari-eyed instruments… not a single one ever saw him. Me. And so it is that I will not take the kuva now. Or ever again. This is the last skin I'm in. Because of this idea: That I cannot be sure. That in all that smoked commotion, in all that panic and fear, in that bending light and blinding dark… was it I who escaped? Or the other?</p>
@@ -288,14 +267,10 @@
     </section>
 
     <section class="requiem">
-        <button class="requiem-button"
-                type="button"
-                aria-expanded="false"
-                onclick="toggleRequiem(this)">
+        <button class="requiem-button" type="button" aria-expanded="false" onclick="toggleRequiem(this)">
             <span>8. Lohk</span>
             <span class="button-symbol">+</span>
         </button>
-
         <div class="requiem-content">
             <p class="meaning">Void.</p>
             <p class="passage">From brooding gulfs are we beheld by that which bears no name.
@@ -308,7 +283,6 @@ Carrion hordes trill their profane accord with eldritch plans.
 To cosmic forms from tangent planes, we end as we began.</p>
         </div>
     </section>
-
 </main>
 
 <footer>
@@ -316,14 +290,14 @@ To cosmic forms from tangent planes, we end as we began.</p>
 </footer>
 
 <script>
-    function toggleRequiem(button) {
-        const content = button.nextElementSibling;
-        const isOpen = content.classList.toggle("open");
-        const symbol = button.querySelector(".button-symbol");
+function toggleRequiem(button) {
+    const content = button.nextElementSibling;
+    const isOpen = content.classList.toggle("open");
+    const symbol = button.querySelector(".button-symbol");
 
-        button.setAttribute("aria-expanded", isOpen);
-        symbol.textContent = isOpen ? "−" : "+";
-    }
+    button.setAttribute("aria-expanded", isOpen);
+    symbol.textContent = isOpen ? "−" : "+";
+}
 </script>
 
 </body>
