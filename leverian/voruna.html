@@ -1,1 +1,302 @@
-vor
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Voruna Leverian | The Lorak Codex</title>
+<meta name="description" content="Explore the Voruna Leverian, featuring Drusus Leverian's account of Voruna, her four wolves, the Circulus, and Executor Tuvul.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://lorakcodex.github.io/leverian/voruna.html">
+<link rel="icon" type="image/png" href="../lorak-codex-favicon-48x48.png">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #111;
+    padding: 25px 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    color: #d4af37;
+    letter-spacing: 3px;
+    margin: 0;
+    font-size: 28px;
+}
+
+nav {
+    background: #151515;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #292929;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 15px 40px;
+}
+
+.back {
+    display: block;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    color: #d4af37;
+    margin-top: 0;
+}
+
+.chapter {
+    margin-top: 10px;
+}
+
+.chapter-button {
+    display: block;
+    width: 100%;
+    background: #d4af37;
+    color: #0b0b0b;
+    border: none;
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.chapter-button:hover {
+    background: #e5c451;
+}
+
+.chapter-button:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+.chapter-button::after {
+    content: "+";
+    float: right;
+    font-size: 18px;
+}
+
+.chapter-button.active::after {
+    content: "−";
+}
+
+.chapter-content {
+    display: none;
+    background: #111;
+    border: 1px solid #66551d;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.chapter-content p {
+    margin: 0 0 14px 0;
+}
+
+.chapter-content p:last-child {
+    margin-bottom: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #66551d;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        gap: 12px 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>THE LORAK CODEX</h1>
+</header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../quests.html">Quests</a>
+    <a href="../transcripts.html">Transcripts</a>
+    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="../factions.html">Factions</a>
+    <a href="../timeline.html">Timeline</a>
+    <a href="../operations.html">Operations</a>
+    <a href="../args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
+</nav>
+
+<main>
+    <a class="back" href="../archives/leverian.html">← Back to Leverian</a>
+
+    <h2>Voruna — Leverian</h2>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Introduction
+        </button>
+        <div class="chapter-content">
+            <p>Drusus Leverian: Impressive, isn't she? The relentless hunting shadow of the night of Naga drums. The last thing many an Orokin lord ever saw. Voruna, She-Wolf Incarnadine. The Heart of the Pack. Hunter of god-prey.</p>
+            <p>We remember her as a primal horror. The pitiless devourer stalking burning cities of white and gold, slavering for god-flesh.</p>
+            <p>This was not always so! Once, Voruna was the obedient guardian of the Circulus, the holiest of Yuvan temples upon none other than veiled Lua. Like a loyal beast, Voruna would roam Lua with her four steel-maned wolves: the stealthy Dynar, the invigorating Raksh, the stalwart Lycath, and the fierce Ulfrun. But what they were sworn to guard was perverse, wrong. In a ceremony reeking of kuva, the Orokin candidate would force their consciousness into the new chosen body – the Yuvan – consigning the mind of the hapless former owner to oblivion. They called this life-extending process… 'Continuity'.</p>
+            <p>Executor Tuvul was one of the ruling Seven and head of the Yuvan Clerisy: high-ranking officiators who enacted the hideous ritual. All of whom… were now all dead, torn apart, all save for Tuvul… now a man pursued. He abandons his family to that night of horrors, his friends to the flames, and whips his slaves to ferry his decrepit, dying body to… his personal ship. Destination? Void-locked Lua. Purpose? To initiate one final ceremony. To trade one last body – one last life – for his own. Before the Empire burned.</p>
+            <p>To slip the noose and escape the relentless hunting shadow that had, one by one, in just one night, found and eviscerated every last one of his Clerisy peers. The shadow that had once protected them.</p>
+            <p>I never liked Tuvul. What followed made me loathe him even more.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Dynar
+        </button>
+        <div class="chapter-content">
+            <p>Drusus Leverian: Here is Dynar, the shadowed. He gave Voruna the gift of stealth, that she might only take by surprise – but never be taken.</p>
+            <p>Hm. Let us speak of what made the Circulus special: the first Void Conjunction.</p>
+            <p>It came suddenly, steeping Lua in malevolent, lashing Void-stuff. Within the moon-plasm, thoughts took horrifying physical forms. Images dredged up from childhood nightmares, or adult neuroses, were abruptly tangible and real. Madness overtook many.</p>
+            <p>It was to this place – the Circulus – that Tuvul fled through a Void tormented by an extremely unusual Conjunction. Thrashing eddies, violent currents, and the appearance of horrifying beasts never seen before or since. It was as if, some have noted, the fabric of the universe echoed the upheaval tearing apart the fabric of the Origin System. Coincidence? [sigh] I have lived too long to believe so, but can provide no explanation greater than that.</p>
+            <p>Hoping against hope that the Void would keep the shadow that stalked him from picking up his trail, Tuvul touched down upon the powdery skin of sacred Lua.</p>
+            <p>What Tuvul lacked in loyalty, he made up for with rat cunning. He should have known better.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Raksh
+        </button>
+        <div class="chapter-content">
+            <p>Drusus Leverian: It is unclear precisely why Lua is a site of very special Void Conjunctions, but enacting Continuity within the Circulus and Yuvarium thereupon guaranteed a safe and strong transition… so long as certain rituals were correctly observed.</p>
+            <p>A privilege reserved only for the Seven themselves.</p>
+            <p>Imagine the scene as the innocent Yuvan would have witnessed it. The vivid insanity of it all. The appointed Soprana bridging the gap between worlds with her song. The Orokin Executor shrilling the ritual words. The bone-white Void creeping in on all fronts. The kuva steaming scarlet in its glass bowl. And the imposing wolf-giant, Voruna, pacing the perimeter, four loyal wolves at her side.</p>
+            <p>This wolf you see here is Raksh, the defender, Voruna's own loyal guardian, as she protected her Orokin overlord from whatever madnesses the Void Conjunction would bring.</p>
+            <p>Of which there were many. And on that night, Tuvul had no such guardian. Quite the opposite.</p>
+            <p>Now, Tuvul would need flesh into which he could pass, but the shipments of fresh young bodies from across the System were no more. Tuvul, we will see, had laid a dark contingency.</p>
+            <p>Rat cunning, as I said.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Lycath
+        </button>
+        <div class="chapter-content">
+            <p>Drusus Leverian: The third of Voruna's wolves. Lycath, the stalwart brother, the provider, and soul of the pack.</p>
+            <p>We know that Voruna and her wolves had served rite after rite. She had watched the mists and savagely destroyed anything that menaced the ceremony, flanked by Lycath's fury.</p>
+            <p>The Yuvan Ceremony – 'Continuity', as they called it – was an obscenity. The Orokin elite, aged and foul, would slouch and leer as the 'Yuvan' – young men and women cultivated on red Mars and worlds beyond for this dire purpose – were paraded before them. They would make their choice, conduct the ritual, and then, well, that young life would be gone, and when those eyes opened once more, it would be their murderer looking out from behind them.</p>
+            <p>Is it any wonder Voruna, freed from the leash of loyalty, was so intent upon making a meal of the Yuvan Clerisy? [short laugh] I think not.</p>
+            <p>Let's get to dessert, shall we?</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Ulfrun
+        </button>
+        <div class="chapter-content">
+            <p>Drusus Leverian: Behold: Ulfrun the Fierce. The most formidable of Voruna's sept.</p>
+            <p>Executor Tuvul scrambled to set up the ritual room. This time, the ceremony was different. Instead of a Soprana, there was a mere Mandachord playing automated notes. And instead of the prepared Yuvan, there was a most unusual cryopod – containing a young child, sleeping peacefully. The aforementioned contingency.</p>
+            <p>In Tuvul's hands, so it is said, were an artefact and a codex belonging to none other than Albrecht Entrati himself: Father of Void travel, and a man who had sacrificed his sanity to it.</p>
+            <p>Tuvul opened the book to pages strange and profane. We know this, having retrieved it from the site much later. It is my belief that Tuvul pretended to protect himself from the horrors the Void would unleash, using what amounted to a madman's grimoire. A desperate act indeed.</p>
+            <p>I like to imagine that, as he parted his withered lips to begin the ceremony, to call down the Void… that was the moment he heard Ulfrun's ravening howl.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Executor Tuvul
+        </button>
+        <div class="chapter-content">
+            <p>Drusus Leverian: From Void signatures, evidence at the site, and what recording technology survived that once-in-a-lifetime Void Conjunction, I infer the following. [clears throat] Forgive an old man some dramatic licence.</p>
+            <p>The kuva was poured, the lamps were lit, and the ritual of Continuity began.</p>
+            <p>As Tuvul intoned the barbarous versicles of Continuity, a horde the breadth of which had never before been seen at such a ceremony massed in the gathering Void. Things with two heads or none, lopsided, broken-horned, perhaps drawing their being from Tuvul himself, as if expressions of his vice.</p>
+            <p>At this moment, I believe Voruna and her pack attacked, hoping to end the ceremony before it began. No such luck. The circle site was later found to be treacherous with the remnants of slain abominations.</p>
+            <p>Voruna and her wolves tore into the manifestations, rending with axe and fang. While Tuvul droned on, panicked, the pack hacked and tore their way through the throng toward him.</p>
+            <p>Why was Tuvul not the first to fall? I cannot answer. Perhaps Albrecht's work had something to it. Or perhaps those beasts simply understood that this wretched old man was the only thing keeping the door open for them.</p>
+            <p>Tremors shook the surface of Lua, and a great cry rang out, like that of a mother crying for her children. Tuvul sweated. The kuva trembled in its bowl.</p>
+            <p>Voruna was relentless, demons falling to blade and fang. But it was not enough. The hordes of the Void are without number, and this one? If Hell has a Hell, then those monsters knew it well.</p>
+            <p>Gentle-eyed Raksh was the first to fall to scything blades. They killed Lycath next, then Dynar, and Ulfrun last of all. Voruna had howled many times before, in hunger, in anger, and in triumph, but now for the first time, she howled in grief.</p>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <button class="chapter-button" onclick="toggleChapter(this)" aria-expanded="false">
+            Voruna
+        </button>
+        <div class="chapter-content">
+            <p>Drusus Leverian: Voruna trod and swung without relent toward the circle – carrying, by their silver scruffs, the severed heads of her fallen, beloved wolves. Severed from their dead bodies by her own hand.</p>
+            <p>With one last ululating cry, Tuvul's ritual reached its peak. Within the cryopod, the child's eyelids fluttered and Voruna… staggered. In what scratchy stills survived in Void-corrupted datamasses, what I saw between child and warframe was… recognition.</p>
+            <p>Tuvul took some meagre scrap of courage from this delay and reached for the bowl of kuva, now boiling and steaming with weird energies.</p>
+            <p>Voruna struck him aside and seized the energised kuva – not for herself, but for her wolves. Holding it high, she doused herself – and her slain packmates – with it.</p>
+            <p>Embraced by the seething crimson glow, connective tissue propagated. Sinew reached for bone, and within that marriage of occultism and science, she and her beloved wolves became one.</p>
+            <p>Her brethren lived again. In her. Voruna was now, and evermore, the heart of the pack.</p>
+            <p>Cheated of his Continuity, Tuvul turned to flee. But his former warden was having none of it.</p>
+            <p>Those who came after found nothing but gnawed bones, some of them unusually long, twisted within shreds of white-gold raiments.</p>
+            <p>Good.</p>
+            <p>I did salvage one final image from those Void-corrupted datamasses, however. That of Voruna herself, striding back toward her craft, the child cradled in her arms.</p>
+            <p>Curious.</p>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    The Lorak Codex
+</footer>
+
+<script>
+function toggleChapter(button) {
+    const content = button.nextElementSibling;
+    const isOpen = content.style.display === "block";
+
+    content.style.display = isOpen ? "none" : "block";
+    button.classList.toggle("active", !isOpen);
+    button.setAttribute("aria-expanded", String(!isOpen));
+}
+</script>
+
+</body>
+</html>
