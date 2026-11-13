@@ -36,6 +36,26 @@
             margin: 0;
         }
 
+        nav {
+            background: #151515;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 15px;
+            border-bottom: 1px solid #292929;
+        }
+
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
         main {
             max-width: 1000px;
             margin: 25px auto;
@@ -120,6 +140,12 @@
             color: #888;
             border-top: 1px solid #333;
         }
+
+        @media (max-width: 600px) {
+            nav {
+                gap: 12px 18px;
+            }
+        }
     </style>
 </head>
 
@@ -128,6 +154,18 @@
 <header>
     <h1>Jade's Memory Feathers</h1>
 </header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../quests.html">Quests</a>
+    <a href="../transcripts.html">Transcripts</a>
+    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="../factions.html">Factions</a>
+    <a href="../timeline.html">Timeline</a>
+    <a href="../operations.html">Operations</a>
+    <a href="../args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
+</nav>
 
 <main>
     <a class="back-link" href="../extra-lore.html">← Back to Extra Lore</a>
