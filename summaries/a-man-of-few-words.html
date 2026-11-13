@@ -6,48 +6,55 @@
     <title>A Man of Few Words - Quest Summaries - The Lorak Codex</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
             background: #0b0b0b;
-            color: #ddd;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
         }
 
         header {
             background: #111;
-            padding: 20px;
+            padding: 25px 15px;
             text-align: center;
-            border-bottom: 2px solid #d4af37;
+            border-bottom: 1px solid #333;
         }
 
         header h1 {
             color: #d4af37;
             letter-spacing: 3px;
             margin: 0;
+            font-size: 28px;
         }
 
         nav {
+            background: #151515;
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            flex-wrap: wrap;
+            gap: 20px;
             padding: 15px;
-            background: #111;
+            border-bottom: 1px solid #292929;
         }
 
         nav a {
-            color: #d4af37;
+            color: #ccc;
             text-decoration: none;
+            font-size: 14px;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #d4af37;
         }
 
         main {
             max-width: 900px;
             margin: auto;
-            padding: 20px;
+            padding: 25px 15px 40px;
         }
 
         h2 {
@@ -55,11 +62,15 @@
         }
 
         .back {
-            display: block;
+            display: inline-block;
             color: #d4af37;
             text-decoration: none;
             font-weight: bold;
             margin-bottom: 20px;
+        }
+
+        .back:hover {
+            text-decoration: underline;
         }
 
         .summary {
@@ -79,17 +90,22 @@
             text-decoration: none;
         }
 
+        .transcript:hover {
+            background: #f0d060;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
+            border-top: 1px solid #66551d;
             color: #777;
-            border-top: 1px solid #222;
-            margin-top: 30px;
+            font-size: 13px;
         }
     </style>
 </head>
 
 <body>
+
     <header>
         <h1>The Lorak Codex</h1>
     </header>
@@ -127,5 +143,6 @@
     <footer>
         The Lorak Codex
     </footer>
+
 </body>
 </html>
