@@ -11,116 +11,249 @@
 <link rel="canonical" href="https://lorakcodex.github.io/archives/synthesis-imprints.html">
 
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#0b0b0b;color:#ddd;font-family:Arial,sans-serif}
-header{background:#111;padding:20px;text-align:center;border-bottom:2px solid #d4af37}
-h1{color:#d4af37;letter-spacing:3px;margin:0}
-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;padding:15px;background:#111}
-nav a,.back{color:#d4af37;text-decoration:none}
-nav a:hover,.back:hover{color:#f0d46b}
-main{max-width:900px;margin:auto;padding:20px}
-.back{display:inline-block;margin-bottom:20px;font-weight:bold}
-h2{color:#d4af37}
-.imprint{margin-bottom:20px}
-.imprint-button{display:flex;justify-content:space-between;align-items:center;width:100%;padding:14px 16px;background:#d4af37;color:#0b0b0b;border:0;border-radius:4px;font-size:16px;font-weight:bold;text-align:left;cursor:pointer}
-.imprint-button:hover{background:#f0d46b}
-.indicator{font-size:20px}
-.imprint-content{display:none;margin-top:10px;padding:18px;background:#111;border:1px solid #d4af37;border-radius:4px;line-height:1.8;overflow-wrap:anywhere}
-.imprint-content.open{display:block}
-.passage{margin:0;white-space:pre-line}
-footer{margin-top:30px;padding:20px;background:#111;border-top:1px solid #d4af37;text-align:center;color:#aaa}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #111;
+    padding: 25px 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    color: #d4af37;
+    letter-spacing: 3px;
+    margin: 0;
+    font-size: 28px;
+}
+
+nav {
+    background: #151515;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #292929;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 15px 40px;
+}
+
+.back {
+    display: block;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    color: #d4af37;
+    margin-top: 0;
+}
+
+.imprint {
+    margin-top: 10px;
+}
+
+.imprint-button {
+    display: block;
+    width: 100%;
+    background: #d4af37;
+    color: #0b0b0b;
+    border: none;
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.imprint-button:hover {
+    background: #e5c451;
+}
+
+.imprint-button::after {
+    content: "+";
+    float: right;
+    font-size: 18px;
+}
+
+.imprint-button.active::after {
+    content: "−";
+}
+
+.imprint-content {
+    display: none;
+    background: #111;
+    border: 1px solid #66551d;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.imprint-content p {
+    margin: 0 0 14px;
+}
+
+.imprint-content p:last-child {
+    margin-bottom: 0;
+}
+
+.passage {
+    white-space: pre-line;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #66551d;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        gap: 12px 18px;
+    }
+}
 </style>
 </head>
+
 <body>
-<header><h1>The Lorak Codex</h1></header>
+
+<header>
+    <h1>THE LORAK CODEX</h1>
+</header>
+
 <nav>
-<a href="../index.html">Home</a>
-<a href="../quests.html">Quests</a>
-<a href="../transcripts.html">Transcripts</a>
-<a href="../timeline.html">Timeline</a>
-<a href="../operations.html">Operations</a>
-<a href="../args.html">ARGs</a>
-<a href="../extra-lore.html">Extra Lore</a>
+    <a href="../index.html">Home</a>
+    <a href="../quests.html">Quests</a>
+    <a href="../transcripts.html">Transcripts</a>
+    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="../factions.html">Factions</a>
+    <a href="../timeline.html">Timeline</a>
+    <a href="../operations.html">Operations</a>
+    <a href="../args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
 </nav>
+
 <main>
-<a class="back" href="../archives.html">← Back to Archives</a>
-<h2>Synthesis Imprints</h2>
+    <a class="back" href="../archives.html">← Back to Archives</a>
 
-<section class="imprint">
-<button class="imprint-button" aria-expanded="false" aria-controls="imprint-1" onclick="toggleImprint(this)">
-<span>1. Anti Moa</span><span class="indicator">+</span>
-</button>
-<div class="imprint-content" id="imprint-1">
-<p class="passage">PASTE THE COMPLETE ANTI MOA TRANSCRIPT HERE</p>
-</div>
-</section>
+    <h2>Synthesis Imprints</h2>
 
-<section class="imprint">
-<button class="imprint-button" aria-expanded="false" aria-controls="imprint-2" onclick="toggleImprint(this)">
-<span>2. Arid Eviscerator</span><span class="indicator">+</span>
-</button>
-<div class="imprint-content" id="imprint-2">
-<p class="passage">PASTE THE COMPLETE ARID EVISCERATOR TRANSCRIPT HERE</p>
-</div>
-</section>
+    <section class="imprint">
+        <button class="imprint-button" aria-expanded="false" aria-controls="imprint-1" onclick="toggleImprint(this)">
+            1. Anti Moa
+        </button>
+        <div class="imprint-content" id="imprint-1">
+            <p class="passage">PASTE THE COMPLETE ANTI MOA TRANSCRIPT HERE</p>
+        </div>
+    </section>
 
-<section class="imprint">
-<button class="imprint-button" aria-expanded="false" aria-controls="imprint-3" onclick="toggleImprint(this)">
-<span>3. Corrupted Ancient</span><span class="indicator">+</span>
-</button>
-<div class="imprint-content" id="imprint-3">
-<p class="passage">PASTE THE COMPLETE CORRUPTED ANCIENT TRANSCRIPT HERE</p>
-</div>
-</section>
+    <section class="imprint">
+        <button class="imprint-button" aria-expanded="false" aria-controls="imprint-2" onclick="toggleImprint(this)">
+            2. Arid Eviscerator
+        </button>
+        <div class="imprint-content" id="imprint-2">
+            <p class="passage">PASTE THE COMPLETE ARID EVISCERATOR TRANSCRIPT HERE</p>
+        </div>
+    </section>
 
-<section class="imprint">
-<button class="imprint-button" aria-expanded="false" aria-controls="imprint-4" onclick="toggleImprint(this)">
-<span>4. Detron Crewman</span><span class="indicator">+</span>
-</button>
-<div class="imprint-content" id="imprint-4">
-<p class="passage">PASTE THE COMPLETE DETRON CREWMAN TRANSCRIPT HERE</p>
-</div>
-</section>
+    <section class="imprint">
+        <button class="imprint-button" aria-expanded="false" aria-controls="imprint-3" onclick="toggleImprint(this)">
+            3. Corrupted Ancient
+        </button>
+        <div class="imprint-content" id="imprint-3">
+            <p class="passage">PASTE THE COMPLETE CORRUPTED ANCIENT TRANSCRIPT HERE</p>
+        </div>
+    </section>
 
-<section class="imprint">
-<button class="imprint-button" aria-expanded="false" aria-controls="imprint-5" onclick="toggleImprint(this)">
-<span>5. Guardsman</span><span class="indicator">+</span>
-</button>
-<div class="imprint-content" id="imprint-5">
-<p class="passage">PASTE THE COMPLETE GUARDSMAN TRANSCRIPT HERE</p>
-</div>
-</section>
+    <section class="imprint">
+        <button class="imprint-button" aria-expanded="false" aria-controls="imprint-4" onclick="toggleImprint(this)">
+            4. Detron Crewman
+        </button>
+        <div class="imprint-content" id="imprint-4">
+            <p class="passage">PASTE THE COMPLETE DETRON CREWMAN TRANSCRIPT HERE</p>
+        </div>
+    </section>
 
-<section class="imprint">
-<button class="imprint-button" aria-expanded="false" aria-controls="imprint-6" onclick="toggleImprint(this)">
-<span>6. Lancer</span><span class="indicator">+</span>
-</button>
-<div class="imprint-content" id="imprint-6">
-<p class="passage">PASTE THE COMPLETE LANCER TRANSCRIPT HERE</p>
-</div>
-</section>
+    <section class="imprint">
+        <button class="imprint-button" aria-expanded="false" aria-controls="imprint-5" onclick="toggleImprint(this)">
+            5. Guardsman
+        </button>
+        <div class="imprint-content" id="imprint-5">
+            <p class="passage">PASTE THE COMPLETE GUARDSMAN TRANSCRIPT HERE</p>
+        </div>
+    </section>
 
-<section class="imprint">
-<button class="imprint-button" aria-expanded="false" aria-controls="imprint-7" onclick="toggleImprint(this)">
-<span>7. Runner</span><span class="indicator">+</span>
-</button>
-<div class="imprint-content" id="imprint-7">
-<p class="passage">"First, my crew were torn down and consumed. Then my segments were ripped out and crushed. Now I lay blind, but feel its growth through each failed system. And with nothing but time remaining, Jordas is forced to wonder: will its complete infiltration bring some vicious mercy, or a new nightmare?"
+    <section class="imprint">
+        <button class="imprint-button" aria-expanded="false" aria-controls="imprint-6" onclick="toggleImprint(this)">
+            6. Lancer
+        </button>
+        <div class="imprint-content" id="imprint-6">
+            <p class="passage">PASTE THE COMPLETE LANCER TRANSCRIPT HERE</p>
+        </div>
+    </section>
+
+    <section class="imprint">
+        <button class="imprint-button" aria-expanded="false" aria-controls="imprint-7" onclick="toggleImprint(this)">
+            7. Runner
+        </button>
+        <div class="imprint-content" id="imprint-7">
+            <p class="passage">"First, my crew were torn down and consumed. Then my segments were ripped out and crushed. Now I lay blind, but feel its growth through each failed system. And with nothing but time remaining, Jordas is forced to wonder: will its complete infiltration bring some vicious mercy, or a new nightmare?"
 <br>—Jordas, Ship Cephalon, 3rd Class Frigate</p>
-</div>
-</section>
+        </div>
+    </section>
+
 </main>
 
-<footer><p>The Lorak Codex</p></footer>
+<footer>
+    The Lorak Codex
+</footer>
 
 <script>
-function toggleImprint(button){
-    const content=document.getElementById(button.getAttribute("aria-controls"));
-    const isOpen=button.getAttribute("aria-expanded")==="true";
-    button.setAttribute("aria-expanded",String(!isOpen));
-    content.classList.toggle("open",!isOpen);
-    button.querySelector(".indicator").textContent=isOpen?"+":"−";
+function toggleImprint(button) {
+    const content = document.getElementById(button.getAttribute("aria-controls"));
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+
+    button.setAttribute("aria-expanded", String(!isOpen));
+    content.style.display = isOpen ? "none" : "block";
+    button.classList.toggle("active", !isOpen);
 }
 </script>
+
 </body>
 </html>
