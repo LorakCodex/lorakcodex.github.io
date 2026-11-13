@@ -1,137 +1,144 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Awakening Quest Transcript | Warframe Lore | The Lorak Codex</title>
-<meta name="description" content="Read the full Awakening quest transcript from Warframe. Follow the Lotus as she awakens the Tenno, helps them escape Captain Vor and guides them back to their ship.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://lorakcodex.github.io/transcripts/awakening.html">
+<title>Awakening - Quest Summary - The Lorak Codex</title>
+<meta name="description" content="Read the Warframe Awakening quest summary on The Lorak Codex, covering the Tenno's return, Captain Vor's Ascaris device, and the Lotus's intervention.">
 
 <style>
-body{
-    margin:0;
-    background:#0b0b0b;
-    color:#ddd;
-    font-family:Arial,sans-serif;
+* {
+    box-sizing: border-box;
 }
 
-header{
-    background:#111;
-    padding:25px;
-    text-align:center;
-    border-bottom:1px solid #333;
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
 }
 
-header h1{
-    margin:0;
-    color:#d4af37;
-    letter-spacing:3px;
+header {
+    background: #111;
+    padding: 25px 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
 }
 
-nav{
-    margin-top:15px;
+header h1 {
+    color: #d4af37;
+    letter-spacing: 3px;
+    margin: 0;
+    font-size: 28px;
 }
 
-nav a{
-    color:#d4af37;
-    text-decoration:none;
-    margin:0 10px;
+nav {
+    background: #151515;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #292929;
 }
 
-nav a:hover{
-    text-decoration:underline;
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
 }
 
-.container{
-    max-width:900px;
-    margin:30px auto;
-    padding:0 15px;
+nav a:hover {
+    color: #d4af37;
 }
 
-.back{
-    display:block;
-    color:#d4af37;
-    text-decoration:none;
-    font-weight:bold;
-    margin-bottom:20px;
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 15px 40px;
 }
 
-.back:hover{
-    text-decoration:underline;
+h2 {
+    color: #d4af37;
+    margin-top: 0;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
 }
 
-.quest-title{
-    color:#d4af37;
-    font-size:26px;
-    font-weight:bold;
-    margin-bottom:10px;
-    letter-spacing:1px;
+.back {
+    display: block;
+    color: #d4af37;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 20px;
 }
 
-.quest-description{
-    background:#111;
-    border-left:2px solid #d4af37;
-    padding:15px;
-    margin-bottom:25px;
-    line-height:1.8;
-    box-sizing:border-box;
+.back:hover {
+    text-decoration: underline;
 }
 
-.mission-button{
-    width:100%;
-    background:#d4af37;
-    color:#0b0b0b;
-    border:none;
-    padding:14px 15px;
-    margin-top:10px;
-    text-align:left;
-    font-size:17px;
-    font-weight:bold;
-    cursor:pointer;
-    border-radius:4px;
-    box-sizing:border-box;
+.summary-box {
+    background: #101010;
+    border: 1px solid #66551d;
+    border-radius: 5px;
+    padding: 15px 20px;
+    line-height: 1.6;
 }
 
-.mission-button:hover,
-.mission-button.active{
-    background:#d4af37;
-    color:#0b0b0b;
+.summary-box ul {
+    margin: 0;
+    padding-left: 25px;
 }
 
-.content{
-    display:none;
-    padding:10px 0 10px 0;
+.summary-box li {
+    color: #e0e0e0;
+    margin-bottom: 15px;
 }
 
-.content.show{
-    display:block;
+.summary-box li:last-child {
+    margin-bottom: 0;
 }
 
-.label{
-    color:#d4af37;
-    font-weight:bold;
-    font-size:18px;
-    margin:18px 0 8px;
+.summary-box li::marker {
+    color: #d4af37;
 }
 
-.text{
-    background:#111;
-    border-left:2px solid #d4af37;
-    padding:15px;
-    margin-top:10px;
-    white-space:pre-line;
-    line-height:2.2;
-    box-sizing:border-box;
-    overflow-wrap:anywhere;
+.section-title {
+    color: #d4af37;
+    font-weight: bold;
 }
 
-footer{
-    text-align:center;
-    padding:30px;
-    color:#777;
-    border-top:1px solid #333;
-    margin-top:40px;
+.section-text {
+    display: block;
+    color: #e0e0e0;
+    margin-top: 5px;
+}
+
+.transcript-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #d4af37;
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+.transcript-link:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #66551d;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        gap: 12px 18px;
+    }
 }
 </style>
 </head>
@@ -139,146 +146,60 @@ footer{
 <body>
 
 <header>
-    <h1>The Lorak Codex</h1>
-
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../quests.html">Quests</a>
-        <a href="../transcripts.html">Transcripts</a>
-        <a href="../extra-lore.html">Extra Lore</a>
-        <a href="../factions.html">Factions</a>
-        <a href="../timeline.html">Timeline</a>
-        <a href="../operations.html">Operations</a>
-        <a href="../args.html">ARGs</a>
-        <a href="https://discord.gg/X3WsdC8jP4">Discord</a>
-    </nav>
+    <h1>THE LORAK CODEX</h1>
 </header>
 
-<div class="container">
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../quests.html">Quests</a>
+    <a href="../transcripts.html">Transcripts</a>
+    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="../factions.html">Factions</a>
+    <a href="../timeline.html">Timeline</a>
+    <a href="../operations.html">Operations</a>
+    <a href="../args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
+</nav>
 
-    <h2 class="quest-title">1. Awakening</h2>
+<main>
 
-    <a href="../transcripts.html" class="back">← Back to Transcripts</a>
+    <a class="back" href="../quests.html">← Back to Quest Index</a>
 
-    <div class="quest-description">
-        The Tenno: monuments of an ancient warrior caste. For generations you've slept, with no call to awake you. Until now.
+    <h2>Awakening</h2>
+
+    <div class="summary-box">
+        <ul>
+            <li>
+                <span class="section-title">The Awakening</span>
+                <span class="section-text">For centuries, the Tenno have been dormant. As the Grineer Empire grows, the Lotus starts waking them up.</span>
+            </li>
+
+            <li>
+                <span class="section-title">Captain Vor's Plot</span>
+                <span class="section-text">Captain Vor hunts down newly awakened Tenno on Earth. Instead of killing the player like ordered by the Twin Queens, he attaches an Ascaris device to control the Warframe.</span>
+            </li>
+
+            <li>
+                <span class="section-title">The Intervention</span>
+                <span class="section-text">The Lotus remotely surges the player's power systems, letting them break free and fight back against nearby Grineer soldiers.</span>
+            </li>
+
+            <li>
+                <span class="section-title">Conclusion</span>
+                <span class="section-text">You eventually fight Vor at the end and get picked up by Ordis, your original Orbiter Cephalon.</span>
+            </li>
+        </ul>
     </div>
 
-    <button class="mission-button">
-        1. Introduction
-    </button>
+    <a class="transcript-link" href="../transcripts/awakening.html">
+        View Transcript
+    </a>
 
-    <div class="content">
-
-        <div class="label">Opening Cinematic</div>
-
-        <div class="text">Lotus: "For generations, you've slept. No purpose.... no call... to wake you."
-
-Lotus: "Grineer! Seeds from the ruins of the Old War. Swallowing colonies whole."
-
-Lotus: "But there's still hope."
-
-Lotus: "The Tenno. Monuments of an ancient warrior caste. Scattered across frail worlds."
-
-Lotus: "Together, they fought back. Bringing an end to an empire. Then, they left."
-
-Lotus: "Forgotten. Like a dream..."
-
-Lotus: "Wake up, Tenno. Wake up."
-
-Grineer Lancer: "Tenno skoom!" / "Tenno scum!"
-
-Vor: "Hmm. I see the Lotus has tried to wake you... pity she's too late. You're my prize now, Tenno."
-
-Vor: "No! We are taking this one with us."
-
-Lotus: "What has he done to you? I can't lose another Tenno. I am surging your Warframe's power systems."</div>
-
-    </div>
-
-    <button class="mission-button">
-        2. Awakening
-    </button>
-
-    <div class="content">
-
-        <div class="label">Awakening</div>
-
-        <div class="text">Lotus: "Quick. Use your power. Defend yourself."
-
-Lotus: "An extraction ship is waiting for you. But the Grineer will be hunting you, arm yourself"
-
-Lotus: "A Tenno's melee weapon honors their warrior tradition. When technology was turned against them, they adapted."
-
-Lotus: "Keep moving."
-
-Lotus: "There's a cache of weapons ahead. Grab what you can."
-
-Grineer Lancer: "Suggresshung fugre!" / "Suppressing fire!"
-
-Grineer Lancer: "Klouvor hu rearr." / "Thought I heard."
-
-Lotus: "Good. The extraction point is up ahead. Hurry, before Vor finds out you've escaped."
-
-Lotus: "A Tenno flows like fire over the battle terrain. Do you remember how to dash up walls?"
-
-Vor: "Salvage team, why have you not reported in?"
-
-Lotus: "You made it. There's the extraction ship!"
-
-Vor: "My decrepit heart is pounding! This one is stronger than the rest. Lock the area down! This Tenno is mine!"
-
-Lotus: "Get out of there Tenno! You'll have to face Vor another time, when you are fully restored."
-
-Vor: "Grineer, my sons. Prepare the reinforcements, we need that Tenno."
-
-Vor: "The Queens want to destroy you, but I need to know more."
-
-Lotus: "Quick, get to the console and release the lockdown. Do that and I will guide you to your old ship. It's your only chance."
-
-Lotus: "Escape will only be possible with a primary weapon. Choose now."
-
-Lotus: "I'm not sure what Vor has done to your Warframe, but we cannot remove it now. Just keep going, your ship is up ahead."
-
-Lotus: "There it is, your ship. Hurry, Vor's reinforcements must be on their way."
-
-Lotus: "There's the ship. It will require power. Activate it."
-
-Lotus: "Your Parazon is a versatile tool, use it to breach this panel and restart the ship."
-
-"Stop touching me, you— what? Are my sensors deceiving me? Operator, is that you?"
-
-Grineer Lancer: "Orre klegra!" / "Over there!"
-
-Grineer Lancer: "Khus hut!" / "Kill it!"
-
-Lotus: "Enemy reinforcements are here! Ship Cephalon, we require immediate extraction."
-
-Ordis: "The Operator is in danger? I will need a few moments to cycle the engines!"
-
-Vor: "Tenno, are you afraid? You cannot hide from these old eyes. I've marked you. You will return to me."
-
-Lotus: "Tenno, the ship is ready. It's time to leave."</div>
-
-    </div>
-
-</div>
+</main>
 
 <footer>
-    The Lorak Codex
+    The Lorak Codex — Warframe Lore Archive
 </footer>
-
-<script>
-document.querySelectorAll(".mission-button").forEach(button=>{
-    button.addEventListener("click",()=>{
-        button.classList.toggle("active");
-        const content=button.nextElementSibling;
-        if(content){
-            content.classList.toggle("show");
-        }
-    });
-});
-</script>
 
 </body>
 </html>
