@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,108 +11,193 @@
 <link rel="canonical" href="https://lorakcodex.github.io/transcripts/veilbreaker.html">
 
 <style>
-body{
-    margin:0;
-    background:#0b0b0b;
-    color:#ddd;
-    font-family:Arial,sans-serif;
+* {
+    box-sizing: border-box;
 }
 
-.container{
-    max-width:900px;
-    margin:30px auto;
-    padding:0 15px;
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
 }
 
-.back{
-    display:block;
-    color:#d4af37;
-    text-decoration:none;
-    font-weight:bold;
-    margin-bottom:20px;
+header {
+    background: #111;
+    padding: 25px 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
 }
 
-.quest-title{
-    color:#d4af37;
-    font-size:26px;
-    font-weight:bold;
-    margin-top:0;
-    margin-bottom:10px;
-    letter-spacing:1px;
+header h1 {
+    color: #d4af37;
+    letter-spacing: 3px;
+    margin: 0;
+    font-size: 28px;
 }
 
-.quest-description{
-    background:#111;
-    border-left:2px solid #d4af37;
-    padding:15px;
-    margin-bottom:25px;
-    line-height:1.8;
-    box-sizing:border-box;
+nav {
+    background: #151515;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #292929;
 }
 
-.mission-button{
-    width:100%;
-    background:#d4af37;
-    color:#0b0b0b;
-    border:none;
-    padding:14px 15px;
-    margin-top:10px;
-    text-align:left;
-    font-size:17px;
-    font-weight:bold;
-    cursor:pointer;
-    border-radius:4px;
-    box-sizing:border-box;
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
 }
 
-.mission-button:hover,
-.mission-button.active{
-    background:#d4af37;
-    color:#0b0b0b;
+nav a:hover {
+    color: #d4af37;
 }
 
-.content{
-    display:none;
-    padding:10px 0 10px 0;
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 15px 40px;
 }
 
-.content.show{
-    display:block;
+.back {
+    display: block;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.label{
-    color:#d4af37;
-    font-weight:bold;
-    font-size:18px;
-    margin:18px 0 8px;
+.back:hover {
+    text-decoration: underline;
 }
 
-.text{
-    background:#111;
-    border-left:2px solid #d4af37;
-    padding:15px;
-    margin-top:10px;
-    white-space:pre-line;
-    line-height:2.2;
-    box-sizing:border-box;
-    overflow-wrap:anywhere;
+.quest-title {
+    color: #d4af37;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.quest-description {
+    background: #111;
+    border-left: 2px solid #d4af37;
+    padding: 15px;
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+.mission-button {
+    display: block;
+    width: 100%;
+    background: #d4af37;
+    color: #0b0b0b;
+    border: none;
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.mission-button:hover {
+    background: #e5c451;
+}
+
+.mission-button::after {
+    content: "+";
+    float: right;
+    font-size: 18px;
+}
+
+.mission-button.active::after {
+    content: "−";
+}
+
+.content {
+    display: none;
+    background: #111;
+    border: 1px solid #66551d;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.content.show {
+    display: block;
+}
+
+.label {
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 18px 0 8px;
+}
+
+.text {
+    background: #0b0b0b;
+    border-left: 2px solid #66551d;
+    padding: 15px;
+    margin-top: 10px;
+    white-space: pre-line;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #66551d;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        gap: 12px 18px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<header>
+    <h1>THE LORAK CODEX</h1>
+</header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../quests.html">Quests</a>
+    <a href="../transcripts.html">Transcripts</a>
+    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="../factions.html">Factions</a>
+    <a href="../timeline.html">Timeline</a>
+    <a href="../operations.html">Operations</a>
+    <a href="../args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
+</nav>
+
+<main>
 
 <a class="back" href="../transcripts.html">← Back to Transcripts</a>
 
-<h1 class="quest-title">17. Veilbreaker</h1>
+<h2 class="quest-title">17. Veilbreaker</h2>
 
 <div class="quest-description">
 Daughter Entrati gets more than she bargained for when she enlists the Tenno to investigate a call for reinforcements aboard a Narmer Murex
 </div>
 
-<button class="mission-button">1. Investigate the Murex</button>
+<button class="mission-button" onclick="toggleMission(this)" aria-expanded="false">1. Investigate the Murex</button>
 <div class="content">
 
 <div class="label">Who Is Pazuul?</div>
@@ -279,7 +365,7 @@ Kahl: "Blue Girl bring brothers aboard. Kahl check everything safe."</div>
 
 </div>
 
-<button class="mission-button">2. Return to Drifters Camp</button>
+<button class="mission-button" onclick="toggleMission(this)" aria-expanded="false">2. Return to Drifters Camp</button>
 <div class="content">
 
 <div class="label">Return to Drifters Camp</div>
@@ -297,7 +383,7 @@ Kahl: "If Narmer make Veils, Kahl and Blue Girl break them."</div>
 
 </div>
 
-<button class="mission-button">3. Talk to Kahl</button>
+<button class="mission-button" onclick="toggleMission(this)" aria-expanded="false">3. Talk to Kahl</button>
 <div class="content">
 
 <div class="label">Talk to Kahl</div>
@@ -305,7 +391,7 @@ Kahl: "If Narmer make Veils, Kahl and Blue Girl break them."</div>
 
 </div>
 
-<button class="mission-button">4. Conclusion</button>
+<button class="mission-button" onclick="toggleMission(this)" aria-expanded="false">4. Conclusion</button>
 <div class="content">
 
 <div class="label">Conclusion</div>
@@ -327,18 +413,21 @@ You know, what with Kahl doing the intel gathering on the ground, me running mis
 
 </div>
 
-</div>
+</main>
+
+<footer>
+    The Lorak Codex
+</footer>
 
 <script>
-document.querySelectorAll(".mission-button").forEach(button=>{
-    button.addEventListener("click",()=>{
-        button.classList.toggle("active");
-        const content=button.nextElementSibling;
-        if(content){
-            content.classList.toggle("show");
-        }
-    });
-});
+function toggleMission(button) {
+    const content = button.nextElementSibling;
+    const isOpen = content.classList.contains("show");
+
+    content.classList.toggle("show", !isOpen);
+    button.classList.toggle("active", !isOpen);
+    button.setAttribute("aria-expanded", String(!isOpen));
+}
 </script>
 
 </body>
