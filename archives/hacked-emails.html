@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hacked Emails | Warframe Lore | The Lorak Codex</title>
+    <meta name="description" content="Read the Hacked Emails from Warframe, revealing HitMaker Music's partnership with the Höllvanian government and the secret Technocyte Coda project.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lorakcodex.github.io/archives/hacked-emails.html">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #0b0b0b;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #111;
+            padding: 25px 15px;
+            text-align: center;
+            border-bottom: 2px solid #d4af37;
+        }
+
+        header h1 {
+            color: #d4af37;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+
+        nav {
+            background: #151515;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 15px;
+            border-bottom: 1px solid #292929;
+        }
+
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #d4af37;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .description {
+            background: #111;
+            border: 1px solid #d4af37;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 22px;
+        }
+
+        .email-section {
+            margin-bottom: 12px;
+        }
+
+        .email-button {
+            display: block;
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid #d4af37;
+            border-radius: 8px;
+            background: #d4af37;
+            color: #0b0b0b;
+            text-align: left;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .email-button:hover {
+            background: #e6c75a;
+        }
+
+        .email-button .indicator {
+            float: right;
+            margin-left: 12px;
+        }
+
+        .email-content {
+            display: none;
+            padding: 18px;
+            margin-top: 8px;
+            background: #111;
+            border: 1px solid #d4af37;
+            border-radius: 8px;
+            overflow-wrap: anywhere;
+        }
+
+        .email-content.open {
+            display: block;
+        }
+
+        .email-content h2 {
+            color: #d4af37;
+            font-size: 17px;
+            letter-spacing: 1px;
+            margin: 0 0 14px;
+        }
+
+        .email-text {
+            white-space: pre-wrap;
+        }
+
+        footer {
+            margin-top: 35px;
+            padding: 20px 15px;
+            text-align: center;
+            color: #888;
+            border-top: 1px solid #333;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                gap: 12px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Hacked Emails</h1>
+</header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../quests.html">Quests</a>
+    <a href="../transcripts.html">Transcripts</a>
+    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="../factions.html">Factions</a>
+    <a href="../timeline.html">Timeline</a>
+    <a href="../operations.html">Operations</a>
+    <a href="../args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
+</nav>
+
+<main>
+    <a class="back-link" href="../extra-lore.html">← Back to Extra Lore</a>
+
+    <div class="description">
+        A collection of hacked emails revealing the secret dealings between HitMaker Music and the Höllvanian government, including the development of the Technocyte Coda project and plans involving On-lyne.
+    </div>
+
+    <div class="email-section">
+        <button class="email-button" onclick="toggleEmail(this, 'email1')" aria-expanded="false">
+            THX AMIR
+            <span class="indicator">+</span>
+        </button>
+        <div class="email-content" id="email1">
+            <div class="email-text">Amir! Thank u for helping me with this! Ur hacking skills are gonna help On-lyne so much! <3
+U don't have to be a fan of their music to admit they deserve better, right? Poor guys
+:(
+If we get a paper trail of the shady backroom deals between HitMaker and the Höllvaniaian government, we can give it to On-lyne. That way, they'll have everything they need to break their contract and get away from these users as soon as we get them home!
+I hear their manager is old school. He's just now figuring out email cause he has to for business. Bet a tech wizard like u can hack his stuff no problem ;)</div>
+        </div>
+    </div>
+
+    <div class="email-section">
+        <button class="email-button" onclick="toggleEmail(this, 'email2')" aria-expanded="false">
+            December 1998
+            <span class="indicator">+</span>
+        </button>
+        <div class="email-content" id="email2">
+            <div class="email-text">Good morning Director,
+It is my pleasure to inform you that HitMaker Music accepts your offer.
+There's a smokin' young secretary faxing you our signed NDAs as I type this. Everyone here looks forward to hearing more about the Technocyte Coda project. As they say, nothing beats Höllvania innovation!
+This promises to be a fine partnership.
+Keep up the good work,
+Gregory V.</div>
+        </div>
+    </div>
+
+    <div class="email-section">
+        <button class="email-button" onclick="toggleEmail(this, 'email3')" aria-expanded="false">
+            February 1998
+            <span class="indicator">+</span>
+        </button>
+        <div class="email-content" id="email3">
+            <div class="email-text">Good evening Director,
+I'm happy to hear that the boys' samples arrived safely. Hairbrushes from pop star dressing rooms leading to major technological advancement... It's amazing, when you think about it! I hope you get what you want out of them. What was it again? DNA?
+You've made incredible progress on the Technocyte Coda project in just a few short months. Nothing like loose regulations to encourage innovation, I suppose. Your broken eggs make the most delicious omelets. We love that about Höllvania!
+Not sure how much sense I'll be able to make out of it, but please fax me the results.
+Here's to a bright future,
+Gregory V.</div>
+        </div>
+    </div>
+
+    <div class="email-section">
+        <button class="email-button" onclick="toggleEmail(this, 'email4')" aria-expanded="false">
+            August 1998
+            <span class="indicator">+</span>
+        </button>
+        <div class="email-content" id="email4">
+            <div class="email-text">Good afternoon Director,
+Or is it morning in Höllvania? Time zones always mix me up.
+Been thinking a lot lately about some words I saw in your Technocyte Coda debrief: predictable, standardized, and controlled. Music to my eyes right now.
+The only thing predictable about pop stars these days is their whining and complaining. Fame really goes to their perfectly coiffed heads.
+How are things going with the Technocyte Coda? I can't wait to meet these new and improved stars.
+Hoping for good news,
+Gregory V.</div>
+        </div>
+    </div>
+
+    <div class="email-section">
+        <button class="email-button" onclick="toggleEmail(this, 'email5')" aria-expanded="false">
+            December 1999
+            <span class="indicator">+</span>
+        </button>
+        <div class="email-content" id="email5">
+            <div class="email-text">Good afternoon Director,
+Given the boys' recent outbursts, I appreciate your concern that their presence won't soothe your citizens as intended.
+I think it's an inspired idea to have the prototype Technocyte Coda replace the boys for spoken interviews. We'll use the scripts you provided, and I'll make sure no cameras are present.
+The boys will remain on standby for in-person appearances only. Here's to hoping the Technocyte Codas will soon be able to replicate the boys' physical appearance too.
+Apologies for the hassle,
+Gregory V.</div>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    The Lorak Codex
+</footer>
+
+<script>
+    function toggleEmail(button, emailId) {
+        const content = document.getElementById(emailId);
+        const indicator = button.querySelector('.indicator');
+        const isOpen = content.classList.toggle('open');
+
+        button.setAttribute('aria-expanded', String(isOpen));
+        indicator.textContent = isOpen ? '−' : '+';
+    }
+</script>
+
+</body>
+</html>
