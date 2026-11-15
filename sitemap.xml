@@ -1,4 +1,5 @@
 
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <!-- Homepage -->
@@ -24,7 +25,6 @@
     <url><loc>https://lorakcodex.github.io/archives/cordylon.html</loc></url>
     <url><loc>https://lorakcodex.github.io/archives/ember-prime.html</loc></url>
     <url><loc>https://lorakcodex.github.io/archives/excalibur-prime.html</loc></url>
-    <url><loc>https://lorakcodex.github.io/archives/executor-tuvul-logs.html</loc></url>
     <url><loc>https://lorakcodex.github.io/archives/garuda.html</loc></url>
     <url><loc>https://lorakcodex.github.io/archives/hacked-emails.html</loc></url>
     <url><loc>https://lorakcodex.github.io/archives/jades-memory-feathers.html</loc></url>
@@ -121,6 +121,7 @@
     <url><loc>https://lorakcodex.github.io/summaries/whispers-in-the-walls.html</loc></url>
 
     <!-- Tablets -->
+    <url><loc>https://lorakcodex.github.io/tablets/executor-tuvul-logs.html</loc></url>
     <url><loc>https://lorakcodex.github.io/tablets/melcantor.html</loc></url>
     <url><loc>https://lorakcodex.github.io/tablets/zariman.html</loc></url>
 
