@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,10 +52,10 @@ nav a:hover {
     color: #d4af37;
 }
 
-main {
+.container {
     max-width: 900px;
-    margin: 0 auto;
-    padding: 25px 15px 40px;
+    margin: 30px auto;
+    padding: 0 15px;
 }
 
 h2 {
@@ -66,83 +65,57 @@ h2 {
     padding-bottom: 10px;
 }
 
-.category {
-    margin-bottom: 15px;
-}
-
 .category-button {
-    width: 100%;
-    background: #d4af37;
-    color: #0b0b0b;
-    border: none;
-    padding: 14px 16px;
-    text-align: left;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.category-button:hover {
-    background: #e5c451;
-}
-
-.category-button::after {
-    content: "+";
-    float: right;
-    font-size: 18px;
-}
-
-.category-button.active::after {
-    content: "−";
-}
-
-.category-content {
-    display: none;
-    background: #111;
-    border: 1px solid #66551d;
-    border-radius: 5px;
-    padding: 10px 15px;
-    margin-top: 10px;
-}
-
-.category-content.show {
-    display: block;
-}
-
-.quest {
-    margin-bottom: 10px;
-}
-
-.quest:last-child {
-    margin-bottom: 0;
-}
-
-.quest-button {
     width: 100%;
     background: #151515;
     color: #d4af37;
     border: 1px solid #333;
-    padding: 14px 16px;
+    padding: 16px;
+    margin-top: 10px;
     text-align: left;
-    font-size: 15px;
+    font-size: 17px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.category-button:hover,
+.category-button.active {
+    background: #1d1d1d;
+}
+
+.content {
+    display: none;
+    padding: 10px 0 10px 15px;
+}
+
+.content.show {
+    display: block;
+}
+
+.quest {
+    margin-bottom: 0;
+}
+
+.quest-button {
+    display: block;
+    width: 100%;
+    background: #111;
+    color: #d4af37;
+    border: none;
+    border-left: 2px solid #d4af37;
+    padding: 15px;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 4px;
 }
 
 .quest-button:hover,
 .quest-button.active {
     background: #1d1d1d;
-}
-
-.quest-button::after {
-    content: "+";
-    float: right;
-    font-size: 18px;
-}
-
-.quest-button.active::after {
-    content: "−";
 }
 
 .quest-content {
@@ -213,72 +186,72 @@ footer {
     <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
 </nav>
 
-<main>
+<div class="container">
 
 <h2>Quest Archives</h2>
 
-<div class="category">
-    <button class="category-button" type="button" aria-expanded="false" onclick="toggleCategory(this)">
-        Main Quest Summaries
-    </button>
+<button class="category-button" type="button" aria-expanded="false" onclick="toggleCategory(this)">
+    Main Quest Summaries
+</button>
 
-    <div class="category-content">
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">1. Awakening</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">2. Vor's Prize</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">3. The Teacher</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">4. Vox Solaris</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">5. Once Awake</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">6. Heart of Deimos</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">7. The Archwing</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">8. Natah</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">9. The Second Dream</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">10. The War Within</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">11. Rising Tide</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">12. Chains of Harrow</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">13. Apostasy Prologue</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">14. The Sacrifice</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">15. Prelude to War</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">16. The New War</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">17. The Duviri Paradox</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">18. Angels of the Zariman</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">19. Whispers in the Walls</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">20. Jade Shadows</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">21. Jade Shadows: Constellations</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">22. The Lotus Eaters</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">23. The Hex Quest</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">24. Old Peace</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">25. Prologue to Tau</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">26. Tau 2026</button><div class="quest-content"></div></div>
-    </div>
+<div class="content">
+
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">1. Awakening</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">2. Vor's Prize</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">3. The Teacher</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">4. Vox Solaris</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">5. Once Awake</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">6. Heart of Deimos</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">7. The Archwing</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">8. Natah</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">9. The Second Dream</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">10. The War Within</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">11. Rising Tide</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">12. Chains of Harrow</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">13. Apostasy Prologue</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">14. The Sacrifice</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">15. Prelude to War</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">16. The New War</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">17. The Duviri Paradox</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">18. Angels of the Zariman</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">19. Whispers in the Walls</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">20. Jade Shadows</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">21. Jade Shadows: Constellations</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">22. The Lotus Eaters</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">23. The Hex Quest</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">24. Old Peace</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">25. Prologue to Tau</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">26. Tau 2026</button><div class="quest-content"></div></div>
+
 </div>
 
-<div class="category">
-    <button class="category-button" type="button" aria-expanded="false" onclick="toggleCategory(this)">
-        Side Quest Summaries
-    </button>
+<button class="category-button" type="button" aria-expanded="false" onclick="toggleCategory(this)">
+    Side Quest Summaries
+</button>
 
-    <div class="category-content">
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">1. Howl of the Kubrow</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">2. The Limbo Theorem</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">3. Patient Zero</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">4. Stolen Dreams</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">5. The New Strange</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">6. A Man of Few Words</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">7. The Jordas Precept</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">8. Sands of Inaros</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">9. The Silver Grove</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">10. The Glast Gambit</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">11. Octavia's Anthem</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">12. Saya's Vigil</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">13. Mask of the Revenant</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">14. The Deadlock Protocol</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">15. Call of the Tempestarii</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">16. The Waverider</button><div class="quest-content"></div></div>
-        <div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">17. Veilbreaker</button><div class="quest-content"></div></div>
-    </div>
+<div class="content">
+
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">1. Howl of the Kubrow</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">2. The Limbo Theorem</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">3. Patient Zero</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">4. Stolen Dreams</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">5. The New Strange</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">6. A Man of Few Words</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">7. The Jordas Precept</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">8. Sands of Inaros</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">9. The Silver Grove</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">10. The Glast Gambit</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">11. Octavia's Anthem</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">12. Saya's Vigil</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">13. Mask of the Revenant</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">14. The Deadlock Protocol</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">15. Call of the Tempestarii</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">16. The Waverider</button><div class="quest-content"></div></div>
+<div class="quest"><button class="quest-button" type="button" onclick="toggleQuest(this)">17. Veilbreaker</button><div class="quest-content"></div></div>
+
 </div>
 
-</main>
+</div>
 
 <footer>
     The Lorak Codex
@@ -343,7 +316,7 @@ const summaryFiles = {
 function toggleCategory(button) {
     const content = button.nextElementSibling;
 
-    if (!content || !content.classList.contains("category-content")) {
+    if (!content) {
         return;
     }
 
