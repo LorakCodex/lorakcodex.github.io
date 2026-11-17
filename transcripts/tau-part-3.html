@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Unnamed Part 3 - Prologue to Tau - The Lorak Codex</title>
+<title>Eris Mortem - Prologue to Tau - The Lorak Codex</title>
 
 <style>
 * {
@@ -16,35 +16,42 @@ body {
     margin: 0;
     background: #0b0b0b;
     color: #ddd;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
     background: #111;
-    padding: 20px;
+    border-bottom: 1px solid #333;
+    padding: 30px 20px;
     text-align: center;
-    border-bottom: 1px solid #d4af37;
 }
 
 header h1 {
-    color: #d4af37;
     margin: 0;
+    color: #d4af37;
+    font-size: 32px;
     letter-spacing: 3px;
 }
 
+/* Homepage navigation design */
 nav {
-    margin-top: 15px;
+    background: #151515;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #292929;
 }
 
 nav a {
-    color: #d4af37;
+    color: #ccc;
     text-decoration: none;
-    margin: 0 8px;
     font-size: 14px;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #d4af37;
 }
 
 .container {
@@ -78,23 +85,44 @@ h2 {
     color: #ddd;
 }
 
-.transcript-box {
+/* Gold quest buttons */
+.accordion {
+    width: 100%;
+    background: #d4af37;
+    color: #111;
+    border: 1px solid #d4af37;
+    border-radius: 6px;
+    padding: 16px 18px;
+    margin: 8px 0;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.accordion:hover {
+    background: #c5a02f;
+    border-color: #c5a02f;
+}
+
+/* Expandable transcript content */
+.panel {
+    display: none;
     background: #151515;
     border: 1px solid #333;
     border-radius: 6px;
-    padding: 20px;
-    margin-top: 10px;
-    line-height: 1.6;
-}
-
-.transcript-box h3 {
-    color: #d4af37;
-    margin-top: 0;
+    padding: 18px;
     margin-bottom: 10px;
+    line-height: 1.6;
+    color: #ddd;
 }
 
-.transcript-box p {
+.panel p {
     margin: 0 0 12px;
+}
+
+.panel p:last-child {
+    margin-bottom: 0;
 }
 
 footer {
@@ -105,40 +133,57 @@ footer {
     border-top: 1px solid #222;
     font-size: 13px;
 }
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 26px;
+    }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>The Lorak Codex</h1>
-
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../quests.html">Quests</a>
-        <a href="../transcripts.html">Transcripts</a>
-        <a href="../extra-lore.html">Extra Lore</a>
-        <a href="../factions.html">Factions</a>
-        <a href="../timeline.html">Timeline</a>
-        <a href="../operations.html">Operations</a>
-        <a href="../args.html">ARGs</a>
-        <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
-    </nav>
+    <h1>THE LORAK CODEX</h1>
 </header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../quests.html">Quests</a>
+    <a href="../transcripts.html">Transcripts</a>
+    <a href="../extra-lore.html">Extra Lore</a>
+    <a href="../factions.html">Factions</a>
+    <a href="../timeline.html">Timeline</a>
+    <a href="../operations.html">Operations</a>
+    <a href="../args.html">ARGs</a>
+    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
+</nav>
 
 <div class="container">
 
     <a class="back-link" href="tau-prologue.html">← Back to Prologue to Tau</a>
 
-    <h2>Unnamed Part 3</h2>
+    <h2>Eris Mortem</h2>
 
     <div class="quest-description">
-        Description coming soon.
+        With the road to Tau made clear Praghasa has now fed on Eris to pave the road for the Journey
     </div>
 
-    <div class="transcript-box">
-        <h3>Transcript</h3>
-        <p>Transcript coming soon.</p>
+    <button class="accordion">1. Cutscene</button>
+    <div class="panel">
+        <p>Lotus: "Mother. It is time. We must... return home."</p>
+        <p>Praghasa: "FOR YOU... I SHALL..."</p>
+    </div>
+
+    <button class="accordion">2. Inbox Message</button>
+    <div class="panel">
+        <p>Praghasa can now reach Tau.</p>
+        <p>I must pilot her, and become one with Praghasa.</p>
+        <p>When we get to Tau, it will be with my strength.</p>
+        <p>I will not be able to free myself from her in Tau.</p>
+        <p>I will watch over you, but I can only be with you here on the Origin System.</p>
+        <p>In Tau, I will be my true self: Natahgasa, The Sungazer - blind once again, empty of all but wisdom.</p>
     </div>
 
 </div>
@@ -146,6 +191,19 @@ footer {
 <footer>
     The Lorak Codex
 </footer>
+
+<script>
+const accordions = document.querySelectorAll(".accordion");
+
+accordions.forEach(button => {
+    button.addEventListener("click", () => {
+        const panel = button.nextElementSibling;
+
+        panel.style.display =
+            panel.style.display === "block" ? "none" : "block";
+    });
+});
+</script>
 
 </body>
 </html>
