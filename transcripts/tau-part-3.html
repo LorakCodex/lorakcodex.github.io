@@ -5,25 +5,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Eris Mortem - Prologue to Tau - The Lorak Codex</title>
+<title>Eris Mortem - Prologue to Tau | The Lorak Codex</title>
+<meta name="description" content="Read the Eris Mortem transcript from the Prologue to Tau in Warframe.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://lorakcodex.github.io/transcripts/tau-part-3.html">
 
 <style>
-* {
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
     background: #0b0b0b;
     color: #ddd;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 header {
     background: #111;
-    border-bottom: 1px solid #333;
     padding: 30px 20px;
     text-align: center;
+    border-bottom: 1px solid #333;
 }
 
 header h1 {
@@ -33,7 +32,7 @@ header h1 {
     letter-spacing: 3px;
 }
 
-/* Homepage navigation design */
+/* Homepage navigation */
 nav {
     background: #151515;
     display: flex;
@@ -56,88 +55,97 @@ nav a:hover {
 
 .container {
     max-width: 900px;
-    margin: auto;
-    padding: 20px;
+    margin: 30px auto;
+    padding: 0 15px;
 }
 
-.back-link {
-    display: inline-block;
+.back {
+    display: block;
     color: #d4af37;
     text-decoration: none;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
-.back-link:hover {
+.back:hover {
     text-decoration: underline;
 }
 
-h2 {
+.quest-title {
     color: #d4af37;
+    font-size: 26px;
+    font-weight: bold;
     margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
 .quest-description {
-    background: #151515;
-    border-left: 4px solid #d4af37;
-    padding: 16px 18px;
-    margin: 15px 0 25px;
-    line-height: 1.6;
-    color: #ddd;
+    background: #111;
+    border-left: 2px solid #d4af37;
+    padding: 15px;
+    margin-bottom: 25px;
+    line-height: 1.8;
+    box-sizing: border-box;
 }
 
-/* Gold quest buttons */
-.accordion {
+/* Jade Shadows mission button design */
+.mission-button {
     width: 100%;
     background: #d4af37;
-    color: #111;
-    border: 1px solid #d4af37;
-    border-radius: 6px;
-    padding: 16px 18px;
-    margin: 8px 0;
+    color: #0b0b0b;
+    border: none;
+    padding: 14px 15px;
+    margin-top: 10px;
     text-align: left;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
     cursor: pointer;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-.accordion:hover {
-    background: #c5a02f;
-    border-color: #c5a02f;
+.mission-button:hover,
+.mission-button.active {
+    background: #d4af37;
+    color: #0b0b0b;
 }
 
-/* Expandable transcript content */
-.panel {
+/* Jade Shadows expandable content */
+.content {
     display: none;
-    background: #151515;
-    border: 1px solid #333;
-    border-radius: 6px;
-    padding: 18px;
-    margin-bottom: 10px;
-    line-height: 1.6;
-    color: #ddd;
+    padding: 10px 0;
 }
 
-.panel p {
-    margin: 0 0 12px;
+.content.show {
+    display: block;
 }
 
-.panel p:last-child {
-    margin-bottom: 0;
+/* Dialogue labels */
+.label {
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 18px 0 8px;
+}
+
+/* Jade Shadows dialogue boxes */
+.text {
+    background: #111;
+    border-left: 2px solid #d4af37;
+    padding: 15px;
+    margin-top: 10px;
+    white-space: pre-line;
+    line-height: 2.2;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
+    padding: 30px;
     color: #777;
-    border-top: 1px solid #222;
-    font-size: 13px;
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 26px;
-    }
+    border-top: 1px solid #333;
+    margin-top: 40px;
 }
 </style>
 </head>
@@ -145,7 +153,7 @@ footer {
 <body>
 
 <header>
-    <h1>THE LORAK CODEX</h1>
+    <h1>The Lorak Codex</h1>
 </header>
 
 <nav>
@@ -157,33 +165,40 @@ footer {
     <a href="../timeline.html">Timeline</a>
     <a href="../operations.html">Operations</a>
     <a href="../args.html">ARGs</a>
-    <a href="https://discord.gg/X3WsdC8jP4" target="_blank" rel="noopener noreferrer">Discord</a>
+    <a href="https://discord.gg/X3WsdC8jP4">Discord</a>
 </nav>
 
 <div class="container">
 
-    <a class="back-link" href="tau-prologue.html">← Back to Prologue to Tau</a>
+    <a href="tau-prologue.html" class="back">← Back to Prologue to Tau</a>
 
-    <h2>Eris Mortem</h2>
+    <h2 class="quest-title">Eris Mortem</h2>
 
     <div class="quest-description">
         With the road to Tau made clear Praghasa has now fed on Eris to pave the road for the Journey
     </div>
 
-    <button class="accordion">1. Cutscene</button>
-    <div class="panel">
-        <p>Lotus: "Mother. It is time. We must... return home."</p>
-        <p>Praghasa: "FOR YOU... I SHALL..."</p>
+    <button class="mission-button">1. Cutscene</button>
+
+    <div class="content">
+
+        <div class="text">Lotus: "Mother. It is time. We must... return home."
+
+Praghasa: "FOR YOU... I SHALL..."</div>
+
     </div>
 
-    <button class="accordion">2. Inbox Message</button>
-    <div class="panel">
-        <p>Praghasa can now reach Tau.</p>
-        <p>I must pilot her, and become one with Praghasa.</p>
-        <p>When we get to Tau, it will be with my strength.</p>
-        <p>I will not be able to free myself from her in Tau.</p>
-        <p>I will watch over you, but I can only be with you here on the Origin System.</p>
-        <p>In Tau, I will be my true self: Natahgasa, The Sungazer - blind once again, empty of all but wisdom.</p>
+    <button class="mission-button">2. Inbox Message</button>
+
+    <div class="content">
+
+        <div class="text">Praghasa can now reach Tau.
+I must pilot her, and become one with Praghasa.
+When we get to Tau, it will be with my strength.
+I will not be able to free myself from her in Tau.
+I will watch over you, but I can only be with you here on the Origin System.
+In Tau, I will be my true self: Natahgasa, The Sungazer - blind once again, empty of all but wisdom.</div>
+
     </div>
 
 </div>
@@ -193,14 +208,15 @@ footer {
 </footer>
 
 <script>
-const accordions = document.querySelectorAll(".accordion");
-
-accordions.forEach(button => {
+document.querySelectorAll(".mission-button").forEach(button => {
     button.addEventListener("click", () => {
-        const panel = button.nextElementSibling;
+        button.classList.toggle("active");
 
-        panel.style.display =
-            panel.style.display === "block" ? "none" : "block";
+        const content = button.nextElementSibling;
+
+        if (content) {
+            content.classList.toggle("show");
+        }
     });
 });
 </script>
